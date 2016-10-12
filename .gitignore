@@ -37,6 +37,6 @@ jspm_packages
 .node_repl_history
 
 # Build
-dist/npm
+dist/npm/*
 !dist/npm/README.md
 !dist/npm/package.json
