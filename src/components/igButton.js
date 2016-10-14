@@ -1,0 +1,1 @@
+var IgButton = React.createClass($.ig.react.core.buildComponent("igButton"));
