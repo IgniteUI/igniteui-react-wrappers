@@ -21,15 +21,15 @@
 
 	<!--IgniteUI refs-->
     <!--Localization-->
- 	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.datasource-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.grid-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.editors-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.combo-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.validator-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.tree-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.popover-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.pivotdataselector-en.js"></script>
-	<script type="text/javascript" src="http://localhost/ig_ui16.2/js/modules/i18n/infragistics.ui.pivotgrid-en.js"></script>
+ 	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.datasource-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.grid-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.editors-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.combo-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.validator-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.tree-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.popover-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.pivotdataselector-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.pivotgrid-en.js"></script>
 	<!--//Localization-->
 
     <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.util.js"></script>
@@ -70,37 +70,17 @@
 		<script type="text/babel">
 			// everything below will be up to the users to write
             var IgEditBox = React.createClass({
-                getProductDescriptionByRowId: function (rowId) {
-                    var grid = this.props.gridInstance,
-                        productDescription, record;
-                    if (rowId > -1 && grid) {
-                        record = grid.dataSource.findRecordByKey(rowId) || {};
-                        productDescription = record["ProductDescription"];
-                    }
-                    return productDescription;
-                },
-                getGridUpdating: function () {
-                    var grid = this.props.gridInstance;
-                    if (!grid) {
-                        return null;
-                    }
-                    return grid.element.data("igGridUpdating");
-                },
                 render: function () {
                     var rowId =  this.props.rowId,
-                        productDescription = this.getProductDescriptionByRowId(rowId),
-                        v = rowId > -1,
-                        record;
-                    
+                        v = rowId > -1;
                     return (
-                        <div style={{"display": v ? "block": "none"}}>
-                            Change value in Cell Description
-                            (for row with id <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>):
+                        <div className="editorBox" style={{"display": v ? "block": "none"}}>
+                            Change value in Cell Description(for row with id <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>):
                             <IgTextEditor
                                     ref="editor"
                                     id="editor1"
                                     keypress={this.handleTextEditorKeyPress}
-                                    value={productDescription}/>
+                                    value={this.props.value}/>
                             <IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} />
                             <IgButton id="btnDelete" labelText="Delete" click={this.handleButtonDeleteClick} />
                         </div>
@@ -108,35 +88,19 @@
                 },
                 handleTextEditorKeyPress: function (e, args) {
                     if (args.key === $.ui.keyCode.ENTER) {
-                        this.handleButtonUpdateClick();
+                        this.handleButtonUpdateClick(e);
                     }
                 },
-                handleButtonDeleteClick: function () {
-                    var rowId = this.props.rowId,
-                        grid = this.props.gridInstance,
-                        rowDeletedCallback = this.props.rowDeleted, 
-                        upd;
-                    if (grid && rowId > -1 &&
-                        confirm("Are you sure you want to delete row with id " + rowId + "?")) {
-                        upd = this.getGridUpdating();//grid.dataSource.deleteRow(rowId, true);
-                        if (upd) {
-                            upd.deleteRow(rowId);
-                            if (rowDeletedCallback) {
-                                rowDeletedCallback(rowId);
-                            }
-                        }
+                handleButtonDeleteClick: function (e) {
+                    var func = this.props.btnDeleteClicked;
+                    if (func) {
+                        func(e, this.props.rowId);
                     }
                 },
-                handleButtonUpdateClick: function () {
-                    var rowId = this.props.rowId, editor,
-                        grid = this.props.gridInstance,
-                        upd;
-                    if (grid && rowId > -1) {
-                        upd = this.getGridUpdating();//grid.dataSource.deleteRow(rowId, true);
-                        if (upd) {
-                            editor = this.refs.editor;
-                            upd.updateRow(rowId, {"ProductDescription": editor.igControl.value()});
-                        }
+                handleButtonUpdateClick: function (e) {
+                    var func = this.props.btnUpdateClicked;
+                    if (func) {
+                        func(e, this.props.rowId, this.refs.editor.igControl.value());
                     }
                 }
             });
@@ -147,7 +111,8 @@
 						// the view is the grid data source in this case
 						view: sourceData,
 						gridHeight: "200px",
-                        selectedRowId: -1
+                        selectedRowId: -1,
+                        selectedValue: null
 					}
 				},
 				render: function () {
@@ -163,7 +128,6 @@
 								autoCommit={true}
 								height={this.state.gridHeight}
 								width="700px"
-								rendered={this.gridRendered}
 								columns={[
 									{ headerText: "Product ID", key: "ProductID", dataType: "number" },
 									{ headerText: "Stock", key: "UnitsInStock", dataType: "number" },
@@ -178,7 +142,11 @@
 								]}
 							/>
 							<br />
-                            <IgEditBox ref="selectedRowInfo" rowDeleted={this.editBoxRowDeleted} rowId={this.state.selectedRowId} gridInstance={this.gridInstance} />
+                            <IgEditBox ref="selectedRowInfo" 
+                                btnDeleteClicked={this.editBoxHandleDelete}
+                                btnUpdateClicked={this.editBoxHandleUpdate}
+                                value={this.state.selectedValue}
+                                rowId={this.state.selectedRowId} />
 
 
 							<br />
@@ -189,17 +157,53 @@
 						</div>
 					);
 				},
-				gridRendered: function (evt, ui) {
-					//console.log(this.state.igGridCommands)
-				},
-                editBoxRowDeleted: function () {
-                    this.setState({ selectedRowId: -1 });
+                /* helper functions */
+                getGridInstance: function (gridRefName) {
+                    gridRefName = gridRefName || "grid1";
+                    return (this.refs[gridRefName] || {}).igControl;
                 },
-                gridRowDeleted: function (evt, ui) {
-                    if (this.state.selectedRowId === ui.rowID) {
-                        this.setState({ selectedRowId: -1 });
+                getGridUpdating: function (gridRefName) {
+                    var grid = this.getGridInstance(gridRefName);
+                    if (!grid || !grid.element) {
+                        return null;
+                    }
+                    return grid.element.data("igGridUpdating");
+                },
+                getProductDescriptionByRowId: function (rowId) {
+                    var grid = this.getGridInstance(),
+                        productDescription, record;
+                    if (rowId > -1 && grid) {
+                        record = grid.dataSource.findRecordByKey(rowId) || {};
+                        productDescription = record["ProductDescription"];
+                    }
+                    return productDescription;
+                },
+                /* //helper functions */
+				/* handle edit box specific events */
+                editBoxHandleDelete: function (e, rowId) {
+                    var grid = this.getGridInstance(),
+                        upd;
+                    if (grid && rowId > -1 &&
+                        confirm("Are you sure you want to delete row with id " + rowId + "?")) {
+                        upd = this.getGridUpdating();//grid.dataSource.deleteRow(rowId, true);
+                        if (upd) {
+                            upd.deleteRow(rowId);
+                            this.setState({ selectedRowId: -1 });
+                        }
                     }
                 },
+                editBoxHandleUpdate: function (e, rowId, val) {
+                    var grid = this.getGridInstance(),
+                        upd;
+                    if (grid && rowId > -1) {
+                        upd = this.getGridUpdating();
+                        if (upd) {
+                            upd.updateRow(rowId, {"ProductDescription": val});
+                        }
+                    }
+                },
+                /* //handle edit box specific events */
+                /* interactions with igGrid - rowDeleted, updated, etc. */
                 gridRowUpdated: function (evt, ui) {
                     var rowId = ui.rowID;
                     if (this.state.selectedRowId !== rowId) {
@@ -207,15 +211,28 @@
                     }
                     if (!ui.rowAdding &&
                         ui.values["ProductDescription"] !== ui.oldValues["ProductDescription"]) {
-                        this.setState({});
+                        this.setState({
+                            selectedValue: this.getProductDescriptionByRowId(rowId)
+                        });
                     }
                 },
+                gridRowDeleted: function (evt, ui) {
+                    var rowId = ui.rowID;
+                    if (this.state.selectedRowId === rowId) {
+                        this.setState({ selectedRowId: -1 });
+                    }
+                },
+                gridRowSelectionChanged: function (evt, ui) {
+                    var rowId = ui.row.id;
+                    this.setState({ selectedRowId: rowId, 
+                                    selectedValue: this.getProductDescriptionByRowId(rowId) 
+                                    });
+				},
+                /* //interactions with igGrid - rowDeleted, updated, etc. */
 				heightChanged: function (evt) {
+                    // change grid height option
                     var editor = this.refs.editorGridHeight;
                     this.setState({ gridHeight: editor.igControl.value() });
-				},
-				gridRowSelectionChanged: function (evt, ui) {
-                    this.setState({ selectedRowId: ui.row.id });
 				}
 			});
 
