@@ -1,1 +1,0 @@
-var IgTextEditor = React.createClass($.ig.react.core.buildComponent("igTextEditor"));

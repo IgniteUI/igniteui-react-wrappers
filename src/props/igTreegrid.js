@@ -3,109 +3,34 @@
 	$.ig.react = $.ig.react || {};
 	$.ig.react.propTypes = $.ig.react.propTypes || {};
 	$.ig.react.propTypes.shapes = $.ig.react.propTypes.shapes || {};
-	$.ig.react.propTypes.shapes.igGridColumnGroupOptions = {
-		expanded: React.PropTypes.bool,
-		allowGroupCollapsing: React.PropTypes.bool,
-		hidden: React.PropTypes.oneOf([
-			"never",
-			"always",
-			"parentcollapsed",
-			"parentexpanded"
-		])
+	$.ig.react.propTypes.shapes.igTreeGridDataSourceSettings = {
+		propertyExpanded: React.PropTypes.string,
+		propertyDataLevel: React.PropTypes.string,
+		initialFlatDataView: React.PropTypes.bool
 	}
 
-	$.ig.react.propTypes.shapes.igGridColumn = {
-		headerText: React.PropTypes.string,
-		key: React.PropTypes.string,
-		formatter: React.PropTypes.oneOfType([	
-			React.PropTypes.string,
-			React.PropTypes.func
-		]),
-		format: React.PropTypes.string,
-		dataType: React.PropTypes.oneOfType([	
-			React.PropTypes.string,
-			React.PropTypes.number
-		]),
-		width: React.PropTypes.oneOfType([	
-			React.PropTypes.string,
-			React.PropTypes.number
-		]),
-		hidden: React.PropTypes.bool,
-		template: React.PropTypes.string,
-		unbound: React.PropTypes.bool,
-		groupOptions: React.PropTypes.shape(
-			$.ig.react.propTypes.shapes.IgGridColumnGroupOptions
-		),
-		group: React.PropTypes.array,
-		rowspan: React.PropTypes.number,
-		formula: React.PropTypes.oneOfType([	
-			React.PropTypes.string,
-			React.PropTypes.func
-		]),
-		unboundValues: React.PropTypes.array,
-		headerCssClass: React.PropTypes.string,
-		columnCssClass: React.PropTypes.string,
-		mapper: React.PropTypes.oneOfType([	
-			React.PropTypes.string,
-			React.PropTypes.func
-		]),
-		rowIndex: React.PropTypes.number,
-		columnIndex: React.PropTypes.number,
-		navigationIndex: React.PropTypes.number,
-		colSpan: React.PropTypes.number,
-		rowSpan: React.PropTypes.number
-	}
-
-	$.ig.react.propTypes.shapes.igGridFeature = {
-		name: React.PropTypes.string
-	}
-
-	$.ig.react.propTypes.shapes.igGridRestSettingsCreate = {
-		url: React.PropTypes.string,
-		template: React.PropTypes.string,
-		batch: React.PropTypes.bool
-	}
-
-	$.ig.react.propTypes.shapes.igGridRestSettingsUpdate = {
-		url: React.PropTypes.string,
-		template: React.PropTypes.string,
-		batch: React.PropTypes.bool
-	}
-
-	$.ig.react.propTypes.shapes.igGridRestSettingsRemove = {
-		url: React.PropTypes.string,
-		template: React.PropTypes.string,
-		batch: React.PropTypes.bool
-	}
-
-	$.ig.react.propTypes.shapes.igGridRestSettings = {
-		create: React.PropTypes.shape(
-			$.ig.react.propTypes.shapes.IgGridRestSettingsCreate
-		),
-		update: React.PropTypes.shape(
-			$.ig.react.propTypes.shapes.IgGridRestSettingsUpdate
-		),
-		remove: React.PropTypes.shape(
-			$.ig.react.propTypes.shapes.IgGridRestSettingsRemove
-		),
-		encodeRemoveInRequestUri: React.PropTypes.bool,
-		contentSerializer: React.PropTypes.func,
-		contentType: React.PropTypes.string
-	}
-
-	$.ig.react.propTypes.shapes.igGridScrollSettings = {
-		scrollTop: React.PropTypes.number,
-		scrollLeft: React.PropTypes.number,
-		wheelStep: React.PropTypes.number,
-		smoothing: React.PropTypes.bool,
-		smoothingStep: React.PropTypes.number,
-		smoothingDuration: React.PropTypes.number,
-		inertiaStep: React.PropTypes.number,
-		inertiaDuration: React.PropTypes.number
-	}
-
-	$.ig.react.propTypes.igGrid = {
+	$.ig.react.propTypes.igTreeGrid = {
 		id: React.PropTypes.string.isRequired,
+		indentation: React.PropTypes.string,
+		initialIndentationLevel: React.PropTypes.number,
+		showExpansionIndicator: React.PropTypes.bool,
+		expandTooltipText: React.PropTypes.string,
+		collapseTooltipText: React.PropTypes.string,
+		foreignKey: React.PropTypes.string,
+		initialExpandDepth: React.PropTypes.number,
+		foreignKeyRootValue: React.PropTypes.number,
+		renderExpansionIndicatorColumn: React.PropTypes.bool,
+		renderFirstDataCellFunction: React.PropTypes.oneOfType([	
+			React.PropTypes.string
+		]),
+		childDataKey: React.PropTypes.string,
+		renderExpansionCellFunction: React.PropTypes.oneOfType([	
+			React.PropTypes.string
+		]),
+		enableRemoteLoadOnDemand: React.PropTypes.bool,
+		dataSourceSettings: React.PropTypes.shape(
+			$.ig.react.propTypes.shapes.IgTreeGridDataSourceSettings
+		),
 		width: React.PropTypes.oneOfType([	
 			React.PropTypes.string,
 			React.PropTypes.number
