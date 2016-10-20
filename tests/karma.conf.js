@@ -32,14 +32,14 @@ module.exports = function(config) {
 			// Paths loaded via module imports:
 			// React
 			"node_modules/react/dist/react-with-addons.min.js",
+			"node_modules/react-dom/dist/react-dom.min.js",
 
 			// paths loaded via module imports
 			// bundled react wrappers
-			"dist/npm/*.min.js",
+			"dist/npm/*.js",
 
 			// test files
-			"tests/unit/render/*.js",
-			"tests/unit/options/*.js"
+			"tests/unit/**/*.js"
 		],
 
 		// list of files to exclude
@@ -50,7 +50,7 @@ module.exports = function(config) {
 
 		browsers : ["Chrome"],
 
-		singleRun: false,
+		singleRun: true,
 
 		customLaunchers: {
 			Chrome_travis_ci: {
@@ -67,6 +67,10 @@ module.exports = function(config) {
 		],
 
 		reporters: ["progress", "coverage"],
+
+		preprocessors: {
+			"dist/npm/igniteui-react.js": ["coverage"]
+		},
 
 		coverageReporter: {
 			reporters:[
