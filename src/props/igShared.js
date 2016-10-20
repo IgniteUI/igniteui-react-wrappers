@@ -3,12 +3,6 @@
 	$.ig.react = $.ig.react || {};
 	$.ig.react.propTypes = $.ig.react.propTypes || {};
 	$.ig.react.propTypes.shapes = $.ig.react.propTypes.shapes || {};
-	$.ig.react.propTypes.igLoading = {
-		id: React.PropTypes.string.isRequired,
-		cssClass: React.PropTypes.object,
-		includeVerticalOffset: React.PropTypes.bool
-	}
-
 	$.ig.react.propTypes.shapes.igSliderBookmarks = {
 		value: React.PropTypes.number,
 		title: React.PropTypes.string,
@@ -72,24 +66,6 @@
 			$.ig.react.propTypes.shapes.IgButtonIcons
 		),
 		title: React.PropTypes.bool
-	}
-
-	$.ig.react.propTypes.igTooltip = {
-		id: React.PropTypes.string.isRequired,
-		text: React.PropTypes.string,
-		arrowLocation: React.PropTypes.string
-	}
-
-	$.ig.react.propTypes.mouseWrapper = {
-		id: React.PropTypes.string.isRequired,
-		cancel: React.PropTypes.string,
-		distance: React.PropTypes.number,
-		delay: React.PropTypes.number
-	}
-
-	$.ig.react.propTypes.igResponsiveContainer = {
-		id: React.PropTypes.string.isRequired,
-		pollingInterval: React.PropTypes.number
 	}
 
 })(jQuery);
