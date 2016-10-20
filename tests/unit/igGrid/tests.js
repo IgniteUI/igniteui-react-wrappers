@@ -25,6 +25,10 @@ describe("igGrid component", function () {
 				primaryKey: "ProductID",
 				width: "700px",
 				height: "500px",
+				initialized: function () {
+					expect($("#grid1").data("igGrid")).not.toBe(null);
+					expect($("#grid1").igGrid("rows").length).toBe(10);
+				},
 				columns: [
 					{ headerText: "Product ID", key: "ProductID", dataType: "number" },
 					{ headerText: "Stock", key: "UnitsInStock", dataType: "number" },
@@ -32,12 +36,10 @@ describe("igGrid component", function () {
 					{ headerText: "UnitPrice", key: "UnitPrice", dataType: "number", format: "#.##" },
 					{ headerText: "DateAdded", key: "DateAdded", dataType: "date", format: "dateTime" }
 				],
-				dataSource: sourceData,
+				dataSource: data,
 				responseDataKey: "Products"
 			});
 		}
 		expect(renderFunc).not.toThrow();
-		expect($("#grid1").data("igGrid")).not.toBe(null);
-		expect($("#grid1").igGrid("rows").length).toBe(10);
 	});
 });

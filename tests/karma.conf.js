@@ -36,11 +36,10 @@ module.exports = function(config) {
 
 			// paths loaded via module imports
 			// bundled react wrappers
-			"dist/npm/*.min.js",
+			"dist/npm/*.js",
 
 			// test files
-			"tests/unit/render/*.js",
-			"tests/unit/options/*.js"
+			"tests/unit/**/*.js"
 		],
 
 		// list of files to exclude
@@ -68,6 +67,10 @@ module.exports = function(config) {
 		],
 
 		reporters: ["progress", "coverage"],
+
+		preprocessors: {
+			"dist/npm/igniteui-react.js": ["coverage"]
+		},
 
 		coverageReporter: {
 			reporters:[
