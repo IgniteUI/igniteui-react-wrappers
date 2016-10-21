@@ -20,10 +20,9 @@ You can install the package with `npm`.
 npm install igniteui-react
 ```
 
-# Building
+# Build
 
-Build will bundle all files available in `src/*` producing `dist/npm/igniteui-react.js`
-and then minify it producing `dist/npm/igniteui-react.min.js` 
+The build will bundle all files available in `src/*` producing `dist/npm/igniteui-react.js` and then minify it producing `dist/npm/igniteui-react.min.js`. Either can be used for obtaining the Ignite UI React components, however, the minified file is preferable for production due to its reduced size. You need [Node.js](http://nodejs.org/) installed on your machine.
 
 To build the project use the following steps:
 
@@ -119,7 +118,28 @@ Binding to control events is done by passing the event name as a property and as
 		valueChanged={this.editorValueChanged}
 	/>
 
-## 
+## Testing
+
+Testing IgniteUI React is done through Unit tests. All of them are written in [Jasmine](http://jasmine.github.io/).
+
+#### Setup
+
+	npm install
+
+#### Running the tests
+
+The easiest way to run the unit tests is to use the npm script:
+
+	npm test
+
+This will start the [Karma](http://karma-runner.github.io/0.12/index.html) test runner and execute the tests. By default the browser is Chrome.
+
+### Code coverage
+
+After running the Karma test a coverage file will be created for the `src/util/ignite-react.js` file containing the bulk of the functionality available for the Ignite UI React components.
+The report is available at `coverage/karma-tmp/**/lcov-report/`.
+
+---------------------------------------
 
 ## What is Ignite UI?
 
