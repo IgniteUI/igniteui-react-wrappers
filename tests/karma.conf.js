@@ -25,7 +25,10 @@ module.exports = function(config) {
 			"node_modules/react-dom/dist/react-dom.min.js",
 			// paths loaded via module imports
 			// bundled react wrappers
-			"dist/npm/*.js",
+			//"dist/npm/igniteui-react.js",
+			"src/props/**/*.js",
+			"src/util/**/*.js",
+			"src/components/**/*.js",
 
 			// spec files need to be loaded in the shim file IN CONTEXT of the main module, don't include:            
             { pattern: 'tests/unit/**/*.js', included: false, watched: true },
@@ -60,7 +63,7 @@ module.exports = function(config) {
 		reporters: ["progress", "coverage"],
 
 		preprocessors: {
-			"dist/npm/igniteui-react.js": ["coverage"]
+			"src/util/**/*.js": ["coverage"]
 		},
 
 		coverageReporter: {
