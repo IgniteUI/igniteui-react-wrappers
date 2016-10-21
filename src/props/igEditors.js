@@ -452,9 +452,9 @@
 
 	$.ig.react.propTypes.igDateEditor = {
 		id: React.PropTypes.string.isRequired,
-		value: React.PropTypes.object,
-		minValue: React.PropTypes.object,
-		maxValue: React.PropTypes.object,
+		value: React.PropTypes.date,
+		minValue: React.PropTypes.date,
+		maxValue: React.PropTypes.date,
 		dateDisplayFormat: React.PropTypes.string,
 		dateInputFormat: React.PropTypes.string,
 		dataMode: React.PropTypes.oneOf([
@@ -543,9 +543,9 @@
 		listItemHoverDuration: React.PropTypes.number,
 		listItems: React.PropTypes.object,
 		listWidth: React.PropTypes.number,
-		value: React.PropTypes.object,
-		minValue: React.PropTypes.object,
-		maxValue: React.PropTypes.object,
+		value: React.PropTypes.date,
+		minValue: React.PropTypes.date,
+		maxValue: React.PropTypes.date,
 		dateDisplayFormat: React.PropTypes.string,
 		dateInputFormat: React.PropTypes.string,
 		dataMode: React.PropTypes.oneOf([

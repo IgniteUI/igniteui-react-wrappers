@@ -81,13 +81,13 @@
 			"discrete"
 		]),
 		isDataPreSorted: React.PropTypes.bool,
-		minimumValue: React.PropTypes.oneOf([
-			"number",
-			"date"
+		minimumValue: React.PropTypes.oneOfType([	
+			React.PropTypes.number,
+			React.PropTypes.date
 		]),
-		maximumValue: React.PropTypes.oneOf([
-			"number",
-			"date"
+		maximumValue: React.PropTypes.oneOfType([	
+			React.PropTypes.number,
+			React.PropTypes.date
 		]),
 		dateTimeMemberPath: React.PropTypes.string,
 		referenceValue: React.PropTypes.number,
