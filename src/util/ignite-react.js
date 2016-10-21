@@ -67,7 +67,7 @@
 		var config = ($.ig.react.core.configWidgets || {})[name] || {};
 		return $.extend({
 			render: function () {
-				return React.createElement("div", { id: this.props.id });
+				return React.createElement("div", { id: this.props.id }, this.props.children);
 			},
 			componentDidMount: function () {
 				$.ig.react.core.mount(this, name);
