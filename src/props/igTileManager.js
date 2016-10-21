@@ -44,7 +44,9 @@
 		marginLeft: React.PropTypes.number,
 		marginTop: React.PropTypes.number,
 		rearrangeItems: React.PropTypes.bool,
-		items: React.PropTypes.any,
+		items: React.PropTypes.oneOfType([	
+			React.PropTypes.array
+		]),
 		dataSource: React.PropTypes.object,
 		minimizedState: React.PropTypes.oneOfType([	
 			React.PropTypes.string

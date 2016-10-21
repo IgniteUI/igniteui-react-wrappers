@@ -5,7 +5,8 @@
 	$.ig.react.propTypes.shapes = $.ig.react.propTypes.shapes || {};
 	$.ig.react.propTypes.shapes.igValidatorField = {
 		selector: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		])
 	}
 
@@ -14,26 +15,50 @@
 		onchange: React.PropTypes.bool,
 		onblur: React.PropTypes.bool,
 		onsubmit: React.PropTypes.bool,
-		required: React.PropTypes.any,
-		number: React.PropTypes.any,
-		date: React.PropTypes.any,
-		email: React.PropTypes.any,
-		lengthRange: React.PropTypes.any,
-		valueRange: React.PropTypes.any,
-		creditCard: React.PropTypes.any,
+		required: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.object
+		]),
+		number: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.object
+		]),
+		date: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.object
+		]),
+		email: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.object
+		]),
+		lengthRange: React.PropTypes.oneOfType([	
+			React.PropTypes.array,
+			React.PropTypes.object
+		]),
+		valueRange: React.PropTypes.oneOfType([	
+			React.PropTypes.array,
+			React.PropTypes.object
+		]),
+		creditCard: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.object
+		]),
 		pattern: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		messageTarget: React.PropTypes.element,
 		errorMessage: React.PropTypes.string,
 		successMessage: React.PropTypes.string,
 		threshold: React.PropTypes.number,
 		equalTo: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		custom: React.PropTypes.oneOfType([	
 			React.PropTypes.func,
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		fields: React.PropTypes.arrayOf(
 			React.PropTypes.shape($.ig.react.propTypes.shapes.igValidatorField)
