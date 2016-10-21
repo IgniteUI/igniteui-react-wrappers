@@ -30,7 +30,8 @@
 			"error"
 		]),
 		appendTo: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		mode: React.PropTypes.oneOf([
 			"auto",
