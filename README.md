@@ -35,7 +35,44 @@ To build the project use the following steps:
 
 ## Page setup
 
+In the page markup include the Ignite UI React components bundle found in `dist/npm/igniteui-react.min.js` along with the Ignite UI scripts:
 
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="react.min.js"></script>
+
+	<script src="infragistics.core.js"></script>
+	<script src="infragistics.lob.js"></script>
+
+	<script src="igniteui-react.min.js"></script>
+
+Optionally include `browser.js` found in the `Babel-core` package for [JSX](https://facebook.github.io/jsx/) support.
+
+	<script src="browser.js"></script>
+
+This provides all supported Ignite UI components as React classes available in the global namespace. 
+
+#### Examples:
+
+|  Control Name   |                 JavaScript                   |          JSX         |
+|-----------------|----------------------------------------------|----------------------|
+| igCombo         | `React.createElement(IgCombo, null);`        | `<IgCombo/>`         |
+| igGrid          | `React.createElement(IgGrid, null);`         | `<IgGrid/>`          |
+| igTreeGrid      | `React.createElement(IgTreeGrid, null);`     | `<IgTreeGrid/>`      |
+| igDataChart     | `React.createElement(IgDataChart, null);`    | `<IgDataChart/>`     |
+| igDialog        | `React.createElement(IgDialog, null);`       | `<IgDialog/>`        |
+| igDateEditor    | `React.createElement(IgDateEditor, null);`   | `<IgDateEditor/>`    |
+| igMaskEditor    | `React.createElement(IgMaskEditor, null);`   | `<IgMaskEditor/>`    |
+| igNumericEditor | `React.createElement(IgNumericEditor, null);`| `<igNumericEditor/>` |
+| igPercentEditor | `React.createElement(IgPercentEditor, null);`| `<igPercentEditor/>` |
+| igTextEditor    | `React.createElement(IgTextEditor, null);`   | `<igTextEditor/>`    |
+| igDatePicker    | `React.createElement(IgDatePicker, null);`   | `<igDatePicker/>`    |
+| igTree          | `React.createElement(IgTree, null);`         | `<igTree/>`          |
+| igMap           | `React.createElement(IgMap, null);`          | `<igMap/>`           |
+| igUpload        | `React.createElement(IgUpload, null);`       | `<igUpload/>`        |
+| igVideoPlayer   | `React.createElement(IgVideoPlayer, null);`  | `<igVideoPlayer/>`   |
+
+**Note:** All Ignite UI React class names are in [PascalCase](https://en.wikipedia.org/wiki/PascalCase) so that they are JSX-friendly.
 
 ## What is Ignite UI?
 [![Ignite UI Logo](http://infragistics-blogs.github.io/github-assets/logos/igniteui.png)](http://igniteui.com)
