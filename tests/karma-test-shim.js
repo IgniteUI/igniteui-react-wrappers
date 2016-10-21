@@ -51,7 +51,7 @@ function onlySpecFiles(path) {
     path.match(new RegExp(__karma__.config.files)) : true;
     /*
     //Test only files in specified path
-    if (/\/tests\/unit\/igGrid\/.*\.js/.test(path)) {
+    if (/\/tests\/unit\/common\/.*\.js/.test(path)) {
         return true;
     }
     return false;

@@ -43,7 +43,8 @@ function main() {
 
     describe("Basic react wrappers test", function() {
         it("Test rendering component ", function () {
-            var suite = $.ig.react.propTypes, component, name, config, opts;
+            var suite = $.ig.react.propTypes, component, name, config, opts,
+                initCalled;
             for (component in suite) {
                 if (suite.hasOwnProperty(component) && component.startsWith("ig")) {
                     name = component.charAt(0).toUpperCase() + component.slice(1);
@@ -52,10 +53,13 @@ function main() {
                     if (config && config.skip) {
                         continue;
                     }
+                    initCalled = false;
                     $.ig.react.test.createOrUpdateComponent(window[name], $.extend({
-                        id: "igComponent"
+                        id: "igComponent",
+                        initialized: function () {initCalled = true;}
                     }, opts));
                     expect($("#igComponent").data(component)).not.toBeUndefined();
+                    expect(initCalled).toBeTruthy();
                     $.ig.react.test.emptyElement();
                 }
             }

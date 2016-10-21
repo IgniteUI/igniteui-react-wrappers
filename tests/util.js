@@ -11,7 +11,7 @@
     $.ig.react.test.getOrCreateElement = function (id) {
         var $e = $.ig.react.test.getElement(id);
         if (!$e.length) {
-            id = id || $.ig.react.test.elementId; 
+            id = id || $.ig.react.test.elementId;
             $e = $("<div id=\"" + id +"\"></div>")
                     .appendTo(document.body); 
         }
