@@ -21,11 +21,13 @@
 		foreignKeyRootValue: React.PropTypes.number,
 		renderExpansionIndicatorColumn: React.PropTypes.bool,
 		renderFirstDataCellFunction: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		childDataKey: React.PropTypes.string,
 		renderExpansionCellFunction: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		enableRemoteLoadOnDemand: React.PropTypes.bool,
 		dataSourceSettings: React.PropTypes.shape(

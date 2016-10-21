@@ -139,7 +139,8 @@
 		appendTo: React.PropTypes.any,
 		containment: React.PropTypes.oneOfType([	
 			React.PropTypes.bool,
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.array
 		]),
 		zIndex: React.PropTypes.number
 	}
@@ -182,7 +183,8 @@
 		appendTo: React.PropTypes.any,
 		containment: React.PropTypes.oneOfType([	
 			React.PropTypes.bool,
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.array
 		]),
 		zIndex: React.PropTypes.number
 	}
