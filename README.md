@@ -50,7 +50,13 @@ Optionally include `browser.js` found in the `Babel-core` package for [JSX](http
 
 	<script src="browser.js"></script>
 
-This provides all supported Ignite UI components as React classes available in the global namespace. 
+This provides all supported Ignite UI components as React classes available in the global namespace.
+
+## Initializing controls
+In general React components can be initialized in two ways: 
+
+1. In `JavaScript` using React's API.
+2. With pseudo-markup by utilizing `JSX` syntax.
 
 #### Examples:
 
@@ -72,9 +78,51 @@ This provides all supported Ignite UI components as React classes available in t
 | igUpload        | `React.createElement(IgUpload, null);`       | `<igUpload/>`        |
 | igVideoPlayer   | `React.createElement(IgVideoPlayer, null);`  | `<igVideoPlayer/>`   |
 
-**Note:** All Ignite UI React class names are in [PascalCase](https://en.wikipedia.org/wiki/PascalCase) so that they are JSX-friendly.
+**Note:** All Ignite UI React class names are in [PascalCase](https://en.wikipedia.org/wiki/PascalCase) so that they are [JSX-friendly](https://facebook.github.io/react/docs/jsx-in-depth.html#html-tags-vs.-react-components).
+
+### Configuring Control Options
+
+If you are using `JavaScript` options can be applied by adding them as an object to the `createElement` call. In `JSX` they are represented by attributes to the component's pseudo-element.
+
+#### Examples:
+
+|               Option               |                          JavaScript                            |                   JSX                    |
+|------------------------------------|----------------------------------------------------------------|------------------------------------------|
+| igGrid.options.autoGenerateColumns | `React.createElement(IgGrid, { autoGenerateColumns: false });` | `<IgGrid autoGenerateColumns={false} />` |
+| igCombo.options.width              | `React.createElement(IgCombo, { width: "700px" });`            | `<IgCombo width="700px" />`              |
+
+Defining complex type control options (`arrays` & `objects`) in `JSX` is done by wrapping their declarations braces `{}`.
+
+#### Example:
+
+	<IgGrid 
+		id="grid1"
+		columns={[
+			{ headerText: "Product ID", key: "ProductID", dataType: "number" },
+			{ headerText: "Stock", key: "UnitsInStock", dataType: "number" },
+			{ headerText: "Description", key: "ProductDescription", dataType: "string" },
+			{ headerText: "UnitPrice", key: "UnitPrice", dataType: "number", format: "#.##" },
+			{ headerText: "DateAdded", key: "DateAdded", dataType: "date", format: "dateTime" }
+		]}
+	/>
+
+**Note:** Some Ignite UI controls require an `id` attribute for the DOM element they initialize on. It can be passed through the control's React class `id` property.
+
+### Handling events
+
+Binding to control events is done by passing the event name as a property and assigning the handling function as its value.
+
+#### Example:
+
+	<IgTextEditor
+		id="editor1"
+		valueChanged={this.editorValueChanged}
+	/>
+
+## 
 
 ## What is Ignite UI?
+
 [![Ignite UI Logo](http://infragistics-blogs.github.io/github-assets/logos/igniteui.png)](http://igniteui.com)
 
 [Ignite UI](http://igniteui.com/) is an advanced HTML5+ toolset that helps you create stunning, modern Web apps. Building on jQuery and jQuery UI, it primarily consists of feature rich, high-performing UI controls/widgets such as all kinds of charts, data visualization maps, (hierarchical, editable) data grids, pivot grids, enhanced editors (combo box, masked editors, HTML editor, date picker, to name a few), flexible data source connectors, and a whole lot more.  Too many to list here - check out [the site](http://igniteui.com/) for more info and to [download](https://igniteui.com/download) a trial.
