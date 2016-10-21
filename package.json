@@ -31,6 +31,7 @@
     "karma-junit-reporter": "^0.4.2",
     "karma-coverage": "^1.1.1",
     "karma-remap-istanbul": "^0.2.1",
+    "systemjs": "^0.19.39",
     "coveralls": "^2.11.9"
   }
 }
