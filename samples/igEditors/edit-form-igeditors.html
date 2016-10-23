@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<title>Basic ReactJS Sample/POC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled JavaScript -->
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<!-- Bootstrap -->
+	<!--Css refs-->
+	<link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+	<link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.shared.css" rel="stylesheet" />
+	<link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.editors.css" rel="stylesheet" />
+
+	<!--//Css refs-->
+	<!--JavaScript refs-->
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!--Localization-->
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.editors-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.validator-en.js"></script>
+	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.popover-en.js"></script>
+	<!--//Localization-->
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.util.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.datasource.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.shared.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.framework.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.shared.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.editors.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.updating.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.sorting.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.paging.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.popover.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.featurechooser.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.filtering.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.selection.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.templating.js"></script>
+
+
+	<script type="text/javascript" src="http://localhost/ig_ui/js/modules/infragistics.ui.notifier.js"></script>
+	<script type="text/javascript" src="http://localhost/ig_ui/js/modules/infragistics.ui.editors.js"></script>
+
+	<!--React-->
+	<script src="../../src/util/ignite-react.js"></script>
+	<script src="../../src/components/igEditors.js"></script>
+	<script src="../../src/components/igShared.js"></script>
+	<!--//React-->
+	<!--IgniteUI refs-->
+
+
+	<style>
+		.well {
+			height: 90px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<script type="text/babel" src="edit-form-example.jsx">
+		</script>
+		<!-- to use JSX in our HTML -->
+		<script type="text/babel">
+			// To get started with this tutorial running your own code, simply remove
+			// the script tag loading scripts/example.js and start writing code here.
+			// everything below will be up to the users to write
+			var EditForm = React.createClass({
+
+			getInitialState: function(){
+			return {
+			Email: "johndoe@gmail.com",
+			userName: "USER",
+			token: 5645,
+			phone:898123123,
+			licensedue: "2000-10-10",
+			birthday: "2015-10-10",
+			yourLocation: "London"
+			}
+			},
+
+			propTypes: {
+			Email: React.PropTypes.string,
+			userName: React.PropTypes.string,
+			token: React.PropTypes.number,
+			phone:React.PropTypes.number,
+			licensedue: React.PropTypes.string,
+			birthday: React.PropTypes.string,
+			yourLocation: React.PropTypes.string
+			},
+
+
+			handleSubmit: function(e) {
+			e.preventDefault();
+			var editor = this.refs.editorEmail;
+
+			this.setState({
+			name: editor.igControl.value()
+			});
+			},
+
+
+			/* //Util funcs */
+			/* //handle EditForm specific events */
+			emailChanged: function (evt) {
+			var editor = this.refs.editorEmail;
+			this.setState({ Email: editor.igControl.value() });
+			},
+
+			userChanged: function (evt) {
+			var editor = this.refs.editorUserName;
+			this.setState({ userName: editor.igControl.value() });
+			},
+
+			phoneChanged : function (evt) {
+			var editor = this.refs.editorPhone;
+			this.setState({ phone: editor.igControl.value() });
+			},
+
+			yearsChanged: function (evt) {
+			var editor = this.refs.editortoken;
+			this.setState({ token: editor.igControl.value() });
+			},
+
+			licenseChanged: function (evt) {
+			var editor = this.refs.editorLicense;
+			this.setState({ licensedue: new Date(editor.igControl.value()).toLocaleDateString()});
+			},
+
+			birthdayChanged: function (evt) {
+			var editor = this.refs.editorBirthday;
+			this.setState({ birthday: new Date(editor.igControl.value()).toDateString()});
+			},
+
+			locationChanged: function (evt) {
+			var editor = this.refs.editorLocation;
+			this.setState({ yourLocation: editor.igControl.value() });
+			},
+
+
+			render:function(){
+			const {Email, userName, token, licensedue, birthday, yourLocation} = this.props;
+			return(
+			<div className="container">
+				<form className="accountForm" onSubmit={this.handleSubmit}>
+					<div className="row">
+						<h1>Edit user account</h1>
+						<div className="col-md-4">
+							<h3 className="well">Email : {this.state.Email}</h3>
+							<h3 className="well">User : {this.state.userName}</h3>
+							<h3 className="well">Phone : {this.state.phone}</h3>
+							<h3 className="well">Token: {this.state.token}</h3>
+							<h3 className="well">License due date: {this.state.licensedue}</h3>
+							<h3 className="well">Birthday : {this.state.birthday}</h3>
+							<h3 className="well">Occupation: {this.state.yourLocation}</h3>
+						</div>
+
+						<div className="col-md-4">
+							<div className="well">
+								Name:<IgTextEditor id="editor1"
+												   ref="editorEmail"
+												   revertIfNotValid={true}
+												   value={this.state.Email}
+												   valueChanged={this.emailChanged}
+												   placeHolder={Email} />
+							</div>
+
+							<div className="well">
+								User : <IgTextEditor id="editor2"
+									 ref="editorUserName"
+									 value={this.state.userName}
+									 valueChanged={this.userChanged} />
+							</div>
+
+							<div className="well">
+								Phone: <IgMaskEditor id="editor3"
+											 ref="editorPhone"
+											 inputMask='(000) 000-000'
+											 dataMode="rawText"
+											 revertIfNotValid={true}
+											 value={this.state.phone}
+											 valueChanged={this.phoneChanged} />
+							</div>
+
+							<div className="well">
+								Token: <IgNumericEditor id="editor4"
+												ref="editortoken"
+												value={this.state.token}
+												valueChanged={this.yearsChanged}
+												buttonType={"spin"} />
+							</div>
+							<div className="well">
+								License due date: <IgDateEditor id="editor5"
+										ref="editorLicense"
+										dataMode={"date"}
+										buttonType={"spin"}
+										limitSpinToCurrentField={true}
+										value={this.state.licensedue}
+										valueChanged={this.licenseChanged} />
+							</div>
+							<div className="well">
+								Birthday: <IgDatePicker id="editor6"
+												ref="editorBirthday"
+												revertIfNotValid={true}
+												buttonType={"dropdown"}
+												minValue={new Date("1/1/1969")}
+								maxValue={new Date("1/1/2017")}
+								value={this.state.birthday}
+								valueChanged={this.birthdayChanged} />
+							</div>
+							<div className="well">
+								Location: <IgTextEditor id="editor7"
+												ref="editorLocation"
+												value={this.state.yourLocation}
+												valueChanged={this.locationChanged} />
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			)
+			}
+			})
+
+			// main component
+			var App = React.createClass({
+
+			render: function () {
+			return (
+			<div>
+
+				<EditForm />
+			</div>
+			);
+			},
+
+			});
+
+			ReactDOM.render(
+			<App />,
+			document.getElementById("app")
+			);
+
+		</script>
+	</div>
+</body>
+</html>
