@@ -107,6 +107,10 @@ Defining complex type control options (`arrays` & `objects`) in `JSX` is done by
 
 **Note:** Some Ignite UI controls require an `id` attribute for the DOM element they initialize on. It can be passed through the control's React class `id` property.
 
+### Updating options
+
+Option updates during runtime can be achieved by using React's [setState](https://facebook.github.io/react/docs/react-component.html#setstate) method. Some of Ignite UI widgets options are not settable at runtime. For these prop changes have no effect.
+
 ### Handling events
 
 Binding to control events is done by passing the event name as a property and assigning the handling function as its value.
@@ -117,6 +121,33 @@ Binding to control events is done by passing the event name as a property and as
 		id="editor1"
 		valueChanged={this.editorValueChanged}
 	/>
+
+In addition to the events available for each Ignite UI widget the React controls will also invoke the function passed for the `initialized` property when the widget is ready for use.
+
+#### Example:
+
+	<IgTextEditor
+		id="editor1"
+		initialized={this.controlInitialized}
+	/>
+
+### Calling widget methods
+
+Calling widget methods can be done in two ways both utilizing functions available in the `$.ig.react.core` namespace. You can either obtain the widget's instance using the React component and its name directly.
+
+#### Example:
+
+```JavaScript
+	$.ig.react.core.getWidgetInstance(gridComponent, "igGrid").commit();
+```
+
+Or get the DOM element it is initialized on and calling the method through jQuery UI's plugin.
+
+#### Example:
+
+```JavaScript
+	$.ig.react.core.getElement(gridComponent).igGrid("commit");
+```
 
 ## Testing
 
