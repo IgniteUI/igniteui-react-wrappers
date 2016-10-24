@@ -1,5 +1,6 @@
 # Ignite UI Components for React
 
+[![NPM version](https://img.shields.io/npm/v/igniteui-react.svg?style=flat)](https://www.npmjs.com/package/igniteui-react)
 [![Build Status](https://travis-ci.org/IgniteUI/igniteui-react.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)
 
