@@ -1,5 +1,5 @@
 function main() {
-    describe("Basic test igDataChart", function() {
+    describe("Basic test igZoombar", function() {
         var data = [{
             "CountryName": "China",
             "Pop1995": 1216,
@@ -7,8 +7,8 @@ function main() {
             "Pop2015": 1361,
             "Pop2025": 1394
         }],
-        opts = {
-            id: "igComponent",
+        chartOpts = {
+            id: "datachart1",
             dataSource: data,
             axes: [{
                     name: "NameAxis",
@@ -31,8 +31,12 @@ function main() {
                     yAxis: "PopulationAxis",
                     valueMemberPath: "Pop2015"
                 }]
-        };        
-            $.ig.react.test.async("igDataChart", opts);
+        };
+        $.ig.react.test.createOrUpdateComponent(IgDataChart, chartOpts, "datachart1_wrapper");
+        $.ig.react.test.async("igZoombar", {
+            id: "igComponent",
+            target: "#datachart1"
+        });
     });
 }
 exports.main = main;

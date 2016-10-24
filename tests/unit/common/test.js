@@ -27,15 +27,6 @@ function main() {
         igMap: {
             skip: true
         },
-        IgLayoutManager: {
-            skip: true
-        },
-        IgValidator: {
-            skip: true
-        },
-        IgVideoPlayer: {
-            skip: true
-        },
         IgZoombar: {
             skip: true
         }
