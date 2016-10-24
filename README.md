@@ -109,7 +109,33 @@ Defining complex type control options (`arrays` & `objects`) in `JSX` is done by
 
 ### Updating options
 
-Option updates during runtime can be achieved by using React's [setState](https://facebook.github.io/react/docs/react-component.html#setstate) method. Some of Ignite UI widgets options are not settable at runtime. For these prop changes have no effect.
+Option updates during runtime can be achieved by using React's [setState](https://facebook.github.io/react/docs/react-component.html#setstate) method. Some of Ignite UI widgets options are not settable at runtime. For these, prop changes have no effect.
+
+#### Example:
+
+	var App = React.createClass({
+		getInitialState: function () {
+			return {
+				alternateRowStyles: true
+			}
+		},
+		render: function () {
+			return (
+				<div>
+					<IgGrid 
+						id="grid1"
+						autoGenerateColumns={true}
+						dataSource={sourceData}
+						alternateRowStyles={this.state.alternateRowStyles}
+					/>
+					<button onClick={this.buttonClick}>Change</button>
+				</div>
+			);
+		},
+		buttonClick: function (evt) {
+			this.setState({ alternateRowStyles: !this.state.alternateRowStyles });
+		}
+	});
 
 ### Handling events
 
