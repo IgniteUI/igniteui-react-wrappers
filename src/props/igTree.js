@@ -48,12 +48,10 @@
 		customDropValidation: React.PropTypes.oneOfType([	
 			React.PropTypes.func
 		]),
-		containment: React.PropTypes.oneOf([
-			"bool",
-			"selector",
-			"element",
-			"string",
-			"array"
+		containment: React.PropTypes.oneOfType([	
+			React.PropTypes.bool,
+			React.PropTypes.string,
+			React.PropTypes.array
 		]),
 		invalidMoveToMarkup: React.PropTypes.string,
 		moveToMarkup: React.PropTypes.string,

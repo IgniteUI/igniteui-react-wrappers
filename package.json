@@ -7,28 +7,28 @@
     "url": "https://github.com/IgniteUI/igniteui-react.git"
   },
   "dependencies": {
-    "react": "^15.3.2"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "babel-core": "^6.17.0"
   },
   "scripts": {
     "build": "npm run prepare-dist",
     "prepare-dist": "uglifyjs src/props/* src/util/* src/components/* -b -o dist/npm/igniteui-react.js && uglifyjs dist/npm/igniteui-react.js -o dist/npm/igniteui-react.min.js",
-
     "pretest": "npm run build",
-    "test": "karma start tests/karma.conf.js && npm run remap-istanbul",
-    "remap-istanbul": "npm run copy-coverage-report && npm run remap-istanbul-html && npm run remap-istanbul-lcov",
-    "remap-istanbul-html": "remap-istanbul -i coverage/karma-tmp/coverage.json -o coverage/html-report -t html",
-    "remap-istanbul-lcov": "remap-istanbul -i coverage/karma-tmp/coverage.json -o coverage/lcov.info -t lcovonly",
-    "copy-coverage-report": "cp coverage/karma-tmp/**/coverage*.json coverage/karma-tmp/"
+    "test": "karma start tests/karma.conf.js && npm run copy-coverage-report",
+    "copy-coverage-report": "cp coverage/karma-tmp/**/coverage*.json coverage/ && cp coverage/karma-tmp/**/lcov*.info coverage/"
   },
   "devDependencies": {
     "uglify-js": "^2.7.3",
     "jasmine-core": "^2.4.1",
+    "jspm": "^0.16.46",
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.2.2",
     "karma-junit-reporter": "^0.4.2",
-    "karma-coverage": "",
+    "karma-coverage": "^1.1.1",
     "karma-remap-istanbul": "",
-    "coveralls": "^2.11.9"
+    "systemjs": "^0.19.39",
+    "coveralls": "^2.11.14"
   }
 }
