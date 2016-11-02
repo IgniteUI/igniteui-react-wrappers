@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>IgniteUI ReactJS Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--IgniteUI CSS refs-->
+    <link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css"
+        rel="stylesheet" />
+    <link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <!--//IgniteUI CSS refs-->
+    <link rel="stylesheet" href="https://igniteui.github.io/igniteui-react/samples/sample.css" type="text/css" />
+
+    <!--JavaScript refs-->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--IgniteUI refs-->
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+	<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+    <!--React-->
+    <script src="../../src/props/igGrid.js"></script>
+    <script src="../../src/props/igChart.js"></script>
+    <script src="../../src/util/ignite-react.js"></script>
+    <script src="../../src/components/igGrid.js"></script>
+    <script src="../../src/components/igEditors.js"></script>
+    <script src="../../src/components/igChart.js"></script>
+    <script src="../../src/components/igShared.js"></script>
+    <!--//React-->
+    <!--IgniteUI refs-->
+    <script type="text/javascript">
+		var sourceData = {
+			"PersonalFinance": [
+				{ "Id": "1", "Name":"Antony", "Income":650, "Outcome": 300, "Date":"10/20/2016" },
+				{ "Id": "2", "Name":"Brick", "Income":1155, "Outcome": 800, "Date":"10/21/2016" },
+				{ "Id": "3", "Name":"Mike", "Income":550, "Outcome": 400, "Date":"10/25/2016" },
+				{ "Id": "4", "Name":"Anna", "Income":1050, "Outcome": 300, "Date":"10/10/2016" },
+				{ "Id": "5", "Name":"Oleg", "Income":750, "Outcome": 400, "Date":"10/20/2016" },
+				{ "Id": "6", "Name":"Sonya", "Income":950, "Outcome": 600, "Date":"10/10/2016" }
+			]
+		}
+	</script>
+
+    <style>
+        .ui-state-hover,
+        .ui-widget-content .ui-state-hover {
+            color: #070707;
+        }
+        .header{
+            color: #337ab7;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/igniteui-react/index.html">Home</a></li>
+                    <li><a href="https://github.com/IgniteUI/igniteui-react">View on GitHub <i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="push-down-md header">Dashboard using <a href="http://igniteui.com/grid/overview" target="_blank">igGrid</a> and <a href="http://www.igniteui.com/data-chart/overview" target="_blank">igDataChart</a></h1>
+
+        <div class="row description">
+            <div class="alert alert-info col-md-5 try-it-out">
+                <span class="h4">TRY IT OUT:</span>
+                <hr />
+                <ul>
+                    <li>Select a row that you would like to edit</li>
+                    <li>Change the Income or the Outcome of the selected person by using the editors.</li>
+                    <li>Observe how the grid and chart values are changing.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <p class="lead">This sample demonstrates how to reflect every change in the igGrid data source on the igDataChart by using ReactJS.</p>
+                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/dashboard.html" class="btn btn-default btn-lg btn-primary"
+                        target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+            </div>
+        </div>
+
+        <hr/>
+        <div id="app">
+            <!-- to use JSX in our HTML -->
+            <script type="text/babel">
+        var IgEditBox = React.createClass({
+                render: function () {
+                    var rowId =  this.props.rowId,
+                        v = rowId > -1;
+                    return (
+                        <div className="editorBox" style={{"display": v ? "block": "none"}}>
+							<h4>Change values in row with ID <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>:</h4>
+							<div className="well well-sm col-md-4">
+								<div className="row">
+									<label htmlFor="editor1" className="col-xs-2 col-form-label">Income: </label>
+									<div className="col-xs-10">
+                                        <IgNumericEditor
+                                                ref="editorIncome"
+                                                id="editor1"
+                                                width="100%"
+                                                className="form-control"
+                                                keypress={this.handleTextEditorKeyPress}
+                                                value={this.props.incomeValue}/>
+									</div>
+								</div>	
+								<div className="row">
+									<label htmlFor="editor2" className="col-xs-2 col-form-label">Outcome: </label>
+									<div className="col-xs-10">
+                                        <IgNumericEditor
+                                                ref="editorOutcome"
+                                                id="editor2"
+                                                width="100%"
+                                                className="form-control"
+                                                keypress={this.handleTextEditorKeyPress}
+                                                value={this.props.outcomeValue}/>
+									</div>
+								</div>	
+                                <div className="row">
+                            <div className="col-md-6" style={{ "float": "right" }}><div style={{ "float": "inherit" }}><IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} /></div></div>
+                        </div>
+								
+							</div>
+						</div>
+                    );
+                },
+                handleTextEditorKeyPress: function (e, args) {
+                    if (args.key === $.ui.keyCode.ENTER) {
+                        this.handleButtonUpdateClick(e);
+                    }
+                },
+                handleButtonUpdateClick: function (e) {
+                    var func = this.props.btnUpdateClicked;
+
+                    if (func) {
+                        func(e, 
+                        this.props.rowId, 
+                        this.refs.editorIncome.igControl.value(),
+                        this.refs.editorOutcome.igControl.value());
+                    }
+                }
+            });
+            var Dashboard = React.createClass({
+                getInitialState: function () {
+					return {
+						// the view is the grid and the chart data source in this case
+						view: sourceData,
+                        selectedRowId: -1,
+                        incomeValue: null,
+                        outcomeValue: null,
+                        selectedRowIndex: -1
+					}
+				},
+                render: function(){
+                    return (
+                        <div>
+							<div className="row">
+								<div className="col-md-8">
+                                    <IgGrid 
+                                            id="grid1"
+                                            ref="grid1"
+                                            autoGenerateColumns={false}
+                                            dataSource={this.state.view}
+                                            /*dataSourceCommands={this.state.igGridCommands}*/
+                                            primaryKey="Id"
+                                            autoCommit={true}
+                                            height="340px"
+                                            width="700px"
+                                            columns={[
+                                                { headerText: "Id", key: "Id", dataType: "number" },
+                                                { headerText: "Name", key: "Name", dataType: "string" },
+                                                { headerText: "Income", key: "Income", dataType: "number" },
+                                                { headerText: "Outcome", key: "Outcome", dataType: "number"},
+                                                { headerText: "Date", key: "Date", dataType: "date", format: "dateTime" }
+                                            ]}
+                                            responseDataKey="PersonalFinance"
+                                            features={[
+                                                { name: "Selection", rowSelectionChanged: this.gridRowSelectionChanged },
+                                                { name: "Updating", editRowEnded: this.gridRowUpdated, enableDeleteRow: false, enableAddRow: false, editMode: "none"}
+                                            ]}
+                                        />
+                                </div>
+							<br />
+                            <div className="col-md-4">
+                                    <IgDataChart 
+                                        id="chart1"
+                                        ref="chart1"   
+                                        height="340px"
+                                        dataSource={this.state.view}
+                                        dataSourceType="json"
+                                        responseDataKey="PersonalFinance"
+                                        axes={[
+                                                {
+                                                    name: "NameAxis",
+                                                    type: "categoryX",
+                                                    title: "Name",
+                                                    label: "Name"
+                                                },
+                                                {
+                                                    name: "FinanceAxis",
+                                                    type: "numericY",
+                                                    minimumValue: 0
+                                                }
+                                            ]}
+                                        series={[
+                                            {
+                                                name: "PersonalFinanceIncome",
+                                                type: "column",
+                                                isTransitionInEnabled: true,
+                                                xAxis: "NameAxis",
+                                                yAxis: "FinanceAxis",
+                                                valueMemberPath: "Income",
+                                                lableMemberPath: "Name",
+                                                transitionDuration: 300 
+                                            },
+                                            {
+                                                name: "PersonalFinanceOutcome",
+                                                type: "column",
+                                                isTransitionInEnabled: true,
+                                                xAxis: "NameAxis",
+                                                yAxis: "FinanceAxis",
+                                                valueMemberPath: "Outcome",
+                                                transitionDuration: 300 
+                                            }
+                                        ]}                                
+                                    />
+                                </div>
+                            <br />
+                            <IgEditBox ref="selectedRowInfo" 
+                                btnUpdateClicked={this.editBoxHandleUpdate}
+                                incomeValue={this.state.incomeValue}
+                                outcomeValue={this.state.outcomeValue}
+                                rowId={this.state.selectedRowId} />
+                        </div>
+                        </div>
+                    );
+                },
+               /* helper functions */
+                getGridInstance: function (gridRefName) {
+                    gridRefName = gridRefName || "grid1";
+                    return (this.refs[gridRefName] || {}).igControl;
+                },
+                getChartInstance: function (chartRefName) {
+                    chartRefName = chartRefName || "chart1";
+                    return (this.refs[chartRefName] || {}).igControl;
+                },
+                getGridUpdating: function (gridRefName) {
+                    var grid = this.getGridInstance(gridRefName);
+                    if (!grid || !grid.element) {
+                        return null;
+                    }
+                    return grid.element.data("igGridUpdating");
+                },
+                getOutcomeByRowId: function (rowId) {
+                    var grid = this.getGridInstance(),
+                        outcome, record;
+                    if (rowId > -1 && grid) {
+                        record = grid.dataSource.findRecordByKey(rowId) || {};
+                        outcome = record["Outcome"];
+                    }
+                    return outcome;
+                },
+                getIncomeByRowId: function (rowId) {
+                    var grid = this.getGridInstance(),
+                        income, record;
+                    if (rowId > -1 && grid) {
+                        record = grid.dataSource.findRecordByKey(rowId) || {};
+                        income = record["Income"];
+                    }
+                    return income;
+                },
+                editBoxHandleUpdate: function (e, rowId, val1, val2) {
+                    var grid = this.getGridInstance(),
+                        upd, ds = this.state.view, index = this.state.selectedRowIndex;
+                        ds.PersonalFinance[ index ].Income = parseInt(val1);
+                        ds.PersonalFinance[ index ].Outcome = parseInt(val2);
+
+                    if (grid && rowId > -1) {
+                        upd = this.getGridUpdating();
+                        if (upd) {
+                            upd.updateRow(
+                                rowId, 
+                                {
+                                    "Outcome": val2, 
+                                    "Income" : val1
+                                });
+                        }
+                    }
+                    this.editoBoxChartHandleUpdate();
+                },
+                editoBoxChartHandleUpdate: function(){
+                    var chartRef = this.getChartInstance(),
+                    index = this.state.selectedRowIndex,
+                    ds = this.state.view.PersonalFinance,
+                    item = ds[ index ];
+
+                    this.refs.chart1.igControl.notifySetItem(ds, index, item,item);
+
+                },            
+                gridRowSelectionChanged: function (evt, ui) {
+                    var rowId = ui.row.id;
+                    this.setState({ selectedRowId: rowId, 
+                                    outcomeValue: this.getOutcomeByRowId(rowId) ,
+                                    incomeValue: this.getIncomeByRowId(rowId) ,
+                                    selectedRowIndex: ui.row.index
+                                    });
+				}
+            });
+
+            ReactDOM.render(
+                <Dashboard />,
+                document.getElementById("app")
+            );
+        </script>
+        </div>
+    </div>
+    <hr/>
+    <footer>
+        <p>
+            <a href="/igniteui-react/index.html">Home</a> |
+            <a href="https://github.com/IgniteUI/igniteui-react/issues">Feedback &amp; Questions</a> |
+            <a href="https://github.com/IgniteUI/igniteui-react">Clone &amp; Fork</a>
+        </p>
+        <p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="http://igniteui.com">http://igniteui.com</a></p>
+    </footer>
+</body>
+
+</html>

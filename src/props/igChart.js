@@ -71,7 +71,7 @@
 		crossingAxis: React.PropTypes.string,
 		crossingValue: React.PropTypes.object,
 		coercionMethods: React.PropTypes.object,
-		label: React.PropTypes.object,
+		label: React.PropTypes.string,
 		gap: React.PropTypes.number,
 		overlap: React.PropTypes.number,
 		startAngleOffset: React.PropTypes.number,
@@ -81,13 +81,13 @@
 			"discrete"
 		]),
 		isDataPreSorted: React.PropTypes.bool,
-		minimumValue: React.PropTypes.oneOf([
-			"number",
-			"date"
+		minimumValue: React.PropTypes.oneOfType([	
+			React.PropTypes.instanceOf(Date),
+			React.PropTypes.number
 		]),
-		maximumValue: React.PropTypes.oneOf([
-			"number",
-			"date"
+		maximumValue: React.PropTypes.oneOfType([	
+			React.PropTypes.instanceOf(Date),
+			React.PropTypes.number
 		]),
 		dateTimeMemberPath: React.PropTypes.string,
 		referenceValue: React.PropTypes.number,
