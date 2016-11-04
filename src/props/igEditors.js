@@ -13,7 +13,7 @@
 			React.PropTypes.string,
 			React.PropTypes.number
 		]),
-		value: React.PropTypes.object,
+		value: React.PropTypes.string,
 		tabIndex: React.PropTypes.number,
 		allowNullValue: React.PropTypes.bool,
 		nullValue: React.PropTypes.oneOfType([	
@@ -81,7 +81,7 @@
 			React.PropTypes.string,
 			React.PropTypes.number
 		]),
-		value: React.PropTypes.object,
+		value: React.PropTypes.string,
 		tabIndex: React.PropTypes.number,
 		allowNullValue: React.PropTypes.bool,
 		nullValue: React.PropTypes.oneOfType([	
@@ -140,7 +140,7 @@
 		toLower: React.PropTypes.object,
 		toUpper: React.PropTypes.object,
 		textMode: React.PropTypes.any,
-		value: React.PropTypes.object,
+		value: React.PropTypes.number,
 		buttonType: React.PropTypes.oneOf([
 			"dropdown",
 			"clear",
@@ -236,7 +236,7 @@
 		toLower: React.PropTypes.object,
 		toUpper: React.PropTypes.object,
 		textMode: React.PropTypes.any,
-		value: React.PropTypes.object,
+		value: React.PropTypes.string,
 		buttonType: React.PropTypes.oneOf([
 			"dropdown",
 			"clear",
@@ -333,7 +333,7 @@
 		toLower: React.PropTypes.object,
 		toUpper: React.PropTypes.object,
 		textMode: React.PropTypes.any,
-		value: React.PropTypes.object,
+		value: React.PropTypes.string,
 		buttonType: React.PropTypes.oneOf([
 			"dropdown",
 			"clear",
@@ -411,7 +411,7 @@
 		textMode: React.PropTypes.any,
 		visibleItemsCount: React.PropTypes.number,
 		maxLength: React.PropTypes.object,
-		value: React.PropTypes.object,
+		value: React.PropTypes.string,
 		textAlign: React.PropTypes.oneOf([
 			"left",
 			"right",
@@ -452,7 +452,7 @@
 
 	$.ig.react.propTypes.igDateEditor = {
 		id: React.PropTypes.string.isRequired,
-		value: React.PropTypes.object,
+		value: React.PropTypes.instanceOf(Date),
 		minValue: React.PropTypes.object,
 		maxValue: React.PropTypes.object,
 		dateDisplayFormat: React.PropTypes.string,
@@ -543,7 +543,7 @@
 		listItemHoverDuration: React.PropTypes.number,
 		listItems: React.PropTypes.object,
 		listWidth: React.PropTypes.number,
-		value: React.PropTypes.object,
+		value: React.PropTypes.instanceOf(Date),
 		minValue: React.PropTypes.object,
 		maxValue: React.PropTypes.object,
 		dateDisplayFormat: React.PropTypes.string,
@@ -630,7 +630,7 @@
 			React.PropTypes.string,
 			React.PropTypes.number
 		]),
-		value: React.PropTypes.object,
+		value: React.PropTypes.bool,
 		inputName: React.PropTypes.string,
 		disabled: React.PropTypes.bool,
 		validatorOptions: React.PropTypes.object
