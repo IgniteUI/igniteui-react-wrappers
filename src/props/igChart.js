@@ -81,13 +81,13 @@
 			"discrete"
 		]),
 		isDataPreSorted: React.PropTypes.bool,
-		minimumValue: React.PropTypes.oneOfType([	
-			React.PropTypes.instanceOf(Date),
-			React.PropTypes.number
+		minimumValue: React.PropTypes.oneOfType([
+			React.PropTypes.number,
+			React.PropTypes.instanceOf(Date)
 		]),
-		maximumValue: React.PropTypes.oneOfType([	
-			React.PropTypes.instanceOf(Date),
-			React.PropTypes.number
+		maximumValue: React.PropTypes.oneOfType([
+			React.PropTypes.number,
+			React.PropTypes.instanceOf(Date)
 		]),
 		dateTimeMemberPath: React.PropTypes.string,
 		referenceValue: React.PropTypes.number,
@@ -175,6 +175,7 @@
 			"typicalPriceIndicator",
 			"polarArea",
 			"polarLine",
+			"polarSpline",
 			"polarScatter",
 			"radialColumn",
 			"radialLine",
@@ -271,7 +272,7 @@
 		valueMemberPath: React.PropTypes.string,
 		radiusX: React.PropTypes.number,
 		radiusY: React.PropTypes.number,
-		angleMemberPath: React.PropTypes.number,
+		angleMemberPath: React.PropTypes.string,
 		radiusAxis: React.PropTypes.string,
 		useCartesianInterpolation: React.PropTypes.bool,
 		negativeBrush: React.PropTypes.string,
