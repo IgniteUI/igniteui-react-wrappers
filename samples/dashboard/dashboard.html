@@ -41,12 +41,12 @@
     <script type="text/javascript">
 		var sourceData = {
 			"PersonalFinance": [
-				{ "Id": "1", "Name":"Antony", "Income":650, "Outcome": 300, "Date":"10/20/2016" },
-				{ "Id": "2", "Name":"Brick", "Income":1155, "Outcome": 800, "Date":"10/21/2016" },
-				{ "Id": "3", "Name":"Mike", "Income":550, "Outcome": 400, "Date":"10/25/2016" },
-				{ "Id": "4", "Name":"Anna", "Income":1050, "Outcome": 300, "Date":"10/10/2016" },
-				{ "Id": "5", "Name":"Oleg", "Income":750, "Outcome": 400, "Date":"10/20/2016" },
-				{ "Id": "6", "Name":"Sonya", "Income":950, "Outcome": 600, "Date":"10/10/2016" }
+				{ "Id": "1", "Name":"Antony", "Revenue":650, "Expenses": 300, "Date":"10/20/2016" },
+				{ "Id": "2", "Name":"Brick", "Revenue":1155, "Expenses": 800, "Date":"10/21/2016" },
+				{ "Id": "3", "Name":"Mike", "Revenue":550, "Expenses": 400, "Date":"10/25/2016" },
+				{ "Id": "4", "Name":"Anna", "Revenue":1050, "Expenses": 300, "Date":"10/10/2016" },
+				{ "Id": "5", "Name":"Oleg", "Revenue":750, "Expenses": 400, "Date":"10/20/2016" },
+				{ "Id": "6", "Name":"Sonya", "Revenue":950, "Expenses": 600, "Date":"10/10/2016" }
 			]
 		}
 	</script>
@@ -94,7 +94,7 @@
                 <hr />
                 <ul>
                     <li>Select a row that you would like to edit</li>
-                    <li>Change the Income or the Outcome of the selected person by using the editors.</li>
+                    <li>Change the Revenue or the Expenses of the selected person by using the editors.</li>
                     <li>Observe how the grid and the chart values are changing.</li>
                 </ul>
             </div>
@@ -119,25 +119,25 @@
 								<h4>Change values in row with ID <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>:</h4>
 								<div className="well well-sm col-md-4">
 									<div className="row">
-										<label htmlFor="editor1" className="col-xs-2 col-form-label">Income: </label>
+										<label htmlFor="editor1" className="col-xs-2 col-form-label">Revenue: </label>
 										<div className="col-xs-10">
 											<IgNumericEditor
-													ref="editorIncome"
+													ref="editorRevenue"
 													id="editor1"
 													width="100%"
 													className="form-control"
-													value={this.props.incomeValue}/>
+													value={this.props.revenueValue}/>
 										</div>
 									</div>	
 									<div className="row">
-										<label htmlFor="editor2" className="col-xs-2 col-form-label">Outcome: </label>
+										<label htmlFor="editor2" className="col-xs-2 col-form-label">Expenses: </label>
 										<div className="col-xs-10">
 											<IgNumericEditor
-													ref="editorOutcome"
+													ref="editorExpenses"
 													id="editor2"
 													width="100%"
 													className="form-control"
-													value={this.props.outcomeValue}/>
+													value={this.props.expensesValue}/>
 										</div>
 									</div>	
 									<div className="row">
@@ -153,8 +153,8 @@
 						if (func) {
 							func(e, 
 							this.props.rowId, 
-							this.refs.editorIncome.igControl.value(),
-							this.refs.editorOutcome.igControl.value());
+							this.refs.editorRevenue.igControl.value(),
+							this.refs.editorExpenses.igControl.value());
 						}
 					}
 				});
@@ -165,8 +165,8 @@
 							// the view is the grid and the chart data source in this case
 							view: sourceData,
 							selectedRowId: -1,
-							incomeValue: null,
-							outcomeValue: null,
+							revenueValue: null,
+							expensesValue: null,
 							selectedRowIndex: -1
 						}
 					},
@@ -187,8 +187,8 @@
 											columns={[
 												{ headerText: "Id", key: "Id", dataType: "number" },
 												{ headerText: "Name", key: "Name", dataType: "string" },
-												{ headerText: "Income", key: "Income", dataType: "number" },
-												{ headerText: "Outcome", key: "Outcome", dataType: "number"},
+												{ headerText: "Revenue", key: "Revenue", dataType: "number" },
+												{ headerText: "Expenses", key: "Expenses", dataType: "number"},
 												{ headerText: "Date", key: "Date", dataType: "date", format: "dateTime" }
 											]}
 											responseDataKey="PersonalFinance"
@@ -222,22 +222,22 @@
 													]}
 												series={[
 													{
-														name: "PersonalFinanceIncome",
+														name: "PersonalFinanceRevenue",
 														type: "column",
 														isTransitionInEnabled: true,
 														xAxis: "NameAxis",
 														yAxis: "FinanceAxis",
-														valueMemberPath: "Income",
+														valueMemberPath: "Revenue",
 														lableMemberPath: "Name",
 														transitionDuration: 300 
 													},
 													{
-														name: "PersonalFinanceOutcome",
+														name: "PersonalFinanceExpenses",
 														type: "column",
 														isTransitionInEnabled: true,
 														xAxis: "NameAxis",
 														yAxis: "FinanceAxis",
-														valueMemberPath: "Outcome",
+														valueMemberPath: "Expenses",
 														transitionDuration: 300 
 													}
 												]}                                
@@ -246,8 +246,8 @@
 									<br />
 									<IgEditBox ref="selectedRowInfo" 
 										btnUpdateClicked={this.editBoxHandleUpdate}
-										incomeValue={this.state.incomeValue}
-										outcomeValue={this.state.outcomeValue}
+										revenueValue={this.state.revenueValue}
+										expensesValue={this.state.expensesValue}
 										rowId={this.state.selectedRowId} 
 									/>
 								</div>
@@ -270,29 +270,29 @@
 						}
 						return grid.element.data("igGridUpdating");
 					},
-					getOutcomeByRowId: function (rowId) {
+					getExpensesByRowId: function (rowId) {
 						var grid = this.getGridInstance(),
-							outcome, record;
+							expenses, record;
 						if (rowId > -1 && grid) {
 							record = grid.dataSource.findRecordByKey(rowId) || {};
-							outcome = record["Outcome"];
+							expenses = record["Expenses"];
 						}
-						return outcome;
+						return expenses;
 					},
-					getIncomeByRowId: function (rowId) {
+					getRevenueByRowId: function (rowId) {
 						var grid = this.getGridInstance(),
-							income, record;
+							revenue, record;
 						if (rowId > -1 && grid) {
 							record = grid.dataSource.findRecordByKey(rowId) || {};
-							income = record["Income"];
+							revenue = record["Revenue"];
 						}
-						return income;
+						return revenue;
 					},
 					editBoxHandleUpdate: function (e, rowId, val1, val2) {
 						var grid = this.getGridInstance(),
 							upd, ds = this.state.view, index = this.state.selectedRowIndex;
-							ds.PersonalFinance[ index ].Income = parseInt(val1);
-							ds.PersonalFinance[ index ].Outcome = parseInt(val2);
+							ds.PersonalFinance[ index ].Revenue = parseInt(val1);
+							ds.PersonalFinance[ index ].Expenses = parseInt(val2);
 
 						if (grid && rowId > -1) {
 							upd = this.getGridUpdating();
@@ -300,8 +300,8 @@
 								upd.updateRow(
 									rowId, 
 									{
-										"Outcome": val2, 
-										"Income" : val1
+										"Expenses": val2, 
+										"Revenue" : val1
 									});
 							}
 						}
@@ -319,8 +319,8 @@
 					gridRowSelectionChanged: function (evt, ui) {
 						var rowId = ui.row.id;
 						this.setState({ selectedRowId: rowId, 
-										outcomeValue: this.getOutcomeByRowId(rowId) ,
-										incomeValue: this.getIncomeByRowId(rowId) ,
+										expensesValue: this.getExpensesByRowId(rowId) ,
+										revenueValue: this.getRevenueByRowId(rowId) ,
 										selectedRowIndex: ui.row.index
 										});
 					}
