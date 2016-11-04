@@ -1,238 +1,418 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8" />
-	<title>Basic ReactJS Sample/POC</title>
+	<title>IgniteUI ReactJS Grid</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--Css refs-->
-    <link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-	<link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.shared.css" rel="stylesheet" />
-    <link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.grid.css" rel="stylesheet" />
-    <link type="text/css" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.editors.css" rel="stylesheet" />
-    <!--//Css refs-->
-    
-    <!--JavaScript refs-->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
-
-	<!--IgniteUI refs-->
-    <!--Localization-->
- 	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.datasource-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.grid-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.editors-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.combo-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.validator-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.tree-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.popover-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.pivotdataselector-en.js"></script>
-	<script type="text/javascript" src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/infragistics.ui.pivotgrid-en.js"></script>
-	<!--//Localization-->
-
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.util.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.datasource.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.shared.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.framework.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.shared.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.editors.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.updating.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.sorting.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.paging.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.popover.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.featurechooser.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.filtering.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.ui.grid.selection.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.templating.js"></script>
-    <!--React-->
-    <script src="../../src/props/igGrid.js"></script>
-    <script src="../../src/util/ignite-react.js"></script>
-    <script src="../../src/components/igGrid.js"></script>
-    <script src="../../src/components/igEditors.js"></script>
-    <script src="../../src/components/igShared.js"></script>
-    <!--//React-->
-    <!--IgniteUI refs-->
-
-
+	<!--IgniteUI CSS refs-->
+    <link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../sample.css" />
+    <!--//IgniteUI CSS refs-->	
+	<style>
+		.ui-state-hover, .ui-widget-content .ui-state-hover {
+			color: #070707;
+		}
+	</style>
+	
 	<script type="text/javascript">
 		var sourceData = {
 			"Products": [
-				{ "ProductID": 1, "UnitsInStock": 385, "ProductDescription": "hcupquwaf oh", "UnitPrice": 358.74353459046387, "DateAdded": "2004-06-20T20:18:20.469", InStock: true }, { "ProductID": 2, "UnitsInStock": 602, "ProductDescription": "eliyoqfqfei", "UnitPrice": 140.2894189303226, "DateAdded": "2000-02-21T22:56:16.331", InStock: true }, { "ProductID": 3, "UnitsInStock": 608, "ProductDescription": "vduejuievck", "UnitPrice": 567.43131092164253, "DateAdded": "2002-04-21T09:06:07.142", InStock: true }, { "ProductID": 4, "UnitsInStock": 402, "ProductDescription": "kdargy", "UnitPrice": 785.99307722691128, "DateAdded": "2001-03-27T03:57:27.373", InStock: true }, { "ProductID": 5, "UnitsInStock": 338, "ProductDescription": "wdilltsp", "UnitPrice": 157.42114473014192, "DateAdded": "2006-02-28T21:22:04.059", InStock: true }, { "ProductID": 6, "UnitsInStock": 163, "ProductDescription": "je uflu", "UnitPrice": 178.17069924351324, "DateAdded": "1996-10-24T06:51:53.93", InStock: true }, { "ProductID": 7, "UnitsInStock": 754, "ProductDescription": "stda", "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true }
+				{ "ProductID": 1, "Name": "Chairs", "UnitsInStock": 385, "UnitPrice": 358.74353459046387, "DateAdded": "2004-06-20T20:18:20.469", InStock: true },
+				{ "ProductID": 2, "Name": "Kitchen knifes", "UnitsInStock": 602, "UnitPrice": 140.2894189303226, "DateAdded": "2000-02-21T22:56:16.331", InStock: true },
+				{ "ProductID": 3, "Name": "Screwdrivers", "UnitsInStock": 608, "UnitPrice": 567.43131092164253, "DateAdded": "2002-04-21T09:06:07.142", InStock: true },
+				{ "ProductID": 4, "Name": "Desk lamps", "UnitsInStock": 402, "UnitPrice": 785.99307722691128, "DateAdded": "2001-03-27T03:57:27.373", InStock: true },
+				{ "ProductID": 5, "Name": "Monitors", "UnitsInStock": 338, "UnitPrice": 157.42114473014192, "DateAdded": "2006-02-28T21:22:04.059", InStock: true },
+				{ "ProductID": 6, "Name": "Beds", "UnitsInStock": 163, "UnitPrice": 178.17069924351324, "DateAdded": "1996-10-24T06:51:53.93", InStock: true },
+				{ "ProductID": 7, "Name": "Dinner tables", "UnitsInStock": 163, "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true },
+				{ "ProductID": 8, "Name": "Dinner tables", "UnitsInStock": 163, "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true },
+				{ "ProductID": 9, "Name": "Dinner tables", "UnitsInStock": 163, "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true },
+				{ "ProductID": 10, "Name": "Dinner tables", "UnitsInStock": 163, "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true },
+				{ "ProductID": 11, "Name": "Dinner tables", "UnitsInStock": 163, "UnitPrice": 641.50092314998665, "DateAdded": "1999-11-19T06:10:35.984", InStock: true }
 			]
 		}
 	</script>
 </head>
-<body>
+<body class="container">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Ignite UI ReactJS Component</a> 
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/igniteui-react/index.html">Home</a></li>
+                    <li><a href="https://github.com/IgniteUI/igniteui-react">View on GitHub <i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+<div >
+	<h1 class="push-down-md"><a href="https://igniteui.com/grid/overview" target="_blank">igGrid</a></h1>
+    
+    <div class="row description">
+        <div class="alert alert-info col-md-5 try-it-out">
+            <span class="h4">TRY IT OUT:</span>
+            <hr />
+            <ul>
+                <li>Select a row that you would like to edit</li>
+                <li>Change a product's name in the group of textboxes below, click update and see how the names change in the grid</li>
+                <li>Delete a product either through the grid's UI or with the button bellow the current selected product in the window next to the grid</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <p class="lead">This sample demonstrates how ReactJS can be used to create igGrid and add two-way data binding. </p>
+            <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/igGrid/igGrid.html" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+        </div>
+    </div>
+	
 	<div id="app">
 		 <!-- to use JSX in our HTML -->
 		<script type="text/babel">
 			// everything below will be up to the users to write
-            var IgEditBox = React.createClass({
-                render: function () {
-                    var rowId =  this.props.rowId,
-                        v = rowId > -1;
-                    return (
-                        <div className="editorBox" style={{"display": v ? "block": "none"}}>
-                            Change value in Cell Description(for row with id <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>):
-                            <IgTextEditor
-                                    ref="editor"
-                                    id="editor1"
-                                    keypress={this.handleTextEditorKeyPress}
-                                    value={this.props.value}/>
-                            <IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} />
-                            <IgButton id="btnDelete" labelText="Delete" click={this.handleButtonDeleteClick} />
-                        </div>
-                    );
-                },
-                handleTextEditorKeyPress: function (e, args) {
-                    if (args.key === $.ui.keyCode.ENTER) {
-                        this.handleButtonUpdateClick(e);
-                    }
-                },
-                handleButtonDeleteClick: function (e) {
-                    var func = this.props.btnDeleteClicked;
-                    if (func) {
-                        func(e, this.props.rowId);
-                    }
-                },
-                handleButtonUpdateClick: function (e) {
-                    var func = this.props.btnUpdateClicked;
-                    if (func) {
-                        func(e, this.props.rowId, this.refs.editor.igControl.value());
-                    }
-                }
-            });
-            // main component
+			var IgEditBox = React.createClass({
+				render: function () {
+					var rowId =  this.props.rowId,
+						v = rowId > -1;
+					return (
+						<div className="editorBox" style={{"display": v ? "block": "none"}}>
+							<h4>Change values in row with ID <span style={{"fontWeight": "bold"}}>{this.props.rowId}</span>:</h4>
+							<div className="well well-sm">
+								<div className="row">
+									<label htmlFor="editor1" className="col-xs-2 col-form-label" style={{"marginTop": "5px"}}>Name: </label>
+									<div className="col-xs-10">
+										<IgTextEditor
+											ref="editorName"
+											id="editor1"
+											width="100%"
+											keypress={this.handleTextEditorKeyPress}
+											value={this.props.nameValue}/>
+									</div>
+								</div>
+								<div className="row">
+									<label htmlFor="editor2" className="col-xs-2 col-form-label" style={{"marginTop": "5px"}}>Stock: </label>
+									<div className="col-xs-10">
+										<IgNumericEditor
+											ref="editorStock"
+											id="editor2"
+											width="100%"
+											textAlign="left"
+											keypress={this.handleTextEditorKeyPress}
+											value={this.props.stockValue}/>
+									</div>
+								</div>
+								<div className="row">
+									<label htmlFor="editor3" className="col-xs-2 col-form-label" style={{"marginTop": "5px"}}>Price: </label>
+									<div className="col-xs-10">
+										<IgNumericEditor
+											ref="editorPrice"
+											id="editor3"
+											width="100%"
+											textAlign="left"
+											keypress={this.handleTextEditorKeyPress}
+											value={this.props.priceValue}/>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-6"><div style={{ "float": "right" }}><IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} /></div></div>
+									<div className="col-md-6"><div style={{ "float": "left" }}><IgButton id="btnDelete" labelText="Delete" click={this.handleButtonDeleteClick} /></div></div>
+								</div>
+								
+							</div>
+						</div>
+					);
+				},
+				handleTextEditorKeyPress: function (e, args) {
+					if (args.key === $.ui.keyCode.ENTER) {
+						this.handleButtonUpdateClick(e);
+					}
+				},
+				handleTextEditorKeyDown: function (e) {
+					if (e.keyCode === $.ui.keyCode.ENTER) {
+						this.handleButtonUpdateClick(e);
+					}
+				},
+				handleButtonDeleteClick: function (e) {
+					var func = this.props.btnDeleteClicked;
+					if (func) {
+						func(e, this.props.rowId);
+					}
+				},
+				handleButtonUpdateClick: function (e) {
+					var func = this.props.btnUpdateClicked;
+					if (func) {
+						func(e,
+							this.props.rowId,
+							this.refs.editorName.igControl.value(),
+							this.refs.editorStock.igControl.value(),
+							this.refs.editorPrice.igControl.value());
+					}
+				}
+			});
+			
+			var IgDialogBox = React.createClass({
+				render: function () {
+					return (
+						<IgDialog
+							id="dialog1"
+							ref="deleteDialog"
+							width="325px"
+							height="210px"
+							resizable="false"
+							headerText="Confirm Row Delete"
+							state={this.props.dialogState}
+							stateChanging={this.handleDialogStateChanging}>
+							<h3 ref="dialogText">Are you sure you want to delete row with ID {this.props.rowId} ?</h3>
+							<br />
+							<div className="col-md-6" style={{ "textAlign": "center" }}>
+								<IgButton id="btnAccept" labelText="Accept" click={this.handleDeleteDialogAccept} />
+							</div>
+							<div className="col-md-6" style={{ "textAlign": "center" }}>
+								<IgButton id="btnCancel" labelText="Cancel" click={this.handleDeleteDialogCancel} />
+							</div>
+						</IgDialog>
+					);
+				},
+				componentWillReceiveProps(nextProps) {
+				  if (this.props.rowId !== nextProps.rowId) {
+					$(this.refs.dialogText).html("Are you sure you want to delete row with ID " + nextProps.rowId + " ?");
+				  }
+				},
+				handleDialogStateChanging: function (evt, ui) {
+					this.props.dialogStateChanging(evt, ui);
+				},
+				handleDeleteDialogAccept: function () {
+					this.props.deleteDialogAccept();
+				},
+				handleDeleteDialogCancel: function () {
+					this.props.deleteDialogCancel();
+				}				
+			});
+			// main component
 			var App = React.createClass({
 				getInitialState: function () {
 					return {
 						// the view is the grid data source in this case
 						view: sourceData,
-						gridHeight: "200px",
-                        selectedRowId: -1,
-                        selectedValue: null
+						gridHeight: "400px",
+						gridWidth: "100%",
+						selectedRowId: -1,
+						deleteRowId: -1,
+						nameValue: null,
+						stockValue: null,
+						priceValue: null,
+						dialogState: "closed"
 					}
 				},
 				render: function () {
 					return (
 						<div>
-							<IgGrid 
-								id="grid1"
-								ref="grid1"
-								autoGenerateColumns={false}
-								dataSource={this.state.view}
-								/*dataSourceCommands={this.state.igGridCommands}*/
-								primaryKey="ProductID"
-								autoCommit={true}
-								height={this.state.gridHeight}
-								width="700px"
-								columns={[
-									{ headerText: "Product ID", key: "ProductID", dataType: "number" },
-									{ headerText: "Stock", key: "UnitsInStock", dataType: "number" },
-									{ headerText: "Description", key: "ProductDescription", dataType: "string" },
-									{ headerText: "UnitPrice", key: "UnitPrice", dataType: "number", format: "#.##" },
-									{ headerText: "DateAdded", key: "DateAdded", dataType: "date", format: "dateTime" }
-								]}
-								responseDataKey="Products"
-								features={[
-									{ name: "Selection", rowSelectionChanged: this.gridRowSelectionChanged },
-                                    { name: "Updating", editRowEnded: this.gridRowUpdated, rowDeleted: this.gridRowDeleted }
-								]}
-							/>
-							<br />
-                            <IgEditBox ref="selectedRowInfo" 
-                                btnDeleteClicked={this.editBoxHandleDelete}
-                                btnUpdateClicked={this.editBoxHandleUpdate}
-                                value={this.state.selectedValue}
-                                rowId={this.state.selectedRowId} />
-
-
-							<br />
-							Change Option Height: <IgTextEditor id="editor2"
-											ref="editorGridHeight"
-											value={this.state.gridHeight}
-											valueChanged={this.heightChanged} />
+							<div className="row">
+								<div className="col-md-8">
+									<IgGrid 
+										id="grid1"
+										ref="grid1"
+										autoGenerateColumns={false}
+										dataSource={this.state.view}
+										/*dataSourceCommands={this.state.igGridCommands}*/
+										primaryKey="ProductID"
+										autoCommit={true}
+										height={this.state.gridHeight}
+										width={this.state.gridWidth}
+										columns={[
+											{ headerText: "Product ID", key: "ProductID", dataType: "number" },
+											{ headerText: "Name", key: "Name", dataType: "string" },
+											{ headerText: "Stock", key: "UnitsInStock", dataType: "number" },
+											{ headerText: "UnitPrice", key: "UnitPrice", dataType: "number", format: "#.##" },
+											{ headerText: "DateAdded", key: "DateAdded", dataType: "date", format: "dateTime" }
+										]}
+										responseDataKey="Products"
+										features={[
+											{ name: "Selection", rowSelectionChanged: this.gridRowSelectionChanged },
+											{ name: "Updating", editRowEnded: this.gridRowUpdated, rowDeleted: this.gridRowDeleted }
+										]}
+									/>
+								</div>
+								<div id="editArea" className="col-md-4">
+									<h3>Grid options</h3>
+									<div className="well well-sm">
+										<div className="row">
+											<label htmlFor="editor2" className="col-xs-2 col-form-label" style={{"marginTop": "5px"}}>Width: </label>
+											<div className="col-xs-10">
+												<IgTextEditor id="editor2"
+													width="100%"
+													ref="editorGridWidth"
+													value={this.state.gridWidth}
+													valueChanged={this.widthChanged} />
+											</div>
+										</div>
+										<div className="row">
+											<label htmlFor="editor3" className="col-xs-2 col-form-label" style={{"marginTop": "5px"}}>Height: </label>
+											<div className="col-xs-10">
+												<IgTextEditor id="editor3"
+													width="100%"
+													ref="editorGridHeight"
+													value={this.state.gridHeight}
+													valueChanged={this.heightChanged} />
+											</div>
+										</div>
+									</div>
+									
+									<IgEditBox
+										ref="selectedRowInfo"
+										btnDeleteClicked={this.editBoxHandleDelete}
+										btnUpdateClicked={this.editBoxHandleUpdate}
+										nameValue={this.state.nameValue}
+										stockValue={this.state.stockValue}
+										priceValue={this.state.priceValue}
+										rowId={this.state.selectedRowId}
+										/>
+								</div>
+								<IgDialogBox
+									dialogState={this.state.dialogState}
+									rowId={this.state.deleteRowId}
+									dialogStateChanging={this.handleDialogStateChanging}
+									deleteDialogAccept={this.handleDeleteDialogAccept}
+									deleteDialogCancel={this.handleDeleteDialogCancel}
+								/>
+							</div>
 						</div>
 					);
 				},
-                /* helper functions */
-                getGridInstance: function (gridRefName) {
-                    gridRefName = gridRefName || "grid1";
-                    return (this.refs[gridRefName] || {}).igControl;
-                },
-                getGridUpdating: function (gridRefName) {
-                    var grid = this.getGridInstance(gridRefName);
-                    if (!grid || !grid.element) {
-                        return null;
-                    }
-                    return grid.element.data("igGridUpdating");
-                },
-                getProductDescriptionByRowId: function (rowId) {
-                    var grid = this.getGridInstance(),
-                        productDescription, record;
-                    if (rowId > -1 && grid) {
-                        record = grid.dataSource.findRecordByKey(rowId) || {};
-                        productDescription = record["ProductDescription"];
-                    }
-                    return productDescription;
-                },
-                /* //helper functions */
-				/* handle edit box specific events */
-                editBoxHandleDelete: function (e, rowId) {
-                    var grid = this.getGridInstance(),
-                        upd;
-                    if (grid && rowId > -1 &&
-                        confirm("Are you sure you want to delete row with id " + rowId + "?")) {
-                        upd = this.getGridUpdating();//grid.dataSource.deleteRow(rowId, true);
-                        if (upd) {
-                            upd.deleteRow(rowId);
-                            this.setState({ selectedRowId: -1 });
-                        }
-                    }
-                },
-                editBoxHandleUpdate: function (e, rowId, val) {
-                    var grid = this.getGridInstance(),
-                        upd;
-                    if (grid && rowId > -1) {
-                        upd = this.getGridUpdating();
-                        if (upd) {
-                            upd.updateRow(rowId, {"ProductDescription": val});
-                        }
-                    }
-                },
-                /* //handle edit box specific events */
-                /* interactions with igGrid - rowDeleted, updated, etc. */
-                gridRowUpdated: function (evt, ui) {
-                    var rowId = ui.rowID;
-                    if (this.state.selectedRowId !== rowId) {
-                        return;
-                    }
-                    if (!ui.rowAdding &&
-                        ui.values["ProductDescription"] !== ui.oldValues["ProductDescription"]) {
-                        this.setState({
-                            selectedValue: this.getProductDescriptionByRowId(rowId)
-                        });
-                    }
-                },
-                gridRowDeleted: function (evt, ui) {
-                    var rowId = ui.rowID;
-                    if (this.state.selectedRowId === rowId) {
-                        this.setState({ selectedRowId: -1 });
-                    }
-                },
-                gridRowSelectionChanged: function (evt, ui) {
-                    var rowId = ui.row.id;
-                    this.setState({ selectedRowId: rowId, 
-                                    selectedValue: this.getProductDescriptionByRowId(rowId) 
-                                    });
+				/* helper functions */
+				getGridInstance: function (gridRefName) {
+					gridRefName = gridRefName || "grid1";
+					return (this.refs[gridRefName] || {}).igControl;
 				},
-                /* //interactions with igGrid - rowDeleted, updated, etc. */
+				getGridUpdating: function (gridRefName) {
+					var grid = this.getGridInstance(gridRefName);
+					if (!grid || !grid.element) {
+						return null;
+					}
+					return grid.element.data("igGridUpdating");
+				},
+				getNameByRowId: function (rowId) {
+					var grid = this.getGridInstance(),
+						Name, record;
+					if (rowId > -1 && grid) {
+						record = grid.dataSource.findRecordByKey(rowId) || {};
+						Name = record["Name"];
+					}
+					return Name;
+				},
+				getStockByRowId: function (rowId) {
+					var grid = this.getGridInstance(),
+						Stock, record;
+					if (rowId > -1 && grid) {
+						record = grid.dataSource.findRecordByKey(rowId) || {};
+						Stock = record["UnitsInStock"];
+					}
+					return Stock;
+				},
+				getPriceByRowId: function (rowId) {
+					var grid = this.getGridInstance(),
+						Price, record;
+					if (rowId > -1 && grid) {
+						record = grid.dataSource.findRecordByKey(rowId) || {};
+						Price = record["UnitPrice"];
+					}
+					return Price;
+				},
+				/* //helper functions */
+				/* handle edit box specific events */
+				editBoxHandleDelete: function (e, rowId) {						
+					this.setState({
+						deleteRowId: rowId,
+						dialogState: "opened"
+					});
+				},
+				editBoxHandleUpdate: function (e, rowId, name, stock, price) {
+					var grid = this.getGridInstance(),
+						upd;
+					if (grid && rowId > -1) {
+						upd = this.getGridUpdating();
+						if (upd) {
+							upd.updateRow(rowId,
+								{
+									"Name": name,
+									"UnitsInStock": stock,
+									"UnitPrice": price
+								});
+						}
+					}
+				},
+				handleDialogStateChanging: function (evt, ui) {
+					if(ui.action === "close" && this.state.dialogState === "opened" ) {
+						this.setState({ dialogState: "closed" });
+					}
+				},
+				handleDeleteDialogAccept: function () {
+					var grid = this.getGridInstance(),
+						rowId = this.state.deleteRowId,
+						upd;
+					if (grid && rowId > -1) {
+						upd = this.getGridUpdating();//grid.dataSource.deleteRow(rowId, true);
+						if (upd) {
+							upd.deleteRow(rowId);
+							this.setState({ selectedRowId: -1, deleteRowId: -1 });
+						}
+					}
+					this.setState({ dialogState: "closed" });
+				},
+				handleDeleteDialogCancel: function () {
+					this.setState({ dialogState: "closed" });
+				},
+				/* //handle edit box specific events */
+				/* interactions with igGrid - rowDeleted, updated, etc. */
+				gridRowUpdated: function (evt, ui) {
+					var rowId = ui.rowID;
+					if (this.state.selectedRowId !== rowId) {
+						return;
+					}
+					if (!ui.rowAdding &&
+						(ui.values["Name"] !== ui.oldValues["Name"] ||
+						ui.values["UnitsInStock"] !== ui.oldValues["UnitsInStock"] ||
+						ui.values["UnitPrice"] !== ui.oldValues["UnitPrice"])) {
+						this.setState({
+							nameValue: this.getNameByRowId(rowId),
+							stockValue: this.getStockByRowId(rowId),
+							priceValue: this.getPriceByRowId(rowId)
+						});
+					}
+				},
+				gridRowDeleted: function (evt, ui) {
+					var rowId = ui.rowID;
+					if (this.state.selectedRowId === rowId) {
+						this.setState({ selectedRowId: -1 });
+					}
+				},
+				gridRowSelectionChanged: function (evt, ui) {
+					var rowId = ui.row.id;
+					this.setState({ selectedRowId: rowId, 
+						nameValue: this.getNameByRowId(rowId),
+						stockValue: this.getStockByRowId(rowId),
+						priceValue: this.getPriceByRowId(rowId)
+					});
+				},
+				/* //interactions with igGrid - rowDeleted, updated, etc. */
 				heightChanged: function (evt) {
-                    // change grid height option
-                    var editor = this.refs.editorGridHeight;
-                    this.setState({ gridHeight: editor.igControl.value() });
+					// change grid height option
+					var editor = this.refs.editorGridHeight;
+					this.setState({ gridHeight: editor.igControl.value() });
+				},
+				widthChanged: function (evt) {
+					// change grid width option
+					var editor = this.refs.editorGridWidth;
+					this.setState({ gridWidth: editor.igControl.value() });
 				}
 			});
 
@@ -242,5 +422,40 @@
 			);
 		</script>
 	</div>
+</div>
+
+	<footer>
+        <p>
+            <a href="/igniteui-react/index.html">Home</a> |
+            <a href="https://github.com/IgniteUI/igniteui-react/issues">Feedback &amp; Questions</a> |
+            <a href="https://github.com/IgniteUI/igniteui-react">Clone &amp; Fork</a>
+        </p>
+        <p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="https://igniteui.com">https://igniteui.com</a></p>
+    </footer>
+	
+	<!--JavaScript refs-->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!--IgniteUI refs-->
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+
+	<!--React-->
+	<script src="../../src/util/ignite-react.js"></script>
+	<script src="../../src/components/igGrid.js"></script>
+	<script src="../../src/components/igEditors.js"></script>
+	<script src="../../src/components/igShared.js"></script>
+	<script src="../../src/components/igDialog.js"></script>
+	<script src="../../src/props/igGrid.js"></script>
+	<script src="../../src/props/igEditors.js"></script>
+	<script src="../../src/props/igShared.js"></script>
+	<script src="../../src/props/igDialog.js"></script>
+	<!--//React-->
+	<!--IgniteUI refs-->
 </body>
 </html>

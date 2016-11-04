@@ -24,7 +24,10 @@
 		format: React.PropTypes.string,
 		dataType: React.PropTypes.oneOfType([	
 			React.PropTypes.string,
-			React.PropTypes.number
+			React.PropTypes.number,
+			React.PropTypes.bool,
+			React.PropTypes.date,
+			React.PropTypes.object
 		]),
 		width: React.PropTypes.oneOfType([	
 			React.PropTypes.string,

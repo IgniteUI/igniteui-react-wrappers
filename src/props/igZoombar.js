@@ -12,7 +12,8 @@
 		id: React.PropTypes.string.isRequired,
 		provider: React.PropTypes.object,
 		target: React.PropTypes.oneOfType([	
-			React.PropTypes.string
+			React.PropTypes.string,
+			React.PropTypes.object
 		]),
 		clone: React.PropTypes.oneOf([
 			"auto",
