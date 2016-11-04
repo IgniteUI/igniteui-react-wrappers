@@ -544,8 +544,8 @@
 		listItems: React.PropTypes.object,
 		listWidth: React.PropTypes.number,
 		value: React.PropTypes.instanceOf(Date),
-		minValue: React.PropTypes.object,
-		maxValue: React.PropTypes.object,
+		minValue: React.PropTypes.instanceOf(Date),
+		maxValue: React.PropTypes.instanceOf(Date),
 		dateDisplayFormat: React.PropTypes.string,
 		dateInputFormat: React.PropTypes.string,
 		dataMode: React.PropTypes.oneOf([
