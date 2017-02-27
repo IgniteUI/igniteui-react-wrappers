@@ -148,7 +148,10 @@
 		columns: React.PropTypes.arrayOf(
 			React.PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
 		),
-		dataSource: React.PropTypes.object,
+		dataSource: React.PropTypes.oneOfType([
+			React.PropTypes.string,
+			React.PropTypes.object
+		]),
 		dataSourceUrl: React.PropTypes.string,
 		dataSourceType: React.PropTypes.string,
 		responseDataKey: React.PropTypes.string,
