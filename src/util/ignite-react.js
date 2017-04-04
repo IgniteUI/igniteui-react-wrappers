@@ -1,3 +1,18 @@
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+
+		// AMD. Register as an anonymous module.
+		define( [
+			"react",
+			"react-dom",
+			"jquery",
+		], factory );
+	} else {
+
+		// Browser globals
+		factory(React, ReactDOM, $);
+	}
+}
 (function (React, $) {
 	$.ig = $.ig || {};
 	$.ig.react = $.ig.react || {};
@@ -81,4 +96,4 @@
 			}
 		}, config)
 	};
-}) (React, jQuery);
+}));
