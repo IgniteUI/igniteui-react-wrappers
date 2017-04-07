@@ -26,8 +26,8 @@ module.exports = function(config) {
 			// paths loaded via module imports
 			// bundled react wrappers
 			//"dist/npm/igniteui-react.js",
-			"src/props/**/*.js",
 			"src/util/**/*.js",
+			"src/props/**/*.js",
 			"src/components/**/*.js",
 
 			// spec files need to be loaded in the shim file IN CONTEXT of the main module, don't include:            
