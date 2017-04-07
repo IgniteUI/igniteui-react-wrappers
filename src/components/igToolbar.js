@@ -1,2 +1,18 @@
-var IgToolbar = React.createClass($.ig.react.core.buildComponent("igToolbar"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgToolbar", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgToolbar = React.createClass($.ig.react.core.buildComponent("igToolbar"));
+	if (window) {
+		window.IgToolbar = IgToolbar;
+	}
+	return IgToolbar;
+}));
 

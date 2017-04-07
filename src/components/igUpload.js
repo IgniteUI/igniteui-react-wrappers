@@ -1,4 +1,36 @@
-var IgBrowseButton = React.createClass($.ig.react.core.buildComponent("igBrowseButton"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgBrowseButton", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgBrowseButton = React.createClass($.ig.react.core.buildComponent("igBrowseButton"));
+	if (window) {
+		window.IgBrowseButton = IgBrowseButton;
+	}
+	return IgBrowseButton;
+}));
 
-var IgUpload = React.createClass($.ig.react.core.buildComponent("igUpload"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgUpload", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgUpload = React.createClass($.ig.react.core.buildComponent("igUpload"));
+	if (window) {
+		window.IgUpload = IgUpload;
+	}
+	return IgUpload;
+}));
 

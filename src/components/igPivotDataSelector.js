@@ -1,2 +1,18 @@
-var IgPivotDataSelector = React.createClass($.ig.react.core.buildComponent("igPivotDataSelector"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgPivotDataSelector", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgPivotDataSelector = React.createClass($.ig.react.core.buildComponent("igPivotDataSelector"));
+	if (window) {
+		window.IgPivotDataSelector = IgPivotDataSelector;
+	}
+	return IgPivotDataSelector;
+}));
 

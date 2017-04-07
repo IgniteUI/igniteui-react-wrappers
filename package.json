@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "npm run prepare-dist",
-    "prepare-dist": "uglifyjs src/props/* -b -o dist/npm/igniteui-react.js && node -e \"require('concat-files')(['build/build-wrapper-start','dist/npm/igniteui-react.js','build/build-wrapper-end'], 'dist/npm/igniteui-react.js');\" && uglifyjs src/util/* dist/npm/igniteui-react.js src/components/* -b --export-all -o dist/npm/igniteui-react.js && uglifyjs dist/npm/igniteui-react.js -o dist/npm/igniteui-react.min.js",
+    "prepare-dist": "uglifyjs src/props/* -b -o dist/npm/igniteui-react.js && node -e \"require('concat-files')(['build/build-wrapper-start','dist/npm/igniteui-react.js','build/build-wrapper-end'], 'dist/npm/igniteui-react.js');\" && uglifyjs src/util/* dist/npm/igniteui-react.js src/components/* -b -o dist/npm/igniteui-react.js && uglifyjs dist/npm/igniteui-react.js -o dist/npm/igniteui-react.min.js && node -e \"require('fs-extra').ensureDirSync('dist/npm/ui');\" && node -e \"require('fs-extra').copySync('src/components', 'dist/npm/ui');\"",
     "pretest": "npm run build",
     "test": "karma start tests/karma.conf.js && npm run copy-coverage-report",
     "copy-coverage-report": "cp coverage/karma-tmp/**/coverage*.json coverage/ && cp coverage/karma-tmp/**/lcov*.info coverage/"
@@ -21,6 +21,7 @@
   "devDependencies": {
     "concat-files": "^0.1.1",
     "coveralls": "^2.11.14",
+    "fs-extra": "^2.1.2",
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.46",
     "karma": "^0.13.19",

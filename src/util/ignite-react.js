@@ -6,6 +6,7 @@
 			"react",
 			"react-dom",
 			"jquery",
+			"jquery-ui"
 		], factory );
 	} else {
 
@@ -13,11 +14,12 @@
 		factory(React, ReactDOM, $);
 	}
 }
-(function (React, $) {
+(function (React, ReactDOM, $) {
 	$.ig = $.ig || {};
 	$.ig.react = $.ig.react || {};
 	$.ig.react.core = $.ig.react.core || {};
 	$.ig.react.propTypes = $.ig.react.propTypes || {};
+	$.ig.react.propTypes.shapes = $.ig.react.propTypes.shapes || {};
 
 	$.ig.react.configWidgets = $.ig.react.configWidgets || {};
 

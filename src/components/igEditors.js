@@ -1,18 +1,162 @@
-var IgBaseEditor = React.createClass($.ig.react.core.buildComponent("igBaseEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgBaseEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgBaseEditor = React.createClass($.ig.react.core.buildComponent("igBaseEditor"));
+	if (window) {
+		window.IgBaseEditor = IgBaseEditor;
+	}
+	return IgBaseEditor;
+}));
 
-var IgTextEditor = React.createClass($.ig.react.core.buildComponent("igTextEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgTextEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgTextEditor = React.createClass($.ig.react.core.buildComponent("igTextEditor"));
+	if (window) {
+		window.IgTextEditor = IgTextEditor;
+	}
+	return IgTextEditor;
+}));
 
-var IgNumericEditor = React.createClass($.ig.react.core.buildComponent("igNumericEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgNumericEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgNumericEditor = React.createClass($.ig.react.core.buildComponent("igNumericEditor"));
+	if (window) {
+		window.IgNumericEditor = IgNumericEditor;
+	}
+	return IgNumericEditor;
+}));
 
-var IgCurrencyEditor = React.createClass($.ig.react.core.buildComponent("igCurrencyEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgCurrencyEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgCurrencyEditor = React.createClass($.ig.react.core.buildComponent("igCurrencyEditor"));
+	if (window) {
+		window.IgCurrencyEditor = IgCurrencyEditor;
+	}
+	return IgCurrencyEditor;
+}));
 
-var IgPercentEditor = React.createClass($.ig.react.core.buildComponent("igPercentEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgPercentEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgPercentEditor = React.createClass($.ig.react.core.buildComponent("igPercentEditor"));
+	if (window) {
+		window.IgPercentEditor = IgPercentEditor;
+	}
+	return IgPercentEditor;
+}));
 
-var IgMaskEditor = React.createClass($.ig.react.core.buildComponent("igMaskEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgMaskEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgMaskEditor = React.createClass($.ig.react.core.buildComponent("igMaskEditor"));
+	if (window) {
+		window.IgMaskEditor = IgMaskEditor;
+	}
+	return IgMaskEditor;
+}));
 
-var IgDateEditor = React.createClass($.ig.react.core.buildComponent("igDateEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgDateEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgDateEditor = React.createClass($.ig.react.core.buildComponent("igDateEditor"));
+	if (window) {
+		window.IgDateEditor = IgDateEditor;
+	}
+	return IgDateEditor;
+}));
 
-var IgDatePicker = React.createClass($.ig.react.core.buildComponent("igDatePicker"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgDatePicker", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgDatePicker = React.createClass($.ig.react.core.buildComponent("igDatePicker"));
+	if (window) {
+		window.IgDatePicker = IgDatePicker;
+	}
+	return IgDatePicker;
+}));
 
-var IgCheckboxEditor = React.createClass($.ig.react.core.buildComponent("igCheckboxEditor"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgCheckboxEditor", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgCheckboxEditor = React.createClass($.ig.react.core.buildComponent("igCheckboxEditor"));
+	if (window) {
+		window.IgCheckboxEditor = IgCheckboxEditor;
+	}
+	return IgCheckboxEditor;
+}));
 

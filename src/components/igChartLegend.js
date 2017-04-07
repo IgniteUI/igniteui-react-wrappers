@@ -1,2 +1,18 @@
-var IgChartLegend = React.createClass($.ig.react.core.buildComponent("igChartLegend"));
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+		define("IgChartLegend", [
+			"react",
+			"jquery"
+		], factory );
+	} else {
+		factory(React, $);
+	}
+}
+(function (React, $) {
+	var IgChartLegend = React.createClass($.ig.react.core.buildComponent("igChartLegend"));
+	if (window) {
+		window.IgChartLegend = IgChartLegend;
+	}
+	return IgChartLegend;
+}));
 
