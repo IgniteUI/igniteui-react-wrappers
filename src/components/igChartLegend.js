@@ -2,7 +2,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgChartLegend", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);

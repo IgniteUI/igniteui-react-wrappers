@@ -2,7 +2,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgSlider", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -20,7 +21,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgProgressBar", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -38,7 +40,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgButton", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);

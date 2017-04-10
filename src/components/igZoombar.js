@@ -3,7 +3,7 @@
 		define("IgZoombar", [
 			"react",
 			"jquery",
-			"jquery-ui"
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);

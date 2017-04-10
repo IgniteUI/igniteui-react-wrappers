@@ -2,7 +2,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgBrowseButton", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -20,7 +21,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgUpload", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);

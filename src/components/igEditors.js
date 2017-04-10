@@ -2,7 +2,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgBaseEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -20,7 +21,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgTextEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -38,7 +40,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgNumericEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -56,7 +59,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgCurrencyEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -74,7 +78,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgPercentEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -92,7 +97,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgMaskEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -110,7 +116,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgDateEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -128,7 +135,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgDatePicker", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -146,7 +154,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgCheckboxEditor", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);

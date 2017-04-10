@@ -2,7 +2,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgDataChart", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
@@ -20,7 +21,8 @@
 	if (typeof define === "function" && define.amd) {
 		define("IgPieChart", [
 			"react",
-			"jquery"
+			"jquery",
+			"../dist/igniteui-react.js"
 		], factory );
 	} else {
 		factory(React, $);
