@@ -14,51 +14,51 @@ $.ig.react.propTypes.shapes.igTileManagerSplitterOptions = {
 
 $.ig.react.propTypes.igTileManager = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	columnWidth: React.PropTypes.oneOfType([	
+	columnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	columnHeight: React.PropTypes.oneOfType([	
+	columnHeight: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	cols: React.PropTypes.oneOfType([	
+	cols: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
-	rows: React.PropTypes.oneOfType([	
+	rows: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
 	marginLeft: React.PropTypes.number,
 	marginTop: React.PropTypes.number,
 	rearrangeItems: React.PropTypes.bool,
-	items: React.PropTypes.oneOfType([	
+	items: React.PropTypes.oneOfType([
 		React.PropTypes.array
 	]),
 	dataSource: React.PropTypes.object,
-	minimizedState: React.PropTypes.oneOfType([	
+	minimizedState: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	maximizedState: React.PropTypes.oneOfType([	
+	maximizedState: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	maximizedTileIndex: React.PropTypes.oneOfType([	
+	maximizedTileIndex: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
-	rightPanelCols: React.PropTypes.oneOfType([	
+	rightPanelCols: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
-	rightPanelTilesWidth: React.PropTypes.oneOfType([	
+	rightPanelTilesWidth: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
-	rightPanelTilesHeight: React.PropTypes.oneOfType([	
+	rightPanelTilesHeight: React.PropTypes.oneOfType([
 		React.PropTypes.number
 	]),
 	showRightPanelScroll: React.PropTypes.bool,
@@ -68,7 +68,7 @@ $.ig.react.propTypes.igTileManager = {
 	preventMaximizingSelector: React.PropTypes.string,
 	animationDuration: React.PropTypes.number,
 	dataSourceUrl: React.PropTypes.string,
-	responseDataKey: React.PropTypes.oneOfType([	
+	responseDataKey: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
 	responseDataType: React.PropTypes.string,

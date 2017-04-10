@@ -40,10 +40,10 @@ $.ig.react.propTypes.shapes.igTreeDragAndDropSettings = {
 		"function",
 		"default"
 	]),
-	customDropValidation: React.PropTypes.oneOfType([	
+	customDropValidation: React.PropTypes.oneOfType([
 		React.PropTypes.func
 	]),
-	containment: React.PropTypes.oneOfType([	
+	containment: React.PropTypes.oneOfType([
 		React.PropTypes.bool,
 		React.PropTypes.string,
 		React.PropTypes.array
@@ -61,11 +61,11 @@ $.ig.react.propTypes.shapes.igTreeDragAndDropSettings = {
 
 $.ig.react.propTypes.igTree = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -76,37 +76,37 @@ $.ig.react.propTypes.igTree = {
 	]),
 	singleBranchExpand: React.PropTypes.bool,
 	hotTracking: React.PropTypes.bool,
-	parentNodeImageUrl: React.PropTypes.oneOfType([	
+	parentNodeImageUrl: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	parentNodeImageClass: React.PropTypes.oneOfType([	
+	parentNodeImageClass: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	parentNodeImageTooltip: React.PropTypes.oneOfType([	
+	parentNodeImageTooltip: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	leafNodeImageUrl: React.PropTypes.oneOfType([	
+	leafNodeImageUrl: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	leafNodeImageClass: React.PropTypes.oneOfType([	
+	leafNodeImageClass: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	leafNodeImageTooltip: React.PropTypes.oneOfType([	
+	leafNodeImageTooltip: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
 	animationDuration: React.PropTypes.number,
 	pathSeparator: React.PropTypes.string,
 	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.oneOfType([	
+	dataSourceUrl: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	dataSourceType: React.PropTypes.oneOfType([	
+	dataSourceType: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	responseDataKey: React.PropTypes.oneOfType([	
+	responseDataKey: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	responseDataType: React.PropTypes.oneOfType([	
+	responseDataType: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
 	requestType: React.PropTypes.string,

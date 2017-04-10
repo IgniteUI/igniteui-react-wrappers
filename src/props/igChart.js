@@ -9,11 +9,11 @@ $.ig.react.propTypes.shapes.igDataChartLegend = {
 		"item",
 		"legend"
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	])
@@ -143,11 +143,11 @@ $.ig.react.propTypes.shapes.igDataChartSeriesLegend = {
 		"item",
 		"legend"
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	])
@@ -451,11 +451,11 @@ $.ig.react.propTypes.igDataChart = {
 	markerBrushes: React.PropTypes.object,
 	outlines: React.PropTypes.object,
 	markerOutlines: React.PropTypes.object,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -526,11 +526,11 @@ $.ig.react.propTypes.shapes.igPieChartLegend = {
 
 $.ig.react.propTypes.igPieChart = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

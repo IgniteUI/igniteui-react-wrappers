@@ -120,7 +120,7 @@ $.ig.react.propTypes.shapes.igPivotGridGridOptionsFeatures = {
 }
 
 $.ig.react.propTypes.shapes.igPivotGridGridOptions = {
-	defaultColumnWidth: React.PropTypes.oneOfType([	
+	defaultColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -136,7 +136,7 @@ $.ig.react.propTypes.shapes.igPivotGridGridOptions = {
 
 $.ig.react.propTypes.shapes.igPivotGridDragAndDropSettings = {
 	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([	
+	containment: React.PropTypes.oneOfType([
 		React.PropTypes.bool,
 		React.PropTypes.string,
 		React.PropTypes.array
@@ -146,11 +146,11 @@ $.ig.react.propTypes.shapes.igPivotGridDragAndDropSettings = {
 
 $.ig.react.propTypes.igPivotGrid = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

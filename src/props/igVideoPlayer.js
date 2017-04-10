@@ -24,11 +24,11 @@ $.ig.react.propTypes.shapes.igVideoPlayerBanner = {
 	autohide: React.PropTypes.bool,
 	hidedelay: React.PropTypes.number,
 	link: React.PropTypes.string,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
@@ -73,11 +73,11 @@ $.ig.react.propTypes.shapes.igVideoPlayerCommercials = {
 $.ig.react.propTypes.igVideoPlayer = {
 	id: React.PropTypes.string.isRequired,
 	sources: React.PropTypes.array,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

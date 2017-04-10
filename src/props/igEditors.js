@@ -1,17 +1,17 @@
 $.ig.react.propTypes.igBaseEditor = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	value: React.PropTypes.string,
 	tabIndex: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -68,18 +68,18 @@ $.ig.react.propTypes.igTextEditor = {
 	toLower: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	value: React.PropTypes.string,
 	tabIndex: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -164,16 +164,16 @@ $.ig.react.propTypes.igNumericEditor = {
 	dropDownOnReadOnly: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	tabIndex: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -260,16 +260,16 @@ $.ig.react.propTypes.igCurrencyEditor = {
 	dropDownOnReadOnly: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	tabIndex: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -357,16 +357,16 @@ $.ig.react.propTypes.igPercentEditor = {
 	dropDownOnReadOnly: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	tabIndex: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -425,17 +425,17 @@ $.ig.react.propTypes.igMaskEditor = {
 	toLower: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	tabIndex: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -466,7 +466,7 @@ $.ig.react.propTypes.igDateEditor = {
 	enableUTCDates: React.PropTypes.bool,
 	centuryThreshold: React.PropTypes.number,
 	yearShift: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -507,11 +507,11 @@ $.ig.react.propTypes.igDateEditor = {
 	preventSubmitOnEnter: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -553,7 +553,7 @@ $.ig.react.propTypes.igDatePicker = {
 	enableUTCDates: React.PropTypes.bool,
 	centuryThreshold: React.PropTypes.number,
 	yearShift: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([	
+	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -587,11 +587,11 @@ $.ig.react.propTypes.igDatePicker = {
 	preventSubmitOnEnter: React.PropTypes.bool,
 	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -617,11 +617,11 @@ $.ig.react.propTypes.igCheckboxEditor = {
 	readOnly: React.PropTypes.bool,
 	allowNullValue: React.PropTypes.bool,
 	nullValue: React.PropTypes.object,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

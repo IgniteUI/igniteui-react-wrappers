@@ -1,11 +1,11 @@
 $.ig.react.propTypes.igRating = {
 	id: React.PropTypes.string.isRequired,
 	vertical: React.PropTypes.bool,
-	value: React.PropTypes.oneOfType([	
+	value: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	valueHover: React.PropTypes.oneOfType([	
+	valueHover: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),

@@ -21,11 +21,11 @@ $.ig.react.propTypes.igDialog = {
 	footerText: React.PropTypes.string,
 	dialogClass: React.PropTypes.string,
 	container: React.PropTypes.object,
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),

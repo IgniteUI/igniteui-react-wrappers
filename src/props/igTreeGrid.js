@@ -15,12 +15,12 @@ $.ig.react.propTypes.igTreeGrid = {
 	initialExpandDepth: React.PropTypes.number,
 	foreignKeyRootValue: React.PropTypes.number,
 	renderExpansionIndicatorColumn: React.PropTypes.bool,
-	renderFirstDataCellFunction: React.PropTypes.oneOfType([	
+	renderFirstDataCellFunction: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.object
 	]),
 	childDataKey: React.PropTypes.string,
-	renderExpansionCellFunction: React.PropTypes.oneOfType([	
+	renderExpansionCellFunction: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.object
 	]),
@@ -28,24 +28,24 @@ $.ig.react.propTypes.igTreeGrid = {
 	dataSourceSettings: React.PropTypes.shape(
 		$.ig.react.propTypes.shapes.IgTreeGridDataSourceSettings
 	),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	autoAdjustHeight: React.PropTypes.bool,
-	avgRowHeight: React.PropTypes.oneOfType([	
+	avgRowHeight: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	avgColumnWidth: React.PropTypes.oneOfType([	
+	avgColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	defaultColumnWidth: React.PropTypes.oneOfType([	
+	defaultColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

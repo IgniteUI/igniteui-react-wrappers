@@ -116,7 +116,7 @@ $.ig.react.propTypes.shapes.igPivotViewPivotGridOptionsGridOptionsFeatures = {
 }
 
 $.ig.react.propTypes.shapes.igPivotViewPivotGridOptionsGridOptions = {
-	defaultColumnWidth: React.PropTypes.oneOfType([	
+	defaultColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -132,7 +132,7 @@ $.ig.react.propTypes.shapes.igPivotViewPivotGridOptionsGridOptions = {
 
 $.ig.react.propTypes.shapes.igPivotViewPivotGridOptionsDragAndDropSettings = {
 	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([	
+	containment: React.PropTypes.oneOfType([
 		React.PropTypes.bool,
 		React.PropTypes.string,
 		React.PropTypes.array
@@ -176,7 +176,7 @@ $.ig.react.propTypes.shapes.igPivotViewPivotGridOptions = {
 
 $.ig.react.propTypes.shapes.igPivotViewDataSelectorOptionsDragAndDropSettings = {
 	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([	
+	containment: React.PropTypes.oneOfType([
 		React.PropTypes.bool,
 		React.PropTypes.string,
 		React.PropTypes.array
@@ -196,7 +196,7 @@ $.ig.react.propTypes.shapes.igPivotViewPivotGridPanel = {
 	resizable: React.PropTypes.bool,
 	collapsible: React.PropTypes.bool,
 	collapsed: React.PropTypes.bool,
-	size: React.PropTypes.oneOfType([	
+	size: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	])
@@ -207,7 +207,7 @@ $.ig.react.propTypes.shapes.igPivotViewDataSelectorPanel = {
 	resizable: React.PropTypes.bool,
 	collapsible: React.PropTypes.bool,
 	collapsed: React.PropTypes.bool,
-	size: React.PropTypes.oneOfType([	
+	size: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	])
@@ -215,11 +215,11 @@ $.ig.react.propTypes.shapes.igPivotViewDataSelectorPanel = {
 
 $.ig.react.propTypes.igPivotView = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

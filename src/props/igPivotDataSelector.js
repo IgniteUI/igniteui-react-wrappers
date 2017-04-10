@@ -109,7 +109,7 @@ $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptions = {
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDragAndDropSettings = {
 	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([	
+	containment: React.PropTypes.oneOfType([
 		React.PropTypes.bool,
 		React.PropTypes.string,
 		React.PropTypes.array
@@ -119,11 +119,11 @@ $.ig.react.propTypes.shapes.igPivotDataSelectorDragAndDropSettings = {
 
 $.ig.react.propTypes.igPivotDataSelector = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),

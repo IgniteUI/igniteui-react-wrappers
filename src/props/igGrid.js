@@ -12,19 +12,19 @@ $.ig.react.propTypes.shapes.igGridColumnGroupOptions = {
 $.ig.react.propTypes.shapes.igGridColumn = {
 	headerText: React.PropTypes.string,
 	key: React.PropTypes.string,
-	formatter: React.PropTypes.oneOfType([	
+	formatter: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
 	format: React.PropTypes.string,
-	dataType: React.PropTypes.oneOfType([	
+	dataType: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number,
 		React.PropTypes.bool,
 		React.PropTypes.date,
 		React.PropTypes.object
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -36,14 +36,14 @@ $.ig.react.propTypes.shapes.igGridColumn = {
 	),
 	group: React.PropTypes.array,
 	rowspan: React.PropTypes.number,
-	formula: React.PropTypes.oneOfType([	
+	formula: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
 	unboundValues: React.PropTypes.array,
 	headerCssClass: React.PropTypes.string,
 	columnCssClass: React.PropTypes.string,
-	mapper: React.PropTypes.oneOfType([	
+	mapper: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
@@ -104,24 +104,24 @@ $.ig.react.propTypes.shapes.igGridScrollSettings = {
 
 $.ig.react.propTypes.igGrid = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	autoAdjustHeight: React.PropTypes.bool,
-	avgRowHeight: React.PropTypes.oneOfType([	
+	avgRowHeight: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	avgColumnWidth: React.PropTypes.oneOfType([	
+	avgColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	defaultColumnWidth: React.PropTypes.oneOfType([	
+	defaultColumnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -143,7 +143,10 @@ $.ig.react.propTypes.igGrid = {
 	columns: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
 	),
-	dataSource: React.PropTypes.object,
+	dataSource: React.PropTypes.oneOfType([
+		React.PropTypes.string,
+		React.PropTypes.object
+	]),
 	dataSourceUrl: React.PropTypes.string,
 	dataSourceType: React.PropTypes.string,
 	responseDataKey: React.PropTypes.string,

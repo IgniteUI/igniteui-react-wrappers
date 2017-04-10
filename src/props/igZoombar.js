@@ -6,7 +6,7 @@ $.ig.react.propTypes.shapes.igZoombarDefaultZoomWindow = {
 $.ig.react.propTypes.igZoombar = {
 	id: React.PropTypes.string.isRequired,
 	provider: React.PropTypes.object,
-	target: React.PropTypes.oneOfType([	
+	target: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.object
 	]),
@@ -18,7 +18,7 @@ $.ig.react.propTypes.igZoombar = {
 		"auto",
 		"null"
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),

@@ -24,7 +24,7 @@ $.ig.react.propTypes.igNotifier = {
 		"warning",
 		"error"
 	]),
-	appendTo: React.PropTypes.oneOfType([	
+	appendTo: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.object
 	]),
@@ -38,7 +38,7 @@ $.ig.react.propTypes.igNotifier = {
 		$.ig.react.propTypes.shapes.IgNotifierMessages
 	),
 	showIcon: React.PropTypes.bool,
-	contentTemplate: React.PropTypes.oneOfType([	
+	contentTemplate: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
@@ -68,23 +68,23 @@ $.ig.react.propTypes.igNotifier = {
 		"start",
 		"end"
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	minWidth: React.PropTypes.oneOfType([	
+	minWidth: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	maxWidth: React.PropTypes.oneOfType([	
+	maxWidth: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	maxHeight: React.PropTypes.oneOfType([	
+	maxHeight: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),

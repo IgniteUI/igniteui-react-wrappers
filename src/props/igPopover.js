@@ -19,28 +19,28 @@ $.ig.react.propTypes.igPopover = {
 		"start",
 		"end"
 	]),
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	minWidth: React.PropTypes.oneOfType([	
+	minWidth: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	maxWidth: React.PropTypes.oneOfType([	
+	maxWidth: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
-	maxHeight: React.PropTypes.oneOfType([	
+	maxHeight: React.PropTypes.oneOfType([
 		React.PropTypes.number,
 		React.PropTypes.string
 	]),
 	animationDuration: React.PropTypes.number,
-	contentTemplate: React.PropTypes.oneOfType([	
+	contentTemplate: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
@@ -54,7 +54,7 @@ $.ig.react.propTypes.igPopover = {
 		"focus"
 	]),
 	containment: React.PropTypes.object,
-	appendTo: React.PropTypes.oneOfType([	
+	appendTo: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.object
 	])

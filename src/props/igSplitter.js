@@ -1,13 +1,13 @@
 $.ig.react.propTypes.shapes.igSplitterPanel = {
-	size: React.PropTypes.oneOfType([	
+	size: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	min: React.PropTypes.oneOfType([	
+	min: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	max: React.PropTypes.oneOfType([	
+	max: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -18,11 +18,11 @@ $.ig.react.propTypes.shapes.igSplitterPanel = {
 
 $.ig.react.propTypes.igSplitter = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
