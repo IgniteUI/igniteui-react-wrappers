@@ -2,43 +2,43 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>IgniteUI ReactJS Dashboard</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--IgniteUI CSS refs-->
-    <link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css"
-        rel="stylesheet" />
-    <link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../sample.css" />
-    <!--//IgniteUI CSS refs-->
+	<meta charset="UTF-8" />
+	<title>IgniteUI ReactJS Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--IgniteUI CSS refs-->
+	<link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css"
+		rel="stylesheet" />
+	<link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="../sample.css" />
+	<!--//IgniteUI CSS refs-->
 
-    <!--JavaScript refs-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--JavaScript refs-->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--IgniteUI refs-->
-    <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
-    <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
-    <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
-    <!--React-->
-    <script src="../../src/props/igGrid.js"></script>
-    <script src="../../src/props/igChart.js"></script>
-    <script src="../../src/util/ignite-react.js"></script>
-    <script src="../../src/components/igGrid.js"></script>
-    <script src="../../src/components/igEditors.js"></script>
-    <script src="../../src/components/igChart.js"></script>
-    <script src="../../src/components/igShared.js"></script>
-    <!--//React-->
-    <!--IgniteUI refs-->
+	<!--IgniteUI refs-->
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+	<!--React-->
+	<script src="../../src/util/ignite-react.js"></script>
+	<script src="../../src/props/igGrid.js"></script>
+	<script src="../../src/props/igChart.js"></script>
+	<script src="../../src/components/igGrid.js"></script>
+	<script src="../../src/components/igEditors.js"></script>
+	<script src="../../src/components/igChart.js"></script>
+	<script src="../../src/components/igShared.js"></script>
+	<!--//React-->
+	<!--IgniteUI refs-->
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 		var sourceData = {
 			"PersonalFinance": [
 				{ "Id": "1", "Name":"Antony", "Revenue":650, "Expenses": 300, "Date":"10/20/2016" },
@@ -51,65 +51,65 @@
 		}
 	</script>
 
-    <style>
-        .ui-state-hover,
-        .ui-widget-content .ui-state-hover {
-            color: #070707;
-        }
-        
-        .header {
-            color: #337ab7;
-        }
-    </style>
+	<style>
+		.ui-state-hover,
+		.ui-widget-content .ui-state-hover {
+			color: #070707;
+		}
+
+		.header {
+			color: #337ab7;
+		}
+	</style>
 </head>
 
 <body class="container">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-                <a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/igniteui-react/index.html">Home</a></li>
-                    <li><a href="https://github.com/IgniteUI/igniteui-react">View on GitHub <i class="fa fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+				<a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/igniteui-react/index.html">Home</a></li>
+					<li><a href="https://github.com/IgniteUI/igniteui-react">View on GitHub <i class="fa fa-github"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-    <div>
-        <h1 class="push-down-md header">Dashboard using <a href="https://igniteui.com/grid/overview" target="_blank">igGrid</a> and <a href="https://www.igniteui.com/data-chart/overview"
-                target="_blank">igDataChart</a></h1>
+	<div>
+		<h1 class="push-down-md header">Dashboard using <a href="https://igniteui.com/grid/overview" target="_blank">igGrid</a> and <a href="https://www.igniteui.com/data-chart/overview"
+				target="_blank">igDataChart</a></h1>
 
-        <div class="row description">
-            <div class="alert alert-info col-md-5 try-it-out">
-                <span class="h4">TRY IT OUT:</span>
-                <hr />
-                <ul>
-                    <li>Select a row that you would like to edit</li>
-                    <li>Change the Revenue or the Expenses of the selected person by using the editors.</li>
-                    <li>Observe how the grid and the chart values are changing.</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <p class="lead">This sample demonstrates how to reflect every change in the igGrid data source on the igDataChart by using
-                    ReactJS.</p>
-                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/dashboard.html" class="btn btn-default btn-lg btn-primary"
-                        target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
-            </div>
-        </div>
+		<div class="row description">
+			<div class="alert alert-info col-md-5 try-it-out">
+				<span class="h4">TRY IT OUT:</span>
+				<hr />
+				<ul>
+					<li>Select a row that you would like to edit</li>
+					<li>Change the Revenue or the Expenses of the selected person by using the editors.</li>
+					<li>Observe how the grid and the chart values are changing.</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<p class="lead">This sample demonstrates how to reflect every change in the igGrid data source on the igDataChart by using
+					ReactJS.</p>
+				<p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/dashboard.html" class="btn btn-default btn-lg btn-primary"
+						target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+			</div>
+		</div>
 
-        <hr/>
-        <div id="app">
-            <!-- to use JSX in our HTML -->
-            <script type="text/babel">
+		<hr/>
+		<div id="app">
+			<!-- to use JSX in our HTML -->
+			<script type="text/babel">
 				var IgEditBox = React.createClass({
 					render: function () {
 						var rowId =  this.props.rowId,
@@ -128,7 +128,7 @@
 													className="form-control"
 													value={this.props.revenueValue}/>
 										</div>
-									</div>	
+									</div>
 									<div className="row">
 										<label htmlFor="editor2" className="col-xs-2 col-form-label">Expenses: </label>
 										<div className="col-xs-10">
@@ -139,7 +139,7 @@
 													className="form-control"
 													value={this.props.expensesValue}/>
 										</div>
-									</div>	
+									</div>
 									<div className="row">
 										<div className="col-md-6" style={{ "float": "right" }}><div style={{ "float": "inherit" }}><IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} /></div></div>
 									</div>
@@ -151,14 +151,14 @@
 						var func = this.props.btnUpdateClicked;
 
 						if (func) {
-							func(e, 
-							this.props.rowId, 
+							func(e,
+							this.props.rowId,
 							this.refs.editorRevenue.igControl.value(),
 							this.refs.editorExpenses.igControl.value());
 						}
 					}
 				});
-				
+
 				var Dashboard = React.createClass({
 					getInitialState: function () {
 						return {
@@ -175,7 +175,7 @@
 							<div>
 								<div className="row">
 									<div className="col-md-8">
-										<IgGrid 
+										<IgGrid
 											id="grid1"
 											ref="grid1"
 											autoGenerateColumns={false}
@@ -200,9 +200,9 @@
 									</div>
 									<br />
 									<div className="col-md-4">
-											<IgDataChart 
+											<IgDataChart
 												id="chart1"
-												ref="chart1"   
+												ref="chart1"
 												height="340px"
 												dataSource={this.state.view}
 												dataSourceType="json"
@@ -229,7 +229,7 @@
 														yAxis: "FinanceAxis",
 														valueMemberPath: "Revenue",
 														lableMemberPath: "Name",
-														transitionDuration: 300 
+														transitionDuration: 300
 													},
 													{
 														name: "PersonalFinanceExpenses",
@@ -238,17 +238,17 @@
 														xAxis: "NameAxis",
 														yAxis: "FinanceAxis",
 														valueMemberPath: "Expenses",
-														transitionDuration: 300 
+														transitionDuration: 300
 													}
-												]}                                
+												]}
 											/>
 									</div>
 									<br />
-									<IgEditBox ref="selectedRowInfo" 
+									<IgEditBox ref="selectedRowInfo"
 										btnUpdateClicked={this.editBoxHandleUpdate}
 										revenueValue={this.state.revenueValue}
 										expensesValue={this.state.expensesValue}
-										rowId={this.state.selectedRowId} 
+										rowId={this.state.selectedRowId}
 									/>
 								</div>
 							</div>
@@ -298,9 +298,9 @@
 							upd = this.getGridUpdating();
 							if (upd) {
 								upd.updateRow(
-									rowId, 
+									rowId,
 									{
-										"Expenses": val2, 
+										"Expenses": val2,
 										"Revenue" : val1
 									});
 							}
@@ -315,10 +315,10 @@
 
 						this.refs.chart1.igControl.notifySetItem(ds, index, item,item);
 
-					},            
+					},
 					gridRowSelectionChanged: function (evt, ui) {
 						var rowId = ui.row.id;
-						this.setState({ selectedRowId: rowId, 
+						this.setState({ selectedRowId: rowId,
 										expensesValue: this.getExpensesByRowId(rowId) ,
 										revenueValue: this.getRevenueByRowId(rowId) ,
 										selectedRowIndex: ui.row.index
@@ -330,18 +330,18 @@
 					<Dashboard />,
 					document.getElementById("app")
 				);
-        </script>
-        </div>
-    </div>
-    <hr/>
-    <footer>
-        <p>
-            <a href="/igniteui-react/index.html">Home</a> |
-            <a href="https://github.com/IgniteUI/igniteui-react/issues">Feedback &amp; Questions</a> |
-            <a href="https://github.com/IgniteUI/igniteui-react">Clone &amp; Fork</a>
-        </p>
-        <p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="https://igniteui.com">https://igniteui.com</a></p>
-    </footer>
+		</script>
+		</div>
+	</div>
+	<hr/>
+	<footer>
+		<p>
+			<a href="/igniteui-react/index.html">Home</a> |
+			<a href="https://github.com/IgniteUI/igniteui-react/issues">Feedback &amp; Questions</a> |
+			<a href="https://github.com/IgniteUI/igniteui-react">Clone &amp; Fork</a>
+		</p>
+		<p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="https://igniteui.com">https://igniteui.com</a></p>
+	</footer>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, $);
+		factory(React, jQuery);
 	}
 }
 (function (React, $) {

@@ -9,7 +9,7 @@
 	} else {
 
 		// Browser globals
-		factory(React, $);
+		factory(React, jQuery);
 	}
 }
 (function(React, $) {

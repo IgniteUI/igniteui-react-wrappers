@@ -11,7 +11,7 @@
 	} else {
 
 		// Browser globals
-		factory(React, ReactDOM, $);
+		factory(React, ReactDOM, jQuery);
 	}
 }
 (function (React, ReactDOM, $) {
