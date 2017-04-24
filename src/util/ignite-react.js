@@ -1,8 +1,25 @@
-(function (React, $) {
+(function (factory) {
+	if (typeof define === "function" && define.amd) {
+
+		// AMD. Register as an anonymous module.
+		define( [
+			"react",
+			"react-dom",
+			"jquery",
+			"jquery-ui"
+		], factory );
+	} else {
+
+		// Browser globals
+		factory(React, ReactDOM, jQuery);
+	}
+}
+(function (React, ReactDOM, $) {
 	$.ig = $.ig || {};
 	$.ig.react = $.ig.react || {};
 	$.ig.react.core = $.ig.react.core || {};
 	$.ig.react.propTypes = $.ig.react.propTypes || {};
+	$.ig.react.propTypes.shapes = $.ig.react.propTypes.shapes || {};
 
 	$.ig.react.configWidgets = $.ig.react.configWidgets || {};
 
@@ -81,4 +98,4 @@
 			}
 		}, config)
 	};
-}) (React, jQuery);
+}));

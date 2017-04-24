@@ -4,77 +4,77 @@
 	<meta charset="UTF-8" />
 	<title>Basic ReactJS Sample/POC</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Css refs-->
 	<link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 	<link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
 	<link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="../sample.css" />
-    <!--//Css refs-->
-    
-    <!--JavaScript refs-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!--//Css refs-->
+
+	<!--JavaScript refs-->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
 
 	<!--IgniteUI refs-->
-    <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
-    <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 
-    <!--React-->
-    <script src="../../src/props/igEditors.js"></script>
+	<!--React-->
+	<script src="../../src/util/ignite-react.js"></script>
+	<script src="../../src/props/igEditors.js"></script>
 	<script src="../../src/props/igCombo.js"></script>
-    <script src="../../src/props/igLinearGauge.js"></script>
+	<script src="../../src/props/igLinearGauge.js"></script>
 	<script src="../../src/props/igChart.js"></script>
-    <script src="../../src/util/ignite-react.js"></script>
-    <script src="../../src/components/igEditors.js"></script>
+	<script src="../../src/components/igEditors.js"></script>
 	<script src="../../src/components/igCombo.js"></script>
-    <script src="../../src/components/igLinearGauge.js"></script>
-    <script src="../../src/components/igChart.js"></script>
-    <!--//React-->
-    <!--IgniteUI refs-->
+	<script src="../../src/components/igLinearGauge.js"></script>
+	<script src="../../src/components/igChart.js"></script>
+	<!--//React-->
+	<!--IgniteUI refs-->
 
-    <style>
-        #app { min-width: 800px; }
-        .editors { height: 90px;}
-        .editor-container { float: left; margin: 0 35px 20px 5px; }
-        .editor-container .labels { display: block; font-size: 13px; padding-bottom: 5px; }
-        .ui-state-hover, .ui-widget-content .ui-state-hover { color: #070707; }
-        #totalEditor { border: none; font-size: x-large; }
-        .clear { clear: both; }
-        .gauges { padding-left: 0; height: 100px; }
-        .gauge-container { float: left; margin: 0 25px 0 5px; }
-        .total-container { float: left; margin: 0 20px 0 5px; }
+	<style>
+		#app { min-width: 800px; }
+		.editors { height: 90px;}
+		.editor-container { float: left; margin: 0 35px 20px 5px; }
+		.editor-container .labels { display: block; font-size: 13px; padding-bottom: 5px; }
+		.ui-state-hover, .ui-widget-content .ui-state-hover { color: #070707; }
+		#totalEditor { border: none; font-size: x-large; }
+		.clear { clear: both; }
+		.gauges { padding-left: 0; height: 100px; }
+		.gauge-container { float: left; margin: 0 25px 0 5px; }
+		.total-container { float: left; margin: 0 20px 0 5px; }
 
-        .sample-line-chart-holder { position: relative; width: 100%; }
-        #legendLineChart { position: absolute; top: 120px; left: 45px; border: none; background-color: transparent; font-weight: bold;}
+		.sample-line-chart-holder { position: relative; width: 100%; }
+		#legendLineChart { position: absolute; top: 120px; left: 45px; border: none; background-color: transparent; font-weight: bold;}
 
-        /* Polar chart container and legend */
-        .sample-polar-chart-holder { position: relative; /*width: 33.3%;*/ float: left; margin-top: 10px;
-        }
-        .polar-chart-legend { position: absolute; top: 250px; left: 15px; border: none; background-color: transparent; font-weight: bold; }
+		/* Polar chart container and legend */
+		.sample-polar-chart-holder { position: relative; /*width: 33.3%;*/ float: left; margin-top: 10px;
+		}
+		.polar-chart-legend { position: absolute; top: 250px; left: 15px; border: none; background-color: transparent; font-weight: bold; }
 
-        /* Line chart container and legend */
-        .sample-bar-chart-holder { position: relative; width: 100%; float: left; margin-top: 10px; }
-        #legendBarColumnChart { position: absolute; top: 135px; left: 45px; border: none; background-color: transparent; font-weight: bold; }
-    </style>
+		/* Line chart container and legend */
+		.sample-bar-chart-holder { position: relative; width: 100%; float: left; margin-top: 10px; }
+		#legendBarColumnChart { position: absolute; top: 135px; left: 45px; border: none; background-color: transparent; font-weight: bold; }
+	</style>
 
 	<script type="text/javascript">
 		var overallProfit = 0,
-            mnths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            months = { months: [ 
-                { value: 0, text: "January"}, { value: 1, text: "February"}, { value: 2, text: "March"},
-                { value: 3, text: "April"}, { value: 4, text: "May"}, { value: 5, text: "June"},
-                { value: 6, text: "July"}, { value: 7, text: "August"}, { value: 8, text: "September"},
-                { value: 9, text: "October"}, { value: 10, text: "November"}, { value: 11, text: "December"}
-            ]};
+			mnths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			months = { months: [
+				{ value: 0, text: "January"}, { value: 1, text: "February"}, { value: 2, text: "March"},
+				{ value: 3, text: "April"}, { value: 4, text: "May"}, { value: 5, text: "June"},
+				{ value: 6, text: "July"}, { value: 7, text: "August"}, { value: 8, text: "September"},
+				{ value: 9, text: "October"}, { value: 10, text: "November"}, { value: 11, text: "December"}
+			]};
 	</script>
 </head>
 <body class="container">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -83,7 +83,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">Ignite UI ReactJS Component</a> 
+				<a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -93,470 +93,469 @@
 			</div>
 		</div>
 	</div>
-	
-    <div>
-        <h1 class="push-down-md"><a href="https://igniteui.com/data-chart/overview" target="_blank">igChart</a></h1>
-        
-        <div class="row description">
-            <div class="alert alert-info col-md-5 try-it-out">
-                <span class="h4">TRY IT OUT:</span>
-                <hr />
-                <ul>
-                    <li>Select a month and edit its revenue and expenses</li>
-                    <li>Change month's revenue or expenses, using the editors or using the linear gauge</li>
-                    <li>All the related components' data is changed and new overall year profit is calculated</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <p class="lead">This sample demonstrates how ReactJS can be used to create igChart, igCombo, igLinearGauge together with several different types of igEditors and how a communication between them can be implemented. </p>
-                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/FinancialState.html" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
-            </div>
-        </div>
-    </div>
+
+	<div>
+		<h1 class="push-down-md"><a href="https://igniteui.com/data-chart/overview" target="_blank">igChart</a></h1>
+
+		<div class="row description">
+			<div class="alert alert-info col-md-5 try-it-out">
+				<span class="h4">TRY IT OUT:</span>
+				<hr />
+				<ul>
+					<li>Select a month and edit its revenue and expenses</li>
+					<li>Change month's revenue or expenses, using the editors or using the linear gauge</li>
+					<li>All the related components' data is changed and new overall year profit is calculated</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<p class="lead">This sample demonstrates how ReactJS can be used to create igChart, igCombo, igLinearGauge together with several different types of igEditors and how a communication between them can be implemented. </p>
+				<p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/FinancialState.html" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+			</div>
+		</div>
+	</div>
 	<hr/>
 	<div id="app">
 		<script type="text/babel">
-            var EditorsBox = React.createClass({
-                render: function () {
-                    return (
-                    <div className="editors row">
-                        <div className="editor-container">
-                            <label className="labels">Month:</label>
-                            <IgCombo 
-                                id="monthCombo"
-                                dataSource={months}
-                                responseDataKey="months"
-                                mode="dropdown"
-                                initialSelectedItems={ [{ index: this.props.month }] }
-                                enableClearButton={false}
-                                width="160"
-                                selectionChanged={this.monthChanged} />
-                       </div>
-                       <div className="editor-container">
-                           <label className="labels">Revenue:</label>
-                            <IgNumericEditor
-                                id="revenueEditor"
-                                ref="revenueEditor"
-                                width={160}
-                                value={this.props.data.data[this.props.month].revenue}
-                                minValue={0}
-                                maxValue={50}
-                                valueChanged={this.revenueChanged} />
-                        </div>
-                        <div className="editor-container">
-                            <label className="labels">Expenses:</label>
-                            <IgNumericEditor
-                                id="expensesEditor"
-                                width={160}
-                                value={this.props.data.data[this.props.month].expenses}
-                                minValue={0}
-                                maxValue={50}
-                                valueChanged={this.expensesChanged} />
-                        </div>
-                        <div className="editor-container">
-                            <label className="labels">Profit:</label>
-                            <IgNumericEditor
-                                id="profitEditor"
-                                width={160}
-                                value={this.props.data.data[this.props.month].profit}
-                                minValue={-50}
-                                maxValue={50}
-                                valueChanged={this.profitChanged} />
-                        </div>
-                        <div className="clear"></div>
-                    </div>
-
-                    );
-                },
-                monthChanged: function (e, args) {
-                    this.props.changeMonth(args.items[0].data.value);
-                },
-                revenueChanged: function (e, args) {
-                    this.props.changeRevenue(args.newValue);
-                },
-                expensesChanged: function (e, args) {
-                    this.props.changeExpenses(args.newValue);
-                },
-                profitChanged: function (e, args) {
-                    this.props.changeProfit(args.newValue);
-                }
-            });
-
-            var TotalBox = React.createClass({
-                getTotal: function() {
-                    var data = this.props.data.data,
-                        total = 0, i;
-
-                    for (i = 0; i < data.length; i++) {
-                        total += data[i].profit;
-                    }
-                    return total * 1000000;
-                },
-                render: function() {
-                    return (
-                        <div className="total-container">
-                            <label className="labels">Overall Year Profit:</label><br />
-                            <IgCurrencyEditor
-                                    id="totalEditor"
-                                    value={this.getTotal().toString()}
-                                    readOnly={true}
-                                    width={170}
-                                    negativePattern="$ -n"
-                                    postivePattern="$ n"
-                                    dataMode="int"
-                                    textAlign="left" />
-                        </div>
-                    )
-                 }
-            });
-            
-            var GaugesBox = React.createClass({
-                gaugeInterval: 10,
-                revenueColor: "#a4ba29",
-                expensesColor: "#d3404b",
-                profitColor: "#216EDD",
-                needleColor: "white",
-                needleOutlineColor: "#2582a9",
-                render: function() {
-                    return (
-                        <div className="gauges">
-                            <div className="gauge-container">
-                                <IgLinearGauge
-                                    id="revenueGauge"
-                                    ref="revenueGauge"
-                                    height="80"
-                                    width="170"
-                                    value={this.props.data.data[this.props.month].revenue}
-                                    interval={this.gaugeInterval}
-                                    minimumValue={0}
-                                    maximumValue={50}
-                                    needleBrush={this.needleColor}
-                                    needleOutline={this.needleOutlineColor}
-                                    isNeedleDraggingEnabled={true}
-                                    ranges={[
-                                        {
-                                            name: 'first',
-                                            startValue: 0,
-                                            endValue: 50, 
-                                            brush: this.revenueColor
-                                        }
-                                        ]}
-                                    valueChanged={this.revenueChanged} />
-                            </div>
-                            <div className="gauge-container">
-                                <IgLinearGauge
-                                    id="expensesGauge"
-                                    height="80"
-                                    width="170"
-                                    value={this.props.data.data[this.props.month].expenses}
-                                    interval={this.gaugeInterval}
-                                    minimumValue={0}
-                                    maximumValue={50}
-                                    needleBrush={this.needleColor}
-                                    needleOutline={this.needleOutlineColor}
-                                    isNeedleDraggingEnabled={true}
-                                    ranges={[
-                                        {
-                                            name: 'first',
-                                            startValue: 0,
-                                            endValue: 50, 
-                                            brush: this.expensesColor
-                                        }
-                                        ]}
-                                    valueChanged={this.expensesChanged} />
-                            </div>
-                            <div className="gauge-container">
-                                <IgLinearGauge
-                                    id="profitGauge"
-                                    height="80"
-                                    width="170"
-                                    value={this.props.data.data[this.props.month].profit}
-                                    interval={this.gaugeInterval*2}
-                                    minimumValue={-50}
-                                    maximumValue={50}
-                                    needleBrush={this.needleColor}
-                                    needleOutline={this.needleOutlineColor}
-                                    isNeedleDraggingEnabled={true}
-                                    ranges={[
-                                        {
-                                            name: 'first',
-                                            startValue: -50,
-                                            endValue: 50, 
-                                            brush: this.profitColor
-                                        }
-                                        ]}
-                                    valueChanged={this.profitChanged} />
-                            </div>
-                            <div className="clear"></div>
-                        </div>
-                    )
-                },
-                revenueChanged: function (e, args) {
-                    this.props.changeRevenue(args.newValue);
-                },
-                expensesChanged: function (e, args) {
-                    this.props.changeExpenses(args.newValue);
-                },
-                profitChanged: function (e, args) {
-                    this.props.changeProfit(args.newValue);
-                }
-            });
-
-             var ChartsBox = React.createClass({
-                chartThickness: 2,
-                transitionDuration: 800,
-                chartIntervalX: 1,
-                revenueColor: "#a4ba29",
-                expensesColor: "#d3404b",
-                profitColor: "#216EDD",
-                outlineColor: "black",
-                updateCharts: function() {
-                    switch(this.props.update) {
-                        case "revenue": this.updateRevenue(); break;
-                        case "expenses": this.updateExpenses(); break;
-                        case "profit": this.updateProfit(); break;
-                        default: break;
-                    }
-                },
-                updateRevenue: function() {
-                    var data = this.props.data.data, index = this.props.month;
-
-                    this.updateNonSplineCharts();
-                    this.refs.polarSplineChartRevenue.igControl.notifySetItem(data, index, data[index], data[index]);
-                },
-                updateExpenses: function() {
-                    var data = this.props.data.data, index = this.props.month;
-
-                    this.updateNonSplineCharts();
-                    this.refs.polarSplineChartExpenses.igControl.notifySetItem(data, index, data[index], data[index]);
-                },
-                updateProfit: function() {
-                    var data = this.props.data.data, index = this.props.month;
-
-                    this.updateNonSplineCharts();
-                    this.refs.polarSplineChartProfit.igControl.notifySetItem(data, index, data[index], data[index]);
-                },
-                updateNonSplineCharts: function() {
-                    var data = this.props.data.data, index = this.props.month;
-
-                    this.refs.lineChart.igControl.notifySetItem(data, index, data[index], data[index]);
-                    this.refs.barChart.igControl.notifySetItem(data, index, data[index], data[index]);
-                },
-                render: function () {
-                    this.updateCharts();
-                    return (
-                        <div className="row">
-                            <div className="sample-line-chart-holder">
-                            <IgDataChart 
-                                id="lineChart"
-                                ref="lineChart"
-                                dataSource={this.props.data}
-                                responseDataKey="data"
-                                dataSourceType="json"
-                                width="900"
-                                height="200"
-                                title="Yearly Profit"
-                                leftMargin={5}
-                                legend={{ element: "legendLineChart" }}
-                                transitionDuration={ this.transitionDuration }
-                                axes={[
-                                    { name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" }, 
-                                    { name: "yAxis", type: "numericY", interval: 10, minimumValue: -50, maximumValue: 50 }
-                                ]}
-                                series={[
-                                    { name: "line1", title: "Revenue", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "revenue", transitionDuration: this.transitionDuration,
-                                        brush: this.revenueColor },
-                                    { name: "line2", title: "Expenses", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "expenses", transitionDuration: this.transitionDuration,
-                                        brush: this.expensesColor },
-                                    { name: "line3", title: "Profit", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "profit", transitionDuration: this.transitionDuration,
-                                        brush: this.profitColor
-                                }]}
-                            />
-                            <div id="legendLineChart"></div></div>
-                            
-                            <div className="sample-polar-chart-holder">
-                                <IgDataChart
-                                    id="polarSplineChartRevenue"
-                                    ref="polarSplineChartRevenue"
-                                    dataSource={this.props.data}
-                                    responseDataKey="data"
-                                    dataSourceType="json"
-                                    width="300"
-                                    height="275"
-                                    title="Revenue"
-                                    legend={{ element: "legendPolarChartRevenue" }}
-                                    transitionDuration={ this.transitionDuration }
-                                    axes={[
-                                        { name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
-                                        { name: "radiusAxis", type: "numericRadius"}
-                                    ]}
-                                    series={[
-                                        { name: "polarSpline", type: "polarSpline", title: "Revenue", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
-                                            angleMemberPath: "index", radiusMemberPath: "revenue", transitionDuration: this.transitionDuration,
-                                            brush: this.revenueColor }
-                                    ]}
-                                />
-                                <div id="legendPolarChartRevenue" className="polar-chart-legend"></div>
-                            </div>
-                            
-                            <div className="sample-polar-chart-holder">
-                                <IgDataChart
-                                    id="polarSplineChartExpenses"
-                                    ref="polarSplineChartExpenses"
-                                    dataSource={this.props.data}
-                                    responseDataKey="data"
-                                    dataSourceType="json"
-                                    width="300"
-                                    height="275"
-                                    title="Revenue"
-                                    legend={{ element: "legendPolarChartExpenses" }}
-                                    axes={[
-                                        { name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
-                                        { name: "radiusAxis", type: "numericRadius"}
-                                    ]}
-                                    series={[
-                                        { name: "polarSpline", type: "polarSpline", title: "Expenses", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
-                                            angleMemberPath: "index", radiusMemberPath: "expenses", transitionDuration: this.transitionDuration,
-                                            brush: this.expensesColor }
-                                    ]}
-                                />
-                                <div id="legendPolarChartExpenses" className="polar-chart-legend"></div>
-                            </div>
-
-                            <div className="sample-polar-chart-holder">
-                                <IgDataChart
-                                    id="polarSplineChartProfit"
-                                    ref="polarSplineChartProfit"
-                                    dataSource={this.props.data}
-                                    responseDataKey="data"
-                                    dataSourceType="json"
-                                    width="300"
-                                    height="275"
-                                    title="Revenue"
-                                    legend={{ element: "legendPolarChartProfit" }}
-                                    axes={[
-                                        { name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
-                                        { name: "radiusAxis", type: "numericRadius"}
-                                    ]}
-                                    series={[
-                                        { name: "polarSpline", type: "polarSpline", title: "Profit", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
-                                            angleMemberPath: "index", radiusMemberPath: "profit", transitionDuration: this.transitionDuration,
-                                            brush: this.profitColor }
-                                    ]} />
-                                    <div id="legendPolarChartProfit" className="polar-chart-legend"></div>
-                            </div>
-                            <div className="clear"></div>
-
-                            <div className="sample-line-chart-holder">
-                            <IgDataChart 
-                                id="barChart"
-                                ref="barChart" 
-                                dataSource={this.props.data}
-                                responseDataKey="data"
-                                dataSourceType="json"
-                                width="900"
-                                height="200"
-                                title="Yearly Profit"
-                                leftMargin={5}
-                                legend={{ element: "legendBarColumnChart" }}
-                                axes={[
-                                    { name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" },
-                                    { name: "yAxis", type: "numericY", interval: 10, minimumValue: -50, maximumValue: 50 }
-                                ]}
-                                series={[
-                                    { name: "column1", title: "Revenue", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "revenue", transitionDuration: this.transitionDuration,
-                                        brush: this.revenueColor },
-                                    { name: "column2", title: "Expenses", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "expenses", transitionDuration: this.transitionDuration,
-                                        brush: this.expensesColor },
-                                    { name: "column3", title: "Profit", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
-                                        xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "profit", transitionDuration: this.transitionDuration,
-                                        brush: this.profitColor
-                                }]}
-                            />
-                            <div id="legendBarColumnChart"></div></div>
-                        </div>
-                    );
-                }
-            });
-
-			var FinancialState = React.createClass({
-                getInitialState: function () {
-					return {
-						month: 2,
-                        data: this.generateData(),
-                        update: null
-					}
-				},
-                generateData: function() {
-                    var num = 12, data = [], rand1, rand2, rand3;
-                    overallProfit = 0;
-
-                    for (var i = 0; i < num; i++) {
-                        rand1 = Math.random() * 50.0;
-                        rand2 = Math.random() * 40.0;
-                        rand3 = rand1 - rand2;
-                        overallProfit += rand3;
-                        data[i] = {
-                            index: i,
-                            month: mnths[i],
-                            revenue: rand1,
-                            expenses: rand2,
-                            profit: rand3
-                        };
-                    }
-                    return { data: data };
-                },
-                changeMonth: function(index) {
-                    this.setState({ month: index, update: "month" });
-                },
-                changeRevenue: function(value) {
-                    var data = this.state.data;
-                    data.data[this.state.month].revenue = value;
-                    data.data[this.state.month].profit = value - data.data[this.state.month].expenses;
-                    this.setState({ data: data, update: "revenue" });
-                },
-                changeExpenses: function(value) {
-                    var data = this.state.data;
-                    data.data[this.state.month].expenses = value;
-                    data.data[this.state.month].profit = data.data[this.state.month].revenue - value;
-                    this.setState({ data: data, update: "expenses" });
-                },
-                changeProfit: function(value) {
-                    var data = this.state.data;
-                    data.data[this.state.month].profit = value;
-                    data.data[this.state.month].revenue = value + data.data[this.state.month].expenses;
-                    this.setState({ data: data, update: "profit" });
-                },
+			var EditorsBox = React.createClass({
 				render: function () {
 					return (
-                        <div className="container">
-                            <EditorsBox
-                                data={this.state.data}
-                                month={this.state.month} 
-                                changeMonth={this.changeMonth}
-                                changeRevenue={this.changeRevenue}
-                                changeExpenses={this.changeExpenses}
-                                changeProfit={this.changeProfit} />
-                            <div className="row">
-                                <TotalBox 
-                                    data={this.state.data} />
-                                <GaugesBox
-                                    data={this.state.data}
-                                    month={this.state.month}
-                                    changeRevenue={this.changeRevenue} 
-                                    changeExpenses={this.changeExpenses}
-                                    changeProfit={this.changeProfit} />
-                            </div>
-                            <ChartsBox 
-                                month={this.state.month}
-                                data={this.state.data}
-                                update={this.state.update} />
-                        </div>
+						<div className="editors row">
+							<div className="editor-container">
+								<label className="labels">Month:</label>
+								<IgCombo
+									id="monthCombo"
+									dataSource={months}
+									responseDataKey="months"
+									mode="dropdown"
+									initialSelectedItems={ [{ index: this.props.month }] }
+									enableClearButton={false}
+									width="160"
+									selectionChanged={this.monthChanged} />
+							</div>
+							<div className="editor-container">
+								<label className="labels">Revenue:</label>
+								<IgNumericEditor
+									id="revenueEditor"
+									ref="revenueEditor"
+									width={160}
+									value={this.props.data.data[this.props.month].revenue}
+									minValue={0}
+									maxValue={50}
+									valueChanged={this.revenueChanged} />
+							</div>
+							<div className="editor-container">
+								<label className="labels">Expenses:</label>
+								<IgNumericEditor
+									id="expensesEditor"
+									width={160}
+									value={this.props.data.data[this.props.month].expenses}
+									minValue={0}
+									maxValue={50}
+									valueChanged={this.expensesChanged} />
+							</div>
+							<div className="editor-container">
+								<label className="labels">Profit:</label>
+								<IgNumericEditor
+									id="profitEditor"
+									width={160}
+									value={this.props.data.data[this.props.month].profit}
+									minValue={-50}
+									maxValue={50}
+									valueChanged={this.profitChanged} />
+							</div>
+							<div className="clear"></div>
+						</div>
+					);
+				},
+				monthChanged: function (e, args) {
+					this.props.changeMonth(args.items[0].data.value);
+				},
+				revenueChanged: function (e, args) {
+					this.props.changeRevenue(args.newValue);
+				},
+				expensesChanged: function (e, args) {
+					this.props.changeExpenses(args.newValue);
+				},
+				profitChanged: function (e, args) {
+					this.props.changeProfit(args.newValue);
+				}
+			});
+
+			var TotalBox = React.createClass({
+				getTotal: function() {
+					var data = this.props.data.data,
+						total = 0, i;
+
+					for (i = 0; i < data.length; i++) {
+						total += data[i].profit;
+					}
+					return total * 1000000;
+				},
+				render: function() {
+					return (
+						<div className="total-container">
+							<label className="labels">Overall Year Profit:</label><br />
+							<IgCurrencyEditor
+								id="totalEditor"
+								value={this.getTotal().toString()}
+								readOnly={true}
+								width={170}
+								negativePattern="$ -n"
+								postivePattern="$ n"
+								dataMode="int"
+								textAlign="left" />
+						</div>
+					)
+				 }
+			});
+
+			var GaugesBox = React.createClass({
+				gaugeInterval: 10,
+				revenueColor: "#a4ba29",
+				expensesColor: "#d3404b",
+				profitColor: "#216EDD",
+				needleColor: "white",
+				needleOutlineColor: "#2582a9",
+				render: function() {
+					return (
+						<div className="gauges">
+							<div className="gauge-container">
+								<IgLinearGauge
+									id="revenueGauge"
+									ref="revenueGauge"
+									height="80"
+									width="170"
+									value={this.props.data.data[this.props.month].revenue}
+									interval={this.gaugeInterval}
+									minimumValue={0}
+									maximumValue={50}
+									needleBrush={this.needleColor}
+									needleOutline={this.needleOutlineColor}
+									isNeedleDraggingEnabled={true}
+									ranges={[
+										{
+											name: 'first',
+											startValue: 0,
+											endValue: 50,
+											brush: this.revenueColor
+										}
+										]}
+									valueChanged={this.revenueChanged} />
+							</div>
+							<div className="gauge-container">
+								<IgLinearGauge
+									id="expensesGauge"
+									height="80"
+									width="170"
+									value={this.props.data.data[this.props.month].expenses}
+									interval={this.gaugeInterval}
+									minimumValue={0}
+									maximumValue={50}
+									needleBrush={this.needleColor}
+									needleOutline={this.needleOutlineColor}
+									isNeedleDraggingEnabled={true}
+									ranges={[
+										{
+											name: 'first',
+											startValue: 0,
+											endValue: 50,
+											brush: this.expensesColor
+										}
+										]}
+									valueChanged={this.expensesChanged} />
+							</div>
+							<div className="gauge-container">
+								<IgLinearGauge
+									id="profitGauge"
+									height="80"
+									width="170"
+									value={this.props.data.data[this.props.month].profit}
+									interval={this.gaugeInterval*2}
+									minimumValue={-50}
+									maximumValue={50}
+									needleBrush={this.needleColor}
+									needleOutline={this.needleOutlineColor}
+									isNeedleDraggingEnabled={true}
+									ranges={[
+										{
+											name: 'first',
+											startValue: -50,
+											endValue: 50,
+											brush: this.profitColor
+										}
+										]}
+									valueChanged={this.profitChanged} />
+							</div>
+							<div className="clear"></div>
+						</div>
+					)
+				},
+				revenueChanged: function (e, args) {
+					this.props.changeRevenue(args.newValue);
+				},
+				expensesChanged: function (e, args) {
+					this.props.changeExpenses(args.newValue);
+				},
+				profitChanged: function (e, args) {
+					this.props.changeProfit(args.newValue);
+				}
+			});
+
+			 var ChartsBox = React.createClass({
+				chartThickness: 2,
+				transitionDuration: 800,
+				chartIntervalX: 1,
+				revenueColor: "#a4ba29",
+				expensesColor: "#d3404b",
+				profitColor: "#216EDD",
+				outlineColor: "black",
+				updateCharts: function() {
+					switch(this.props.update) {
+						case "revenue": this.updateRevenue(); break;
+						case "expenses": this.updateExpenses(); break;
+						case "profit": this.updateProfit(); break;
+						default: break;
+					}
+				},
+				updateRevenue: function() {
+					var data = this.props.data.data, index = this.props.month;
+
+					this.updateNonSplineCharts();
+					this.refs.polarSplineChartRevenue.igControl.notifySetItem(data, index, data[index], data[index]);
+				},
+				updateExpenses: function() {
+					var data = this.props.data.data, index = this.props.month;
+
+					this.updateNonSplineCharts();
+					this.refs.polarSplineChartExpenses.igControl.notifySetItem(data, index, data[index], data[index]);
+				},
+				updateProfit: function() {
+					var data = this.props.data.data, index = this.props.month;
+
+					this.updateNonSplineCharts();
+					this.refs.polarSplineChartProfit.igControl.notifySetItem(data, index, data[index], data[index]);
+				},
+				updateNonSplineCharts: function() {
+					var data = this.props.data.data, index = this.props.month;
+
+					this.refs.lineChart.igControl.notifySetItem(data, index, data[index], data[index]);
+					this.refs.barChart.igControl.notifySetItem(data, index, data[index], data[index]);
+				},
+				render: function () {
+					this.updateCharts();
+					return (
+						<div className="row">
+							<div className="sample-line-chart-holder">
+							<IgDataChart
+								id="lineChart"
+								ref="lineChart"
+								dataSource={this.props.data}
+								responseDataKey="data"
+								dataSourceType="json"
+								width="900"
+								height="200"
+								title="Yearly Profit"
+								leftMargin={5}
+								legend={{ element: "legendLineChart" }}
+								transitionDuration={ this.transitionDuration }
+								axes={[
+									{ name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" },
+									{ name: "yAxis", type: "numericY", interval: 10, minimumValue: -50, maximumValue: 50 }
+								]}
+								series={[
+									{ name: "line1", title: "Revenue", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "revenue", transitionDuration: this.transitionDuration,
+										brush: this.revenueColor },
+									{ name: "line2", title: "Expenses", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "expenses", transitionDuration: this.transitionDuration,
+										brush: this.expensesColor },
+									{ name: "line3", title: "Profit", type: "line", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "profit", transitionDuration: this.transitionDuration,
+										brush: this.profitColor
+								}]}
+							/>
+							<div id="legendLineChart"></div></div>
+
+							<div className="sample-polar-chart-holder">
+								<IgDataChart
+									id="polarSplineChartRevenue"
+									ref="polarSplineChartRevenue"
+									dataSource={this.props.data}
+									responseDataKey="data"
+									dataSourceType="json"
+									width="300"
+									height="275"
+									title="Revenue"
+									legend={{ element: "legendPolarChartRevenue" }}
+									transitionDuration={ this.transitionDuration }
+									axes={[
+										{ name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
+										{ name: "radiusAxis", type: "numericRadius"}
+									]}
+									series={[
+										{ name: "polarSpline", type: "polarSpline", title: "Revenue", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
+											angleMemberPath: "index", radiusMemberPath: "revenue", transitionDuration: this.transitionDuration,
+											brush: this.revenueColor }
+									]}
+								/>
+								<div id="legendPolarChartRevenue" className="polar-chart-legend"></div>
+							</div>
+
+							<div className="sample-polar-chart-holder">
+								<IgDataChart
+									id="polarSplineChartExpenses"
+									ref="polarSplineChartExpenses"
+									dataSource={this.props.data}
+									responseDataKey="data"
+									dataSourceType="json"
+									width="300"
+									height="275"
+									title="Revenue"
+									legend={{ element: "legendPolarChartExpenses" }}
+									axes={[
+										{ name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
+										{ name: "radiusAxis", type: "numericRadius"}
+									]}
+									series={[
+										{ name: "polarSpline", type: "polarSpline", title: "Expenses", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
+											angleMemberPath: "index", radiusMemberPath: "expenses", transitionDuration: this.transitionDuration,
+											brush: this.expensesColor }
+									]}
+								/>
+								<div id="legendPolarChartExpenses" className="polar-chart-legend"></div>
+							</div>
+
+							<div className="sample-polar-chart-holder">
+								<IgDataChart
+									id="polarSplineChartProfit"
+									ref="polarSplineChartProfit"
+									dataSource={this.props.data}
+									responseDataKey="data"
+									dataSourceType="json"
+									width="300"
+									height="275"
+									title="Revenue"
+									legend={{ element: "legendPolarChartProfit" }}
+									axes={[
+										{ name: "angleAxis", type: "numericAngle", interval: this.chartIntervalX, formatLabel: this.formatMonth },
+										{ name: "radiusAxis", type: "numericRadius"}
+									]}
+									series={[
+										{ name: "polarSpline", type: "polarSpline", title: "Profit", angleAxis: "angleAxis", radiusAxis: "radiusAxis",
+											angleMemberPath: "index", radiusMemberPath: "profit", transitionDuration: this.transitionDuration,
+											brush: this.profitColor }
+									]} />
+									<div id="legendPolarChartProfit" className="polar-chart-legend"></div>
+							</div>
+							<div className="clear"></div>
+
+							<div className="sample-line-chart-holder">
+							<IgDataChart
+								id="barChart"
+								ref="barChart"
+								dataSource={this.props.data}
+								responseDataKey="data"
+								dataSourceType="json"
+								width="900"
+								height="200"
+								title="Yearly Profit"
+								leftMargin={5}
+								legend={{ element: "legendBarColumnChart" }}
+								axes={[
+									{ name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" },
+									{ name: "yAxis", type: "numericY", interval: 10, minimumValue: -50, maximumValue: 50 }
+								]}
+								series={[
+									{ name: "column1", title: "Revenue", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "revenue", transitionDuration: this.transitionDuration,
+										brush: this.revenueColor },
+									{ name: "column2", title: "Expenses", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "expenses", transitionDuration: this.transitionDuration,
+										brush: this.expensesColor },
+									{ name: "column3", title: "Profit", type: "column", isHighlightingEnabled: true, thickness: this.chartThickness,
+										xAxis: "xAxis", yAxis: "yAxis", valueMemberPath: "profit", transitionDuration: this.transitionDuration,
+										brush: this.profitColor
+								}]}
+							/>
+							<div id="legendBarColumnChart"></div></div>
+						</div>
+					);
+				}
+			});
+
+			var FinancialState = React.createClass({
+				getInitialState: function () {
+					return {
+						month: 2,
+						data: this.generateData(),
+						update: null
+					}
+				},
+				generateData: function() {
+					var num = 12, data = [], rand1, rand2, rand3;
+					overallProfit = 0;
+
+					for (var i = 0; i < num; i++) {
+						rand1 = Math.random() * 50.0;
+						rand2 = Math.random() * 40.0;
+						rand3 = rand1 - rand2;
+						overallProfit += rand3;
+						data[i] = {
+							index: i,
+							month: mnths[i],
+							revenue: rand1,
+							expenses: rand2,
+							profit: rand3
+						};
+					}
+					return { data: data };
+				},
+				changeMonth: function(index) {
+					this.setState({ month: index, update: "month" });
+				},
+				changeRevenue: function(value) {
+					var data = this.state.data;
+					data.data[this.state.month].revenue = value;
+					data.data[this.state.month].profit = value - data.data[this.state.month].expenses;
+					this.setState({ data: data, update: "revenue" });
+				},
+				changeExpenses: function(value) {
+					var data = this.state.data;
+					data.data[this.state.month].expenses = value;
+					data.data[this.state.month].profit = data.data[this.state.month].revenue - value;
+					this.setState({ data: data, update: "expenses" });
+				},
+				changeProfit: function(value) {
+					var data = this.state.data;
+					data.data[this.state.month].profit = value;
+					data.data[this.state.month].revenue = value + data.data[this.state.month].expenses;
+					this.setState({ data: data, update: "profit" });
+				},
+				render: function () {
+					return (
+						<div className="container">
+							<EditorsBox
+								data={this.state.data}
+								month={this.state.month}
+								changeMonth={this.changeMonth}
+								changeRevenue={this.changeRevenue}
+								changeExpenses={this.changeExpenses}
+								changeProfit={this.changeProfit} />
+							<div className="row">
+								<TotalBox
+									data={this.state.data} />
+								<GaugesBox
+									data={this.state.data}
+									month={this.state.month}
+									changeRevenue={this.changeRevenue}
+									changeExpenses={this.changeExpenses}
+									changeProfit={this.changeProfit} />
+							</div>
+							<ChartsBox
+								month={this.state.month}
+								data={this.state.data}
+								update={this.state.update} />
+						</div>
 					);
 				}
 			});
@@ -566,7 +565,7 @@
 			);
 		</script>
 	</div>
-    <hr/>
+	<hr/>
 	<footer>
 		<p>
 			<a href="/igniteui-react/index.html">Home</a> |
