@@ -1,6 +1,6 @@
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define("IgDialog", [
+		define("IgPieChart", [
 			"react",
 			"jquery",
 			"../dist/igniteui-react.js"
@@ -10,10 +10,10 @@
 	}
 }
 (function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+	var IgPieChart = React.createClass($.ig.react.core.buildComponent("igPieChart"));
 	if (window) {
-		window.IgDialog = IgDialog;
+		window.IgPieChart = IgPieChart;
 	}
-	return IgDialog;
+	return IgPieChart;
 }));
 

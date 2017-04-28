@@ -17,5 +17,3 @@
 	return IgHtmlEditor;
 }));
 
-
-
