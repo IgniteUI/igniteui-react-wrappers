@@ -1,6 +1,6 @@
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define("IgDialog", [
+		define("IgBrowseButton", [
 			"react",
 			"jquery",
 			"../dist/igniteui-react.js"
@@ -10,10 +10,10 @@
 	}
 }
 (function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+	var IgBrowseButton = React.createClass($.ig.react.core.buildComponent("igBrowseButton"));
 	if (window) {
-		window.IgDialog = IgDialog;
+		window.IgBrowseButton = IgBrowseButton;
 	}
-	return IgDialog;
+	return IgBrowseButton;
 }));
 

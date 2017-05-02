@@ -1,6 +1,6 @@
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define("IgDialog", [
+		define("IgMaskEditor", [
 			"react",
 			"jquery",
 			"../dist/igniteui-react.js"
@@ -10,10 +10,10 @@
 	}
 }
 (function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+	var IgMaskEditor = React.createClass($.ig.react.core.buildComponent("igMaskEditor"));
 	if (window) {
-		window.IgDialog = IgDialog;
+		window.IgMaskEditor = IgMaskEditor;
 	}
-	return IgDialog;
+	return IgMaskEditor;
 }));
 

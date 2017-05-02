@@ -1,6 +1,6 @@
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define("IgDialog", [
+		define("IgProgressBar", [
 			"react",
 			"jquery",
 			"../dist/igniteui-react.js"
@@ -10,10 +10,10 @@
 	}
 }
 (function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+	var IgProgressBar = React.createClass($.ig.react.core.buildComponent("igProgressBar"));
 	if (window) {
-		window.IgDialog = IgDialog;
+		window.IgProgressBar = IgProgressBar;
 	}
-	return IgDialog;
+	return IgProgressBar;
 }));
 

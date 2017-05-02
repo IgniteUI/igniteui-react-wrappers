@@ -1,6 +1,6 @@
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define("IgDialog", [
+		define("IgDateEditor", [
 			"react",
 			"jquery",
 			"../dist/igniteui-react.js"
@@ -10,10 +10,10 @@
 	}
 }
 (function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+	var IgDateEditor = React.createClass($.ig.react.core.buildComponent("igDateEditor"));
 	if (window) {
-		window.IgDialog = IgDialog;
+		window.IgDateEditor = IgDateEditor;
 	}
-	return IgDialog;
+	return IgDateEditor;
 }));
 
