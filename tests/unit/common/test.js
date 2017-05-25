@@ -29,7 +29,13 @@ function main() {
         },
         IgZoombar: {
             skip: true
-        }
+        },
+		IgScheduler: {
+			skip: true
+		},
+		IgSpreadsheet: {
+			skip: true
+		}
     };
 
     describe("Basic react wrappers test", function() {
