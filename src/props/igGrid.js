@@ -144,8 +144,9 @@ $.ig.react.propTypes.igGrid = {
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
 	),
 	dataSource: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+		React.PropTypes.array,
+		React.PropTypes.object,
+		React.PropTypes.string
 	]),
 	dataSourceUrl: React.PropTypes.string,
 	dataSourceType: React.PropTypes.string,
