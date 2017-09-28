@@ -31,6 +31,14 @@ To build the project use the following steps:
 2. run `npm install`
 3. run `npm run build`
 
+`igniteui-react` depends on the `ignite-ui-full` licensed package. Follow [this guide](https://www.igniteui.com/help/using-ignite-ui-npm-packages) on setting up access to the Ignite UI private npm feed and add the dependency to the `package.json`.
+
+```
+"dependencies": {
+	"@infragistics/ignite-ui-full": "latest"
+}
+```
+
 # Getting Started
 
 ## Page setup
