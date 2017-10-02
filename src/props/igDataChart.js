@@ -172,6 +172,7 @@ $.ig.react.propTypes.shapes.igDataChartSeries = {
 		"polarLine",
 		"polarSpline",
 		"polarScatter",
+		"radialArea",
 		"radialColumn",
 		"radialLine",
 		"radialPie",
