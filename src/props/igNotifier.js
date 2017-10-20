@@ -1,10 +1,3 @@
-$.ig.react.propTypes.shapes.igNotifierMessages = {
-	success: React.PropTypes.string,
-	info: React.PropTypes.string,
-	warning: React.PropTypes.string,
-	error: React.PropTypes.string
-}
-
 $.ig.react.propTypes.shapes.igNotifierHeaderTemplate = {
 	closeButton: React.PropTypes.bool,
 	title: React.PropTypes.string
@@ -34,16 +27,13 @@ $.ig.react.propTypes.igNotifier = {
 		"inline"
 	]),
 	allowCSSOnTarget: React.PropTypes.bool,
-	messages: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgNotifierMessages
-	),
 	showIcon: React.PropTypes.bool,
 	contentTemplate: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.func
 	]),
 	headerTemplate: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgNotifierHeaderTemplate
+		$.ig.react.propTypes.shapes.igNotifierHeaderTemplate
 	),
 	showOn: React.PropTypes.oneOf([
 		"mouseenter",
@@ -62,6 +52,7 @@ $.ig.react.propTypes.igNotifier = {
 		"top",
 		"bottom"
 	]),
+	directionPriority: React.PropTypes.array,
 	position: React.PropTypes.oneOf([
 		"auto",
 		"balanced",

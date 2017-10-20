@@ -161,7 +161,7 @@ $.ig.react.propTypes.igMap = {
 		"collapsed"
 	]),
 	crosshairPoint: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgMapCrosshairPoint
+		$.ig.react.propTypes.shapes.igMapCrosshairPoint
 	),
 	plotAreaBackground: React.PropTypes.string,
 	defaultInteraction: React.PropTypes.oneOf([
@@ -207,30 +207,10 @@ $.ig.react.propTypes.igMap = {
 	preferHigherResolutionTiles: React.PropTypes.bool,
 	zoomTileCacheSize: React.PropTypes.number,
 	backgroundContent: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgMapBackgroundContent
+		$.ig.react.propTypes.shapes.igMapBackgroundContent
 	),
 	series: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igMapSeries)
 	),
 	theme: React.PropTypes.string
-}
-
-$.ig.react.propTypes.shapes.shapeDataSourceSettings = {
-	id: React.PropTypes.string,
-	shapefileSource: React.PropTypes.string,
-	databaseSource: React.PropTypes.string,
-	callback: React.PropTypes.func,
-	callee: React.PropTypes.object,
-	transformRecord: React.PropTypes.func,
-	transformPoint: React.PropTypes.func,
-	transformBounds: React.PropTypes.func,
-	importCompleted: React.PropTypes.func
-}
-
-$.ig.react.propTypes.shapes.triangulationDataSourceSettings = {
-	id: React.PropTypes.string,
-	source: React.PropTypes.string,
-	triangulationSource: React.PropTypes.string,
-	callback: React.PropTypes.func,
-	callee: React.PropTypes.object
 }

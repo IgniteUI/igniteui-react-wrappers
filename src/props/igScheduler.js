@@ -23,20 +23,21 @@ $.ig.react.propTypes.igScheduler = {
 		"agendaView"
 	]),
 	selectedDate: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
 	agendaViewSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgSchedulerAgendaViewSettings
+		$.ig.react.propTypes.shapes.igSchedulerAgendaViewSettings
 	),
 	monthViewSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgSchedulerMonthViewSettings
+		$.ig.react.propTypes.shapes.igSchedulerMonthViewSettings
 	),
-	appointmentDialogSuppress: React.PropTypes.bool
+	appointmentDialogSuppress: React.PropTypes.bool,
+	dataSource: React.PropTypes.object,
+	resources: React.PropTypes.object
 }
-

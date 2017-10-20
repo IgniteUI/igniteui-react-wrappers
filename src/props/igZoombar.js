@@ -28,15 +28,10 @@ $.ig.react.propTypes.igZoombar = {
 	]),
 	zoomWindowMoveDistance: React.PropTypes.number,
 	defaultZoomWindow: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgZoombarDefaultZoomWindow
+		$.ig.react.propTypes.shapes.igZoombarDefaultZoomWindow
 	),
 	zoomWindowMinWidth: React.PropTypes.number,
 	hoverStyleAnimationDuration: React.PropTypes.number,
 	windowPanDuration: React.PropTypes.number,
 	tabIndex: React.PropTypes.number
-}
-
-$.ig.react.propTypes.shapes.zoombarProviderDefaultSettings = {
-	targetObject: React.PropTypes.object,
-	zoomChangedCallback: React.PropTypes.object
 }

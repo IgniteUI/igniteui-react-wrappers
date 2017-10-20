@@ -15,4 +15,3 @@ $.ig.react.propTypes.igChartLegend = {
 	]),
 	theme: React.PropTypes.string
 }
-

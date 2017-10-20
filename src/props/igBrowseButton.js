@@ -4,4 +4,3 @@ $.ig.react.propTypes.igBrowseButton = {
 	multipleFiles: React.PropTypes.bool,
 	container: React.PropTypes.object
 }
-

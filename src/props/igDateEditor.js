@@ -10,18 +10,23 @@ $.ig.react.propTypes.igDateEditor = {
 		"displayModeText",
 		"editModeText"
 	]),
+	displayTimeOffset: React.PropTypes.object,
 	buttonType: React.PropTypes.oneOf([
 		"clear",
 		"spin"
 	]),
-	spinDelta: React.PropTypes.number,
+	spinDelta: React.PropTypes.oneOfType([
+		React.PropTypes.number,
+		React.PropTypes.object
+	]),
 	limitSpinToCurrentField: React.PropTypes.bool,
 	enableUTCDates: React.PropTypes.bool,
 	centuryThreshold: React.PropTypes.number,
 	yearShift: React.PropTypes.number,
 	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
-		React.PropTypes.number
+		React.PropTypes.number,
+		React.PropTypes.instanceOf(Date)
 	]),
 	isLimitedToListValues: React.PropTypes.bool,
 	listItemHoverDuration: React.PropTypes.number,
@@ -36,7 +41,7 @@ $.ig.react.propTypes.igDateEditor = {
 	emptyChar: React.PropTypes.string,
 	toUpper: React.PropTypes.bool,
 	toLower: React.PropTypes.bool,
-	regional: React.PropTypes.object,
+	suppressKeyboard: React.PropTypes.bool,
 	includeKeys: React.PropTypes.string,
 	excludeKeys: React.PropTypes.string,
 	spinWrapAround: React.PropTypes.bool,
@@ -58,7 +63,6 @@ $.ig.react.propTypes.igDateEditor = {
 	]),
 	revertIfNotValid: React.PropTypes.bool,
 	preventSubmitOnEnter: React.PropTypes.bool,
-	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,

@@ -42,6 +42,7 @@ $.ig.react.propTypes.igValidator = {
 		React.PropTypes.string,
 		React.PropTypes.object
 	]),
+	executeAllRules: React.PropTypes.bool,
 	messageTarget: React.PropTypes.element,
 	errorMessage: React.PropTypes.string,
 	successMessage: React.PropTypes.string,

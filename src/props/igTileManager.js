@@ -1,6 +1,6 @@
 $.ig.react.propTypes.shapes.igTileManagerSplitterOptionsEvents = {
-	collapsed: React.PropTypes.func,
-	expanded: React.PropTypes.func
+	collapsed: React.PropTypes.object,
+	expanded: React.PropTypes.object
 }
 
 $.ig.react.propTypes.shapes.igTileManagerSplitterOptions = {
@@ -8,7 +8,7 @@ $.ig.react.propTypes.shapes.igTileManagerSplitterOptions = {
 	collapsible: React.PropTypes.bool,
 	collapsed: React.PropTypes.bool,
 	events: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTileManagerSplitterOptionsEvents
+		$.ig.react.propTypes.shapes.igTileManagerSplitterOptionsEvents
 	)
 }
 
@@ -24,11 +24,13 @@ $.ig.react.propTypes.igTileManager = {
 	]),
 	columnWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
-		React.PropTypes.number
+		React.PropTypes.number,
+		React.PropTypes.array
 	]),
 	columnHeight: React.PropTypes.oneOfType([
 		React.PropTypes.string,
-		React.PropTypes.number
+		React.PropTypes.number,
+		React.PropTypes.array
 	]),
 	cols: React.PropTypes.oneOfType([
 		React.PropTypes.number
@@ -40,7 +42,7 @@ $.ig.react.propTypes.igTileManager = {
 	marginTop: React.PropTypes.number,
 	rearrangeItems: React.PropTypes.bool,
 	items: React.PropTypes.oneOfType([
-		React.PropTypes.array
+		React.PropTypes.object
 	]),
 	dataSource: React.PropTypes.object,
 	minimizedState: React.PropTypes.oneOfType([
@@ -63,7 +65,7 @@ $.ig.react.propTypes.igTileManager = {
 	]),
 	showRightPanelScroll: React.PropTypes.bool,
 	splitterOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTileManagerSplitterOptions
+		$.ig.react.propTypes.shapes.igTileManagerSplitterOptions
 	),
 	preventMaximizingSelector: React.PropTypes.string,
 	animationDuration: React.PropTypes.number,
@@ -71,7 +73,9 @@ $.ig.react.propTypes.igTileManager = {
 	responseDataKey: React.PropTypes.oneOfType([
 		React.PropTypes.string
 	]),
-	responseDataType: React.PropTypes.string,
+	responseDataType: React.PropTypes.oneOfType([
+		React.PropTypes.string
+	]),
 	dataSourceType: React.PropTypes.string,
 	requestType: React.PropTypes.string,
 	responseContentType: React.PropTypes.string

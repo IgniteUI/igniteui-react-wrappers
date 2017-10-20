@@ -170,9 +170,7 @@ $.ig.react.propTypes.shapes.igDataChartSeries = {
 		"typicalPriceIndicator",
 		"polarArea",
 		"polarLine",
-		"polarSpline",
 		"polarScatter",
-		"radialArea",
 		"radialColumn",
 		"radialLine",
 		"radialPie",
@@ -193,7 +191,7 @@ $.ig.react.propTypes.shapes.igDataChartSeries = {
 	showTooltip: React.PropTypes.bool,
 	tooltipTemplate: React.PropTypes.string,
 	legend: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgDataChartSeriesLegend
+		$.ig.react.propTypes.shapes.igDataChartSeriesLegend
 	),
 	legendItemVisibility: React.PropTypes.oneOf([
 		"visible",
@@ -347,12 +345,25 @@ $.ig.react.propTypes.shapes.igDataChartSeries = {
 	expectFunctions: React.PropTypes.bool,
 	useInterpolation: React.PropTypes.bool,
 	skipUnknownValues: React.PropTypes.bool,
-	verticalLineVisibility: React.PropTypes.bool,
-	horizontalLineVisibility: React.PropTypes.bool,
+	verticalLineVisibility: React.PropTypes.oneOf([
+		"visible",
+		"collapsed"
+	]),
+	horizontalLineVisibility: React.PropTypes.oneOf([
+		"visible",
+		"collapsed"
+	]),
 	targetSeries: React.PropTypes.string,
 	targetAxis: React.PropTypes.string,
 	isCustomCategoryStyleAllowed: React.PropTypes.bool,
 	isCustomCategoryMarkerStyleAllowed: React.PropTypes.bool,
+	consolidatedColumnVerticalPosition: React.PropTypes.oneOf([
+		"maximum",
+		"minimum",
+		"median",
+		"relativeMinimum",
+		"relativeMaximum"
+	]),
 	isHighlightingEnabled: React.PropTypes.bool,
 	bandHighlightWidth: React.PropTypes.number,
 	highlightType: React.PropTypes.oneOf([
@@ -381,15 +392,18 @@ $.ig.react.propTypes.shapes.igDataChartSeries = {
 
 $.ig.react.propTypes.igDataChart = {
 	id: React.PropTypes.string.isRequired,
+	isPagePanningAllowed: React.PropTypes.bool,
 	syncChannel: React.PropTypes.string,
 	synchronizeVertically: React.PropTypes.bool,
-	syncrhonizeHorizontally: React.PropTypes.bool,
+	synchronizeHorizontally: React.PropTypes.bool,
 	crosshairPoint: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgDataChartCrosshairPoint
+		$.ig.react.propTypes.shapes.igDataChartCrosshairPoint
 	),
 	windowRect: React.PropTypes.object,
 	horizontalZoomable: React.PropTypes.bool,
 	verticalZoomable: React.PropTypes.bool,
+	isHorizontalZoomEnabled: React.PropTypes.bool,
+	isVerticalZoomEnabled: React.PropTypes.bool,
 	windowResponse: React.PropTypes.oneOf([
 		"deferred",
 		"immediate"
@@ -504,7 +518,7 @@ $.ig.react.propTypes.igDataChart = {
 		"mixedFavoringComputational"
 	]),
 	legend: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgDataChartLegend
+		$.ig.react.propTypes.shapes.igDataChartLegend
 	),
 	axes: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igDataChartAxes)

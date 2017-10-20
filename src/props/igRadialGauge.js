@@ -118,7 +118,7 @@ $.ig.react.propTypes.igRadialGauge = {
 	]),
 	isNeedleDraggingEnabled: React.PropTypes.bool,
 	isNeedleDraggingConstrained: React.PropTypes.bool,
-	font: React.PropTypes.object,
+	font: React.PropTypes.string,
 	transitionProgress: React.PropTypes.number,
 	pixelScalingRatio: React.PropTypes.number
 }

@@ -66,8 +66,30 @@ $.ig.react.propTypes.shapes.igVideoPlayerCommercials = {
 	alwaysPlayCommercials: React.PropTypes.bool,
 	showBookmarks: React.PropTypes.bool,
 	adMessage: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgVideoPlayerCommercialsAdMessage
+		$.ig.react.propTypes.shapes.igVideoPlayerCommercialsAdMessage
 	)
+}
+
+$.ig.react.propTypes.shapes.igVideoPlayerLocale = {
+	liveStream: React.PropTypes.bool,
+	live: React.PropTypes.bool,
+	paused: React.PropTypes.bool,
+	playing: React.PropTypes.bool,
+	play: React.PropTypes.bool,
+	volume: React.PropTypes.bool,
+	progressLabelLongFormat: React.PropTypes.bool,
+	progressLabelShortFormat: React.PropTypes.bool,
+	enterFullscreen: React.PropTypes.bool,
+	exitFullscreen: React.PropTypes.bool,
+	skipTo: React.PropTypes.bool,
+	buffering: React.PropTypes.bool,
+	adMessage: React.PropTypes.bool,
+	adMessageLong: React.PropTypes.bool,
+	adMessageNoDuration: React.PropTypes.bool,
+	adNewWindowTip: React.PropTypes.bool,
+	relatedVideos: React.PropTypes.bool,
+	replayButton: React.PropTypes.bool,
+	replayTooltip: React.PropTypes.bool
 }
 
 $.ig.react.propTypes.igVideoPlayer = {
@@ -105,6 +127,9 @@ $.ig.react.propTypes.igVideoPlayer = {
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerBanner)
 	),
 	commercials: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgVideoPlayerCommercials
+		$.ig.react.propTypes.shapes.igVideoPlayerCommercials
+	),
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igVideoPlayerLocale
 	)
 }

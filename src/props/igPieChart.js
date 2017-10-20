@@ -24,6 +24,7 @@ $.ig.react.propTypes.igPieChart = {
 	responseDataKey: React.PropTypes.string,
 	valueMemberPath: React.PropTypes.string,
 	labelMemberPath: React.PropTypes.string,
+	legendLabelMemberPath: React.PropTypes.string,
 	dataValue: React.PropTypes.string,
 	dataLabel: React.PropTypes.string,
 	labelsPosition: React.PropTypes.oneOf([
@@ -69,7 +70,7 @@ $.ig.react.propTypes.igPieChart = {
 	showTooltip: React.PropTypes.bool,
 	tooltipTemplate: React.PropTypes.string,
 	legend: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPieChartLegend
+		$.ig.react.propTypes.shapes.igPieChartLegend
 	),
 	labelExtent: React.PropTypes.number,
 	startAngle: React.PropTypes.number,

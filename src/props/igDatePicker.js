@@ -1,6 +1,5 @@
 $.ig.react.propTypes.igDatePicker = {
 	id: React.PropTypes.string.isRequired,
-	regional: React.PropTypes.object,
 	buttonType: React.PropTypes.oneOf([
 		"dropdown",
 		"clear",
@@ -13,6 +12,7 @@ $.ig.react.propTypes.igDatePicker = {
 	listItemHoverDuration: React.PropTypes.number,
 	listItems: React.PropTypes.object,
 	listWidth: React.PropTypes.number,
+	suppressKeyboard: React.PropTypes.bool,
 	value: React.PropTypes.instanceOf(Date),
 	minValue: React.PropTypes.instanceOf(Date),
 	maxValue: React.PropTypes.instanceOf(Date),
@@ -23,14 +23,19 @@ $.ig.react.propTypes.igDatePicker = {
 		"displayModeText",
 		"editModeText"
 	]),
-	spinDelta: React.PropTypes.number,
+	displayTimeOffset: React.PropTypes.object,
+	spinDelta: React.PropTypes.oneOfType([
+		React.PropTypes.number,
+		React.PropTypes.object
+	]),
 	limitSpinToCurrentField: React.PropTypes.bool,
 	enableUTCDates: React.PropTypes.bool,
 	centuryThreshold: React.PropTypes.number,
 	yearShift: React.PropTypes.number,
 	nullValue: React.PropTypes.oneOfType([
 		React.PropTypes.string,
-		React.PropTypes.number
+		React.PropTypes.number,
+		React.PropTypes.instanceOf(Date)
 	]),
 	dropDownAnimationDuration: React.PropTypes.number,
 	inputMask: React.PropTypes.string,
@@ -60,7 +65,6 @@ $.ig.react.propTypes.igDatePicker = {
 	]),
 	revertIfNotValid: React.PropTypes.bool,
 	preventSubmitOnEnter: React.PropTypes.bool,
-	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,

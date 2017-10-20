@@ -1,3 +1,8 @@
+$.ig.react.propTypes.shapes.igHierarchicalGridLocale = {
+	expandTooltip: React.PropTypes.string,
+	collapseTooltip: React.PropTypes.string
+}
+
 $.ig.react.propTypes.shapes.igHierarchicalGridColumnLayout = {
 	key: React.PropTypes.string,
 	primaryKey: React.PropTypes.string,
@@ -27,7 +32,7 @@ $.ig.react.propTypes.shapes.igHierarchicalGridColumn = {
 		React.PropTypes.string,
 		React.PropTypes.number,
 		React.PropTypes.bool,
-		React.PropTypes.date,
+		React.PropTypes.instanceOf(Date),
 		React.PropTypes.object
 	]),
 	width: React.PropTypes.oneOfType([
@@ -38,9 +43,13 @@ $.ig.react.propTypes.shapes.igHierarchicalGridColumn = {
 	template: React.PropTypes.string,
 	unbound: React.PropTypes.bool,
 	groupOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridColumnGroupOptions
+		$.ig.react.propTypes.shapes.igHierarchicalGridColumnGroupOptions
 	),
 	group: React.PropTypes.array,
+	dateDisplayType: React.PropTypes.oneOf([
+		"local",
+		"utc"
+	]),
 	rowspan: React.PropTypes.number,
 	formula: React.PropTypes.oneOfType([
 		React.PropTypes.string,
@@ -84,13 +93,13 @@ $.ig.react.propTypes.shapes.igHierarchicalGridRestSettingsRemove = {
 
 $.ig.react.propTypes.shapes.igHierarchicalGridRestSettings = {
 	create: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridRestSettingsCreate
+		$.ig.react.propTypes.shapes.igHierarchicalGridRestSettingsCreate
 	),
 	update: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridRestSettingsUpdate
+		$.ig.react.propTypes.shapes.igHierarchicalGridRestSettingsUpdate
 	),
 	remove: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridRestSettingsRemove
+		$.ig.react.propTypes.shapes.igHierarchicalGridRestSettingsRemove
 	),
 	encodeRemoveInRequestUri: React.PropTypes.bool,
 	contentSerializer: React.PropTypes.func,
@@ -123,6 +132,9 @@ $.ig.react.propTypes.igHierarchicalGrid = {
 	animationDuration: React.PropTypes.number,
 	expandTooltip: React.PropTypes.string,
 	collapseTooltip: React.PropTypes.string,
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igHierarchicalGridLocale
+	),
 	columnLayouts: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igHierarchicalGridColumnLayout)
 	),
@@ -153,7 +165,6 @@ $.ig.react.propTypes.igHierarchicalGrid = {
 		"fixed",
 		"continuous"
 	]),
-	requiresDataBinding: React.PropTypes.bool,
 	rowVirtualization: React.PropTypes.bool,
 	columnVirtualization: React.PropTypes.bool,
 	virtualizationMouseWheelStep: React.PropTypes.number,
@@ -165,7 +176,7 @@ $.ig.react.propTypes.igHierarchicalGrid = {
 	columns: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igHierarchicalGridColumn)
 	),
-	dataSource: React.PropTypes.oneOfType([	
+	dataSource: React.PropTypes.oneOfType([
 		React.PropTypes.array,
 		React.PropTypes.object,
 		React.PropTypes.string
@@ -200,7 +211,7 @@ $.ig.react.propTypes.igHierarchicalGrid = {
 	renderCheckboxes: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,
 	restSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridRestSettings
+		$.ig.react.propTypes.shapes.igHierarchicalGridRestSettings
 	),
 	alternateRowStyles: React.PropTypes.bool,
 	autofitLastColumn: React.PropTypes.bool,
@@ -215,7 +226,6 @@ $.ig.react.propTypes.igHierarchicalGrid = {
 		"always"
 	]),
 	scrollSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgHierarchicalGridScrollSettings
+		$.ig.react.propTypes.shapes.igHierarchicalGridScrollSettings
 	)
 }
-

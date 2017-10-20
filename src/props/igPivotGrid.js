@@ -18,13 +18,13 @@ $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptions = {
 	cube: React.PropTypes.string,
 	measureGroup: React.PropTypes.string,
 	requestOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsXmlaOptionsRequestOptions
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsRequestOptions
 	),
 	enableResultCache: React.PropTypes.bool,
 	discoverProperties: React.PropTypes.object,
 	executeProperties: React.PropTypes.object,
 	mdxSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsXmlaOptionsMdxSettings
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsMdxSettings
 	)
 }
 
@@ -70,7 +70,7 @@ $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataC
 	name: React.PropTypes.string,
 	caption: React.PropTypes.string,
 	measuresDimension: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension
 	),
 	dimensions: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimension)
@@ -79,7 +79,7 @@ $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataC
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadata = {
 	cube: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsFlatDataOptionsMetadataCube
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCube
 	)
 }
 
@@ -90,16 +90,16 @@ $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptions = {
 	responseDataKey: React.PropTypes.string,
 	responseDataType: React.PropTypes.string,
 	metadata: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsFlatDataOptionsMetadata
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadata
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptions = {
 	xmlaOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsXmlaOptions
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptions
 	),
 	flatDataOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptionsFlatDataOptions
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptions
 	),
 	measures: React.PropTypes.string,
 	filters: React.PropTypes.string,
@@ -127,7 +127,7 @@ $.ig.react.propTypes.shapes.igPivotGridGridOptions = {
 	fixedHeaders: React.PropTypes.bool,
 	caption: React.PropTypes.string,
 	features: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridGridOptionsFeatures
+		$.ig.react.propTypes.shapes.igPivotGridGridOptionsFeatures
 	),
 	tabIndex: React.PropTypes.number,
 	alternateRowStyles: React.PropTypes.bool,
@@ -156,7 +156,7 @@ $.ig.react.propTypes.igPivotGrid = {
 	]),
 	dataSource: React.PropTypes.object,
 	dataSourceOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDataSourceOptions
+		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptions
 	),
 	deferUpdate: React.PropTypes.bool,
 	isParentInFrontForColumns: React.PropTypes.bool,
@@ -182,10 +182,10 @@ $.ig.react.propTypes.igPivotGrid = {
 	]),
 	firstLevelSortDirection: React.PropTypes.any,
 	gridOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridGridOptions
+		$.ig.react.propTypes.shapes.igPivotGridGridOptions
 	),
 	dragAndDropSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPivotGridDragAndDropSettings
+		$.ig.react.propTypes.shapes.igPivotGridDragAndDropSettings
 	),
 	dropDownParent: React.PropTypes.any,
 	disableRowsDropArea: React.PropTypes.bool,

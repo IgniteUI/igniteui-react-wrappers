@@ -1,3 +1,12 @@
+$.ig.react.propTypes.shapes.igDialogLocale = {
+	closeButtonTitle: React.PropTypes.string,
+	minimizeButtonTitle: React.PropTypes.string,
+	maximizeButtonTitle: React.PropTypes.string,
+	pinButtonTitle: React.PropTypes.string,
+	unpinButtonTitle: React.PropTypes.string,
+	restoreButtonTitle: React.PropTypes.string
+}
+
 $.ig.react.propTypes.igDialog = {
 	id: React.PropTypes.string.isRequired,
 	mainElement: React.PropTypes.element,
@@ -48,6 +57,9 @@ $.ig.react.propTypes.igDialog = {
 	pinButtonTitle: React.PropTypes.string,
 	unpinButtonTitle: React.PropTypes.string,
 	restoreButtonTitle: React.PropTypes.string,
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igDialogLocale
+	),
 	temporaryUrl: React.PropTypes.string,
 	enableHeaderFocus: React.PropTypes.bool,
 	enableDblclick: React.PropTypes.any

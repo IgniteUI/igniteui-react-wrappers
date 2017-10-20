@@ -14,14 +14,14 @@ $.ig.react.propTypes.igButton = {
 	width: React.PropTypes.object,
 	height: React.PropTypes.object,
 	link: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgButtonLink
+		$.ig.react.propTypes.shapes.igButtonLink
 	),
 	labelText: React.PropTypes.string,
 	centerLabel: React.PropTypes.bool,
 	css: React.PropTypes.object,
 	onlyIcons: React.PropTypes.bool,
 	icons: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgButtonIcons
+		$.ig.react.propTypes.shapes.igButtonIcons
 	),
 	title: React.PropTypes.bool
 }

@@ -1,7 +1,8 @@
 $.ig.react.propTypes.igMaskEditor = {
 	id: React.PropTypes.string.isRequired,
-	regional: React.PropTypes.object,
-	buttonType: React.PropTypes.string,
+	buttonType: React.PropTypes.oneOf([
+		"clear"
+	]),
 	inputMask: React.PropTypes.string,
 	dataMode: React.PropTypes.oneOf([
 		"rawText",
@@ -29,6 +30,7 @@ $.ig.react.propTypes.igMaskEditor = {
 	visibleItemsCount: React.PropTypes.number,
 	maxLength: React.PropTypes.object,
 	value: React.PropTypes.string,
+	suppressKeyboard: React.PropTypes.bool,
 	textAlign: React.PropTypes.oneOf([
 		"left",
 		"right",
@@ -45,7 +47,6 @@ $.ig.react.propTypes.igMaskEditor = {
 	preventSubmitOnEnter: React.PropTypes.bool,
 	toUpper: React.PropTypes.bool,
 	toLower: React.PropTypes.bool,
-	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
