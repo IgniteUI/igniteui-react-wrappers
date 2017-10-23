@@ -37,19 +37,18 @@ $.ig.react.propTypes.shapes.igTreeDragAndDropSettings = {
 	dragStartDelay: React.PropTypes.number,
 	expandOnDragOver: React.PropTypes.bool,
 	expandDelay: React.PropTypes.number,
-	helper: React.PropTypes.oneOf([
-		"function",
-		"default"
+	helper: React.PropTypes.oneOfType([
+		React.PropTypes.func,
+		React.PropTypes.string
 	]),
 	customDropValidation: React.PropTypes.oneOfType([
 		React.PropTypes.func
 	]),
-	containment: React.PropTypes.oneOf([
-		"boolean",
-		"selector",
-		"element",
-		"string",
-		"array"
+	containment: React.PropTypes.oneOfType([
+		React.PropTypes.bool,
+		React.PropTypes.string,
+		React.PropTypes.object,
+		React.PropTypes.array
 	]),
 	invalidMoveToMarkup: React.PropTypes.string,
 	moveToMarkup: React.PropTypes.string,

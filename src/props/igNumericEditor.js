@@ -31,7 +31,6 @@ $.ig.react.propTypes.igNumericEditor = {
 	allowNullValue: React.PropTypes.bool,
 	spinDelta: React.PropTypes.number,
 	scientificFormat: React.PropTypes.oneOf([
-		"null",
 		"E",
 		"e",
 		"E+",

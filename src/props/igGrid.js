@@ -17,12 +17,12 @@ $.ig.react.propTypes.shapes.igGridColumn = {
 		React.PropTypes.func
 	]),
 	format: React.PropTypes.string,
-	dataType: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number,
-		React.PropTypes.bool,
-		React.PropTypes.instanceOf(Date),
-		React.PropTypes.object
+	dataType: React.PropTypes.oneOf([
+		"number",
+		"boolean",
+		"date",
+		"object",
+		"string"
 	]),
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
@@ -171,12 +171,9 @@ $.ig.react.propTypes.igGrid = {
 	serializeTransactionLog: React.PropTypes.bool,
 	autoCommit: React.PropTypes.bool,
 	aggregateTransactions: React.PropTypes.bool,
-	autoFormat: React.PropTypes.oneOf([
-		"date",
-		"number",
-		"dateandnumber",
-		"true",
-		"false"
+	autoFormat: React.PropTypes.oneOfType([
+		React.PropTypes.string,
+		React.PropTypes.bool
 	]),
 	renderCheckboxes: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,

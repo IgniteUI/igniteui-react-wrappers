@@ -119,8 +119,7 @@ $.ig.react.propTypes.igCombo = {
 		"multi",
 		"contains",
 		"startsWith",
-		"full",
-		"null"
+		"full"
 	]),
 	caseSensitive: React.PropTypes.bool,
 	autoSelectFirstMatch: React.PropTypes.bool,
