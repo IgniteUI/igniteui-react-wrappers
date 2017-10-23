@@ -1,7 +1,17 @@
 $.ig.react.propTypes.shapes.igTreeGridDataSourceSettings = {
-	propertyExpanded: React.PropTypes.string,
-	propertyDataLevel: React.PropTypes.string,
+	propertyExpanded: React.PropTypes.object,
+	propertyDataLevel: React.PropTypes.object,
+	expandedKey: React.PropTypes.string,
+	dataLevelKey: React.PropTypes.string,
 	initialFlatDataView: React.PropTypes.bool
+}
+
+$.ig.react.propTypes.shapes.igTreeGridLocale = {
+	expandTooltipText: React.PropTypes.string,
+	collapseTooltipText: React.PropTypes.string
+}
+
+$.ig.react.propTypes.shapes.igTreeGridRestSettings = {
 }
 
 $.ig.react.propTypes.igTreeGrid = {
@@ -13,7 +23,10 @@ $.ig.react.propTypes.igTreeGrid = {
 	collapseTooltipText: React.PropTypes.string,
 	foreignKey: React.PropTypes.string,
 	initialExpandDepth: React.PropTypes.number,
-	foreignKeyRootValue: React.PropTypes.number,
+	foreignKeyRootValue: React.PropTypes.oneOfType([
+		React.PropTypes.number,
+		React.PropTypes.string
+	]),
 	renderExpansionIndicatorColumn: React.PropTypes.bool,
 	renderFirstDataCellFunction: React.PropTypes.oneOfType([
 		React.PropTypes.string,
@@ -26,7 +39,10 @@ $.ig.react.propTypes.igTreeGrid = {
 	]),
 	enableRemoteLoadOnDemand: React.PropTypes.bool,
 	dataSourceSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTreeGridDataSourceSettings
+		$.ig.react.propTypes.shapes.igTreeGridDataSourceSettings
+	),
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igTreeGridLocale
 	),
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
@@ -55,7 +71,6 @@ $.ig.react.propTypes.igTreeGrid = {
 		"fixed",
 		"continuous"
 	]),
-	requiresDataBinding: React.PropTypes.bool,
 	rowVirtualization: React.PropTypes.bool,
 	columnVirtualization: React.PropTypes.bool,
 	virtualizationMouseWheelStep: React.PropTypes.number,
@@ -67,7 +82,7 @@ $.ig.react.propTypes.igTreeGrid = {
 	columns: React.PropTypes.arrayOf(
 		React.PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
 	),
-	dataSource: React.PropTypes.oneOfType([	
+	dataSource: React.PropTypes.oneOfType([
 		React.PropTypes.array,
 		React.PropTypes.object,
 		React.PropTypes.string
@@ -101,9 +116,6 @@ $.ig.react.propTypes.igTreeGrid = {
 	]),
 	renderCheckboxes: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,
-	restSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridRestSettings
-	),
 	alternateRowStyles: React.PropTypes.bool,
 	autofitLastColumn: React.PropTypes.bool,
 	enableHoverStyles: React.PropTypes.bool,
@@ -117,6 +129,6 @@ $.ig.react.propTypes.igTreeGrid = {
 		"always"
 	]),
 	scrollSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridScrollSettings
+		$.ig.react.propTypes.shapes.igGridScrollSettings
 	)
 }

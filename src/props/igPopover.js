@@ -13,6 +13,7 @@ $.ig.react.propTypes.igPopover = {
 		"top",
 		"bottom"
 	]),
+	directionPriority: React.PropTypes.array,
 	position: React.PropTypes.oneOf([
 		"auto",
 		"balanced",
@@ -46,7 +47,7 @@ $.ig.react.propTypes.igPopover = {
 	]),
 	selectors: React.PropTypes.string,
 	headerTemplate: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgPopoverHeaderTemplate
+		$.ig.react.propTypes.shapes.igPopoverHeaderTemplate
 	),
 	showOn: React.PropTypes.oneOf([
 		"mouseenter",

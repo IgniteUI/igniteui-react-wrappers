@@ -21,7 +21,7 @@ $.ig.react.propTypes.shapes.igGridColumn = {
 		React.PropTypes.string,
 		React.PropTypes.number,
 		React.PropTypes.bool,
-		React.PropTypes.date,
+		React.PropTypes.instanceOf(Date),
 		React.PropTypes.object
 	]),
 	width: React.PropTypes.oneOfType([
@@ -32,9 +32,13 @@ $.ig.react.propTypes.shapes.igGridColumn = {
 	template: React.PropTypes.string,
 	unbound: React.PropTypes.bool,
 	groupOptions: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridColumnGroupOptions
+		$.ig.react.propTypes.shapes.igGridColumnGroupOptions
 	),
 	group: React.PropTypes.array,
+	dateDisplayType: React.PropTypes.oneOf([
+		"local",
+		"utc"
+	]),
 	rowspan: React.PropTypes.number,
 	formula: React.PropTypes.oneOfType([
 		React.PropTypes.string,
@@ -78,13 +82,13 @@ $.ig.react.propTypes.shapes.igGridRestSettingsRemove = {
 
 $.ig.react.propTypes.shapes.igGridRestSettings = {
 	create: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridRestSettingsCreate
+		$.ig.react.propTypes.shapes.igGridRestSettingsCreate
 	),
 	update: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridRestSettingsUpdate
+		$.ig.react.propTypes.shapes.igGridRestSettingsUpdate
 	),
 	remove: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridRestSettingsRemove
+		$.ig.react.propTypes.shapes.igGridRestSettingsRemove
 	),
 	encodeRemoveInRequestUri: React.PropTypes.bool,
 	contentSerializer: React.PropTypes.func,
@@ -131,7 +135,6 @@ $.ig.react.propTypes.igGrid = {
 		"fixed",
 		"continuous"
 	]),
-	requiresDataBinding: React.PropTypes.bool,
 	rowVirtualization: React.PropTypes.bool,
 	columnVirtualization: React.PropTypes.bool,
 	virtualizationMouseWheelStep: React.PropTypes.number,
@@ -178,7 +181,7 @@ $.ig.react.propTypes.igGrid = {
 	renderCheckboxes: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,
 	restSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridRestSettings
+		$.ig.react.propTypes.shapes.igGridRestSettings
 	),
 	alternateRowStyles: React.PropTypes.bool,
 	autofitLastColumn: React.PropTypes.bool,
@@ -193,6 +196,6 @@ $.ig.react.propTypes.igGrid = {
 		"always"
 	]),
 	scrollSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgGridScrollSettings
+		$.ig.react.propTypes.shapes.igGridScrollSettings
 	)
 }

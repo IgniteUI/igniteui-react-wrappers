@@ -1,10 +1,10 @@
 $.ig.react.propTypes.igSpreadsheet = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -21,7 +21,9 @@ $.ig.react.propTypes.igSpreadsheet = {
 		"up",
 		"left"
 	]),
+	fixedDecimalPlaceCount: React.PropTypes.number,
 	isEnterKeyNavigationEnabled: React.PropTypes.bool,
+	isFixedDecimalEnabled: React.PropTypes.bool,
 	isFormulaBarVisible: React.PropTypes.bool,
 	isInEndMode: React.PropTypes.bool,
 	isUndoEnabled: React.PropTypes.bool,

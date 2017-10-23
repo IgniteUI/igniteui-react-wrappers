@@ -17,7 +17,6 @@ $.ig.react.propTypes.igPercentEditor = {
 	]),
 	spinDelta: React.PropTypes.number,
 	listItems: React.PropTypes.array,
-	regional: React.PropTypes.object,
 	negativeSign: React.PropTypes.string,
 	negativePattern: React.PropTypes.string,
 	decimalSeparator: React.PropTypes.string,
@@ -25,6 +24,7 @@ $.ig.react.propTypes.igPercentEditor = {
 	groups: React.PropTypes.array,
 	maxDecimals: React.PropTypes.number,
 	minDecimals: React.PropTypes.number,
+	roundDecimals: React.PropTypes.bool,
 	textAlign: React.PropTypes.oneOf([
 		"left",
 		"right",
@@ -41,13 +41,14 @@ $.ig.react.propTypes.igPercentEditor = {
 		"e+"
 	]),
 	spinWrapAround: React.PropTypes.bool,
+	isLimitedToListValues: React.PropTypes.bool,
 	maxLength: React.PropTypes.object,
 	excludeKeys: React.PropTypes.object,
 	includeKeys: React.PropTypes.object,
 	toLower: React.PropTypes.object,
 	toUpper: React.PropTypes.object,
 	textMode: React.PropTypes.any,
-	value: React.PropTypes.string,
+	value: React.PropTypes.object,
 	buttonType: React.PropTypes.oneOf([
 		"dropdown",
 		"clear",
@@ -65,7 +66,6 @@ $.ig.react.propTypes.igPercentEditor = {
 		"atEnd",
 		"browserDefault"
 	]),
-	isLimitedToListValues: React.PropTypes.bool,
 	revertIfNotValid: React.PropTypes.bool,
 	preventSubmitOnEnter: React.PropTypes.bool,
 	dropDownOrientation: React.PropTypes.oneOf([
@@ -74,8 +74,8 @@ $.ig.react.propTypes.igPercentEditor = {
 		"top"
 	]),
 	dropDownOnReadOnly: React.PropTypes.bool,
-	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
+	suppressKeyboard: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number

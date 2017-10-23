@@ -14,7 +14,7 @@ $.ig.react.propTypes.igSlider = {
 	step: React.PropTypes.number,
 	value: React.PropTypes.number,
 	bookmarks: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgSliderBookmarks
+		$.ig.react.propTypes.shapes.igSliderBookmarks
 	),
 	showBookmarkTitle: React.PropTypes.bool,
 	syncHandleWithBookmark: React.PropTypes.bool

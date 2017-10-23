@@ -12,13 +12,14 @@ $.ig.react.propTypes.shapes.igTreeBindings = {
 	navigateUrlXPath: React.PropTypes.string,
 	targetKey: React.PropTypes.string,
 	expandedKey: React.PropTypes.string,
+	checkedKey: React.PropTypes.string,
 	primaryKey: React.PropTypes.string,
 	nodeContentTemplate: React.PropTypes.string,
 	childDataProperty: React.PropTypes.string,
 	childDataXPath: React.PropTypes.string,
 	searchFieldXPath: React.PropTypes.string,
 	bindings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTreeBindingsBindings
+		$.ig.react.propTypes.shapes.igTreeBindingsBindings
 	)
 }
 
@@ -43,10 +44,12 @@ $.ig.react.propTypes.shapes.igTreeDragAndDropSettings = {
 	customDropValidation: React.PropTypes.oneOfType([
 		React.PropTypes.func
 	]),
-	containment: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.string,
-		React.PropTypes.array
+	containment: React.PropTypes.oneOf([
+		"boolean",
+		"selector",
+		"element",
+		"string",
+		"array"
 	]),
 	invalidMoveToMarkup: React.PropTypes.string,
 	moveToMarkup: React.PropTypes.string,
@@ -114,12 +117,12 @@ $.ig.react.propTypes.igTree = {
 	initialExpandDepth: React.PropTypes.number,
 	loadOnDemand: React.PropTypes.bool,
 	bindings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTreeBindings
+		$.ig.react.propTypes.shapes.igTreeBindings
 	),
 	defaultNodeTarget: React.PropTypes.string,
 	dragAndDrop: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,
 	dragAndDropSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgTreeDragAndDropSettings
+		$.ig.react.propTypes.shapes.igTreeDragAndDropSettings
 	)
 }

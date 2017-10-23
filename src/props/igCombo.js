@@ -1,3 +1,10 @@
+$.ig.react.propTypes.shapes.igComboLocale = {
+	noMatchFoundText: React.PropTypes.object,
+	dropDownButtonTitle: React.PropTypes.object,
+	clearButtonTitle: React.PropTypes.object,
+	placeHolder: React.PropTypes.object
+}
+
 $.ig.react.propTypes.shapes.igComboLoadOnDemandSettings = {
 	enabled: React.PropTypes.bool,
 	pageSize: React.PropTypes.number
@@ -12,7 +19,10 @@ $.ig.react.propTypes.shapes.igComboMultiSelection = {
 
 $.ig.react.propTypes.shapes.igComboGrouping = {
 	key: React.PropTypes.string,
-	dir: React.PropTypes.any
+	dir: React.PropTypes.oneOf([
+		"asc",
+		"desc"
+	])
 }
 
 $.ig.react.propTypes.shapes.igComboInitialSelectedItem = {
@@ -22,15 +32,15 @@ $.ig.react.propTypes.shapes.igComboInitialSelectedItem = {
 
 $.ig.react.propTypes.igCombo = {
 	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([	
+	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([	
+	height: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	dropDownWidth: React.PropTypes.oneOfType([	
+	dropDownWidth: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
@@ -64,14 +74,33 @@ $.ig.react.propTypes.igCombo = {
 		"none"
 	]),
 	filterExprUrlKey: React.PropTypes.string,
-	filteringCondition: React.PropTypes.any,
-	filteringLogic: React.PropTypes.any,
+	filteringCondition: React.PropTypes.oneOf([
+		"contains",
+		"doesNotContain",
+		"startsWith",
+		"endsWith",
+		"greaterThan",
+		"lessThan",
+		"greaterThanOrEqualTo",
+		"lessThanOrEqualTo",
+		"equals",
+		"doesNotEqual"
+	]),
+	filteringLogic: React.PropTypes.oneOf([
+		"OR",
+		"AND"
+	]),
 	noMatchFoundText: React.PropTypes.string,
+	dropDownButtonTitle: React.PropTypes.string,
+	clearButtonTitle: React.PropTypes.string,
+	placeHolder: React.PropTypes.string,
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igComboLocale
+	),
 	loadOnDemandSettings: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgComboLoadOnDemandSettings
+		$.ig.react.propTypes.shapes.igComboLoadOnDemandSettings
 	),
 	visibleItemsCount: React.PropTypes.number,
-	placeHolder: React.PropTypes.string,
 	mode: React.PropTypes.oneOf([
 		"editable",
 		"dropdown",
@@ -80,10 +109,10 @@ $.ig.react.propTypes.igCombo = {
 	]),
 	virtualization: React.PropTypes.bool,
 	multiSelection: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgComboMultiSelection
+		$.ig.react.propTypes.shapes.igComboMultiSelection
 	),
 	grouping: React.PropTypes.shape(
-		$.ig.react.propTypes.shapes.IgComboGrouping
+		$.ig.react.propTypes.shapes.igComboGrouping
 	),
 	validatorOptions: React.PropTypes.object,
 	highlightMatchesMode: React.PropTypes.oneOf([
@@ -110,7 +139,9 @@ $.ig.react.propTypes.igCombo = {
 	format: React.PropTypes.string,
 	suppressKeyboard: React.PropTypes.bool,
 	enableClearButton: React.PropTypes.bool,
-	dropDownButtonTitle: React.PropTypes.string,
-	clearButtonTitle: React.PropTypes.string,
-	dropDownOrientation: React.PropTypes.any
+	dropDownOrientation: React.PropTypes.oneOf([
+		"auto",
+		"bottom",
+		"top"
+	])
 }

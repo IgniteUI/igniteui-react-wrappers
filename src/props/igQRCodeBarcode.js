@@ -8,6 +8,7 @@ $.ig.react.propTypes.igQRCodeBarcode = {
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
+	pixelScalingRatio: React.PropTypes.number,
 	backingBrush: React.PropTypes.string,
 	backingOutline: React.PropTypes.string,
 	backingStrokeThickness: React.PropTypes.number,
@@ -96,4 +97,3 @@ $.ig.react.propTypes.igQRCodeBarcode = {
 	]),
 	applicationIndicator: React.PropTypes.string
 }
-

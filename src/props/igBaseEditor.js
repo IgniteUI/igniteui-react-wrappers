@@ -8,7 +8,7 @@ $.ig.react.propTypes.igBaseEditor = {
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	value: React.PropTypes.string,
+	value: React.PropTypes.object,
 	tabIndex: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
 	nullValue: React.PropTypes.oneOfType([

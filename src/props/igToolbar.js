@@ -1,3 +1,8 @@
+$.ig.react.propTypes.shapes.igToolbarLocale = {
+	collapseButtonTitle: React.PropTypes.object,
+	expandButtonTitle: React.PropTypes.object
+}
+
 $.ig.react.propTypes.igToolbar = {
 	id: React.PropTypes.string.isRequired,
 	height: React.PropTypes.object,
@@ -8,5 +13,8 @@ $.ig.react.propTypes.igToolbar = {
 	name: React.PropTypes.string,
 	displayName: React.PropTypes.string,
 	items: React.PropTypes.array,
-	isExpanded: React.PropTypes.bool
+	isExpanded: React.PropTypes.bool,
+	locale: React.PropTypes.shape(
+		$.ig.react.propTypes.shapes.igToolbarLocale
+	)
 }

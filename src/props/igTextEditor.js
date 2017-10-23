@@ -43,8 +43,8 @@ $.ig.react.propTypes.igTextEditor = {
 	dropDownOnReadOnly: React.PropTypes.bool,
 	toUpper: React.PropTypes.bool,
 	toLower: React.PropTypes.bool,
-	locale: React.PropTypes.object,
 	suppressNotifications: React.PropTypes.bool,
+	suppressKeyboard: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
@@ -53,7 +53,7 @@ $.ig.react.propTypes.igTextEditor = {
 		React.PropTypes.string,
 		React.PropTypes.number
 	]),
-	value: React.PropTypes.string,
+	value: React.PropTypes.object,
 	tabIndex: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
 	nullValue: React.PropTypes.oneOfType([

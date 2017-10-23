@@ -31,6 +31,9 @@ $.ig.react.propTypes.igBulletGraph = {
 		"horizontal",
 		"vertical"
 	]),
+	scaleBackgroundBrush: React.PropTypes.string,
+	scaleBackgroundOutline: React.PropTypes.string,
+	scaleBackgroundThickness: React.PropTypes.number,
 	rangeBrushes: React.PropTypes.object,
 	rangeOutlines: React.PropTypes.object,
 	minimumValue: React.PropTypes.number,
