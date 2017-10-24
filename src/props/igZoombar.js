@@ -14,9 +14,9 @@ $.ig.react.propTypes.igZoombar = {
 		"auto",
 		"none"
 	]),
-	width: React.PropTypes.oneOf([
-		"auto",
-		"null"
+	width: React.PropTypes.oneOfType([
+		React.PropTypes.string,
+		React.PropTypes.number
 	]),
 	height: React.PropTypes.oneOfType([
 		React.PropTypes.number,

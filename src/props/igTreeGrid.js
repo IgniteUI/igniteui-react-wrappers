@@ -107,12 +107,9 @@ $.ig.react.propTypes.igTreeGrid = {
 	serializeTransactionLog: React.PropTypes.bool,
 	autoCommit: React.PropTypes.bool,
 	aggregateTransactions: React.PropTypes.bool,
-	autoFormat: React.PropTypes.oneOf([
-		"date",
-		"number",
-		"dateandnumber",
-		"true",
-		"false"
+	autoFormat: React.PropTypes.oneOfType([
+		React.PropTypes.string,
+		React.PropTypes.bool
 	]),
 	renderCheckboxes: React.PropTypes.bool,
 	updateUrl: React.PropTypes.string,

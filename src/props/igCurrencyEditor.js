@@ -33,7 +33,6 @@ $.ig.react.propTypes.igCurrencyEditor = {
 	allowNullValue: React.PropTypes.bool,
 	spinDelta: React.PropTypes.number,
 	scientificFormat: React.PropTypes.oneOf([
-		"null",
 		"E",
 		"e",
 		"E+",

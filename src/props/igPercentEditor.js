@@ -34,7 +34,6 @@ $.ig.react.propTypes.igPercentEditor = {
 	maxValue: React.PropTypes.number,
 	allowNullValue: React.PropTypes.bool,
 	scientificFormat: React.PropTypes.oneOf([
-		"null",
 		"E",
 		"e",
 		"E+",
