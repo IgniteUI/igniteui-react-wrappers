@@ -10,8 +10,6 @@ $.ig.react.propTypes.igCheckboxEditor = {
 	iconClass: React.PropTypes.string,
 	tabIndex: React.PropTypes.number,
 	readOnly: React.PropTypes.bool,
-	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.object,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number

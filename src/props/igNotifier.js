@@ -44,7 +44,6 @@ $.ig.react.propTypes.igNotifier = {
 	closeOnBlur: React.PropTypes.bool,
 	animationDuration: React.PropTypes.number,
 	animationSlideDistance: React.PropTypes.number,
-	selectors: React.PropTypes.string,
 	direction: React.PropTypes.oneOf([
 		"auto",
 		"left",

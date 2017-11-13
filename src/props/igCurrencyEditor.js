@@ -40,12 +40,6 @@ $.ig.react.propTypes.igCurrencyEditor = {
 	]),
 	spinWrapAround: React.PropTypes.bool,
 	isLimitedToListValues: React.PropTypes.bool,
-	maxLength: React.PropTypes.object,
-	excludeKeys: React.PropTypes.object,
-	includeKeys: React.PropTypes.object,
-	toLower: React.PropTypes.object,
-	toUpper: React.PropTypes.object,
-	textMode: React.PropTypes.any,
 	value: React.PropTypes.number,
 	buttonType: React.PropTypes.oneOf([
 		"dropdown",
