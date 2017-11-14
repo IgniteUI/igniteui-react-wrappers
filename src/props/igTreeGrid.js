@@ -11,9 +11,6 @@ $.ig.react.propTypes.shapes.igTreeGridLocale = {
 	collapseTooltipText: React.PropTypes.string
 }
 
-$.ig.react.propTypes.shapes.igTreeGridRestSettings = {
-}
-
 $.ig.react.propTypes.igTreeGrid = {
 	id: React.PropTypes.string.isRequired,
 	indentation: React.PropTypes.string,

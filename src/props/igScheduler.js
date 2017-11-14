@@ -22,7 +22,8 @@ $.ig.react.propTypes.igScheduler = {
 		"monthView",
 		"agendaView"
 	]),
-	selectedDate: React.PropTypes.bool,
+	selectedDate: React.PropTypes.instanceOf(Date),
+	enableTodayButton: React.PropTypes.bool,
 	width: React.PropTypes.oneOfType([
 		React.PropTypes.string,
 		React.PropTypes.number
