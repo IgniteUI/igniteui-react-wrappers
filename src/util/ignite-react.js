@@ -72,6 +72,10 @@
 		if (changedOpts) {
 			$(element)[component.widgetName]("option", changedOpts);
 		}
+
+		if (nextProps.children && nextProps.children.length > 0) {
+			return true;
+		}
 		return false;
 	};
 	$.ig.react.core.unmount = function (component) {
