@@ -41,6 +41,17 @@ To build the project use the following steps:
 
 # Getting Started
 
+## Ignite UI CLI
+To get started with the Ignite UI CLI and the Ignite UI React wrappers:
+
+```
+npm i -g igniteui-cli
+ig new <project name> --framework=react
+cd <project name>
+ig add combo <component name>
+ig start
+```
+
 ## Page setup
 
 In the page markup include the Ignite UI React components bundle found in `dist/npm/igniteui-react.min.js` along with the Ignite UI scripts:
