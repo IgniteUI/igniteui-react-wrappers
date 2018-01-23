@@ -10,13 +10,13 @@
     <link type="text/css" href="https://secure-cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="../sample.css" />
-    <!--//IgniteUI CSS refs-->	
+    <!--//IgniteUI CSS refs-->
 	<style>
 		.ui-state-hover, .ui-widget-content .ui-state-hover {
 			color: #070707;
 		}
 	</style>
-	
+
 	<script type="text/javascript">
 		var sourceData = {
 			"Products": [
@@ -45,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Ignite UI ReactJS Component</a> 
+                <a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -55,10 +55,10 @@
             </div>
         </div>
     </div>
-	
+
 <div >
 	<h1 class="push-down-md"><a href="https://igniteui.com/grid/overview" target="_blank">igGrid</a></h1>
-    
+
     <div class="row description">
         <div class="alert alert-info col-md-5 try-it-out">
             <span class="h4">TRY IT OUT:</span>
@@ -71,10 +71,10 @@
         </div>
         <div class="col-md-4">
             <p class="lead">This sample demonstrates how ReactJS can be used to create igGrid and add two-way data binding. </p>
-            <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/igGrid/igGrid.html" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+            <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-grid" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
         </div>
     </div>
-	
+
 	<div id="app">
 		 <!-- to use JSX in our HTML -->
 		<script type="text/babel">
@@ -126,7 +126,7 @@
 									<div className="col-md-6"><div style={{ "float": "right" }}><IgButton id="btnUpdate" labelText="Update" click={this.handleButtonUpdateClick} /></div></div>
 									<div className="col-md-6"><div style={{ "float": "left" }}><IgButton id="btnDelete" labelText="Delete" click={this.handleButtonDeleteClick} /></div></div>
 								</div>
-								
+
 							</div>
 						</div>
 					);
@@ -158,7 +158,7 @@
 					}
 				}
 			});
-			
+
 			var IgDialogBox = React.createClass({
 				render: function () {
 					return (
@@ -195,7 +195,7 @@
 				},
 				handleDeleteDialogCancel: function () {
 					this.props.deleteDialogCancel();
-				}				
+				}
 			});
 			// main component
 			var App = React.createClass({
@@ -218,7 +218,7 @@
 						<div>
 							<div className="row">
 								<div className="col-md-8">
-									<IgGrid 
+									<IgGrid
 										id="grid1"
 										ref="grid1"
 										autoGenerateColumns={false}
@@ -266,7 +266,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 									<IgEditBox
 										ref="selectedRowInfo"
 										btnDeleteClicked={this.editBoxHandleDelete}
@@ -329,7 +329,7 @@
 				},
 				/* //helper functions */
 				/* handle edit box specific events */
-				editBoxHandleDelete: function (e, rowId) {						
+				editBoxHandleDelete: function (e, rowId) {
 					this.setState({
 						deleteRowId: rowId,
 						dialogState: "opened"
@@ -397,7 +397,7 @@
 				},
 				gridRowSelectionChanged: function (evt, ui) {
 					var rowId = ui.row.id;
-					this.setState({ selectedRowId: rowId, 
+					this.setState({ selectedRowId: rowId,
 						nameValue: this.getNameByRowId(rowId),
 						stockValue: this.getStockByRowId(rowId),
 						priceValue: this.getPriceByRowId(rowId)
@@ -432,7 +432,7 @@
         </p>
         <p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="https://igniteui.com">https://igniteui.com</a></p>
     </footer>
-	
+
 	<!--JavaScript refs-->
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>

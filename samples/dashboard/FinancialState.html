@@ -11,7 +11,7 @@
 	<link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="../sample.css" />
     <!--//Css refs-->
-    
+
     <!--JavaScript refs-->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
@@ -65,7 +65,7 @@
 	<script type="text/javascript">
 		var overallProfit = 0,
             mnths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            months = { months: [ 
+            months = { months: [
                 { value: 0, text: "January"}, { value: 1, text: "February"}, { value: 2, text: "March"},
                 { value: 3, text: "April"}, { value: 4, text: "May"}, { value: 5, text: "June"},
                 { value: 6, text: "July"}, { value: 7, text: "August"}, { value: 8, text: "September"},
@@ -83,7 +83,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">Ignite UI ReactJS Component</a> 
+				<a class="navbar-brand" href="/">Ignite UI ReactJS Component</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -93,10 +93,10 @@
 			</div>
 		</div>
 	</div>
-	
+
     <div>
         <h1 class="push-down-md"><a href="https://igniteui.com/data-chart/overview" target="_blank">igChart</a></h1>
-        
+
         <div class="row description">
             <div class="alert alert-info col-md-5 try-it-out">
                 <span class="h4">TRY IT OUT:</span>
@@ -109,7 +109,7 @@
             </div>
             <div class="col-md-4">
                 <p class="lead">This sample demonstrates how ReactJS can be used to create igChart, igCombo, igLinearGauge together with several different types of igEditors and how a communication between them can be implemented. </p>
-                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/dashboard/FinancialState.html" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-financial-state" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
             </div>
         </div>
     </div>
@@ -122,7 +122,7 @@
                     <div className="editors row">
                         <div className="editor-container">
                             <label className="labels">Month:</label>
-                            <IgCombo 
+                            <IgCombo
                                 id="monthCombo"
                                 dataSource={months}
                                 responseDataKey="months"
@@ -209,7 +209,7 @@
                     )
                  }
             });
-            
+
             var GaugesBox = React.createClass({
                 gaugeInterval: 10,
                 revenueColor: "#a4ba29",
@@ -237,7 +237,7 @@
                                         {
                                             name: 'first',
                                             startValue: 0,
-                                            endValue: 50, 
+                                            endValue: 50,
                                             brush: this.revenueColor
                                         }
                                         ]}
@@ -259,7 +259,7 @@
                                         {
                                             name: 'first',
                                             startValue: 0,
-                                            endValue: 50, 
+                                            endValue: 50,
                                             brush: this.expensesColor
                                         }
                                         ]}
@@ -281,7 +281,7 @@
                                         {
                                             name: 'first',
                                             startValue: -50,
-                                            endValue: 50, 
+                                            endValue: 50,
                                             brush: this.profitColor
                                         }
                                         ]}
@@ -347,7 +347,7 @@
                     return (
                         <div className="row">
                             <div className="sample-line-chart-holder">
-                            <IgDataChart 
+                            <IgDataChart
                                 id="lineChart"
                                 ref="lineChart"
                                 dataSource={this.props.data}
@@ -360,7 +360,7 @@
                                 legend={{ element: "legendLineChart" }}
                                 transitionDuration={ this.transitionDuration }
                                 axes={[
-                                    { name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" }, 
+                                    { name: "xAxis", type: "categoryX", interval: this.chartIntervalX, label: "month", labelLocation: "outsideTop" },
                                     { name: "yAxis", type: "numericY", interval: 10, minimumValue: -50, maximumValue: 50 }
                                 ]}
                                 series={[
@@ -376,7 +376,7 @@
                                 }]}
                             />
                             <div id="legendLineChart"></div></div>
-                            
+
                             <div className="sample-polar-chart-holder">
                                 <IgDataChart
                                     id="polarSplineChartRevenue"
@@ -401,7 +401,7 @@
                                 />
                                 <div id="legendPolarChartRevenue" className="polar-chart-legend"></div>
                             </div>
-                            
+
                             <div className="sample-polar-chart-holder">
                                 <IgDataChart
                                     id="polarSplineChartExpenses"
@@ -451,9 +451,9 @@
                             <div className="clear"></div>
 
                             <div className="sample-line-chart-holder">
-                            <IgDataChart 
+                            <IgDataChart
                                 id="barChart"
-                                ref="barChart" 
+                                ref="barChart"
                                 dataSource={this.props.data}
                                 responseDataKey="data"
                                 dataSourceType="json"
@@ -537,22 +537,22 @@
                         <div className="container">
                             <EditorsBox
                                 data={this.state.data}
-                                month={this.state.month} 
+                                month={this.state.month}
                                 changeMonth={this.changeMonth}
                                 changeRevenue={this.changeRevenue}
                                 changeExpenses={this.changeExpenses}
                                 changeProfit={this.changeProfit} />
                             <div className="row">
-                                <TotalBox 
+                                <TotalBox
                                     data={this.state.data} />
                                 <GaugesBox
                                     data={this.state.data}
                                     month={this.state.month}
-                                    changeRevenue={this.changeRevenue} 
+                                    changeRevenue={this.changeRevenue}
                                     changeExpenses={this.changeExpenses}
                                     changeProfit={this.changeProfit} />
                             </div>
-                            <ChartsBox 
+                            <ChartsBox
                                 month={this.state.month}
                                 data={this.state.data}
                                 update={this.state.update} />
