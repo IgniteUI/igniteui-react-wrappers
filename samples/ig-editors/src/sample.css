@@ -1,0 +1,66 @@
+.push-down {
+	margin-top:4em;
+}
+
+.push-down-md {
+	margin-top:2em;
+}
+
+.push-down-xs {
+	margin-top:1em;
+}
+
+footer {
+	border-top:1px solid #ccc;
+	background-color:#ddd;
+	padding:50px;
+	margin-top:25px;
+	color:#999;
+}
+
+.description {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.try-it-out hr {
+	margin: 0px;
+	margin-top: 4px;
+}
+
+
+.try-it-out ul li{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover {
+	color: #070707;
+}
+
+.well {
+	height: 100px;
+	margin: 10px;
+}
+
+h1,
+.ui-state-focus {
+	color: #1e96dc;
+}
+
+.lbl {
+	display: block;
+	color: #1e96dc;
+}
+
+h3 {
+	color: #1e96dc;
+	text-align: left;
+}
+
+.info {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 20px;
+}
