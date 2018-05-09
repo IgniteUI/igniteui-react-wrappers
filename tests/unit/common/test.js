@@ -27,9 +27,6 @@ function main() {
 		igMap: {
 			skip: true
 		},
-		igTimePicker: {
-			skip: true
-		},
 		IgZoombar: {
 			skip: true
 		},
