@@ -46,7 +46,7 @@ module.exports = function(config) {
 		autoWatch : true,
 
 		browsers : ["Chrome"],
-		singleRun: false,
+		singleRun: true,
 
 		customLaunchers: {
 			Chrome_travis_ci: {
