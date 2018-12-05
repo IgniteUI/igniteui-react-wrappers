@@ -1,9 +1,9 @@
 $.ig.react.propTypes.igPercentEditor = {
-	id: React.PropTypes.string.isRequired,
-	positivePattern: React.PropTypes.string,
-	percentSymbol: React.PropTypes.string,
-	displayFactor: React.PropTypes.number,
-	dataMode: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	positivePattern: PropTypes.string,
+	percentSymbol: PropTypes.string,
+	displayFactor: PropTypes.number,
+	dataMode: PropTypes.oneOf([
 		"double",
 		"float",
 		"long",
@@ -15,75 +15,75 @@ $.ig.react.propTypes.igPercentEditor = {
 		"sbyte",
 		"byte"
 	]),
-	spinDelta: React.PropTypes.number,
-	listItems: React.PropTypes.array,
-	negativeSign: React.PropTypes.string,
-	negativePattern: React.PropTypes.string,
-	decimalSeparator: React.PropTypes.string,
-	groupSeparator: React.PropTypes.string,
-	groups: React.PropTypes.array,
-	maxDecimals: React.PropTypes.number,
-	minDecimals: React.PropTypes.number,
-	roundDecimals: React.PropTypes.bool,
-	textAlign: React.PropTypes.oneOf([
+	spinDelta: PropTypes.number,
+	listItems: PropTypes.array,
+	negativeSign: PropTypes.string,
+	negativePattern: PropTypes.string,
+	decimalSeparator: PropTypes.string,
+	groupSeparator: PropTypes.string,
+	groups: PropTypes.array,
+	maxDecimals: PropTypes.number,
+	minDecimals: PropTypes.number,
+	roundDecimals: PropTypes.bool,
+	textAlign: PropTypes.oneOf([
 		"left",
 		"right",
 		"center"
 	]),
-	minValue: React.PropTypes.number,
-	maxValue: React.PropTypes.number,
-	allowNullValue: React.PropTypes.bool,
-	scientificFormat: React.PropTypes.oneOf([
+	minValue: PropTypes.number,
+	maxValue: PropTypes.number,
+	allowNullValue: PropTypes.bool,
+	scientificFormat: PropTypes.oneOf([
 		"E",
 		"e",
 		"E+",
 		"e+"
 	]),
-	spinWrapAround: React.PropTypes.bool,
-	isLimitedToListValues: React.PropTypes.bool,
-	value: React.PropTypes.object,
-	buttonType: React.PropTypes.oneOf([
+	spinWrapAround: PropTypes.bool,
+	isLimitedToListValues: PropTypes.bool,
+	value: PropTypes.object,
+	buttonType: PropTypes.oneOf([
 		"dropdown",
 		"clear",
 		"spin"
 	]),
-	listWidth: React.PropTypes.number,
-	listItemHoverDuration: React.PropTypes.number,
-	dropDownAttachedToBody: React.PropTypes.bool,
-	dropDownAnimationDuration: React.PropTypes.number,
-	visibleItemsCount: React.PropTypes.number,
-	placeHolder: React.PropTypes.string,
-	selectionOnFocus: React.PropTypes.oneOf([
+	listWidth: PropTypes.number,
+	listItemHoverDuration: PropTypes.number,
+	dropDownAttachedToBody: PropTypes.bool,
+	dropDownAnimationDuration: PropTypes.number,
+	visibleItemsCount: PropTypes.number,
+	placeHolder: PropTypes.string,
+	selectionOnFocus: PropTypes.oneOf([
 		"selectAll",
 		"atStart",
 		"atEnd",
 		"browserDefault"
 	]),
-	revertIfNotValid: React.PropTypes.bool,
-	preventSubmitOnEnter: React.PropTypes.bool,
-	dropDownOrientation: React.PropTypes.oneOf([
+	revertIfNotValid: PropTypes.bool,
+	preventSubmitOnEnter: PropTypes.bool,
+	dropDownOrientation: PropTypes.oneOf([
 		"auto",
 		"bottom",
 		"top"
 	]),
-	dropDownOnReadOnly: React.PropTypes.bool,
-	suppressNotifications: React.PropTypes.bool,
-	suppressKeyboard: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	dropDownOnReadOnly: PropTypes.bool,
+	suppressNotifications: PropTypes.bool,
+	suppressKeyboard: PropTypes.bool,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	tabIndex: React.PropTypes.number,
-	nullValue: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	tabIndex: PropTypes.number,
+	nullValue: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	inputName: React.PropTypes.string,
-	readOnly: React.PropTypes.bool,
-	disabled: React.PropTypes.bool,
-	validatorOptions: React.PropTypes.object
+	inputName: PropTypes.string,
+	readOnly: PropTypes.bool,
+	disabled: PropTypes.bool,
+	validatorOptions: PropTypes.object
 }

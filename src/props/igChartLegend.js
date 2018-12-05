@@ -1,17 +1,15 @@
 $.ig.react.propTypes.igChartLegend = {
-	id: React.PropTypes.string.isRequired,
-	type: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	type: PropTypes.oneOf([
 		"item",
-		"legend",
-		"scale"
+		"legend"
 	]),
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
-	]),
-	theme: React.PropTypes.string
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
+	])
 }

@@ -3,14 +3,15 @@
 		define("IgRating", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgRating = React.createClass($.ig.react.core.buildComponent("igRating"));
+(function (React, $, createReactClass) {
+	var IgRating = createReactClass($.ig.react.core.buildComponent("igRating"));
 	if (window) {
 		window.IgRating = IgRating;
 	}

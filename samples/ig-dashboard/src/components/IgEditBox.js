@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
 import IgButton from 'igniteui-react/ui/igButton.js';
 
@@ -6,8 +6,8 @@ import IgButton from 'igniteui-react/ui/igButton.js';
 import "@infragistics/ignite-ui-full/en/js/infragistics.core.js";
 import "@infragistics/ignite-ui-full/en/js/infragistics.lob.js";
 
-var IgEditBox = React.createClass({
-	render: function () {
+class IgEditBox extends React.Component {
+    render() {
 		var rowId =  this.props.rowId,
 			v = rowId > -1;
 		return (
@@ -46,8 +46,9 @@ var IgEditBox = React.createClass({
 				</div>
 			</div>
 		);
-	},
-	handleButtonUpdateClick: function (e) {
+	}
+
+    handleButtonUpdateClick = (e) => {
 		var func = this.props.btnUpdateClicked;
 
 		if (func) {
@@ -56,7 +57,7 @@ var IgEditBox = React.createClass({
 			this.refs.editorRevenue.igControl.value(),
 			this.refs.editorExpenses.igControl.value());
 		}
-	}
-});
+	};
+}
 
 export default IgEditBox;

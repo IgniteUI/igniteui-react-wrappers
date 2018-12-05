@@ -1,14 +1,15 @@
 import IgLinearGauge from 'igniteui-react/ui/igLinearGauge.js';
-import React, { Component } from 'react';
+import React from 'react';
 
-var GaugesBox = React.createClass({
-	gaugeInterval: 10,
-	revenueColor: "#a4ba29",
-	expensesColor: "#d3404b",
-	profitColor: "#216EDD",
-	needleColor: "white",
-	needleOutlineColor: "#2582a9",
-	render: function() {
+class GaugesBox extends React.Component {
+    gaugeInterval = 10;
+    revenueColor = "#a4ba29";
+    expensesColor = "#d3404b";
+    profitColor = "#216EDD";
+    needleColor = "white";
+    needleOutlineColor = "#2582a9";
+
+    render() {
 		return (
 			<div className="gauges">
 				<div className="gauge-container">
@@ -81,16 +82,19 @@ var GaugesBox = React.createClass({
 				<div className="clear"></div>
 			</div>
 		)
-	},
-	revenueChanged: function (e, args) {
-		this.props.changeRevenue(args.newValue);
-	},
-	expensesChanged: function (e, args) {
-		this.props.changeExpenses(args.newValue);
-	},
-	profitChanged: function (e, args) {
-		this.props.changeProfit(args.newValue);
 	}
-});
+
+    revenueChanged = (e, args) => {
+		this.props.changeRevenue(args.newValue);
+	};
+
+    expensesChanged = (e, args) => {
+		this.props.changeExpenses(args.newValue);
+	};
+
+    profitChanged = (e, args) => {
+		this.props.changeProfit(args.newValue);
+	};
+}
 
 export default GaugesBox;

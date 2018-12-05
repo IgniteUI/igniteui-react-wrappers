@@ -3,14 +3,15 @@
 		define("IgLayoutManager", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgLayoutManager = React.createClass($.ig.react.core.buildComponent("igLayoutManager"));
+(function (React, $, createReactClass) {
+	var IgLayoutManager = createReactClass($.ig.react.core.buildComponent("igLayoutManager"));
 	if (window) {
 		window.IgLayoutManager = IgLayoutManager;
 	}

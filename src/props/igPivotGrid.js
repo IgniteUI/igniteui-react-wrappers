@@ -1,116 +1,116 @@
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsRequestOptions = {
-	withCredentials: React.PropTypes.bool,
-	beforeSend: React.PropTypes.func
+	withCredentials: PropTypes.bool,
+	beforeSend: PropTypes.func
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsMdxSettings = {
-	nonEmptyOnRows: React.PropTypes.bool,
-	nonEmptyOnColumns: React.PropTypes.bool,
-	addCalculatedMembersOnRows: React.PropTypes.bool,
-	addCalculatedMembersOnColumns: React.PropTypes.bool,
-	dimensionPropertiesOnRows: React.PropTypes.array,
-	dimensionPropertiesOnColumns: React.PropTypes.array
+	nonEmptyOnRows: PropTypes.bool,
+	nonEmptyOnColumns: PropTypes.bool,
+	addCalculatedMembersOnRows: PropTypes.bool,
+	addCalculatedMembersOnColumns: PropTypes.bool,
+	dimensionPropertiesOnRows: PropTypes.array,
+	dimensionPropertiesOnColumns: PropTypes.array
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptions = {
-	serverUrl: React.PropTypes.string,
-	catalog: React.PropTypes.string,
-	cube: React.PropTypes.string,
-	measureGroup: React.PropTypes.string,
-	requestOptions: React.PropTypes.shape(
+	serverUrl: PropTypes.string,
+	catalog: PropTypes.string,
+	cube: PropTypes.string,
+	measureGroup: PropTypes.string,
+	requestOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsRequestOptions
 	),
-	enableResultCache: React.PropTypes.bool,
-	discoverProperties: React.PropTypes.object,
-	executeProperties: React.PropTypes.object,
-	mdxSettings: React.PropTypes.shape(
+	enableResultCache: PropTypes.bool,
+	discoverProperties: PropTypes.object,
+	executeProperties: PropTypes.object,
+	mdxSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptionsMdxSettings
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	aggregator: React.PropTypes.func,
-	displayFolder: React.PropTypes.string
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	aggregator: PropTypes.func,
+	displayFolder: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	measures: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	measures: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	memberProvider: React.PropTypes.func
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	memberProvider: PropTypes.func
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	displayFolder: React.PropTypes.string,
-	levels: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	displayFolder: PropTypes.string,
+	levels: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimension = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	hierarchies: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	hierarchies: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCube = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	measuresDimension: React.PropTypes.shape(
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	measuresDimension: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension
 	),
-	dimensions: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimension)
+	dimensions: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCubeDimension)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadata = {
-	cube: React.PropTypes.shape(
+	cube: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadataCube
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptions = {
-	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.string,
-	dataSourceType: React.PropTypes.string,
-	responseDataKey: React.PropTypes.string,
-	responseDataType: React.PropTypes.string,
-	metadata: React.PropTypes.shape(
+	dataSource: PropTypes.object,
+	dataSourceUrl: PropTypes.string,
+	dataSourceType: PropTypes.string,
+	responseDataKey: PropTypes.string,
+	responseDataType: PropTypes.string,
+	metadata: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptionsMetadata
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDataSourceOptions = {
-	xmlaOptions: React.PropTypes.shape(
+	xmlaOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsXmlaOptions
 	),
-	flatDataOptions: React.PropTypes.shape(
+	flatDataOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptionsFlatDataOptions
 	),
-	measures: React.PropTypes.string,
-	filters: React.PropTypes.string,
-	rows: React.PropTypes.string,
-	columns: React.PropTypes.string
+	measures: PropTypes.string,
+	filters: PropTypes.string,
+	rows: PropTypes.string,
+	columns: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igPivotGridLevelSortDirection = {
-	levelUniqueName: React.PropTypes.string,
-	sortDirection: React.PropTypes.any,
-	sortBehavior: React.PropTypes.oneOf([
+	levelUniqueName: PropTypes.string,
+	sortDirection: PropTypes.any,
+	sortBehavior: PropTypes.oneOf([
 		"system",
 		"alphabetical"
 	])
@@ -120,81 +120,81 @@ $.ig.react.propTypes.shapes.igPivotGridGridOptionsFeatures = {
 }
 
 $.ig.react.propTypes.shapes.igPivotGridGridOptions = {
-	defaultColumnWidth: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	defaultColumnWidth: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	fixedHeaders: React.PropTypes.bool,
-	caption: React.PropTypes.string,
-	features: React.PropTypes.shape(
+	fixedHeaders: PropTypes.bool,
+	caption: PropTypes.string,
+	features: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridGridOptionsFeatures
 	),
-	tabIndex: React.PropTypes.number,
-	alternateRowStyles: React.PropTypes.bool,
-	enableHoverStyles: React.PropTypes.bool
+	tabIndex: PropTypes.number,
+	alternateRowStyles: PropTypes.bool,
+	enableHoverStyles: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igPivotGridDragAndDropSettings = {
-	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.string,
-		React.PropTypes.array
+	appendTo: PropTypes.any,
+	containment: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.string,
+		PropTypes.array
 	]),
-	zIndex: React.PropTypes.number
+	zIndex: PropTypes.number
 }
 
 $.ig.react.propTypes.igPivotGrid = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	dataSource: React.PropTypes.object,
-	dataSourceOptions: React.PropTypes.shape(
+	dataSource: PropTypes.object,
+	dataSourceOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDataSourceOptions
 	),
-	deferUpdate: React.PropTypes.bool,
-	isParentInFrontForColumns: React.PropTypes.bool,
-	isParentInFrontForRows: React.PropTypes.bool,
-	compactColumnHeaders: React.PropTypes.bool,
-	compactRowHeaders: React.PropTypes.bool,
-	rowHeadersLayout: React.PropTypes.any,
-	compactColumnHeaderIndentation: React.PropTypes.number,
-	compactRowHeaderIndentation: React.PropTypes.number,
-	rowHeaderLinkGroupIndentation: React.PropTypes.number,
-	treeRowHeaderIndentation: React.PropTypes.number,
-	defaultRowHeaderWidth: React.PropTypes.number,
-	allowSorting: React.PropTypes.bool,
-	firstSortDirection: React.PropTypes.any,
-	allowHeaderRowsSorting: React.PropTypes.bool,
-	allowHeaderColumnsSorting: React.PropTypes.bool,
-	levelSortDirections: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridLevelSortDirection)
+	deferUpdate: PropTypes.bool,
+	isParentInFrontForColumns: PropTypes.bool,
+	isParentInFrontForRows: PropTypes.bool,
+	compactColumnHeaders: PropTypes.bool,
+	compactRowHeaders: PropTypes.bool,
+	rowHeadersLayout: PropTypes.any,
+	compactColumnHeaderIndentation: PropTypes.number,
+	compactRowHeaderIndentation: PropTypes.number,
+	rowHeaderLinkGroupIndentation: PropTypes.number,
+	treeRowHeaderIndentation: PropTypes.number,
+	defaultRowHeaderWidth: PropTypes.number,
+	allowSorting: PropTypes.bool,
+	firstSortDirection: PropTypes.any,
+	allowHeaderRowsSorting: PropTypes.bool,
+	allowHeaderColumnsSorting: PropTypes.bool,
+	levelSortDirections: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotGridLevelSortDirection)
 	),
-	defaultLevelSortBehavior: React.PropTypes.oneOf([
+	defaultLevelSortBehavior: PropTypes.oneOf([
 		"system",
 		"alphabetical"
 	]),
-	firstLevelSortDirection: React.PropTypes.any,
-	gridOptions: React.PropTypes.shape(
+	firstLevelSortDirection: PropTypes.any,
+	gridOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridGridOptions
 	),
-	dragAndDropSettings: React.PropTypes.shape(
+	dragAndDropSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotGridDragAndDropSettings
 	),
-	dropDownParent: React.PropTypes.any,
-	disableRowsDropArea: React.PropTypes.bool,
-	disableColumnsDropArea: React.PropTypes.bool,
-	disableMeasuresDropArea: React.PropTypes.bool,
-	disableFiltersDropArea: React.PropTypes.bool,
-	hideRowsDropArea: React.PropTypes.bool,
-	hideColumnsDropArea: React.PropTypes.bool,
-	hideMeasuresDropArea: React.PropTypes.bool,
-	hideFiltersDropArea: React.PropTypes.bool,
-	customMoveValidation: React.PropTypes.func
+	dropDownParent: PropTypes.any,
+	disableRowsDropArea: PropTypes.bool,
+	disableColumnsDropArea: PropTypes.bool,
+	disableMeasuresDropArea: PropTypes.bool,
+	disableFiltersDropArea: PropTypes.bool,
+	hideRowsDropArea: PropTypes.bool,
+	hideColumnsDropArea: PropTypes.bool,
+	hideMeasuresDropArea: PropTypes.bool,
+	hideFiltersDropArea: PropTypes.bool,
+	customMoveValidation: PropTypes.func
 }

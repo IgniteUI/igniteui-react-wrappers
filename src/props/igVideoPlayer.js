@@ -1,135 +1,135 @@
 $.ig.react.propTypes.shapes.igVideoPlayerBookmark = {
-	time: React.PropTypes.number,
-	title: React.PropTypes.string,
-	disabled: React.PropTypes.bool
+	time: PropTypes.number,
+	title: PropTypes.string,
+	disabled: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerRelatedVideo = {
-	imageUrl: React.PropTypes.string,
-	title: React.PropTypes.string,
-	width: React.PropTypes.number,
-	height: React.PropTypes.number,
-	link: React.PropTypes.string,
-	sources: React.PropTypes.array,
-	css: React.PropTypes.string
+	imageUrl: PropTypes.string,
+	title: PropTypes.string,
+	width: PropTypes.number,
+	height: PropTypes.number,
+	link: PropTypes.string,
+	sources: PropTypes.array,
+	css: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerBanner = {
-	imageUrl: React.PropTypes.string,
-	times: React.PropTypes.array,
-	closeBanner: React.PropTypes.bool,
-	animate: React.PropTypes.bool,
-	visible: React.PropTypes.bool,
-	duration: React.PropTypes.number,
-	autohide: React.PropTypes.bool,
-	hidedelay: React.PropTypes.number,
-	link: React.PropTypes.string,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	imageUrl: PropTypes.string,
+	times: PropTypes.array,
+	closeBanner: PropTypes.bool,
+	animate: PropTypes.bool,
+	visible: PropTypes.bool,
+	duration: PropTypes.number,
+	autohide: PropTypes.bool,
+	hidedelay: PropTypes.number,
+	link: PropTypes.string,
+	width: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	height: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	css: React.PropTypes.string
+	css: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerCommercialsLinkedCommercial = {
-	sources: React.PropTypes.array,
-	startTime: React.PropTypes.number,
-	link: React.PropTypes.string,
-	title: React.PropTypes.string
+	sources: PropTypes.array,
+	startTime: PropTypes.number,
+	link: PropTypes.string,
+	title: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerCommercialsEmbeddedCommercial = {
-	startTime: React.PropTypes.number,
-	endTime: React.PropTypes.number,
-	link: React.PropTypes.string,
-	title: React.PropTypes.string
+	startTime: PropTypes.number,
+	endTime: PropTypes.number,
+	link: PropTypes.string,
+	title: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerCommercialsAdMessage = {
-	animate: React.PropTypes.bool,
-	autoHide: React.PropTypes.bool,
-	hideDelay: React.PropTypes.number,
-	animationDuration: React.PropTypes.number
+	animate: PropTypes.bool,
+	autoHide: PropTypes.bool,
+	hideDelay: PropTypes.number,
+	animationDuration: PropTypes.number
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerCommercials = {
-	linkedCommercials: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerCommercialsLinkedCommercial)
+	linkedCommercials: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerCommercialsLinkedCommercial)
 	),
-	embeddedCommercials: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerCommercialsEmbeddedCommercial)
+	embeddedCommercials: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerCommercialsEmbeddedCommercial)
 	),
-	alwaysPlayCommercials: React.PropTypes.bool,
-	showBookmarks: React.PropTypes.bool,
-	adMessage: React.PropTypes.shape(
+	alwaysPlayCommercials: PropTypes.bool,
+	showBookmarks: PropTypes.bool,
+	adMessage: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igVideoPlayerCommercialsAdMessage
 	)
 }
 
 $.ig.react.propTypes.shapes.igVideoPlayerLocale = {
-	liveStream: React.PropTypes.bool,
-	live: React.PropTypes.bool,
-	paused: React.PropTypes.bool,
-	playing: React.PropTypes.bool,
-	play: React.PropTypes.bool,
-	volume: React.PropTypes.bool,
-	progressLabelLongFormat: React.PropTypes.bool,
-	progressLabelShortFormat: React.PropTypes.bool,
-	enterFullscreen: React.PropTypes.bool,
-	exitFullscreen: React.PropTypes.bool,
-	skipTo: React.PropTypes.bool,
-	buffering: React.PropTypes.bool,
-	adMessage: React.PropTypes.bool,
-	adMessageLong: React.PropTypes.bool,
-	adMessageNoDuration: React.PropTypes.bool,
-	adNewWindowTip: React.PropTypes.bool,
-	relatedVideos: React.PropTypes.bool,
-	replayButton: React.PropTypes.bool,
-	replayTooltip: React.PropTypes.bool
+	liveStream: PropTypes.bool,
+	live: PropTypes.bool,
+	paused: PropTypes.bool,
+	playing: PropTypes.bool,
+	play: PropTypes.bool,
+	volume: PropTypes.bool,
+	progressLabelLongFormat: PropTypes.bool,
+	progressLabelShortFormat: PropTypes.bool,
+	enterFullscreen: PropTypes.bool,
+	exitFullscreen: PropTypes.bool,
+	skipTo: PropTypes.bool,
+	buffering: PropTypes.bool,
+	adMessage: PropTypes.bool,
+	adMessageLong: PropTypes.bool,
+	adMessageNoDuration: PropTypes.bool,
+	adNewWindowTip: PropTypes.bool,
+	relatedVideos: PropTypes.bool,
+	replayButton: PropTypes.bool,
+	replayTooltip: PropTypes.bool
 }
 
 $.ig.react.propTypes.igVideoPlayer = {
-	id: React.PropTypes.string.isRequired,
-	sources: React.PropTypes.array,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	sources: PropTypes.array,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	posterUrl: React.PropTypes.string,
-	preload: React.PropTypes.bool,
-	autoplay: React.PropTypes.bool,
-	autohide: React.PropTypes.bool,
-	volumeAutohideDelay: React.PropTypes.number,
-	centerButtonHideDelay: React.PropTypes.number,
-	loop: React.PropTypes.bool,
-	browserControls: React.PropTypes.bool,
-	fullscreen: React.PropTypes.bool,
-	volume: React.PropTypes.number,
-	muted: React.PropTypes.bool,
-	title: React.PropTypes.string,
-	showSeekTime: React.PropTypes.bool,
-	progressLabelFormat: React.PropTypes.string,
-	bookmarks: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerBookmark)
+	posterUrl: PropTypes.string,
+	preload: PropTypes.bool,
+	autoplay: PropTypes.bool,
+	autohide: PropTypes.bool,
+	volumeAutohideDelay: PropTypes.number,
+	centerButtonHideDelay: PropTypes.number,
+	loop: PropTypes.bool,
+	browserControls: PropTypes.bool,
+	fullscreen: PropTypes.bool,
+	volume: PropTypes.number,
+	muted: PropTypes.bool,
+	title: PropTypes.string,
+	showSeekTime: PropTypes.bool,
+	progressLabelFormat: PropTypes.string,
+	bookmarks: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerBookmark)
 	),
-	relatedVideos: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerRelatedVideo)
+	relatedVideos: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerRelatedVideo)
 	),
-	banners: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerBanner)
+	banners: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igVideoPlayerBanner)
 	),
-	commercials: React.PropTypes.shape(
+	commercials: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igVideoPlayerCommercials
 	),
-	locale: React.PropTypes.shape(
+	locale: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igVideoPlayerLocale
 	)
 }

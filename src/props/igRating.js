@@ -1,28 +1,28 @@
 $.ig.react.propTypes.igRating = {
-	id: React.PropTypes.string.isRequired,
-	vertical: React.PropTypes.bool,
-	value: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	id: PropTypes.string.isRequired,
+	vertical: PropTypes.bool,
+	value: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	valueHover: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	valueHover: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	voteCount: React.PropTypes.number,
-	voteWidth: React.PropTypes.number,
-	voteHeight: React.PropTypes.number,
-	swapDirection: React.PropTypes.bool,
-	valueAsPercent: React.PropTypes.bool,
-	focusable: React.PropTypes.bool,
-	precision: React.PropTypes.oneOf([
+	voteCount: PropTypes.number,
+	voteWidth: PropTypes.number,
+	voteHeight: PropTypes.number,
+	swapDirection: PropTypes.bool,
+	valueAsPercent: PropTypes.bool,
+	focusable: PropTypes.bool,
+	precision: PropTypes.oneOf([
 		"exact",
 		"half",
 		"whole"
 	]),
-	precisionZeroVote: React.PropTypes.number,
-	roundedDecimalPlaces: React.PropTypes.number,
-	theme: React.PropTypes.string,
-	validatorOptions: React.PropTypes.object,
-	cssVotes: React.PropTypes.object
+	precisionZeroVote: PropTypes.number,
+	roundedDecimalPlaces: PropTypes.number,
+	theme: PropTypes.string,
+	validatorOptions: PropTypes.object,
+	cssVotes: PropTypes.object
 }

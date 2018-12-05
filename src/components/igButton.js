@@ -3,14 +3,15 @@
 		define("IgButton", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgButton = React.createClass($.ig.react.core.buildComponent("igButton"));
+(function (React, $, createReactClass) {
+	var IgButton = createReactClass($.ig.react.core.buildComponent("igButton"));
 	if (window) {
 		window.IgButton = IgButton;
 	}

@@ -3,14 +3,15 @@
 		define("IgScheduler", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgScheduler = React.createClass($.ig.react.core.buildComponent("igScheduler"));
+(function (React, $, createReactClass) {
+	var IgScheduler = createReactClass($.ig.react.core.buildComponent("igScheduler"));
 	if (window) {
 		window.IgScheduler = IgScheduler;
 	}

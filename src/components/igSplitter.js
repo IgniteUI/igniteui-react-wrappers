@@ -3,14 +3,15 @@
 		define("IgSplitter", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgSplitter = React.createClass($.ig.react.core.buildComponent("igSplitter"));
+(function (React, $, createReactClass) {
+	var IgSplitter = createReactClass($.ig.react.core.buildComponent("igSplitter"));
 	if (window) {
 		window.IgSplitter = IgSplitter;
 	}

@@ -3,14 +3,15 @@
 		define("IgPivotGrid", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgPivotGrid = React.createClass($.ig.react.core.buildComponent("igPivotGrid"));
+(function (React, $, createReactClass) {
+	var IgPivotGrid = createReactClass($.ig.react.core.buildComponent("igPivotGrid"));
 	if (window) {
 		window.IgPivotGrid = IgPivotGrid;
 	}

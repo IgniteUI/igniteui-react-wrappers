@@ -3,14 +3,15 @@
 		define("IgColorPickerSplitButton", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgColorPickerSplitButton = React.createClass($.ig.react.core.buildComponent("igColorPickerSplitButton"));
+(function (React, $, createReactClass) {
+	var IgColorPickerSplitButton = createReactClass($.ig.react.core.buildComponent("igColorPickerSplitButton"));
 	if (window) {
 		window.IgColorPickerSplitButton = IgColorPickerSplitButton;
 	}

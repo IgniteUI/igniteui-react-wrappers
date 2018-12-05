@@ -21,8 +21,10 @@ module.exports = function(config) {
 
 			// Paths loaded via module imports:
 			// React
-			"node_modules/react/dist/react-with-addons.min.js",
-			"node_modules/react-dom/dist/react-dom.min.js",
+			"node_modules/react/umd/react.production.min.js",
+            "node_modules/react-dom/umd/react-dom.production.min.js",
+            "node_modules/create-react-class/create-react-class.min.js",
+            "node_modules/prop-types/prop-types.min.js",
 			// paths loaded via module imports
 			// bundled react wrappers
 			//"dist/npm/igniteui-react.js",
@@ -44,7 +46,7 @@ module.exports = function(config) {
 		autoWatch : true,
 
 		browsers : ["Chrome"],
-		singleRun: true,
+		singleRun: false,
 
 		customLaunchers: {
 			Chrome_travis_ci: {

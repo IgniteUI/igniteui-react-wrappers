@@ -1,14 +1,14 @@
 $.ig.react.propTypes.igProgressBar = {
-	id: React.PropTypes.string.isRequired,
-	animate: React.PropTypes.bool,
-	animateTimeout: React.PropTypes.number,
-	max: React.PropTypes.number,
-	min: React.PropTypes.number,
-	orientation: React.PropTypes.string,
-	value: React.PropTypes.number,
-	width: React.PropTypes.string,
-	height: React.PropTypes.string,
-	range: React.PropTypes.bool,
-	queue: React.PropTypes.bool,
-	endValue: React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	animate: PropTypes.bool,
+	animateTimeout: PropTypes.number,
+	max: PropTypes.number,
+	min: PropTypes.number,
+	orientation: PropTypes.string,
+	value: PropTypes.number,
+	width: PropTypes.string,
+	height: PropTypes.string,
+	range: PropTypes.bool,
+	queue: PropTypes.bool,
+	endValue: PropTypes.number
 }

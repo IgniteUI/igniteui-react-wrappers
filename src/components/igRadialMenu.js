@@ -3,14 +3,15 @@
 		define("IgRadialMenu", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgRadialMenu = React.createClass($.ig.react.core.buildComponent("igRadialMenu"));
+(function (React, $, createReactClass) {
+	var IgRadialMenu = createReactClass($.ig.react.core.buildComponent("igRadialMenu"));
 	if (window) {
 		window.IgRadialMenu = IgRadialMenu;
 	}

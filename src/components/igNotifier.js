@@ -3,14 +3,15 @@
 		define("IgNotifier", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgNotifier = React.createClass($.ig.react.core.buildComponent("igNotifier"));
+(function (React, $, createReactClass) {
+	var IgNotifier = createReactClass($.ig.react.core.buildComponent("igNotifier"));
 	if (window) {
 		window.IgNotifier = IgNotifier;
 	}

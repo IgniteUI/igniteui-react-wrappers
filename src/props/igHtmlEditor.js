@@ -1,19 +1,19 @@
 $.ig.react.propTypes.igHtmlEditor = {
-	id: React.PropTypes.string.isRequired,
-	showFormattingToolbar: React.PropTypes.bool,
-	showTextToolbar: React.PropTypes.bool,
-	showInsertObjectToolbar: React.PropTypes.bool,
-	showCopyPasteToolbar: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	showFormattingToolbar: PropTypes.bool,
+	showTextToolbar: PropTypes.bool,
+	showInsertObjectToolbar: PropTypes.bool,
+	showCopyPasteToolbar: PropTypes.bool,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	toolbarSettings: React.PropTypes.array,
-	customToolbars: React.PropTypes.array,
-	inputName: React.PropTypes.string,
-	value: React.PropTypes.string
+	toolbarSettings: PropTypes.array,
+	customToolbars: PropTypes.array,
+	inputName: PropTypes.string,
+	value: PropTypes.string
 }

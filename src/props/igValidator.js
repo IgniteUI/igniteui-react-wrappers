@@ -1,65 +1,65 @@
 $.ig.react.propTypes.shapes.igValidatorField = {
-	selector: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+	selector: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
 	])
 }
 
 $.ig.react.propTypes.igValidator = {
-	id: React.PropTypes.string.isRequired,
-	onchange: React.PropTypes.bool,
-	onblur: React.PropTypes.bool,
-	onsubmit: React.PropTypes.bool,
-	required: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.object
+	id: PropTypes.string.isRequired,
+	onchange: PropTypes.bool,
+	onblur: PropTypes.bool,
+	onsubmit: PropTypes.bool,
+	required: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
 	]),
-	number: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.object
+	number: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
 	]),
-	date: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.object
+	date: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
 	]),
-	email: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.object
+	email: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
 	]),
-	lengthRange: React.PropTypes.oneOfType([
-		React.PropTypes.array,
-		React.PropTypes.object
+	lengthRange: PropTypes.oneOfType([
+		PropTypes.array,
+		PropTypes.object
 	]),
-	valueRange: React.PropTypes.oneOfType([
-		React.PropTypes.array,
-		React.PropTypes.object
+	valueRange: PropTypes.oneOfType([
+		PropTypes.array,
+		PropTypes.object
 	]),
-	creditCard: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.object
+	creditCard: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
 	]),
-	pattern: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+	pattern: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
 	]),
-	executeAllRules: React.PropTypes.bool,
-	messageTarget: React.PropTypes.element,
-	errorMessage: React.PropTypes.string,
-	successMessage: React.PropTypes.string,
-	threshold: React.PropTypes.number,
-	equalTo: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+	executeAllRules: PropTypes.bool,
+	messageTarget: PropTypes.element,
+	errorMessage: PropTypes.string,
+	successMessage: PropTypes.string,
+	threshold: PropTypes.number,
+	equalTo: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
 	]),
-	custom: React.PropTypes.oneOfType([
-		React.PropTypes.func,
-		React.PropTypes.string,
-		React.PropTypes.object
+	custom: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.string,
+		PropTypes.object
 	]),
-	fields: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igValidatorField)
+	fields: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igValidatorField)
 	),
-	notificationOptions: React.PropTypes.object,
-	requiredIndication: React.PropTypes.bool,
-	optionalIndication: React.PropTypes.bool
+	notificationOptions: PropTypes.object,
+	requiredIndication: PropTypes.bool,
+	optionalIndication: PropTypes.bool
 }

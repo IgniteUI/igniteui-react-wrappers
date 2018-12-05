@@ -3,14 +3,15 @@
 		define("IgZoombar", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgZoombar = React.createClass($.ig.react.core.buildComponent("igZoombar"));
+(function (React, $, createReactClass) {
+	var IgZoombar = createReactClass($.ig.react.core.buildComponent("igZoombar"));
 	if (window) {
 		window.IgZoombar = IgZoombar;
 	}

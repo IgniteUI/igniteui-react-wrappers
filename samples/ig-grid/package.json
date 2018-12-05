@@ -9,14 +9,21 @@
     "igniteui-react": "^1.1.0",
     "jquery": ">=1.9.1",
     "jquery-ui": ">=1.10.5",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "react-scripts": "1.0.17"
+    "react": "16.6.3",
+    "react-dom": "^16.6.3",
+    "create-react-class": "^15.6.3",
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,22 +1,22 @@
 $.ig.react.propTypes.igBaseEditor = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	value: React.PropTypes.object,
-	tabIndex: React.PropTypes.number,
-	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	value: PropTypes.object,
+	tabIndex: PropTypes.number,
+	allowNullValue: PropTypes.bool,
+	nullValue: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	inputName: React.PropTypes.string,
-	readOnly: React.PropTypes.bool,
-	disabled: React.PropTypes.bool,
-	validatorOptions: React.PropTypes.object
+	inputName: PropTypes.string,
+	readOnly: PropTypes.bool,
+	disabled: PropTypes.bool,
+	validatorOptions: PropTypes.object
 }

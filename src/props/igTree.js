@@ -2,126 +2,126 @@ $.ig.react.propTypes.shapes.igTreeBindingsBindings = {
 }
 
 $.ig.react.propTypes.shapes.igTreeBindings = {
-	textKey: React.PropTypes.string,
-	textXPath: React.PropTypes.string,
-	valueKey: React.PropTypes.string,
-	valueXPath: React.PropTypes.string,
-	imageUrlKey: React.PropTypes.string,
-	imageUrlXPath: React.PropTypes.string,
-	navigateUrlKey: React.PropTypes.string,
-	navigateUrlXPath: React.PropTypes.string,
-	targetKey: React.PropTypes.string,
-	expandedKey: React.PropTypes.string,
-	checkedKey: React.PropTypes.string,
-	primaryKey: React.PropTypes.string,
-	nodeContentTemplate: React.PropTypes.string,
-	childDataProperty: React.PropTypes.string,
-	childDataXPath: React.PropTypes.string,
-	searchFieldXPath: React.PropTypes.string,
-	bindings: React.PropTypes.shape(
+	textKey: PropTypes.string,
+	textXPath: PropTypes.string,
+	valueKey: PropTypes.string,
+	valueXPath: PropTypes.string,
+	imageUrlKey: PropTypes.string,
+	imageUrlXPath: PropTypes.string,
+	navigateUrlKey: PropTypes.string,
+	navigateUrlXPath: PropTypes.string,
+	targetKey: PropTypes.string,
+	expandedKey: PropTypes.string,
+	checkedKey: PropTypes.string,
+	primaryKey: PropTypes.string,
+	nodeContentTemplate: PropTypes.string,
+	childDataProperty: PropTypes.string,
+	childDataXPath: PropTypes.string,
+	searchFieldXPath: PropTypes.string,
+	bindings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igTreeBindingsBindings
 	)
 }
 
 $.ig.react.propTypes.shapes.igTreeDragAndDropSettings = {
-	allowDrop: React.PropTypes.bool,
-	dragAndDropMode: React.PropTypes.oneOf([
+	allowDrop: PropTypes.bool,
+	dragAndDropMode: PropTypes.oneOf([
 		"default",
 		"copy",
 		"move"
 	]),
-	dragOpacity: React.PropTypes.number,
-	revert: React.PropTypes.bool,
-	revertDuration: React.PropTypes.number,
-	zIndex: React.PropTypes.number,
-	dragStartDelay: React.PropTypes.number,
-	expandOnDragOver: React.PropTypes.bool,
-	expandDelay: React.PropTypes.number,
-	helper: React.PropTypes.oneOfType([
-		React.PropTypes.func,
-		React.PropTypes.string
+	dragOpacity: PropTypes.number,
+	revert: PropTypes.bool,
+	revertDuration: PropTypes.number,
+	zIndex: PropTypes.number,
+	dragStartDelay: PropTypes.number,
+	expandOnDragOver: PropTypes.bool,
+	expandDelay: PropTypes.number,
+	helper: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.string
 	]),
-	customDropValidation: React.PropTypes.oneOfType([
-		React.PropTypes.func
+	customDropValidation: PropTypes.oneOfType([
+		PropTypes.func
 	]),
-	containment: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.string,
-		React.PropTypes.object,
-		React.PropTypes.array
+	containment: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.string,
+		PropTypes.object,
+		PropTypes.array
 	]),
-	invalidMoveToMarkup: React.PropTypes.string,
-	moveToMarkup: React.PropTypes.string,
-	moveBetweenMarkup: React.PropTypes.string,
-	moveAfterMarkup: React.PropTypes.string,
-	moveBeforeMarkup: React.PropTypes.string,
-	copyToMarkup: React.PropTypes.string,
-	copyBetweenMarkup: React.PropTypes.string,
-	copyAfterMarkup: React.PropTypes.string,
-	copyBeforeMarkup: React.PropTypes.string
+	invalidMoveToMarkup: PropTypes.string,
+	moveToMarkup: PropTypes.string,
+	moveBetweenMarkup: PropTypes.string,
+	moveAfterMarkup: PropTypes.string,
+	moveBeforeMarkup: PropTypes.string,
+	copyToMarkup: PropTypes.string,
+	copyBetweenMarkup: PropTypes.string,
+	copyAfterMarkup: PropTypes.string,
+	copyBeforeMarkup: PropTypes.string
 }
 
 $.ig.react.propTypes.igTree = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	checkboxMode: React.PropTypes.oneOf([
+	checkboxMode: PropTypes.oneOf([
 		"off",
 		"biState",
 		"triState"
 	]),
-	singleBranchExpand: React.PropTypes.bool,
-	hotTracking: React.PropTypes.bool,
-	parentNodeImageUrl: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	singleBranchExpand: PropTypes.bool,
+	hotTracking: PropTypes.bool,
+	parentNodeImageUrl: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	parentNodeImageClass: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	parentNodeImageClass: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	parentNodeImageTooltip: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	parentNodeImageTooltip: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	leafNodeImageUrl: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	leafNodeImageUrl: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	leafNodeImageClass: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	leafNodeImageClass: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	leafNodeImageTooltip: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	leafNodeImageTooltip: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	animationDuration: React.PropTypes.number,
-	pathSeparator: React.PropTypes.string,
-	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	animationDuration: PropTypes.number,
+	pathSeparator: PropTypes.string,
+	dataSource: PropTypes.object,
+	dataSourceUrl: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	dataSourceType: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	dataSourceType: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	responseDataKey: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	responseDataKey: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	responseDataType: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	responseDataType: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	requestType: React.PropTypes.string,
-	responseContentType: React.PropTypes.string,
-	initialExpandDepth: React.PropTypes.number,
-	loadOnDemand: React.PropTypes.bool,
-	bindings: React.PropTypes.shape(
+	requestType: PropTypes.string,
+	responseContentType: PropTypes.string,
+	initialExpandDepth: PropTypes.number,
+	loadOnDemand: PropTypes.bool,
+	bindings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igTreeBindings
 	),
-	defaultNodeTarget: React.PropTypes.string,
-	dragAndDrop: React.PropTypes.bool,
-	updateUrl: React.PropTypes.string,
-	dragAndDropSettings: React.PropTypes.shape(
+	defaultNodeTarget: PropTypes.string,
+	dragAndDrop: PropTypes.bool,
+	updateUrl: PropTypes.string,
+	dragAndDropSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igTreeDragAndDropSettings
 	)
 }

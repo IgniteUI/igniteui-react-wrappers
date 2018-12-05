@@ -9,8 +9,8 @@
 		"igniteui-react": "^1.1.0",
 		"jquery": ">=1.9.1",
 		"jquery-ui": ">=1.10.5",
-		"react": "15.4.2",
-		"react-dom": "15.4.2",
+		"react": "^16.6.3",
+		"react-dom": "^16.6.3",
 		"react-scripts": "1.0.17"
 	},
 	"scripts": {

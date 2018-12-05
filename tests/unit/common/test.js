@@ -57,7 +57,7 @@ function main() {
 					}, opts));
 					expect($("#igComponent").data(component)).not.toBeUndefined();
 					expect(initCalled).toBeTruthy();
-					$.ig.react.test.emptyElement();
+					$.ig.react.test.removeElement();
 				}
 			}
 		});

@@ -1,38 +1,38 @@
 $.ig.react.propTypes.shapes.igSplitterPanel = {
-	size: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	size: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	min: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	min: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	max: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	max: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	resizable: React.PropTypes.bool,
-	collapsed: React.PropTypes.bool,
-	collapsible: React.PropTypes.bool
+	resizable: PropTypes.bool,
+	collapsed: PropTypes.bool,
+	collapsible: PropTypes.bool
 }
 
 $.ig.react.propTypes.igSplitter = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	orientation: React.PropTypes.oneOf([
+	orientation: PropTypes.oneOf([
 		"vertical",
 		"horizontal"
 	]),
-	panels: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igSplitterPanel)
+	panels: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igSplitterPanel)
 	),
-	dragDelta: React.PropTypes.number,
-	resizeOtherSplitters: React.PropTypes.bool
+	dragDelta: PropTypes.number,
+	resizeOtherSplitters: PropTypes.bool
 }

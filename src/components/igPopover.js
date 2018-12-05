@@ -3,14 +3,15 @@
 		define("IgPopover", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgPopover = React.createClass($.ig.react.core.buildComponent("igPopover"));
+(function (React, $, createReactClass) {
+	var IgPopover = createReactClass($.ig.react.core.buildComponent("igPopover"));
 	if (window) {
 		window.IgPopover = IgPopover;
 	}

@@ -1,40 +1,46 @@
+$.ig.react.propTypes.shapes.igSpreadsheetBrushes = {
+}
+
 $.ig.react.propTypes.igSpreadsheet = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	activeCell: React.PropTypes.string,
-	isScrollLocked: React.PropTypes.bool,
-	activeWorksheet: React.PropTypes.object,
-	allowAddWorksheet: React.PropTypes.bool,
-	allowDeleteWorksheet: React.PropTypes.bool,
-	areGridlinesVisible: React.PropTypes.bool,
-	areHeadersVisible: React.PropTypes.bool,
-	enterKeyNavigationDirection: React.PropTypes.oneOf([
+	activeCell: PropTypes.string,
+	brushes: PropTypes.shape(
+		$.ig.react.propTypes.shapes.igSpreadsheetBrushes
+	),
+	isScrollLocked: PropTypes.bool,
+	activeWorksheet: PropTypes.object,
+	allowAddWorksheet: PropTypes.bool,
+	allowDeleteWorksheet: PropTypes.bool,
+	areGridlinesVisible: PropTypes.bool,
+	areHeadersVisible: PropTypes.bool,
+	enterKeyNavigationDirection: PropTypes.oneOf([
 		"down",
 		"right",
 		"up",
 		"left"
 	]),
-	fixedDecimalPlaceCount: React.PropTypes.number,
-	isEnterKeyNavigationEnabled: React.PropTypes.bool,
-	isFixedDecimalEnabled: React.PropTypes.bool,
-	isFormulaBarVisible: React.PropTypes.bool,
-	isInEndMode: React.PropTypes.bool,
-	isUndoEnabled: React.PropTypes.bool,
-	nameBoxWidth: React.PropTypes.number,
-	selectionMode: React.PropTypes.oneOf([
+	fixedDecimalPlaceCount: PropTypes.number,
+	isEnterKeyNavigationEnabled: PropTypes.bool,
+	isFixedDecimalEnabled: PropTypes.bool,
+	isFormulaBarVisible: PropTypes.bool,
+	isInEndMode: PropTypes.bool,
+	isUndoEnabled: PropTypes.bool,
+	nameBoxWidth: PropTypes.number,
+	selectionMode: PropTypes.oneOf([
 		"normal",
 		"extendSelection",
 		"addToSelection"
 	]),
-	selectedWorksheets: React.PropTypes.object,
-	validationInputMessagePosition: React.PropTypes.object,
-	workbook: React.PropTypes.object,
-	zoomLevel: React.PropTypes.number
+	selectedWorksheets: PropTypes.object,
+	validationInputMessagePosition: PropTypes.object,
+	workbook: PropTypes.object,
+	zoomLevel: PropTypes.number
 }

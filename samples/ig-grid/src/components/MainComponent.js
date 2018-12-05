@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import IgGrid from 'igniteui-react/ui/igGrid.js';
 import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
 import IgEditBox from './IgEditBox.js';
@@ -13,7 +14,7 @@ import "@infragistics/ignite-ui-full/en/css/structure/infragistics.css";
 import "@infragistics/ignite-ui-full/en/css/themes/infragistics/infragistics.theme.css";
 import '../sample.css';
 
-var MainComponent = React.createClass({
+var MainComponent = createReactClass({
 	render: function () {
 		return (
 			<div className="row">

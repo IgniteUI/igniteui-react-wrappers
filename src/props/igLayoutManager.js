@@ -1,60 +1,60 @@
 $.ig.react.propTypes.shapes.igLayoutManagerBorderLayout = {
-	leftWidth: React.PropTypes.string,
-	rightWidth: React.PropTypes.string,
-	showFooter: React.PropTypes.bool,
-	showHeader: React.PropTypes.bool,
-	showLeft: React.PropTypes.bool,
-	showRight: React.PropTypes.bool
+	leftWidth: PropTypes.string,
+	rightWidth: PropTypes.string,
+	showFooter: PropTypes.bool,
+	showHeader: PropTypes.bool,
+	showLeft: PropTypes.bool,
+	showRight: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igLayoutManagerGridLayout = {
-	animationDuration: React.PropTypes.number,
-	cols: React.PropTypes.number,
-	columnHeight: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number,
-		React.PropTypes.array
+	animationDuration: PropTypes.number,
+	cols: PropTypes.number,
+	columnHeight: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+		PropTypes.array
 	]),
-	columnWidth: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number,
-		React.PropTypes.array
+	columnWidth: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+		PropTypes.array
 	]),
-	marginLeft: React.PropTypes.number,
-	marginTop: React.PropTypes.number,
-	overrideConfigOnSetOption: React.PropTypes.bool,
-	rearrangeItems: React.PropTypes.bool,
-	rows: React.PropTypes.number
+	marginLeft: PropTypes.number,
+	marginTop: PropTypes.number,
+	overrideConfigOnSetOption: PropTypes.bool,
+	rearrangeItems: PropTypes.bool,
+	rows: PropTypes.number
 }
 
 $.ig.react.propTypes.shapes.igLayoutManagerItem = {
-	colIndex: React.PropTypes.number,
-	colSpan: React.PropTypes.number,
-	height: React.PropTypes.string,
-	rowIndex: React.PropTypes.number,
-	rowSpan: React.PropTypes.number,
-	width: React.PropTypes.number
+	colIndex: PropTypes.number,
+	colSpan: PropTypes.number,
+	height: PropTypes.string,
+	rowIndex: PropTypes.number,
+	rowSpan: PropTypes.number,
+	width: PropTypes.number
 }
 
 $.ig.react.propTypes.igLayoutManager = {
-	id: React.PropTypes.string.isRequired,
-	borderLayout: React.PropTypes.shape(
+	id: PropTypes.string.isRequired,
+	borderLayout: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igLayoutManagerBorderLayout
 	),
-	gridLayout: React.PropTypes.shape(
+	gridLayout: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igLayoutManagerGridLayout
 	),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	itemCount: React.PropTypes.number,
-	items: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igLayoutManagerItem)
+	itemCount: PropTypes.number,
+	items: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igLayoutManagerItem)
 	),
-	layoutMode: React.PropTypes.any,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	layoutMode: PropTypes.any,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	])
 }

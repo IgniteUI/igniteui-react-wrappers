@@ -3,14 +3,15 @@
 		define("IgSlider", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgSlider = React.createClass($.ig.react.core.buildComponent("igSlider"));
+(function (React, $, createReactClass) {
+	var IgSlider = createReactClass($.ig.react.core.buildComponent("igSlider"));
 	if (window) {
 		window.IgSlider = IgSlider;
 	}

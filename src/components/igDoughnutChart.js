@@ -3,17 +3,17 @@
 		define("IgDoughnutChart", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgDoughnutChart = React.createClass($.ig.react.core.buildComponent("igDoughnutChart"));
+(function (React, $, createReactClass) {
+	var IgDoughnutChart = createReactClass($.ig.react.core.buildComponent("igDoughnutChart"));
 	if (window) {
 		window.IgDoughnutChart = IgDoughnutChart;
 	}
 	return IgDoughnutChart;
 }));
-

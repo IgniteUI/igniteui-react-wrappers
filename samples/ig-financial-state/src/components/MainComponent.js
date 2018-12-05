@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import EditorsBox from './EditorsBox.js';
 import ChartsBox from './ChartsBox.js';
 import GaugesBox from './GaugesBox.js';
@@ -14,17 +14,8 @@ import "@infragistics/ignite-ui-full/en/css/structure/infragistics.css";
 import "@infragistics/ignite-ui-full/en/css/themes/infragistics/infragistics.theme.css";
 import '../sample.css';
 
-var MainComponent = React.createClass({
-
-	getInitialState: function () {
-		return {
-			month: this.getRandomInt(12),
-			data: this.generateData(),
-			update: null,
-			months: this.getMonths()
-		}
-	},
-	generateData: function() {
+class MainComponent extends React.Component {
+    generateData = () => {
 		var num = 12, data = [], rand1, rand2, rand3,
 			mnths = this.getShortMonthNames();
 
@@ -42,29 +33,34 @@ var MainComponent = React.createClass({
 			};
 		}
 		return { data: data };
-	},
-	changeMonth: function(index) {
+	};
+
+    changeMonth = (index) => {
 		this.setState({ month: index, update: "month" });
-	},
-	changeRevenue: function(value) {
+	};
+
+    changeRevenue = (value) => {
 		var data = this.state.data;
 		data.data[this.state.month].revenue = value;
 		data.data[this.state.month].profit = value - data.data[this.state.month].expenses;
 		this.setState({ data: data, update: "revenue" });
-	},
-	changeExpenses: function(value) {
+	};
+
+    changeExpenses = (value) => {
 		var data = this.state.data;
 		data.data[this.state.month].expenses = value;
 		data.data[this.state.month].profit = data.data[this.state.month].revenue - value;
 		this.setState({ data: data, update: "expenses" });
-	},
-	changeProfit: function(value) {
+	};
+
+    changeProfit = (value) => {
 		var data = this.state.data;
 		data.data[this.state.month].profit = value;
 		data.data[this.state.month].revenue = value + data.data[this.state.month].expenses;
 		this.setState({ data: data, update: "profit" });
-	},
-	getMonths: function() {
+	};
+
+    getMonths = () => {
 		return {
 			months: [
 				{ value: 0, text: "January"}, { value: 1, text: "February"}, { value: 2, text: "March"},
@@ -72,14 +68,24 @@ var MainComponent = React.createClass({
 				{ value: 6, text: "July"}, { value: 7, text: "August"}, { value: 8, text: "September"},
 				{ value: 9, text: "October"}, { value: 10, text: "November"}, { value: 11, text: "December"}
 			]};
-	},
-	getRandomInt: function(max) {
+	};
+
+    getRandomInt = (max) => {
 		return Math.floor(Math.random() * Math.floor(max));
-	},
-	getShortMonthNames: function() {
+	};
+
+    getShortMonthNames = () => {
 		return ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-	},
-	render: function () {
+	};
+
+    state = {
+        month: this.getRandomInt(12),
+        data: this.generateData(),
+        update: null,
+        months: this.getMonths()
+    };
+
+    render() {
 		return (
 			<div className="container">
 				<EditorsBox
@@ -107,6 +113,6 @@ var MainComponent = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default MainComponent;

@@ -3,14 +3,15 @@
 		define("IgPivotDataSelector", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgPivotDataSelector = React.createClass($.ig.react.core.buildComponent("igPivotDataSelector"));
+(function (React, $, createReactClass) {
+	var IgPivotDataSelector = createReactClass($.ig.react.core.buildComponent("igPivotDataSelector"));
 	if (window) {
 		window.IgPivotDataSelector = IgPivotDataSelector;
 	}

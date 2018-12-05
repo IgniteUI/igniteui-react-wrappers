@@ -1,8 +1,8 @@
 $.ig.react.propTypes.igColorPickerSplitButton = {
-	id: React.PropTypes.string.isRequired,
-	items: React.PropTypes.array,
-	defaultColor: React.PropTypes.string,
-	hasDefaultIcon: React.PropTypes.bool,
-	defaultItemName: React.PropTypes.string,
-	swapDefaultEnabled: React.PropTypes.bool
+	id: PropTypes.string.isRequired,
+	items: PropTypes.array,
+	defaultColor: PropTypes.string,
+	hasDefaultIcon: PropTypes.bool,
+	defaultItemName: PropTypes.string,
+	swapDefaultEnabled: PropTypes.bool
 }

@@ -3,14 +3,15 @@
 		define("IgDialog", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgDialog = React.createClass($.ig.react.core.buildComponent("igDialog"));
+(function (React, $, createReactClass) {
+	var IgDialog = createReactClass($.ig.react.core.buildComponent("igDialog"));
 	if (window) {
 		window.IgDialog = IgDialog;
 	}

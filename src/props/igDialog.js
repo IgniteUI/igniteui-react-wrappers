@@ -1,66 +1,66 @@
 $.ig.react.propTypes.shapes.igDialogLocale = {
-	closeButtonTitle: React.PropTypes.string,
-	minimizeButtonTitle: React.PropTypes.string,
-	maximizeButtonTitle: React.PropTypes.string,
-	pinButtonTitle: React.PropTypes.string,
-	unpinButtonTitle: React.PropTypes.string,
-	restoreButtonTitle: React.PropTypes.string
+	closeButtonTitle: PropTypes.string,
+	minimizeButtonTitle: PropTypes.string,
+	maximizeButtonTitle: PropTypes.string,
+	pinButtonTitle: PropTypes.string,
+	unpinButtonTitle: PropTypes.string,
+	restoreButtonTitle: PropTypes.string
 }
 
 $.ig.react.propTypes.igDialog = {
-	id: React.PropTypes.string.isRequired,
-	mainElement: React.PropTypes.element,
-	state: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	mainElement: PropTypes.element,
+	state: PropTypes.oneOf([
 		"opened",
 		"minimized",
 		"maximized",
 		"closed"
 	]),
-	pinned: React.PropTypes.bool,
-	closeOnEscape: React.PropTypes.bool,
-	showCloseButton: React.PropTypes.bool,
-	showMaximizeButton: React.PropTypes.bool,
-	showMinimizeButton: React.PropTypes.bool,
-	showPinButton: React.PropTypes.bool,
-	pinOnMinimized: React.PropTypes.bool,
-	imageClass: React.PropTypes.string,
-	headerText: React.PropTypes.string,
-	showHeader: React.PropTypes.bool,
-	showFooter: React.PropTypes.bool,
-	footerText: React.PropTypes.string,
-	dialogClass: React.PropTypes.string,
-	container: React.PropTypes.object,
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	pinned: PropTypes.bool,
+	closeOnEscape: PropTypes.bool,
+	showCloseButton: PropTypes.bool,
+	showMaximizeButton: PropTypes.bool,
+	showMinimizeButton: PropTypes.bool,
+	showPinButton: PropTypes.bool,
+	pinOnMinimized: PropTypes.bool,
+	imageClass: PropTypes.string,
+	headerText: PropTypes.string,
+	showHeader: PropTypes.bool,
+	showFooter: PropTypes.bool,
+	footerText: PropTypes.string,
+	dialogClass: PropTypes.string,
+	container: PropTypes.object,
+	height: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	width: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	minHeight: React.PropTypes.number,
-	minWidth: React.PropTypes.number,
-	maxHeight: React.PropTypes.number,
-	maxWidth: React.PropTypes.number,
-	draggable: React.PropTypes.bool,
-	position: React.PropTypes.object,
-	resizable: React.PropTypes.bool,
-	tabIndex: React.PropTypes.number,
-	openAnimation: React.PropTypes.object,
-	closeAnimation: React.PropTypes.object,
-	zIndex: React.PropTypes.number,
-	modal: React.PropTypes.bool,
-	trackFocus: React.PropTypes.bool,
-	closeButtonTitle: React.PropTypes.string,
-	minimizeButtonTitle: React.PropTypes.string,
-	maximizeButtonTitle: React.PropTypes.string,
-	pinButtonTitle: React.PropTypes.string,
-	unpinButtonTitle: React.PropTypes.string,
-	restoreButtonTitle: React.PropTypes.string,
-	locale: React.PropTypes.shape(
+	minHeight: PropTypes.number,
+	minWidth: PropTypes.number,
+	maxHeight: PropTypes.number,
+	maxWidth: PropTypes.number,
+	draggable: PropTypes.bool,
+	position: PropTypes.object,
+	resizable: PropTypes.bool,
+	tabIndex: PropTypes.number,
+	openAnimation: PropTypes.object,
+	closeAnimation: PropTypes.object,
+	zIndex: PropTypes.number,
+	modal: PropTypes.bool,
+	trackFocus: PropTypes.bool,
+	closeButtonTitle: PropTypes.string,
+	minimizeButtonTitle: PropTypes.string,
+	maximizeButtonTitle: PropTypes.string,
+	pinButtonTitle: PropTypes.string,
+	unpinButtonTitle: PropTypes.string,
+	restoreButtonTitle: PropTypes.string,
+	locale: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igDialogLocale
 	),
-	temporaryUrl: React.PropTypes.string,
-	enableHeaderFocus: React.PropTypes.bool,
-	enableDblclick: React.PropTypes.any
+	temporaryUrl: PropTypes.string,
+	enableHeaderFocus: PropTypes.bool,
+	enableDblclick: PropTypes.any
 }

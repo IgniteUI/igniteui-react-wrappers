@@ -1,21 +1,21 @@
 $.ig.react.propTypes.shapes.igSliderBookmarks = {
-	value: React.PropTypes.number,
-	title: React.PropTypes.string,
-	disabled: React.PropTypes.bool,
-	css: React.PropTypes.string
+	value: PropTypes.number,
+	title: PropTypes.string,
+	disabled: PropTypes.bool,
+	css: PropTypes.string
 }
 
 $.ig.react.propTypes.igSlider = {
-	id: React.PropTypes.string.isRequired,
-	animate: React.PropTypes.bool,
-	max: React.PropTypes.number,
-	min: React.PropTypes.number,
-	orientation: React.PropTypes.any,
-	step: React.PropTypes.number,
-	value: React.PropTypes.number,
-	bookmarks: React.PropTypes.shape(
+	id: PropTypes.string.isRequired,
+	animate: PropTypes.bool,
+	max: PropTypes.number,
+	min: PropTypes.number,
+	orientation: PropTypes.any,
+	step: PropTypes.number,
+	value: PropTypes.number,
+	bookmarks: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igSliderBookmarks
 	),
-	showBookmarkTitle: React.PropTypes.bool,
-	syncHandleWithBookmark: React.PropTypes.bool
+	showBookmarkTitle: PropTypes.bool,
+	syncHandleWithBookmark: PropTypes.bool
 }

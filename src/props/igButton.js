@@ -1,27 +1,27 @@
 $.ig.react.propTypes.shapes.igButtonLink = {
-	href: React.PropTypes.object,
-	target: React.PropTypes.object,
-	title: React.PropTypes.object
+	href: PropTypes.object,
+	target: PropTypes.object,
+	title: PropTypes.object
 }
 
 $.ig.react.propTypes.shapes.igButtonIcons = {
-	primary: React.PropTypes.object,
-	secondary: React.PropTypes.object
+	primary: PropTypes.object,
+	secondary: PropTypes.object
 }
 
 $.ig.react.propTypes.igButton = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.object,
-	height: React.PropTypes.object,
-	link: React.PropTypes.shape(
+	id: PropTypes.string.isRequired,
+	width: PropTypes.object,
+	height: PropTypes.object,
+	link: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igButtonLink
 	),
-	labelText: React.PropTypes.string,
-	centerLabel: React.PropTypes.bool,
-	css: React.PropTypes.object,
-	onlyIcons: React.PropTypes.bool,
-	icons: React.PropTypes.shape(
+	labelText: PropTypes.string,
+	centerLabel: PropTypes.bool,
+	css: PropTypes.object,
+	onlyIcons: PropTypes.bool,
+	icons: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igButtonIcons
 	),
-	title: React.PropTypes.bool
+	title: PropTypes.bool
 }

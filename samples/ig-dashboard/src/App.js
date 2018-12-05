@@ -3,8 +3,8 @@ import MainComponent from './components/MainComponent.js';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-var App = React.createClass({
-	render: function () {
+class App extends React.Component {
+    render() {
 		return (
 			<div className="container">
 				<div className="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -63,6 +63,6 @@ var App = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default App;

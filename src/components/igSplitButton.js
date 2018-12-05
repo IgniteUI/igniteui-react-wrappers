@@ -3,14 +3,15 @@
 		define("IgSplitButton", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgSplitButton = React.createClass($.ig.react.core.buildComponent("igSplitButton"));
+(function (React, $, createReactClass) {
+	var IgSplitButton = createReactClass($.ig.react.core.buildComponent("igSplitButton"));
 	if (window) {
 		window.IgSplitButton = IgSplitButton;
 	}

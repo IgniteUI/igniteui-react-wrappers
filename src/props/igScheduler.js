@@ -1,44 +1,62 @@
 $.ig.react.propTypes.shapes.igSchedulerAgendaViewSettings = {
-	dateRangeInterval: React.PropTypes.number
+	dateRangeInterval: PropTypes.number
+}
+
+$.ig.react.propTypes.shapes.igSchedulerWeekViewSettings = {
+	weekViewDisplayMode: PropTypes.number,
+	workingHoursDisplayMode: PropTypes.number,
+	timeSlotInterval: PropTypes.number
+}
+
+$.ig.react.propTypes.shapes.igSchedulerDayViewSettings = {
+	timeSlotInterval: PropTypes.number,
+	dayViewNumberOfDays: PropTypes.number,
+	workingHoursDisplayMode: PropTypes.number
 }
 
 $.ig.react.propTypes.shapes.igSchedulerMonthViewSettings = {
-	appointmentMode: React.PropTypes.string,
-	isAgendaVisible: React.PropTypes.bool,
-	agendaVisibilityType: React.PropTypes.string,
-	viewSplitOrientation: React.PropTypes.string,
-	isHorizontalSeparatorVisibile: React.PropTypes.bool,
-	isVerticalSeparatorVisibile: React.PropTypes.bool,
-	isWeekdayVisible: React.PropTypes.bool,
-	isWeekNumberVisible: React.PropTypes.bool,
-	isPreviousMonthShown: React.PropTypes.bool,
-	isNextMonthShown: React.PropTypes.bool
+	appointmentMode: PropTypes.string,
+	isAgendaVisible: PropTypes.bool,
+	agendaVisibilityType: PropTypes.string,
+	viewSplitOrientation: PropTypes.string,
+	isHorizontalSeparatorVisibile: PropTypes.bool,
+	isVerticalSeparatorVisibile: PropTypes.bool,
+	isWeekdayVisible: PropTypes.bool,
+	isWeekNumberVisible: PropTypes.bool,
+	isPreviousMonthShown: PropTypes.bool,
+	isNextMonthShown: PropTypes.bool
 }
 
 $.ig.react.propTypes.igScheduler = {
-	id: React.PropTypes.string.isRequired,
-	views: React.PropTypes.array,
-	viewMode: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	views: PropTypes.array,
+	viewMode: PropTypes.oneOf([
 		"monthView",
 		"agendaView"
 	]),
-	selectedDate: React.PropTypes.instanceOf(Date),
-	enableTodayButton: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	selectedDate: PropTypes.instanceOf(Date),
+	enableTodayButton: PropTypes.bool,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	agendaViewSettings: React.PropTypes.shape(
+	agendaViewSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igSchedulerAgendaViewSettings
 	),
-	monthViewSettings: React.PropTypes.shape(
+	weekViewSettings: PropTypes.shape(
+		$.ig.react.propTypes.shapes.igSchedulerWeekViewSettings
+	),
+	dayViewSettings: PropTypes.shape(
+		$.ig.react.propTypes.shapes.igSchedulerDayViewSettings
+	),
+	monthViewSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igSchedulerMonthViewSettings
 	),
-	appointmentDialogSuppress: React.PropTypes.bool,
-	dataSource: React.PropTypes.object,
-	resources: React.PropTypes.object
+	appointmentDialogSuppress: PropTypes.bool,
+	dataSource: PropTypes.object,
+	resources: PropTypes.object
 }

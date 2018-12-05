@@ -3,14 +3,15 @@
 		define("IgHtmlEditor", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgHtmlEditor = React.createClass($.ig.react.core.buildComponent("igHtmlEditor"));
+(function (React, $, createReactClass) {
+	var IgHtmlEditor = createReactClass($.ig.react.core.buildComponent("igHtmlEditor"));
 	if (window) {
 		window.IgHtmlEditor = IgHtmlEditor;
 	}
