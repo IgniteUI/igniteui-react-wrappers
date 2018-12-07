@@ -1,10 +1,10 @@
 $.ig.react.propTypes.igMaskEditor = {
-	id: React.PropTypes.string.isRequired,
-	buttonType: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	buttonType: PropTypes.oneOf([
 		"clear"
 	]),
-	inputMask: React.PropTypes.string,
-	dataMode: React.PropTypes.oneOf([
+	inputMask: PropTypes.string,
+	dataMode: PropTypes.oneOf([
 		"rawText",
 		"rawTextWithRequiredPrompts",
 		"rawTextWithAllPrompts",
@@ -12,45 +12,45 @@ $.ig.react.propTypes.igMaskEditor = {
 		"rawTextWithRequiredPromptsAndLiterals",
 		"allText"
 	]),
-	unfilledCharsPrompt: React.PropTypes.string,
-	padChar: React.PropTypes.string,
-	emptyChar: React.PropTypes.string,
-	includeKeys: React.PropTypes.string,
-	excludeKeys: React.PropTypes.string,
-	value: React.PropTypes.string,
-	textAlign: React.PropTypes.oneOf([
+	unfilledCharsPrompt: PropTypes.string,
+	padChar: PropTypes.string,
+	emptyChar: PropTypes.string,
+	includeKeys: PropTypes.string,
+	excludeKeys: PropTypes.string,
+	value: PropTypes.object,
+	textAlign: PropTypes.oneOf([
 		"left",
 		"right",
 		"center"
 	]),
-	placeHolder: React.PropTypes.string,
-	selectionOnFocus: React.PropTypes.oneOf([
+	placeHolder: PropTypes.string,
+	selectionOnFocus: PropTypes.oneOf([
 		"selectAll",
 		"atStart",
 		"atEnd",
 		"browserDefault"
 	]),
-	revertIfNotValid: React.PropTypes.bool,
-	preventSubmitOnEnter: React.PropTypes.bool,
-	toUpper: React.PropTypes.bool,
-	toLower: React.PropTypes.bool,
-	suppressNotifications: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	revertIfNotValid: PropTypes.bool,
+	preventSubmitOnEnter: PropTypes.bool,
+	toUpper: PropTypes.bool,
+	toLower: PropTypes.bool,
+	suppressNotifications: PropTypes.bool,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	tabIndex: React.PropTypes.number,
-	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	tabIndex: PropTypes.number,
+	allowNullValue: PropTypes.bool,
+	nullValue: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	inputName: React.PropTypes.string,
-	readOnly: React.PropTypes.bool,
-	disabled: React.PropTypes.bool,
-	validatorOptions: React.PropTypes.object
+	inputName: PropTypes.string,
+	readOnly: PropTypes.bool,
+	disabled: PropTypes.bool,
+	validatorOptions: PropTypes.object
 }

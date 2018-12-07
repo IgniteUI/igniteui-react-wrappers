@@ -3,14 +3,15 @@
 		define("IgTimePicker", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgTimePicker = React.createClass($.ig.react.core.buildComponent("igTimePicker"));
+(function (React, $, createReactClass) {
+	var IgTimePicker = createReactClass($.ig.react.core.buildComponent("igTimePicker"));
 	if (window) {
 		window.IgTimePicker = IgTimePicker;
 	}

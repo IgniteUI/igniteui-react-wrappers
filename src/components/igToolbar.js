@@ -3,14 +3,15 @@
 		define("IgToolbar", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgToolbar = React.createClass($.ig.react.core.buildComponent("igToolbar"));
+(function (React, $, createReactClass) {
+	var IgToolbar = createReactClass($.ig.react.core.buildComponent("igToolbar"));
 	if (window) {
 		window.IgToolbar = IgToolbar;
 	}

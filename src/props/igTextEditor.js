@@ -1,67 +1,67 @@
 $.ig.react.propTypes.igTextEditor = {
-	id: React.PropTypes.string.isRequired,
-	buttonType: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	buttonType: PropTypes.oneOf([
 		"dropdown",
 		"clear",
 		"spin"
 	]),
-	listItems: React.PropTypes.array,
-	listWidth: React.PropTypes.number,
-	listItemHoverDuration: React.PropTypes.number,
-	dropDownAttachedToBody: React.PropTypes.bool,
-	dropDownAnimationDuration: React.PropTypes.number,
-	visibleItemsCount: React.PropTypes.number,
-	includeKeys: React.PropTypes.string,
-	excludeKeys: React.PropTypes.string,
-	textAlign: React.PropTypes.oneOf([
+	listItems: PropTypes.array,
+	listWidth: PropTypes.number,
+	listItemHoverDuration: PropTypes.number,
+	dropDownAttachedToBody: PropTypes.bool,
+	dropDownAnimationDuration: PropTypes.number,
+	visibleItemsCount: PropTypes.number,
+	includeKeys: PropTypes.string,
+	excludeKeys: PropTypes.string,
+	textAlign: PropTypes.oneOf([
 		"left",
 		"right",
 		"center"
 	]),
-	placeHolder: React.PropTypes.string,
-	selectionOnFocus: React.PropTypes.oneOf([
+	placeHolder: PropTypes.string,
+	selectionOnFocus: PropTypes.oneOf([
 		"selectAll",
 		"atStart",
 		"atEnd",
 		"browserDefault"
 	]),
-	textMode: React.PropTypes.oneOf([
+	textMode: PropTypes.oneOf([
 		"text",
 		"password",
 		"multiline"
 	]),
-	spinWrapAround: React.PropTypes.bool,
-	isLimitedToListValues: React.PropTypes.bool,
-	revertIfNotValid: React.PropTypes.bool,
-	preventSubmitOnEnter: React.PropTypes.bool,
-	dropDownOrientation: React.PropTypes.oneOf([
+	spinWrapAround: PropTypes.bool,
+	isLimitedToListValues: PropTypes.bool,
+	revertIfNotValid: PropTypes.bool,
+	preventSubmitOnEnter: PropTypes.bool,
+	dropDownOrientation: PropTypes.oneOf([
 		"auto",
 		"bottom",
 		"top"
 	]),
-	maxLength: React.PropTypes.number,
-	dropDownOnReadOnly: React.PropTypes.bool,
-	toUpper: React.PropTypes.bool,
-	toLower: React.PropTypes.bool,
-	suppressNotifications: React.PropTypes.bool,
-	suppressKeyboard: React.PropTypes.bool,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	maxLength: PropTypes.number,
+	dropDownOnReadOnly: PropTypes.bool,
+	toUpper: PropTypes.bool,
+	toLower: PropTypes.bool,
+	suppressNotifications: PropTypes.bool,
+	suppressKeyboard: PropTypes.bool,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	value: React.PropTypes.object,
-	tabIndex: React.PropTypes.number,
-	allowNullValue: React.PropTypes.bool,
-	nullValue: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	value: PropTypes.object,
+	tabIndex: PropTypes.number,
+	allowNullValue: PropTypes.bool,
+	nullValue: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	inputName: React.PropTypes.string,
-	readOnly: React.PropTypes.bool,
-	disabled: React.PropTypes.bool,
-	validatorOptions: React.PropTypes.object
+	inputName: PropTypes.string,
+	readOnly: PropTypes.bool,
+	disabled: PropTypes.bool,
+	validatorOptions: PropTypes.object
 }

@@ -4,12 +4,14 @@
 		// AMD. Register as an anonymous module.
 		define( [
 			"react",
-			"jquery"
+			"jquery",
+            "create-react-class",
+            "prop-types"
 		], factory );
 	} else {
 
 		// Browser globals
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass, PropTypes);
 	}
 }
-(function(React, $) {
+(function(React, $, createReactClass, PropTypes) {

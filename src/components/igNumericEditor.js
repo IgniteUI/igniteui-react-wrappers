@@ -3,14 +3,15 @@
 		define("IgNumericEditor", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgNumericEditor = React.createClass($.ig.react.core.buildComponent("igNumericEditor"));
+(function (React, $, createReactClass) {
+	var IgNumericEditor = createReactClass($.ig.react.core.buildComponent("igNumericEditor"));
 	if (window) {
 		window.IgNumericEditor = IgNumericEditor;
 	}

@@ -3,14 +3,15 @@
 		define("IgBulletGraph", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgBulletGraph = React.createClass($.ig.react.core.buildComponent("igBulletGraph"));
+(function (React, $, createReactClass) {
+	var IgBulletGraph = createReactClass($.ig.react.core.buildComponent("igBulletGraph"));
 	if (window) {
 		window.IgBulletGraph = IgBulletGraph;
 	}

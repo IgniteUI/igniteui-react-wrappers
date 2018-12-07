@@ -3,14 +3,15 @@
 		define("IgPivotView", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgPivotView = React.createClass($.ig.react.core.buildComponent("igPivotView"));
+(function (React, $, createReactClass) {
+	var IgPivotView = createReactClass($.ig.react.core.buildComponent("igPivotView"));
 	if (window) {
 		window.IgPivotView = IgPivotView;
 	}

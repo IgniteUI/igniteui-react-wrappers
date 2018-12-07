@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
 import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
 import IgButton from 'igniteui-react/ui/igButton.js';
 import '../sample.css';
 import $ from 'jquery';
 
-var IgEditBox = React.createClass({
+var IgEditBox = createReactClass({
     render: function () {
         var rowId =  this.props.rowId,
             v = rowId > -1;

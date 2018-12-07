@@ -1,37 +1,37 @@
 $.ig.react.propTypes.shapes.igZoombarDefaultZoomWindow = {
-	left: React.PropTypes.number,
-	width: React.PropTypes.string
+	left: PropTypes.number,
+	width: PropTypes.string
 }
 
 $.ig.react.propTypes.igZoombar = {
-	id: React.PropTypes.string.isRequired,
-	provider: React.PropTypes.object,
-	target: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+	id: PropTypes.string.isRequired,
+	provider: PropTypes.object,
+	target: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
 	]),
-	clone: React.PropTypes.oneOf([
+	clone: PropTypes.oneOf([
 		"auto",
 		"none"
 	]),
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	height: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	zoomAction: React.PropTypes.oneOf([
+	zoomAction: PropTypes.oneOf([
 		"immediate",
 		"deferred"
 	]),
-	zoomWindowMoveDistance: React.PropTypes.number,
-	defaultZoomWindow: React.PropTypes.shape(
+	zoomWindowMoveDistance: PropTypes.number,
+	defaultZoomWindow: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igZoombarDefaultZoomWindow
 	),
-	zoomWindowMinWidth: React.PropTypes.number,
-	hoverStyleAnimationDuration: React.PropTypes.number,
-	windowPanDuration: React.PropTypes.number,
-	tabIndex: React.PropTypes.number
+	zoomWindowMinWidth: PropTypes.number,
+	hoverStyleAnimationDuration: PropTypes.number,
+	windowPanDuration: PropTypes.number,
+	tabIndex: PropTypes.number
 }

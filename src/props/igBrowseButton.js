@@ -1,6 +1,6 @@
 $.ig.react.propTypes.igBrowseButton = {
-	id: React.PropTypes.string.isRequired,
-	autoselect: React.PropTypes.bool,
-	multipleFiles: React.PropTypes.bool,
-	container: React.PropTypes.object
+	id: PropTypes.string.isRequired,
+	autoselect: PropTypes.bool,
+	multipleFiles: PropTypes.bool,
+	container: PropTypes.object
 }

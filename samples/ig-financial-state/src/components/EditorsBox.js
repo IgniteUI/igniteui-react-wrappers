@@ -1,9 +1,9 @@
 import IgCombo from 'igniteui-react/ui/igCombo.js';
 import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
-import React, { Component } from 'react';
+import React from 'react';
 
-var EditorsBox = React.createClass({
-	render: function () {
+class EditorsBox extends React.Component {
+    render() {
 		return (
 			<div className="editors row">
 				<div className="editor-container">
@@ -52,19 +52,23 @@ var EditorsBox = React.createClass({
 				<div className="clear"></div>
 			</div>
 		);
-	},
-	monthChanged: function (e, args) {
-		this.props.changeMonth(args.items[0].data.value);
-	},
-	revenueChanged: function (e, args) {
-		this.props.changeRevenue(args.newValue);
-	},
-	expensesChanged: function (e, args) {
-		this.props.changeExpenses(args.newValue);
-	},
-	profitChanged: function (e, args) {
-		this.props.changeProfit(args.newValue);
 	}
-});
+
+    monthChanged = (e, args) => {
+		this.props.changeMonth(args.items[0].data.value);
+	};
+
+    revenueChanged = (e, args) => {
+		this.props.changeRevenue(args.newValue);
+	};
+
+    expensesChanged = (e, args) => {
+		this.props.changeExpenses(args.newValue);
+	};
+
+    profitChanged = (e, args) => {
+		this.props.changeProfit(args.newValue);
+	};
+}
 
 export default EditorsBox;

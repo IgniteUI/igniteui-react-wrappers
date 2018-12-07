@@ -17,8 +17,8 @@
         }
         return $e;
     };
-    $.ig.react.test.emptyElement = function (id) {
-        $.ig.react.test.getElement(id).empty();
+    $.ig.react.test.removeElement = function (id) {
+        $.ig.react.test.getElement(id).remove();
     };
     $.ig.react.test.createOrUpdateComponent = function (component, options, elementId) {
         options = options || {};

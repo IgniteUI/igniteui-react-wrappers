@@ -1,82 +1,82 @@
 $.ig.react.propTypes.shapes.igNotifierHeaderTemplate = {
-	closeButton: React.PropTypes.bool,
-	title: React.PropTypes.string
+	closeButton: PropTypes.bool,
+	title: PropTypes.string
 }
 
 $.ig.react.propTypes.igNotifier = {
-	id: React.PropTypes.string.isRequired,
-	state: React.PropTypes.oneOf([
+	id: PropTypes.string.isRequired,
+	state: PropTypes.oneOf([
 		"success",
 		"info",
 		"warning",
 		"error"
 	]),
-	notifyLevel: React.PropTypes.oneOf([
+	notifyLevel: PropTypes.oneOf([
 		"success",
 		"info",
 		"warning",
 		"error"
 	]),
-	appendTo: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.object
+	appendTo: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
 	]),
-	mode: React.PropTypes.oneOf([
+	mode: PropTypes.oneOf([
 		"auto",
 		"popover",
 		"inline"
 	]),
-	allowCSSOnTarget: React.PropTypes.bool,
-	showIcon: React.PropTypes.bool,
-	contentTemplate: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.func
+	allowCSSOnTarget: PropTypes.bool,
+	showIcon: PropTypes.bool,
+	contentTemplate: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.func
 	]),
-	headerTemplate: React.PropTypes.shape(
+	headerTemplate: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igNotifierHeaderTemplate
 	),
-	showOn: React.PropTypes.oneOf([
+	showOn: PropTypes.oneOf([
 		"mouseenter",
 		"click",
 		"focus",
 		"manual"
 	]),
-	closeOnBlur: React.PropTypes.bool,
-	animationDuration: React.PropTypes.number,
-	animationSlideDistance: React.PropTypes.number,
-	direction: React.PropTypes.oneOf([
+	closeOnBlur: PropTypes.bool,
+	animationDuration: PropTypes.number,
+	animationSlideDistance: PropTypes.number,
+	direction: PropTypes.oneOf([
 		"auto",
 		"left",
 		"right",
 		"top",
 		"bottom"
 	]),
-	directionPriority: React.PropTypes.array,
-	position: React.PropTypes.oneOf([
+	directionPriority: PropTypes.array,
+	position: PropTypes.oneOf([
 		"auto",
 		"balanced",
 		"start",
 		"end"
 	]),
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	width: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	height: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	minWidth: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	minWidth: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	maxWidth: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	maxWidth: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	maxHeight: React.PropTypes.oneOfType([
-		React.PropTypes.number,
-		React.PropTypes.string
+	maxHeight: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string
 	]),
-	containment: React.PropTypes.object
+	containment: PropTypes.object
 }

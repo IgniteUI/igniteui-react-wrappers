@@ -3,14 +3,15 @@
 		define("IgFunnelChart", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgFunnelChart = React.createClass($.ig.react.core.buildComponent("igFunnelChart"));
+(function (React, $, createReactClass) {
+	var IgFunnelChart = createReactClass($.ig.react.core.buildComponent("igFunnelChart"));
 	if (window) {
 		window.IgFunnelChart = IgFunnelChart;
 	}

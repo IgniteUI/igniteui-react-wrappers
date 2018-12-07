@@ -1,51 +1,51 @@
 $.ig.react.propTypes.shapes.igRadialGaugeRange = {
-	name: React.PropTypes.string,
-	startValue: React.PropTypes.number,
-	endValue: React.PropTypes.number,
-	outerStartExtent: React.PropTypes.number,
-	outerEndExtent: React.PropTypes.number,
-	innerStartExtent: React.PropTypes.number,
-	innerEndExtent: React.PropTypes.number,
-	brush: React.PropTypes.string,
-	outline: React.PropTypes.string,
-	strokeThickness: React.PropTypes.number,
-	remove: React.PropTypes.bool
+	name: PropTypes.string,
+	startValue: PropTypes.number,
+	endValue: PropTypes.number,
+	outerStartExtent: PropTypes.number,
+	outerEndExtent: PropTypes.number,
+	innerStartExtent: PropTypes.number,
+	innerEndExtent: PropTypes.number,
+	brush: PropTypes.string,
+	outline: PropTypes.string,
+	strokeThickness: PropTypes.number,
+	remove: PropTypes.bool
 }
 
 $.ig.react.propTypes.igRadialGauge = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	ranges: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igRadialGaugeRange)
+	ranges: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igRadialGaugeRange)
 	),
-	rangeBrushes: React.PropTypes.object,
-	rangeOutlines: React.PropTypes.object,
-	minimumValue: React.PropTypes.number,
-	maximumValue: React.PropTypes.number,
-	interval: React.PropTypes.number,
-	centerX: React.PropTypes.number,
-	centerY: React.PropTypes.number,
-	value: React.PropTypes.number,
-	scaleStartAngle: React.PropTypes.number,
-	scaleEndAngle: React.PropTypes.number,
-	scaleSweepDirection: React.PropTypes.oneOf([
+	rangeBrushes: PropTypes.object,
+	rangeOutlines: PropTypes.object,
+	minimumValue: PropTypes.number,
+	maximumValue: PropTypes.number,
+	interval: PropTypes.number,
+	centerX: PropTypes.number,
+	centerY: PropTypes.number,
+	value: PropTypes.number,
+	scaleStartAngle: PropTypes.number,
+	scaleEndAngle: PropTypes.number,
+	scaleSweepDirection: PropTypes.oneOf([
 		"counterclockwise",
 		"clockwise"
 	]),
-	transitionDuration: React.PropTypes.number,
-	transitionEasingFunction: React.PropTypes.object,
-	needleBrush: React.PropTypes.string,
-	needleOutline: React.PropTypes.string,
-	needleStartExtent: React.PropTypes.number,
-	needleEndExtent: React.PropTypes.number,
-	needleShape: React.PropTypes.oneOf([
+	transitionDuration: PropTypes.number,
+	transitionEasingFunction: PropTypes.object,
+	needleBrush: PropTypes.string,
+	needleOutline: PropTypes.string,
+	needleStartExtent: PropTypes.number,
+	needleEndExtent: PropTypes.number,
+	needleShape: PropTypes.oneOf([
 		"none",
 		"rectangle",
 		"triangle",
@@ -56,15 +56,15 @@ $.ig.react.propTypes.igRadialGauge = {
 		"needleWithBulb",
 		"trapezoidWithBulb"
 	]),
-	needleStartWidthRatio: React.PropTypes.number,
-	needleEndWidthRatio: React.PropTypes.number,
-	needleBaseFeatureWidthRatio: React.PropTypes.number,
-	needleBaseFeatureExtent: React.PropTypes.number,
-	needlePointFeatureWidthRatio: React.PropTypes.number,
-	needlePointFeatureExtent: React.PropTypes.number,
-	needlePivotWidthRatio: React.PropTypes.number,
-	needlePivotInnerWidthRatio: React.PropTypes.number,
-	needlePivotShape: React.PropTypes.oneOf([
+	needleStartWidthRatio: PropTypes.number,
+	needleEndWidthRatio: PropTypes.number,
+	needleBaseFeatureWidthRatio: PropTypes.number,
+	needleBaseFeatureExtent: PropTypes.number,
+	needlePointFeatureWidthRatio: PropTypes.number,
+	needlePointFeatureExtent: PropTypes.number,
+	needlePivotWidthRatio: PropTypes.number,
+	needlePivotInnerWidthRatio: PropTypes.number,
+	needlePivotShape: PropTypes.oneOf([
 		"none",
 		"circle",
 		"circleWithHole",
@@ -73,52 +73,52 @@ $.ig.react.propTypes.igRadialGauge = {
 		"circleUnderlay",
 		"circleUnderlayWithHole"
 	]),
-	scaleStartExtent: React.PropTypes.number,
-	needlePivotBrush: React.PropTypes.string,
-	needlePivotOutline: React.PropTypes.string,
-	needleStrokeThickness: React.PropTypes.number,
-	needlePivotStrokeThickness: React.PropTypes.number,
-	scaleEndExtent: React.PropTypes.number,
-	labelExtent: React.PropTypes.number,
-	labelInterval: React.PropTypes.number,
-	tickStartExtent: React.PropTypes.number,
-	tickEndExtent: React.PropTypes.number,
-	tickStrokeThickness: React.PropTypes.number,
-	tickBrush: React.PropTypes.string,
-	fontBrush: React.PropTypes.string,
-	minorTickStartExtent: React.PropTypes.number,
-	minorTickEndExtent: React.PropTypes.number,
-	minorTickStrokeThickness: React.PropTypes.number,
-	minorTickBrush: React.PropTypes.string,
-	minorTickCount: React.PropTypes.number,
-	scaleBrush: React.PropTypes.string,
-	backingBrush: React.PropTypes.string,
-	backingOutline: React.PropTypes.string,
-	backingStrokeThickness: React.PropTypes.number,
-	backingOuterExtent: React.PropTypes.number,
-	backingOversweep: React.PropTypes.number,
-	scaleOversweep: React.PropTypes.number,
-	scaleOversweepShape: React.PropTypes.oneOf([
+	scaleStartExtent: PropTypes.number,
+	needlePivotBrush: PropTypes.string,
+	needlePivotOutline: PropTypes.string,
+	needleStrokeThickness: PropTypes.number,
+	needlePivotStrokeThickness: PropTypes.number,
+	scaleEndExtent: PropTypes.number,
+	labelExtent: PropTypes.number,
+	labelInterval: PropTypes.number,
+	tickStartExtent: PropTypes.number,
+	tickEndExtent: PropTypes.number,
+	tickStrokeThickness: PropTypes.number,
+	tickBrush: PropTypes.string,
+	fontBrush: PropTypes.string,
+	minorTickStartExtent: PropTypes.number,
+	minorTickEndExtent: PropTypes.number,
+	minorTickStrokeThickness: PropTypes.number,
+	minorTickBrush: PropTypes.string,
+	minorTickCount: PropTypes.number,
+	scaleBrush: PropTypes.string,
+	backingBrush: PropTypes.string,
+	backingOutline: PropTypes.string,
+	backingStrokeThickness: PropTypes.number,
+	backingOuterExtent: PropTypes.number,
+	backingOversweep: PropTypes.number,
+	scaleOversweep: PropTypes.number,
+	scaleOversweepShape: PropTypes.oneOf([
 		"auto",
 		"circular",
 		"fitted"
 	]),
-	backingCornerRadius: React.PropTypes.number,
-	backingInnerExtent: React.PropTypes.number,
-	backingShape: React.PropTypes.oneOf([
+	backingCornerRadius: PropTypes.number,
+	backingInnerExtent: PropTypes.number,
+	backingShape: PropTypes.oneOf([
 		"circular",
 		"fitted"
 	]),
-	radiusMultiplier: React.PropTypes.number,
-	duplicateLabelOmissionStrategy: React.PropTypes.oneOf([
+	radiusMultiplier: PropTypes.number,
+	duplicateLabelOmissionStrategy: PropTypes.oneOf([
 		"omitLast",
 		"omitFirst",
 		"omitNeither",
 		"omitBoth"
 	]),
-	isNeedleDraggingEnabled: React.PropTypes.bool,
-	isNeedleDraggingConstrained: React.PropTypes.bool,
-	font: React.PropTypes.string,
-	transitionProgress: React.PropTypes.number,
-	pixelScalingRatio: React.PropTypes.number
+	isNeedleDraggingEnabled: PropTypes.bool,
+	isNeedleDraggingConstrained: PropTypes.bool,
+	font: PropTypes.string,
+	transitionProgress: PropTypes.number,
+	pixelScalingRatio: PropTypes.number
 }

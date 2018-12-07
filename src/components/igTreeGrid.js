@@ -3,14 +3,15 @@
 		define("IgTreeGrid", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgTreeGrid = React.createClass($.ig.react.core.buildComponent("igTreeGrid"));
+(function (React, $, createReactClass) {
+	var IgTreeGrid = createReactClass($.ig.react.core.buildComponent("igTreeGrid"));
 	if (window) {
 		window.IgTreeGrid = IgTreeGrid;
 	}

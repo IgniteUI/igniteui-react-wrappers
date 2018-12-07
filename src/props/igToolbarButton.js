@@ -1,5 +1,5 @@
 $.ig.react.propTypes.igToolbarButton = {
-	id: React.PropTypes.string.isRequired,
-	allowToggling: React.PropTypes.bool,
-	isSelected: React.PropTypes.bool
+	id: PropTypes.string.isRequired,
+	allowToggling: PropTypes.bool,
+	isSelected: PropTypes.bool
 }

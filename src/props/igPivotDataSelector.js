@@ -1,144 +1,144 @@
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptionsRequestOptions = {
-	withCredentials: React.PropTypes.bool,
-	beforeSend: React.PropTypes.func
+	withCredentials: PropTypes.bool,
+	beforeSend: PropTypes.func
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptionsMdxSettings = {
-	nonEmptyOnRows: React.PropTypes.bool,
-	nonEmptyOnColumns: React.PropTypes.bool,
-	addCalculatedMembersOnRows: React.PropTypes.bool,
-	addCalculatedMembersOnColumns: React.PropTypes.bool,
-	dimensionPropertiesOnRows: React.PropTypes.array,
-	dimensionPropertiesOnColumns: React.PropTypes.array
+	nonEmptyOnRows: PropTypes.bool,
+	nonEmptyOnColumns: PropTypes.bool,
+	addCalculatedMembersOnRows: PropTypes.bool,
+	addCalculatedMembersOnColumns: PropTypes.bool,
+	dimensionPropertiesOnRows: PropTypes.array,
+	dimensionPropertiesOnColumns: PropTypes.array
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptions = {
-	serverUrl: React.PropTypes.string,
-	catalog: React.PropTypes.string,
-	cube: React.PropTypes.string,
-	measureGroup: React.PropTypes.string,
-	requestOptions: React.PropTypes.shape(
+	serverUrl: PropTypes.string,
+	catalog: PropTypes.string,
+	cube: PropTypes.string,
+	measureGroup: PropTypes.string,
+	requestOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptionsRequestOptions
 	),
-	enableResultCache: React.PropTypes.bool,
-	discoverProperties: React.PropTypes.object,
-	executeProperties: React.PropTypes.object,
-	mdxSettings: React.PropTypes.shape(
+	enableResultCache: PropTypes.bool,
+	discoverProperties: PropTypes.object,
+	executeProperties: PropTypes.object,
+	mdxSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptionsMdxSettings
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	aggregator: React.PropTypes.func,
-	displayFolder: React.PropTypes.string
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	aggregator: PropTypes.func,
+	displayFolder: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	measures: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	measures: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimensionMeasure)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	memberProvider: React.PropTypes.func
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	memberProvider: PropTypes.func
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	displayFolder: React.PropTypes.string,
-	levels: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	displayFolder: PropTypes.string,
+	levels: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchieLevel)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimension = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	hierarchies: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie)
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	hierarchies: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimensionHierarchie)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCube = {
-	name: React.PropTypes.string,
-	caption: React.PropTypes.string,
-	measuresDimension: React.PropTypes.shape(
+	name: PropTypes.string,
+	caption: PropTypes.string,
+	measuresDimension: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeMeasuresDimension
 	),
-	dimensions: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimension)
+	dimensions: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCubeDimension)
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadata = {
-	cube: React.PropTypes.shape(
+	cube: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadataCube
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptions = {
-	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.string,
-	dataSourceType: React.PropTypes.string,
-	responseDataKey: React.PropTypes.string,
-	responseDataType: React.PropTypes.string,
-	metadata: React.PropTypes.shape(
+	dataSource: PropTypes.object,
+	dataSourceUrl: PropTypes.string,
+	dataSourceType: PropTypes.string,
+	responseDataKey: PropTypes.string,
+	responseDataType: PropTypes.string,
+	metadata: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptionsMetadata
 	)
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptions = {
-	xmlaOptions: React.PropTypes.shape(
+	xmlaOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsXmlaOptions
 	),
-	flatDataOptions: React.PropTypes.shape(
+	flatDataOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptionsFlatDataOptions
 	),
-	measures: React.PropTypes.string,
-	filters: React.PropTypes.string,
-	rows: React.PropTypes.string,
-	columns: React.PropTypes.string
+	measures: PropTypes.string,
+	filters: PropTypes.string,
+	rows: PropTypes.string,
+	columns: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igPivotDataSelectorDragAndDropSettings = {
-	appendTo: React.PropTypes.any,
-	containment: React.PropTypes.oneOfType([
-		React.PropTypes.bool,
-		React.PropTypes.string,
-		React.PropTypes.array
+	appendTo: PropTypes.any,
+	containment: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.string,
+		PropTypes.array
 	]),
-	zIndex: React.PropTypes.number
+	zIndex: PropTypes.number
 }
 
 $.ig.react.propTypes.igPivotDataSelector = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	dataSource: React.PropTypes.object,
-	dataSourceOptions: React.PropTypes.shape(
+	dataSource: PropTypes.object,
+	dataSourceOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDataSourceOptions
 	),
-	deferUpdate: React.PropTypes.bool,
-	dragAndDropSettings: React.PropTypes.shape(
+	deferUpdate: PropTypes.bool,
+	dragAndDropSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igPivotDataSelectorDragAndDropSettings
 	),
-	dropDownParent: React.PropTypes.any,
-	disableRowsDropArea: React.PropTypes.bool,
-	disableColumnsDropArea: React.PropTypes.bool,
-	disableMeasuresDropArea: React.PropTypes.bool,
-	disableFiltersDropArea: React.PropTypes.bool,
-	customMoveValidation: React.PropTypes.func
+	dropDownParent: PropTypes.any,
+	disableRowsDropArea: PropTypes.bool,
+	disableColumnsDropArea: PropTypes.bool,
+	disableMeasuresDropArea: PropTypes.bool,
+	disableFiltersDropArea: PropTypes.bool,
+	customMoveValidation: PropTypes.func
 }

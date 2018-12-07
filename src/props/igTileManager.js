@@ -1,82 +1,82 @@
 $.ig.react.propTypes.shapes.igTileManagerSplitterOptionsEvents = {
-	collapsed: React.PropTypes.object,
-	expanded: React.PropTypes.object
+	collapsed: PropTypes.object,
+	expanded: PropTypes.object
 }
 
 $.ig.react.propTypes.shapes.igTileManagerSplitterOptions = {
-	enabled: React.PropTypes.bool,
-	collapsible: React.PropTypes.bool,
-	collapsed: React.PropTypes.bool,
-	events: React.PropTypes.shape(
+	enabled: PropTypes.bool,
+	collapsible: PropTypes.bool,
+	collapsed: PropTypes.bool,
+	events: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igTileManagerSplitterOptionsEvents
 	)
 }
 
 $.ig.react.propTypes.igTileManager = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	columnWidth: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number,
-		React.PropTypes.array
+	columnWidth: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+		PropTypes.array
 	]),
-	columnHeight: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number,
-		React.PropTypes.array
+	columnHeight: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number,
+		PropTypes.array
 	]),
-	cols: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	cols: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	rows: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	rows: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	marginLeft: React.PropTypes.number,
-	marginTop: React.PropTypes.number,
-	rearrangeItems: React.PropTypes.bool,
-	items: React.PropTypes.oneOfType([
-		React.PropTypes.object
+	marginLeft: PropTypes.number,
+	marginTop: PropTypes.number,
+	rearrangeItems: PropTypes.bool,
+	items: PropTypes.oneOfType([
+		PropTypes.object
 	]),
-	dataSource: React.PropTypes.object,
-	minimizedState: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	dataSource: PropTypes.object,
+	minimizedState: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	maximizedState: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	maximizedState: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	maximizedTileIndex: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	maximizedTileIndex: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	rightPanelCols: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	rightPanelCols: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	rightPanelTilesWidth: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	rightPanelTilesWidth: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	rightPanelTilesHeight: React.PropTypes.oneOfType([
-		React.PropTypes.number
+	rightPanelTilesHeight: PropTypes.oneOfType([
+		PropTypes.number
 	]),
-	showRightPanelScroll: React.PropTypes.bool,
-	splitterOptions: React.PropTypes.shape(
+	showRightPanelScroll: PropTypes.bool,
+	splitterOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igTileManagerSplitterOptions
 	),
-	preventMaximizingSelector: React.PropTypes.string,
-	animationDuration: React.PropTypes.number,
-	dataSourceUrl: React.PropTypes.string,
-	responseDataKey: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	preventMaximizingSelector: PropTypes.string,
+	animationDuration: PropTypes.number,
+	dataSourceUrl: PropTypes.string,
+	responseDataKey: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	responseDataType: React.PropTypes.oneOfType([
-		React.PropTypes.string
+	responseDataType: PropTypes.oneOfType([
+		PropTypes.string
 	]),
-	dataSourceType: React.PropTypes.string,
-	requestType: React.PropTypes.string,
-	responseContentType: React.PropTypes.string
+	dataSourceType: PropTypes.string,
+	requestType: PropTypes.string,
+	responseContentType: PropTypes.string
 }

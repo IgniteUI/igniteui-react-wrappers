@@ -3,14 +3,15 @@
 		define("IgHierarchicalGrid", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgHierarchicalGrid = React.createClass($.ig.react.core.buildComponent("igHierarchicalGrid"));
+(function (React, $, createReactClass) {
+	var IgHierarchicalGrid = createReactClass($.ig.react.core.buildComponent("igHierarchicalGrid"));
 	if (window) {
 		window.IgHierarchicalGrid = IgHierarchicalGrid;
 	}

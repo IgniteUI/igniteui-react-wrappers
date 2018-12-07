@@ -1,47 +1,53 @@
 import IgDataChart from 'igniteui-react/ui/igDataChart.js';
-import React, { Component } from 'react';
+import React from 'react';
 
-var ChartsBox = React.createClass({
-	chartThickness: 2,
-	transitionDuration: 800,
-	chartIntervalX: 1,
-	revenueColor: "#a4ba29",
-	expensesColor: "#d3404b",
-	profitColor: "#216EDD",
-	outlineColor: "black",
-	updateCharts: function() {
+class ChartsBox extends React.Component {
+    chartThickness = 2;
+    transitionDuration = 800;
+    chartIntervalX = 1;
+    revenueColor = "#a4ba29";
+    expensesColor = "#d3404b";
+    profitColor = "#216EDD";
+    outlineColor = "black";
+
+    updateCharts = () => {
 		switch(this.props.update) {
 			case "revenue": this.updateRevenue(); break;
 			case "expenses": this.updateExpenses(); break;
 			case "profit": this.updateProfit(); break;
 			default: break;
 		}
-	},
-	updateRevenue: function() {
+	};
+
+    updateRevenue = () => {
 		var data = this.props.data.data, index = this.props.month;
 
 		this.updateNonSplineCharts();
 		this.refs.polarSplineChartRevenue.igControl.notifySetItem(data, index, data[index], data[index]);
-	},
-	updateExpenses: function() {
+	};
+
+    updateExpenses = () => {
 		var data = this.props.data.data, index = this.props.month;
 
 		this.updateNonSplineCharts();
 		this.refs.polarSplineChartExpenses.igControl.notifySetItem(data, index, data[index], data[index]);
-	},
-	updateProfit: function() {
+	};
+
+    updateProfit = () => {
 		var data = this.props.data.data, index = this.props.month;
 
 		this.updateNonSplineCharts();
 		this.refs.polarSplineChartProfit.igControl.notifySetItem(data, index, data[index], data[index]);
-	},
-	updateNonSplineCharts: function() {
+	};
+
+    updateNonSplineCharts = () => {
 		var data = this.props.data.data, index = this.props.month;
 
 		this.refs.lineChart.igControl.notifySetItem(data, index, data[index], data[index]);
 		this.refs.barChart.igControl.notifySetItem(data, index, data[index], data[index]);
-	},
-	render: function () {
+	};
+
+    render() {
 		this.updateCharts();
 		return (
 			<div className="row">
@@ -181,6 +187,6 @@ var ChartsBox = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default ChartsBox;

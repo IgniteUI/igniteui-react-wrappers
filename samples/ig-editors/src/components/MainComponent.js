@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
 import IgMaskEditor from 'igniteui-react/ui/igMaskEditor.js';
 import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
 import IgDateEditor from 'igniteui-react/ui/igDateEditor.js';
 import IgDatePicker from 'igniteui-react/ui/igDatePicker.js';
+import PropTypes from 'prop-types';
 
 // Ignite UI Required Combined JavaScript Files
 import "@infragistics/ignite-ui-full/en/js/infragistics.core.js";
@@ -14,74 +15,69 @@ import "@infragistics/ignite-ui-full/en/css/structure/infragistics.css";
 import "@infragistics/ignite-ui-full/en/css/themes/infragistics/infragistics.theme.css";
 import '../sample.css';
 
-var MainComponent = React.createClass({
+class MainComponent extends React.Component {
+    static propTypes = {
+		Email: PropTypes.string,
+		userName: PropTypes.string,
+		seats: PropTypes.number,
+		phone: PropTypes.number,
+		licensedue: PropTypes.string,
+		birthday: PropTypes.string,
+		yourLocation: PropTypes.string
+	};
 
-	getInitialState: function() {
-		return {
-			Email: "johndoe@gmail.com",
-			userName: "USER",
-			seats: 108,
-			phone: 898123123,
-			licensedue: "2018-10-10",
-			birthday: "2001-12-9",
-			yourLocation: "LA"
-		}
-	},
+    state = {
+        Email: "johndoe@gmail.com",
+        userName: "USER",
+        seats: 108,
+        phone: 898123123,
+        licensedue: "2018-10-10",
+        birthday: "2001-12-9",
+        yourLocation: "LA"
+    };
 
-	propTypes: {
-		Email: React.PropTypes.string,
-		userName: React.PropTypes.string,
-		seats: React.PropTypes.number,
-		phone:React.PropTypes.number,
-		licensedue: React.PropTypes.string,
-		birthday: React.PropTypes.string,
-		yourLocation: React.PropTypes.string
-	},
-
-
-	handleSubmit: function(e) {
+    handleSubmit = (e) => {
 		e.preventDefault();
-	},
+	};
 
-
-	/* //Util funcs */
-	/* //handle EditForm specific events */
-	emailChanged: function (evt) {
+    /* //Util funcs */
+    /* //handle EditForm specific events */
+    emailChanged = (evt) => {
 		var editor = this.refs.editorEmail;
 		this.setState({ Email: editor.igControl.value() });
-	},
+	};
 
-	userChanged: function (evt) {
+    userChanged = (evt) => {
 		var editor = this.refs.editorUserName;
 		this.setState({ userName: editor.igControl.value() });
-	},
+	};
 
-	phoneChanged : function (evt) {
+    phoneChanged = (evt) => {
 		var editor = this.refs.editorPhone;
 		this.setState({ phone: editor.igControl.value() });
-	},
+	};
 
-	yearsChanged: function (evt) {
+    yearsChanged = (evt) => {
 		var editor = this.refs.editorseats;
 		this.setState({ seats: editor.igControl.value() });
-	},
+	};
 
-	licenseChanged: function (evt) {
+    licenseChanged = (evt) => {
 		var editor = this.refs.editorLicense;
 		this.setState({ licensedue: new Date(editor.igControl.value()).toLocaleDateString()});
-	},
+	};
 
-	birthdayChanged: function (evt) {
+    birthdayChanged = (evt) => {
 		var editor = this.refs.editorBirthday;
 		this.setState({ birthday: new Date(editor.igControl.value()).toDateString()});
-	},
+	};
 
-	locationChanged: function (evt) {
+    locationChanged = (evt) => {
 		var editor = this.refs.editorLocation;
 		this.setState({ yourLocation: editor.igControl.value() });
-	},
+	};
 
-	render:function(){
+    render() {
 		const {Email, userName, seats, licensedue, birthday, yourLocation} = this.props;
 		return(
 			<div className="container">
@@ -223,6 +219,6 @@ var MainComponent = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default MainComponent;

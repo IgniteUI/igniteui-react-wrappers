@@ -3,14 +3,15 @@
 		define("IgSparkline", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgSparkline = React.createClass($.ig.react.core.buildComponent("igSparkline"));
+(function (React, $, createReactClass) {
+	var IgSparkline = createReactClass($.ig.react.core.buildComponent("igSparkline"));
 	if (window) {
 		window.IgSparkline = IgSparkline;
 	}

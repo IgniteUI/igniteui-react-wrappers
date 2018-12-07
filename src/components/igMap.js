@@ -3,14 +3,15 @@
 		define("IgMap", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgMap = React.createClass($.ig.react.core.buildComponent("igMap"));
+(function (React, $, createReactClass) {
+	var IgMap = createReactClass($.ig.react.core.buildComponent("igMap"));
 	if (window) {
 		window.IgMap = IgMap;
 	}

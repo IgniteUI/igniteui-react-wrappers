@@ -1,23 +1,23 @@
 $.ig.react.propTypes.shapes.igMapCrosshairPoint = {
-	x: React.PropTypes.number,
-	y: React.PropTypes.number
+	x: PropTypes.number,
+	y: PropTypes.number
 }
 
 $.ig.react.propTypes.shapes.igMapBackgroundContent = {
-	type: React.PropTypes.oneOf([
+	type: PropTypes.oneOf([
 		"openStreet",
 		"cloudMade",
 		"bing"
 	]),
-	key: React.PropTypes.string,
-	parameter: React.PropTypes.string,
-	tilePath: React.PropTypes.string,
-	imagerySet: React.PropTypes.string,
-	bingUrl: React.PropTypes.string
+	key: PropTypes.string,
+	parameter: PropTypes.string,
+	tilePath: PropTypes.string,
+	imagerySet: PropTypes.string,
+	bingUrl: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igMapSeries = {
-	type: React.PropTypes.oneOf([
+	type: PropTypes.oneOf([
 		"geographicSymbolSeries",
 		"geographicPolyLine",
 		"geographicScatterArea",
@@ -26,35 +26,35 @@ $.ig.react.propTypes.shapes.igMapSeries = {
 		"geographicHighDensityScatter",
 		"geographicProportionalSymbol"
 	]),
-	name: React.PropTypes.string,
-	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.string,
-	dataSourceType: React.PropTypes.string,
-	responseDataKey: React.PropTypes.string,
-	remove: React.PropTypes.bool,
-	showTooltip: React.PropTypes.bool,
-	shapeDataSource: React.PropTypes.string,
-	databaseSource: React.PropTypes.string,
-	triangulationDataSource: React.PropTypes.string,
-	legendItemBadgeTemplate: React.PropTypes.object,
-	legendItemTemplate: React.PropTypes.object,
-	discreteLegendItemTemplate: React.PropTypes.object,
-	transitionDuration: React.PropTypes.number,
-	resolution: React.PropTypes.number,
-	title: React.PropTypes.string,
-	brush: React.PropTypes.string,
-	outline: React.PropTypes.string,
-	thickness: React.PropTypes.number,
-	trianglesSource: React.PropTypes.object,
-	triangleVertexMemberPath1: React.PropTypes.string,
-	triangleVertexMemberPath2: React.PropTypes.string,
-	triangleVertexMemberPath3: React.PropTypes.string,
-	colorScale: React.PropTypes.object,
-	colorMemberPath: React.PropTypes.string,
-	visibleFromScale: React.PropTypes.number,
-	longitudeMemberPath: React.PropTypes.string,
-	latitudeMemberPath: React.PropTypes.string,
-	markerType: React.PropTypes.oneOf([
+	name: PropTypes.string,
+	dataSource: PropTypes.object,
+	dataSourceUrl: PropTypes.string,
+	dataSourceType: PropTypes.string,
+	responseDataKey: PropTypes.string,
+	remove: PropTypes.bool,
+	showTooltip: PropTypes.bool,
+	shapeDataSource: PropTypes.string,
+	databaseSource: PropTypes.string,
+	triangulationDataSource: PropTypes.string,
+	legendItemBadgeTemplate: PropTypes.object,
+	legendItemTemplate: PropTypes.object,
+	discreteLegendItemTemplate: PropTypes.object,
+	transitionDuration: PropTypes.number,
+	resolution: PropTypes.number,
+	title: PropTypes.string,
+	brush: PropTypes.string,
+	outline: PropTypes.string,
+	thickness: PropTypes.number,
+	trianglesSource: PropTypes.object,
+	triangleVertexMemberPath1: PropTypes.string,
+	triangleVertexMemberPath2: PropTypes.string,
+	triangleVertexMemberPath3: PropTypes.string,
+	colorScale: PropTypes.object,
+	colorMemberPath: PropTypes.string,
+	visibleFromScale: PropTypes.number,
+	longitudeMemberPath: PropTypes.string,
+	latitudeMemberPath: PropTypes.string,
+	markerType: PropTypes.oneOf([
 		"unset",
 		"none",
 		"automatic",
@@ -69,21 +69,21 @@ $.ig.react.propTypes.shapes.igMapSeries = {
 		"pentagram",
 		"hexagram"
 	]),
-	markerTemplate: React.PropTypes.object,
-	shapeMemberPath: React.PropTypes.string,
-	shapeStyleSelector: React.PropTypes.object,
-	shapeStyle: React.PropTypes.object,
-	markerBrush: React.PropTypes.string,
-	markerOutline: React.PropTypes.string,
-	markerCollisionAvoidance: React.PropTypes.oneOf([
+	markerTemplate: PropTypes.object,
+	shapeMemberPath: PropTypes.string,
+	shapeStyleSelector: PropTypes.object,
+	shapeStyle: PropTypes.object,
+	markerBrush: PropTypes.string,
+	markerOutline: PropTypes.string,
+	markerCollisionAvoidance: PropTypes.oneOf([
 		"none",
 		"omit",
 		"fade",
 		"omitAndShift"
 	]),
-	fillScale: React.PropTypes.object,
-	fillMemberPath: React.PropTypes.string,
-	trendLineType: React.PropTypes.oneOf([
+	fillScale: PropTypes.object,
+	fillMemberPath: PropTypes.string,
+	trendLineType: PropTypes.oneOf([
 		"none",
 		"linearFit",
 		"quadraticFit",
@@ -99,118 +99,118 @@ $.ig.react.propTypes.shapes.igMapSeries = {
 		"cumulativeAverage",
 		"weightedAverage"
 	]),
-	trendLineBrush: React.PropTypes.string,
-	trendLineThickness: React.PropTypes.number,
-	trendLinePeriod: React.PropTypes.number,
-	trendLineZIndex: React.PropTypes.number,
-	maximumMarkers: React.PropTypes.number,
-	radiusMemberPath: React.PropTypes.string,
-	radiusScale: React.PropTypes.object,
-	labelMemberPath: React.PropTypes.string,
-	clipSeriesToBounds: React.PropTypes.bool,
-	valueMemberPath: React.PropTypes.string,
-	unknownValuePlotting: React.PropTypes.oneOf([
+	trendLineBrush: PropTypes.string,
+	trendLineThickness: PropTypes.number,
+	trendLinePeriod: PropTypes.number,
+	trendLineZIndex: PropTypes.number,
+	maximumMarkers: PropTypes.number,
+	radiusMemberPath: PropTypes.string,
+	radiusScale: PropTypes.object,
+	labelMemberPath: PropTypes.string,
+	clipSeriesToBounds: PropTypes.bool,
+	valueMemberPath: PropTypes.string,
+	unknownValuePlotting: PropTypes.oneOf([
 		"linearInterpolate",
 		"dontPlot"
 	]),
-	angleMemberPath: React.PropTypes.number,
-	useCartesianInterpolation: React.PropTypes.bool,
-	stiffness: React.PropTypes.number,
-	negativeBrush: React.PropTypes.string,
-	splineType: React.PropTypes.oneOf([
+	angleMemberPath: PropTypes.number,
+	useCartesianInterpolation: PropTypes.bool,
+	stiffness: PropTypes.number,
+	negativeBrush: PropTypes.string,
+	splineType: PropTypes.oneOf([
 		"natural",
 		"clamped"
 	]),
-	lowMemberPath: React.PropTypes.string,
-	highMemberPath: React.PropTypes.string,
-	openMemberPath: React.PropTypes.string,
-	closeMemberPath: React.PropTypes.string,
-	volumeMemberPath: React.PropTypes.string,
-	ignoreFirst: React.PropTypes.number,
-	period: React.PropTypes.number,
-	shortPeriod: React.PropTypes.number,
-	longPeriod: React.PropTypes.number,
-	valueResolver: React.PropTypes.object,
-	shapeFilterResolution: React.PropTypes.number,
-	useBruteForce: React.PropTypes.bool,
-	progressiveLoad: React.PropTypes.bool,
-	mouseOverEnabled: React.PropTypes.bool,
-	useSquareCutoffStyle: React.PropTypes.bool,
-	heatMinimum: React.PropTypes.number,
-	heatMaximum: React.PropTypes.number
+	lowMemberPath: PropTypes.string,
+	highMemberPath: PropTypes.string,
+	openMemberPath: PropTypes.string,
+	closeMemberPath: PropTypes.string,
+	volumeMemberPath: PropTypes.string,
+	ignoreFirst: PropTypes.number,
+	period: PropTypes.number,
+	shortPeriod: PropTypes.number,
+	longPeriod: PropTypes.number,
+	valueResolver: PropTypes.object,
+	shapeFilterResolution: PropTypes.number,
+	useBruteForce: PropTypes.bool,
+	progressiveLoad: PropTypes.bool,
+	mouseOverEnabled: PropTypes.bool,
+	useSquareCutoffStyle: PropTypes.bool,
+	heatMinimum: PropTypes.number,
+	heatMaximum: PropTypes.number
 }
 
 $.ig.react.propTypes.igMap = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	dataSource: React.PropTypes.object,
-	dataSourceUrl: React.PropTypes.string,
-	dataSourceType: React.PropTypes.string,
-	responseDataKey: React.PropTypes.string,
-	autoMarginWidth: React.PropTypes.number,
-	autoMarginHeight: React.PropTypes.number,
-	crosshairVisibility: React.PropTypes.oneOf([
+	dataSource: PropTypes.object,
+	dataSourceUrl: PropTypes.string,
+	dataSourceType: PropTypes.string,
+	responseDataKey: PropTypes.string,
+	autoMarginWidth: PropTypes.number,
+	autoMarginHeight: PropTypes.number,
+	crosshairVisibility: PropTypes.oneOf([
 		"visible",
 		"collapsed"
 	]),
-	crosshairPoint: React.PropTypes.shape(
+	crosshairPoint: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igMapCrosshairPoint
 	),
-	plotAreaBackground: React.PropTypes.string,
-	defaultInteraction: React.PropTypes.oneOf([
+	plotAreaBackground: PropTypes.string,
+	defaultInteraction: PropTypes.oneOf([
 		"none",
 		"dragZoom",
 		"dragPan"
 	]),
-	dragModifier: React.PropTypes.oneOf([
+	dragModifier: PropTypes.oneOf([
 		"none",
 		"alt",
 		"control",
 		"shift"
 	]),
-	panModifier: React.PropTypes.oneOf([
+	panModifier: PropTypes.oneOf([
 		"none",
 		"alt",
 		"control",
 		"shift"
 	]),
-	previewRect: React.PropTypes.object,
-	windowRect: React.PropTypes.object,
-	zoomable: React.PropTypes.bool,
-	windowScale: React.PropTypes.number,
-	windowResponse: React.PropTypes.oneOf([
+	previewRect: PropTypes.object,
+	windowRect: PropTypes.object,
+	zoomable: PropTypes.bool,
+	windowScale: PropTypes.number,
+	windowResponse: PropTypes.oneOf([
 		"deferred",
 		"immediate"
 	]),
-	windowRectMinWidth: React.PropTypes.number,
-	windowPositionHorizontal: React.PropTypes.number,
-	windowPositionVertical: React.PropTypes.number,
-	circleMarkerTemplate: React.PropTypes.object,
-	triangleMarkerTemplate: React.PropTypes.object,
-	pyramidMarkerTemplate: React.PropTypes.object,
-	squareMarkerTemplate: React.PropTypes.object,
-	diamondMarkerTemplate: React.PropTypes.object,
-	pentagonMarkerTemplate: React.PropTypes.object,
-	hexagonMarkerTemplate: React.PropTypes.object,
-	tetragramMarkerTemplate: React.PropTypes.object,
-	pentagramMarkerTemplate: React.PropTypes.object,
-	hexagramMarkerTemplate: React.PropTypes.object,
-	overviewPlusDetailPaneBackgroundImageUri: React.PropTypes.string,
-	useTiledZooming: React.PropTypes.bool,
-	preferHigherResolutionTiles: React.PropTypes.bool,
-	zoomTileCacheSize: React.PropTypes.number,
-	backgroundContent: React.PropTypes.shape(
+	windowRectMinWidth: PropTypes.number,
+	windowPositionHorizontal: PropTypes.number,
+	windowPositionVertical: PropTypes.number,
+	circleMarkerTemplate: PropTypes.object,
+	triangleMarkerTemplate: PropTypes.object,
+	pyramidMarkerTemplate: PropTypes.object,
+	squareMarkerTemplate: PropTypes.object,
+	diamondMarkerTemplate: PropTypes.object,
+	pentagonMarkerTemplate: PropTypes.object,
+	hexagonMarkerTemplate: PropTypes.object,
+	tetragramMarkerTemplate: PropTypes.object,
+	pentagramMarkerTemplate: PropTypes.object,
+	hexagramMarkerTemplate: PropTypes.object,
+	overviewPlusDetailPaneBackgroundImageUri: PropTypes.string,
+	useTiledZooming: PropTypes.bool,
+	preferHigherResolutionTiles: PropTypes.bool,
+	zoomTileCacheSize: PropTypes.number,
+	backgroundContent: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igMapBackgroundContent
 	),
-	series: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igMapSeries)
+	series: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igMapSeries)
 	),
-	theme: React.PropTypes.string
+	theme: PropTypes.string
 }

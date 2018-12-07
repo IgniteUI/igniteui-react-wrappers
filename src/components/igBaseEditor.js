@@ -3,14 +3,15 @@
 		define("IgBaseEditor", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgBaseEditor = React.createClass($.ig.react.core.buildComponent("igBaseEditor"));
+(function (React, $, createReactClass) {
+	var IgBaseEditor = createReactClass($.ig.react.core.buildComponent("igBaseEditor"));
 	if (window) {
 		window.IgBaseEditor = IgBaseEditor;
 	}

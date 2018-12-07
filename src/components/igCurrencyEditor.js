@@ -3,14 +3,15 @@
 		define("IgCurrencyEditor", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgCurrencyEditor = React.createClass($.ig.react.core.buildComponent("igCurrencyEditor"));
+(function (React, $, createReactClass) {
+	var IgCurrencyEditor = createReactClass($.ig.react.core.buildComponent("igCurrencyEditor"));
 	if (window) {
 		window.IgCurrencyEditor = IgCurrencyEditor;
 	}

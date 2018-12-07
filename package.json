@@ -7,9 +7,11 @@
     "url": "https://github.com/IgniteUI/igniteui-react.git"
   },
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "babel-core": "^6.17.0"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "create-react-class": "^15.6.3",
+    "prop-types": "^15.6.2",
+    "babel-core": "^6.26.3"
   },
   "scripts": {
     "build": "npm run prepare-dist",

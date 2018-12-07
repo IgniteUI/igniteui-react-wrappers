@@ -1,41 +1,41 @@
 $.ig.react.propTypes.igQRCodeBarcode = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	pixelScalingRatio: React.PropTypes.number,
-	backingBrush: React.PropTypes.string,
-	backingOutline: React.PropTypes.string,
-	backingStrokeThickness: React.PropTypes.number,
-	barBrush: React.PropTypes.string,
-	fontBrush: React.PropTypes.string,
-	font: React.PropTypes.string,
-	data: React.PropTypes.string,
-	errorMessageText: React.PropTypes.string,
-	stretch: React.PropTypes.oneOf([
+	pixelScalingRatio: PropTypes.number,
+	backingBrush: PropTypes.string,
+	backingOutline: PropTypes.string,
+	backingStrokeThickness: PropTypes.number,
+	barBrush: PropTypes.string,
+	fontBrush: PropTypes.string,
+	font: PropTypes.string,
+	data: PropTypes.string,
+	errorMessageText: PropTypes.string,
+	stretch: PropTypes.oneOf([
 		"none",
 		"fill",
 		"uniform",
 		"uniformToFill"
 	]),
-	barsFillMode: React.PropTypes.oneOf([
+	barsFillMode: PropTypes.oneOf([
 		"fillSpace",
 		"ensureEqualSize"
 	]),
-	widthToHeightRatio: React.PropTypes.number,
-	xDimension: React.PropTypes.number,
-	errorCorrectionLevel: React.PropTypes.oneOf([
+	widthToHeightRatio: PropTypes.number,
+	xDimension: PropTypes.number,
+	errorCorrectionLevel: PropTypes.oneOf([
 		"low",
 		"medium",
 		"quartil",
 		"high"
 	]),
-	sizeVersion: React.PropTypes.oneOf([
+	sizeVersion: PropTypes.oneOf([
 		"undefined",
 		"version1",
 		"version2",
@@ -78,22 +78,22 @@ $.ig.react.propTypes.igQRCodeBarcode = {
 		"version39",
 		"version40"
 	]),
-	encodingMode: React.PropTypes.oneOf([
+	encodingMode: PropTypes.oneOf([
 		"undefined",
 		"numeric",
 		"alphanumeric",
 		"byte",
 		"kanji"
 	]),
-	eciNumber: React.PropTypes.number,
-	eciHeaderDisplayMode: React.PropTypes.oneOf([
+	eciNumber: PropTypes.number,
+	eciHeaderDisplayMode: PropTypes.oneOf([
 		"hide",
 		"show"
 	]),
-	fnc1Mode: React.PropTypes.oneOf([
+	fnc1Mode: PropTypes.oneOf([
 		"none",
 		"gs1",
 		"industry"
 	]),
-	applicationIndicator: React.PropTypes.string
+	applicationIndicator: PropTypes.string
 }

@@ -1,8 +1,8 @@
 import IgCurrencyEditor from 'igniteui-react/ui/igCurrencyEditor.js';
-import React, { Component } from 'react';
+import React from 'react';
 
-var TotalBox = React.createClass({
-	getTotal: function() {
+class TotalBox extends React.Component {
+    getTotal = () => {
 		var data = this.props.data.data,
 			total = 0, i;
 
@@ -10,8 +10,9 @@ var TotalBox = React.createClass({
 			total += data[i].profit;
 		}
 		return total * 1000000;
-	},
-	render: function() {
+	};
+
+    render() {
 		return (
 			<div className="total-container">
 				<label className="labels">Overall Year Profit:</label><br />
@@ -27,6 +28,6 @@ var TotalBox = React.createClass({
 			</div>
 		)
 	 }
-});
+}
 
 export default TotalBox;

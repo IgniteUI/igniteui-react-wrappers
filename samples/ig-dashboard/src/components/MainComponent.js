@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IgGrid from 'igniteui-react/ui/igGrid.js';
 import IgDataChart from 'igniteui-react/ui/igDataChart.js';
 import IgEditBox from './IgEditBox.js';
@@ -13,18 +13,8 @@ import "@infragistics/ignite-ui-full/en/css/structure/infragistics.css";
 import "@infragistics/ignite-ui-full/en/css/themes/infragistics/infragistics.theme.css";
 import '../sample.css';
 
-var MainComponent = React.createClass({
-	getInitialState: function () {
-		return {
-			// the view is the grid and the chart data source in this case
-			view: this.getSourceData(),
-			selectedRowId: -1,
-			revenueValue: null,
-			expensesValue: null,
-			selectedRowIndex: -1
-		}
-	},
-	render: function(){
+class MainComponent extends React.Component {
+    render() {
 		return (
 			<div>
 				<div className="row">
@@ -107,24 +97,28 @@ var MainComponent = React.createClass({
 				</div>
 			</div>
 		);
-	},
-   /* helper functions */
-	getGridInstance: function (gridRefName) {
+	}
+
+    /* helper functions */
+    getGridInstance = (gridRefName) => {
 		gridRefName = gridRefName || "grid1";
 		return (this.refs[gridRefName] || {}).igControl;
-	},
-	getChartInstance: function (chartRefName) {
+	};
+
+    getChartInstance = (chartRefName) => {
 		chartRefName = chartRefName || "chart1";
 		return (this.refs[chartRefName] || {}).igControl;
-	},
-	getGridUpdating: function (gridRefName) {
+	};
+
+    getGridUpdating = (gridRefName) => {
 		var grid = this.getGridInstance(gridRefName);
 		if (!grid || !grid.element) {
 			return null;
 		}
 		return grid.element.data("igGridUpdating");
-	},
-	getExpensesByRowId: function (rowId) {
+	};
+
+    getExpensesByRowId = (rowId) => {
 		var grid = this.getGridInstance(),
 			expenses, record;
 		if (rowId > -1 && grid) {
@@ -132,8 +126,9 @@ var MainComponent = React.createClass({
 			expenses = record["Expenses"];
 		}
 		return expenses;
-	},
-	getRevenueByRowId: function (rowId) {
+	};
+
+    getRevenueByRowId = (rowId) => {
 		var grid = this.getGridInstance(),
 			revenue, record;
 		if (rowId > -1 && grid) {
@@ -141,8 +136,9 @@ var MainComponent = React.createClass({
 			revenue = record["Revenue"];
 		}
 		return revenue;
-	},
-	editBoxHandleUpdate: function (e, rowId, val1, val2) {
+	};
+
+    editBoxHandleUpdate = (e, rowId, val1, val2) => {
 		var grid = this.getGridInstance(),
 			upd, ds = this.state.view, index = this.state.selectedRowIndex;
 			ds.PersonalFinance[ index ].Revenue = parseInt(val1);
@@ -160,8 +156,9 @@ var MainComponent = React.createClass({
 			}
 		}
 		this.editoBoxChartHandleUpdate();
-	},
-	editoBoxChartHandleUpdate: function(){
+	};
+
+    editoBoxChartHandleUpdate = () => {
 		var chartRef = this.getChartInstance(),
 		index = this.state.selectedRowIndex,
 		ds = this.state.view.PersonalFinance,
@@ -169,16 +166,18 @@ var MainComponent = React.createClass({
 
 		this.refs.chart1.igControl.notifySetItem(ds, index, item,item);
 
-	},
-	gridRowSelectionChanged: function (evt, ui) {
+	};
+
+    gridRowSelectionChanged = (evt, ui) => {
 		var rowId = ui.row.id;
 		this.setState({ selectedRowId: rowId,
 						expensesValue: this.getExpensesByRowId(rowId) ,
 						revenueValue: this.getRevenueByRowId(rowId) ,
 						selectedRowIndex: ui.row.index
 						});
-	},
-	getSourceData: function() {
+	};
+
+    getSourceData = () => {
 		var sourceData = {
 			"PersonalFinance": [
 				{ "Id": "1", "Name":"Antony", "Revenue":650, "Expenses": 300, "Date":"10/20/2016" },
@@ -190,7 +189,16 @@ var MainComponent = React.createClass({
 			]
 		}
 		return sourceData;
-	}
-});
+	};
+
+    state = {
+        // the view is the grid and the chart data source in this case
+        view: this.getSourceData(),
+        selectedRowId: -1,
+        revenueValue: null,
+        expensesValue: null,
+        selectedRowIndex: -1
+    };
+}
 
 export default MainComponent;

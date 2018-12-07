@@ -3,14 +3,15 @@
 		define("IgBaseChart", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgBaseChart = React.createClass($.ig.react.core.buildComponent("igBaseChart"));
+(function (React, $, createReactClass) {
+	var IgBaseChart = createReactClass($.ig.react.core.buildComponent("igBaseChart"));
 	if (window) {
 		window.IgBaseChart = IgBaseChart;
 	}

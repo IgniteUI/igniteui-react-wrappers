@@ -3,14 +3,15 @@
 		define("IgDateEditor", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgDateEditor = React.createClass($.ig.react.core.buildComponent("igDateEditor"));
+(function (React, $, createReactClass) {
+	var IgDateEditor = createReactClass($.ig.react.core.buildComponent("igDateEditor"));
 	if (window) {
 		window.IgDateEditor = IgDateEditor;
 	}

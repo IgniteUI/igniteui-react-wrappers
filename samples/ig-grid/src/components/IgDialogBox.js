@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import IgButton from 'igniteui-react/ui/igButton.js';
 import IgDialog from 'igniteui-react/ui/igDialog.js';
 import $ from 'jquery'
 import '../sample.css';
 
-var IgDialogBox = React.createClass({
+var IgDialogBox = createReactClass({
     render: function () {
         return (
             <IgDialog

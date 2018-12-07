@@ -3,14 +3,15 @@
 		define("IgScroll", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgScroll = React.createClass($.ig.react.core.buildComponent("igScroll"));
+(function (React, $, createReactClass) {
+	var IgScroll = createReactClass($.ig.react.core.buildComponent("igScroll"));
 	if (window) {
 		window.IgScroll = IgScroll;
 	}

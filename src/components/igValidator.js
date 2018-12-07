@@ -3,14 +3,15 @@
 		define("IgValidator", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgValidator = React.createClass($.ig.react.core.buildComponent("igValidator"));
+(function (React, $, createReactClass) {
+	var IgValidator = createReactClass($.ig.react.core.buildComponent("igValidator"));
 	if (window) {
 		window.IgValidator = IgValidator;
 	}

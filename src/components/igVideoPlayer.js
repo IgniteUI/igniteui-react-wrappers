@@ -3,14 +3,15 @@
 		define("IgVideoPlayer", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgVideoPlayer = React.createClass($.ig.react.core.buildComponent("igVideoPlayer"));
+(function (React, $, createReactClass) {
+	var IgVideoPlayer = createReactClass($.ig.react.core.buildComponent("igVideoPlayer"));
 	if (window) {
 		window.IgVideoPlayer = IgVideoPlayer;
 	}

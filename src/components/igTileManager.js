@@ -3,14 +3,15 @@
 		define("IgTileManager", [
 			"react",
 			"jquery",
+			"create-react-class",
 			"../dist/igniteui-react.js"
 		], factory );
 	} else {
-		factory(React, jQuery);
+		factory(React, jQuery, createReactClass);
 	}
 }
-(function (React, $) {
-	var IgTileManager = React.createClass($.ig.react.core.buildComponent("igTileManager"));
+(function (React, $, createReactClass) {
+	var IgTileManager = createReactClass($.ig.react.core.buildComponent("igTileManager"));
 	if (window) {
 		window.IgTileManager = IgTileManager;
 	}

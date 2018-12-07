@@ -1,7 +1,7 @@
 $.ig.react.propTypes.shapes.igGridColumnGroupOptions = {
-	expanded: React.PropTypes.bool,
-	allowGroupCollapsing: React.PropTypes.bool,
-	hidden: React.PropTypes.oneOf([
+	expanded: PropTypes.bool,
+	allowGroupCollapsing: PropTypes.bool,
+	hidden: PropTypes.oneOf([
 		"never",
 		"always",
 		"parentcollapsed",
@@ -10,189 +10,191 @@ $.ig.react.propTypes.shapes.igGridColumnGroupOptions = {
 }
 
 $.ig.react.propTypes.shapes.igGridColumn = {
-	headerText: React.PropTypes.string,
-	key: React.PropTypes.string,
-	formatter: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.func
+	headerText: PropTypes.string,
+	key: PropTypes.string,
+	formatter: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.func
 	]),
-	format: React.PropTypes.string,
-	dataType: React.PropTypes.oneOf([
+	format: PropTypes.string,
+	dataType: PropTypes.oneOf([
 		"number",
 		"boolean",
 		"date",
+		"time",
 		"object",
 		"string"
 	]),
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	hidden: React.PropTypes.bool,
-	template: React.PropTypes.string,
-	unbound: React.PropTypes.bool,
-	groupOptions: React.PropTypes.shape(
+	hidden: PropTypes.bool,
+	template: PropTypes.string,
+	unbound: PropTypes.bool,
+	groupOptions: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridColumnGroupOptions
 	),
-	group: React.PropTypes.array,
-	dateDisplayType: React.PropTypes.oneOf([
+	group: PropTypes.array,
+	dateDisplayType: PropTypes.oneOf([
 		"local",
 		"utc"
 	]),
-	rowspan: React.PropTypes.number,
-	formula: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.func
+	rowspan: PropTypes.number,
+	formula: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.func
 	]),
-	unboundValues: React.PropTypes.array,
-	headerCssClass: React.PropTypes.string,
-	columnCssClass: React.PropTypes.string,
-	mapper: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.func
+	unboundValues: PropTypes.array,
+	headerCssClass: PropTypes.string,
+	columnCssClass: PropTypes.string,
+	mapper: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.func
 	]),
-	rowIndex: React.PropTypes.number,
-	columnIndex: React.PropTypes.number,
-	navigationIndex: React.PropTypes.number,
-	colSpan: React.PropTypes.number,
-	rowSpan: React.PropTypes.number
+	rowIndex: PropTypes.number,
+	columnIndex: PropTypes.number,
+	navigationIndex: PropTypes.number,
+	colSpan: PropTypes.number,
+	rowSpan: PropTypes.number
 }
 
 $.ig.react.propTypes.shapes.igGridFeature = {
-	name: React.PropTypes.string
+	name: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igGridRestSettingsCreate = {
-	url: React.PropTypes.string,
-	template: React.PropTypes.string,
-	batch: React.PropTypes.bool
+	url: PropTypes.string,
+	template: PropTypes.string,
+	batch: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igGridRestSettingsUpdate = {
-	url: React.PropTypes.string,
-	template: React.PropTypes.string,
-	batch: React.PropTypes.bool
+	url: PropTypes.string,
+	template: PropTypes.string,
+	batch: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igGridRestSettingsRemove = {
-	url: React.PropTypes.string,
-	template: React.PropTypes.string,
-	batch: React.PropTypes.bool
+	url: PropTypes.string,
+	template: PropTypes.string,
+	batch: PropTypes.bool
 }
 
 $.ig.react.propTypes.shapes.igGridRestSettings = {
-	create: React.PropTypes.shape(
+	create: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridRestSettingsCreate
 	),
-	update: React.PropTypes.shape(
+	update: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridRestSettingsUpdate
 	),
-	remove: React.PropTypes.shape(
+	remove: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridRestSettingsRemove
 	),
-	encodeRemoveInRequestUri: React.PropTypes.bool,
-	contentSerializer: React.PropTypes.func,
-	contentType: React.PropTypes.string
+	encodeRemoveInRequestUri: PropTypes.bool,
+	contentSerializer: PropTypes.func,
+	contentType: PropTypes.string
 }
 
 $.ig.react.propTypes.shapes.igGridScrollSettings = {
-	scrollTop: React.PropTypes.number,
-	scrollLeft: React.PropTypes.number,
-	wheelStep: React.PropTypes.number,
-	smoothing: React.PropTypes.bool,
-	smoothingStep: React.PropTypes.number,
-	smoothingDuration: React.PropTypes.number,
-	inertiaStep: React.PropTypes.number,
-	inertiaDuration: React.PropTypes.number
+	scrollTop: PropTypes.number,
+	scrollLeft: PropTypes.number,
+	wheelStep: PropTypes.number,
+	smoothing: PropTypes.bool,
+	smoothingStep: PropTypes.number,
+	smoothingDuration: PropTypes.number,
+	inertiaStep: PropTypes.number,
+	inertiaDuration: PropTypes.number
 }
 
 $.ig.react.propTypes.igGrid = {
-	id: React.PropTypes.string.isRequired,
-	width: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	id: PropTypes.string.isRequired,
+	locale: PropTypes.object,
+	width: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	height: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	height: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	autoAdjustHeight: React.PropTypes.bool,
-	avgRowHeight: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	autoAdjustHeight: PropTypes.bool,
+	avgRowHeight: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	avgColumnWidth: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	avgColumnWidth: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	defaultColumnWidth: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.number
+	defaultColumnWidth: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
 	]),
-	autoGenerateColumns: React.PropTypes.bool,
-	virtualization: React.PropTypes.bool,
-	virtualizationMode: React.PropTypes.oneOf([
+	autoGenerateColumns: PropTypes.bool,
+	virtualization: PropTypes.bool,
+	virtualizationMode: PropTypes.oneOf([
 		"fixed",
 		"continuous"
 	]),
-	rowVirtualization: React.PropTypes.bool,
-	columnVirtualization: React.PropTypes.bool,
-	virtualizationMouseWheelStep: React.PropTypes.number,
-	adjustVirtualHeights: React.PropTypes.bool,
-	templatingEngine: React.PropTypes.oneOf([
+	rowVirtualization: PropTypes.bool,
+	columnVirtualization: PropTypes.bool,
+	virtualizationMouseWheelStep: PropTypes.number,
+	adjustVirtualHeights: PropTypes.bool,
+	templatingEngine: PropTypes.oneOf([
 		"infragistics",
 		"jsRender"
 	]),
-	columns: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
+	columns: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igGridColumn)
 	),
-	dataSource: React.PropTypes.oneOfType([
-		React.PropTypes.array,
-		React.PropTypes.object,
-		React.PropTypes.string
+	dataSource: PropTypes.oneOfType([
+		PropTypes.array,
+		PropTypes.object,
+		PropTypes.string
 	]),
-	dataSourceUrl: React.PropTypes.string,
-	dataSourceType: React.PropTypes.string,
-	responseDataKey: React.PropTypes.string,
-	responseTotalRecCountKey: React.PropTypes.string,
-	requestType: React.PropTypes.string,
-	responseContentType: React.PropTypes.string,
-	showHeader: React.PropTypes.bool,
-	showFooter: React.PropTypes.bool,
-	fixedHeaders: React.PropTypes.bool,
-	fixedFooters: React.PropTypes.bool,
-	caption: React.PropTypes.string,
-	features: React.PropTypes.arrayOf(
-		React.PropTypes.shape($.ig.react.propTypes.shapes.igGridFeature)
+	dataSourceUrl: PropTypes.string,
+	dataSourceType: PropTypes.string,
+	responseDataKey: PropTypes.string,
+	responseTotalRecCountKey: PropTypes.string,
+	requestType: PropTypes.string,
+	responseContentType: PropTypes.string,
+	showHeader: PropTypes.bool,
+	showFooter: PropTypes.bool,
+	fixedHeaders: PropTypes.bool,
+	fixedFooters: PropTypes.bool,
+	caption: PropTypes.string,
+	features: PropTypes.arrayOf(
+		PropTypes.shape($.ig.react.propTypes.shapes.igGridFeature)
 	),
-	tabIndex: React.PropTypes.number,
-	localSchemaTransform: React.PropTypes.bool,
-	primaryKey: React.PropTypes.string,
-	serializeTransactionLog: React.PropTypes.bool,
-	autoCommit: React.PropTypes.bool,
-	aggregateTransactions: React.PropTypes.bool,
-	autoFormat: React.PropTypes.oneOfType([
-		React.PropTypes.string,
-		React.PropTypes.bool
+	tabIndex: PropTypes.number,
+	localSchemaTransform: PropTypes.bool,
+	primaryKey: PropTypes.string,
+	serializeTransactionLog: PropTypes.bool,
+	autoCommit: PropTypes.bool,
+	aggregateTransactions: PropTypes.bool,
+	autoFormat: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.bool
 	]),
-	renderCheckboxes: React.PropTypes.bool,
-	updateUrl: React.PropTypes.string,
-	restSettings: React.PropTypes.shape(
+	renderCheckboxes: PropTypes.bool,
+	updateUrl: PropTypes.string,
+	restSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridRestSettings
 	),
-	alternateRowStyles: React.PropTypes.bool,
-	autofitLastColumn: React.PropTypes.bool,
-	enableHoverStyles: React.PropTypes.bool,
-	enableUTCDates: React.PropTypes.bool,
-	mergeUnboundColumns: React.PropTypes.bool,
-	jsonpRequest: React.PropTypes.bool,
-	enableResizeContainerCheck: React.PropTypes.bool,
-	featureChooserIconDisplay: React.PropTypes.oneOf([
+	alternateRowStyles: PropTypes.bool,
+	autofitLastColumn: PropTypes.bool,
+	enableHoverStyles: PropTypes.bool,
+	enableUTCDates: PropTypes.bool,
+	mergeUnboundColumns: PropTypes.bool,
+	jsonpRequest: PropTypes.bool,
+	enableResizeContainerCheck: PropTypes.bool,
+	featureChooserIconDisplay: PropTypes.oneOf([
 		"none",
 		"desktopOnly",
 		"always"
 	]),
-	scrollSettings: React.PropTypes.shape(
+	scrollSettings: PropTypes.shape(
 		$.ig.react.propTypes.shapes.igGridScrollSettings
 	)
 }
