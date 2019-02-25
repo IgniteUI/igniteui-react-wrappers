@@ -6,7 +6,8 @@
 
 Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react/).
 
-**IMPORTANT** The repository has been renamed from `igniteui-react` to `igniteui-react-wrappers`. This is done to align it to our naming convention explained [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-github-repo-name-changes). For now the package name will stay with the `igniteui-react` name.
+**IMPORTANT** The repository has been renamed from `igniteui-react` to `igniteui-react-wrappers`. For now the package name will stay with the `igniteui-react` name.
+There is a new product [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react) from Infragistics that you may want to consider when starting your next React project. It features a high-performance data grid, high-volume data charts and a complete Microsoft Excel Solution. Please check out the announcement [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/announcing-ignite-ui-for-react-components).
 
 # Requirements
 
