@@ -1,7 +1,7 @@
 # Ignite UI Component Wrappers for React
 
-[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)
+[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react-wrappers.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react-wrappers)
+[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react-wrappers/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react-wrappers?branch=master)
 [![npm version](https://badge.fury.io/js/igniteui-react.svg)](https://badge.fury.io/js/igniteui-react)
 
 Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react/).
