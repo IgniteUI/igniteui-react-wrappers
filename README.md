@@ -1,6 +1,6 @@
 # Ignite UI Components for React
 
-[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react?branch=master)
+[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react-wrappers.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react-wrappers)
 [![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)
 [![npm version](https://badge.fury.io/js/igniteui-react.svg)](https://badge.fury.io/js/igniteui-react)
 
