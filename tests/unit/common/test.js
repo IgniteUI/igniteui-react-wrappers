@@ -15,6 +15,15 @@ function main() {
 		igDataChart: {
 			skip: true
 		},
+		igCategoryChart: {
+			skip: true
+		},
+		igFinancialChart: {
+			skip: true
+		},
+		igShapeChart: {
+			skip: true
+		},
 		igLinearGauge: {
 			skip: true
 		},
