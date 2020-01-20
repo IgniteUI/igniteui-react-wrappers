@@ -1,6 +1,6 @@
 # Ignite UI Components for React
 
-Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react/).
+Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react-wrappers/).
 
 # Requirements
 
@@ -171,6 +171,15 @@ Or get the DOM element it is initialized on and calling the method through jQuer
 ```JavaScript
 	$.ig.react.core.getElement(gridComponent).igGrid("commit");
 ```
+
+## Running our samples:
+
+Go to the folder of the sample you want to run:
+
+	npm install
+	npm start
+
+Alternatively you can view them from [here](https://igniteui.github.io/igniteui-react-wrappers/).
 
 ## Testing
 
