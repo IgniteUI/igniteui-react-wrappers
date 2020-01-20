@@ -1,11 +1,15 @@
+sudo: required
+dist: xenial
+addons:
+  chrome: stable
+services:
+  - xvfb
 language: node_js
 node_js:
-- '5'
+- 'lts/*'
 before_install:
-- export CHROME_BIN=chromium-browser
 - export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-- sleep 3
+
 script:
 - npm run test
 - cat ./coverage/lcov.info | coveralls
@@ -25,5 +29,5 @@ deploy:
     secure: O2Zsp89PM2zYp5OI6zc4k6Lg7ICyblxTOjy7LkK9s0hC85dqYHl+fVJ0saBvUMpW0HqFWsYnhvid8pBLgFm2afArjCT+j0Z1oj6vp67R3guYWGZnhX/bU51CFdRRqsAH69R00NLbc5kDSAJkGM4b3BoKGU1CUjb0cmmVUclShbLsf1wCofrZOlH5cYsvdxUD/LUwY0l8gckmyMQTJGbOoIwZl1hz99Ccch4aIqVZnDYg/kC3t76JuAiMufGmr6Rbuh+pgA1ytjVSF4GbPo8rIc4/MCtuimVSePowHoxXhXY/5jd3p0v3xg6Dbfg3D4LMqMa0ViZm2kXUVlMVsyf2O/sj40Kdv6w7RbXQkB5UOfifbcLcnDvNsjoJvWerZ6Yhp8p5Cgt2bPpdSfp2DrxT6PyqK4sOHk/nLNLHUQLrObH9dAsHxa5FhoyXZ5ELfTi3PgIBCPDeRBKWeQ+DKK0zv2AarfBZaHR83HBiltW+INiISQMIh6BW9JbqpMg9VewwghipEBX102kyz0jp/GWIKsxVTopEgWJ8HXxm6DzFQJZCL95Kdey2S9/GD2j5Ffn1JNMiFND609IQ4r3L+PRNQN7JezxgG4GGASwzIdmgpYxS7NXsr8riSYFW7BtqnDv+iAdxW2eMUXSy9C7oXwhadAhpK4IPapUt+yiYv3s29Qw=
   on:
     tags: true
-    repo: IgniteUI/igniteui-react
+    repo: IgniteUI/igniteui-react-wrappers
     branch: master
