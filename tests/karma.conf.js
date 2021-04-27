@@ -1,9 +1,7 @@
 module.exports = function(config) {
-	var cfg = {
+	config.set({
 		basePath: "../",
-
 		frameworks: ["jasmine"],
-
 		files: [
 
 			"http://code.jquery.com/jquery-1.12.4.js",
@@ -37,49 +35,35 @@ module.exports = function(config) {
 			// test files
 			"tests/util.js",
 			"tests/karma-test-shim.js"
+			
 		],
-
-		// list of files to exclude
-		exclude: [
+		plugins: [
+			require('karma-jasmine'),
+			require('karma-coverage'),
+			require('karma-chrome-launcher'),
+			require('karma-jasmine-html-reporter')
 		],
-
-		autoWatch : true,
-
-		browsers : ["Chrome"],
-		singleRun: true,
-
-		customLaunchers: {
-			Chrome_travis_ci: {
-				base: "Chrome",
-				flags: ["--no-sandbox"]
-			}
+		crossOriginAttribute: false,
+		client: {
+		  clearContext: false // leave Jasmine Spec Runner output visible in browser
 		},
-
-		plugins : [
-			"karma-chrome-launcher",
-			"karma-jasmine",
-			"karma-junit-reporter",
-			"karma-coverage"
-		],
-
-		reporters: ["progress", "coverage"],
-
 		preprocessors: {
-			"src/util/**/*.js": ["coverage"]
+			'src/**/*.js': ['coverage']
 		},
-
 		coverageReporter: {
-			reporters:[
-				{ type: "lcov", dir:"coverage/karma-tmp/" },
-				{ type: "json", dir:"coverage/karma-tmp", file: "coverage.json" }
-			],
+			dir: require('path').join(__dirname, '../coverage/'),
+			subdir: '.',
+			reporters: [
+			  { type: 'lcovonly' }
+			]
 		},
-
-		browserNoActivityTimeout: 20000
-	};
-
-	if (process.env.TRAVIS) {
-		cfg.browsers = ["Chrome_travis_ci"];
-	}
-	config.set(cfg);
+		reporters: ['progress', 'coverage'],
+		port: 9876,
+		colors: true,
+		logLevel: config.LOG_INFO,
+		autoWatch: true,
+		browsers: ['Chrome'],
+		singleRun: false,
+		restartOnFileChange: true
+	});
 };
