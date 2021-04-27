@@ -1,6 +1,6 @@
 # Ignite UI Component Wrappers for React
 
-[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react-wrappers.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react-wrappers)
+[![Node.js CI](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml/badge.svg)](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react-wrappers/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react-wrappers?branch=master)
 [![npm version](https://badge.fury.io/js/igniteui-react.svg)](https://badge.fury.io/js/igniteui-react)
 
