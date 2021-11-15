@@ -2,11 +2,11 @@
 
 [![Node.js CI](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml/badge.svg)](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react-wrappers/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react-wrappers?branch=master)
-[![npm version](https://badge.fury.io/js/igniteui-react.svg)](https://badge.fury.io/js/igniteui-react)
+[![npm version](https://badge.fury.io/js/igniteui-react-wrappers.svg)](https://badge.fury.io/js/igniteui-react-wrappers)
 
 Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react-wrappers/).
 
-**IMPORTANT** The repository has been renamed from `igniteui-react` to `igniteui-react-wrappers`. For now the package name will stay with the `igniteui-react` name.
+**IMPORTANT** The package and repository have been renamed from `igniteui-react` to `igniteui-react-wrappers`.
 There is a new product [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react) from Infragistics that you may want to consider when starting your next React project. It features a high-performance data grid, high-volume data charts and a complete Microsoft Excel Solution. Please check out the announcement [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/announcing-ignite-ui-for-react-components).
 
 # Requirements
@@ -21,7 +21,7 @@ There is a new product [Ignite UI for React](https://www.infragistics.com/produc
 You can install the package with `npm`.
 
 ```shell
-npm install igniteui-react
+npm install igniteui-react-wrappers
 ```
 
 # Build
@@ -30,11 +30,11 @@ The build will bundle all files available in `src/*` producing `dist/npm/igniteu
 
 To build the project use the following steps:
 
-1. Open a console in the folder where the **igniteui-react** project is located
+1. Open a console in the folder where the **igniteui-react-wrappers** project is located
 2. run `npm install`
 3. run `npm run build`
 
-`igniteui-react` depends on the `ignite-ui-full` licensed package. Follow [this guide](https://www.igniteui.com/help/using-ignite-ui-npm-packages) on setting up access to the Ignite UI private npm feed and add the dependency to the `package.json`.
+`igniteui-react-wrappers` depends on the `ignite-ui-full` licensed package. Follow [this guide](https://www.igniteui.com/help/using-ignite-ui-npm-packages) on setting up access to the Ignite UI private npm feed and add the dependency to the `package.json`.
 
 ```
 "dependencies": {
