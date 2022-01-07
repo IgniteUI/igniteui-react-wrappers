@@ -71,7 +71,7 @@
         </div>
         <div class="col-md-4">
             <p class="lead">This sample demonstrates how ReactJS can be used to create igGrid and add two-way data binding. </p>
-            <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-grid" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+            <p><a href="https://github.com/IgniteUI/igniteui-react-wrappers/blob/master/samples/ig-grid" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
         </div>
     </div>
 
@@ -79,7 +79,7 @@
 		 <!-- to use JSX in our HTML -->
 		<script type="text/babel">
 			// everything below will be up to the users to write
-			var IgEditBox = React.createClass({
+			var IgEditBox = createReactClass({
 				render: function () {
 					var rowId =  this.props.rowId,
 						v = rowId > -1;
@@ -159,7 +159,7 @@
 				}
 			});
 
-			var IgDialogBox = React.createClass({
+			var IgDialogBox = createReactClass({
 				render: function () {
 					return (
 						<IgDialog
@@ -198,7 +198,7 @@
 				}
 			});
 			// main component
-			var App = React.createClass({
+			var App = createReactClass({
 				getInitialState: function () {
 					return {
 						// the view is the grid data source in this case
@@ -434,27 +434,32 @@
     </footer>
 
 	<!--JavaScript refs-->
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/create-react-class/15.7.0/create-react-class.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 	<!--IgniteUI refs-->
 	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 
 	<!--React-->
-	<script src="../../src/util/ignite-react.js"></script>
-	<script src="../../src/components/igGrid.js"></script>
-	<script src="../../src/components/igEditors.js"></script>
-	<script src="../../src/components/igShared.js"></script>
-	<script src="../../src/components/igDialog.js"></script>
-	<script src="../../src/props/igGrid.js"></script>
-	<script src="../../src/props/igEditors.js"></script>
-	<script src="../../src/props/igShared.js"></script>
-	<script src="../../src/props/igDialog.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/util/ignite-react.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igGrid.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igTextEditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igNumericEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igDialog.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igButton.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igGrid.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igTextEditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igNumericEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igDialog.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igButton.js"></script>
 	<!--//React-->
 	<!--IgniteUI refs-->
 </body>

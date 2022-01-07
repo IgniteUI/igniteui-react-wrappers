@@ -13,11 +13,14 @@
     <!--//Css refs-->
 
     <!--JavaScript refs-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/create-react-class/15.7.0/create-react-class.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!--IgniteUI refs-->
     <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
@@ -25,15 +28,17 @@
     <script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 
     <!--React-->
-    <script src="../../src/props/igEditors.js"></script>
-	<script src="../../src/props/igCombo.js"></script>
-    <script src="../../src/props/igLinearGauge.js"></script>
-	<script src="../../src/props/igChart.js"></script>
-    <script src="../../src/util/ignite-react.js"></script>
-    <script src="../../src/components/igEditors.js"></script>
-	<script src="../../src/components/igCombo.js"></script>
-    <script src="../../src/components/igLinearGauge.js"></script>
-    <script src="../../src/components/igChart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/util/ignite-react.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igCurrencyEditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igNumericEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igCombo.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igLinearGauge.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igDataChart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igCurrencyEditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igNumericEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igCombo.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igLinearGauge.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/props/igDataChart.js"></script>
     <!--//React-->
     <!--IgniteUI refs-->
 
@@ -109,14 +114,14 @@
             </div>
             <div class="col-md-4">
                 <p class="lead">This sample demonstrates how ReactJS can be used to create igChart, igCombo, igLinearGauge together with several different types of igEditors and how a communication between them can be implemented. </p>
-                <p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-financial-state" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+                <p><a href="https://github.com/IgniteUI/igniteui-react-wrappers/blob/master/samples/ig-financial-state" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
             </div>
         </div>
     </div>
 	<hr/>
 	<div id="app">
 		<script type="text/babel">
-            var EditorsBox = React.createClass({
+            var EditorsBox = createReactClass({
                 render: function () {
                     return (
                     <div className="editors row">
@@ -182,7 +187,7 @@
                 }
             });
 
-            var TotalBox = React.createClass({
+            var TotalBox = createReactClass({
                 getTotal: function() {
                     var data = this.props.data.data,
                         total = 0, i;
@@ -210,7 +215,7 @@
                  }
             });
 
-            var GaugesBox = React.createClass({
+            var GaugesBox = createReactClass({
                 gaugeInterval: 10,
                 revenueColor: "#a4ba29",
                 expensesColor: "#d3404b",
@@ -302,7 +307,7 @@
                 }
             });
 
-             var ChartsBox = React.createClass({
+             var ChartsBox = createReactClass({
                 chartThickness: 2,
                 transitionDuration: 800,
                 chartIntervalX: 1,
@@ -484,7 +489,7 @@
                 }
             });
 
-			var FinancialState = React.createClass({
+			var FinancialState = createReactClass({
                 getInitialState: function () {
 					return {
 						month: 2,
