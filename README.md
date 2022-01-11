@@ -136,7 +136,7 @@ Option updates during runtime can be achieved by using React's [setState](https:
 
 #### Example:
 
-	var App = React.createClass({
+	var App = createReactClass({
 		getInitialState: function () {
 			return {
 				alternateRowStyles: true
