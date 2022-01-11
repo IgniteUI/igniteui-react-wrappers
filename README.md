@@ -1,10 +1,13 @@
-# Ignite UI Components for React
+# Ignite UI Component Wrappers for React
 
-[![NPM version](https://img.shields.io/npm/v/igniteui-react.svg?style=flat)](https://www.npmjs.com/package/igniteui-react)
-[![Build Status](https://travis-ci.org/IgniteUI/igniteui-react.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-react?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react?branch=master)
+[![Node.js CI](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml/badge.svg)](https://github.com/IgniteUI/igniteui-react-wrappers/actions/workflows/node.js.yml)
+[![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react-wrappers/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react-wrappers?branch=master)
+[![npm version](https://badge.fury.io/js/igniteui-react-wrappers.svg)](https://badge.fury.io/js/igniteui-react-wrappers)
 
-Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react/).
+Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react-wrappers/).
+
+**IMPORTANT** The package and repository have been renamed from `igniteui-react` to `igniteui-react-wrappers`.
+There is a new product [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react) from Infragistics that you may want to consider when starting your next React project. It features a high-performance data grid, high-volume data charts and a complete Microsoft Excel Solution. Please check out the announcement [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/announcing-ignite-ui-for-react-components).
 
 # Requirements
 
@@ -18,7 +21,7 @@ Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js
 You can install the package with `npm`.
 
 ```shell
-npm install igniteui-react
+npm install igniteui-react-wrappers
 ```
 
 # Build
@@ -27,11 +30,30 @@ The build will bundle all files available in `src/*` producing `dist/npm/igniteu
 
 To build the project use the following steps:
 
-1. Open a console in the folder where the **igniteui-react** project is located
+1. Open a console in the folder where the **igniteui-react-wrappers** project is located
 2. run `npm install`
 3. run `npm run build`
 
+`igniteui-react-wrappers` depends on the `ignite-ui-full` licensed package. Follow [this guide](https://www.igniteui.com/help/using-ignite-ui-npm-packages) on setting up access to the Ignite UI private npm feed and add the dependency to the `package.json`.
+
+```
+"dependencies": {
+	"@infragistics/ignite-ui-full": "latest"
+}
+```
+
 # Getting Started
+
+## Ignite UI CLI
+To get started with the Ignite UI CLI and the Ignite UI React wrappers:
+
+```
+npm i -g igniteui-cli
+ig new <project name> --framework=react
+cd <project name>
+ig add combo <component name>
+ig start
+```
 
 ## Page setup
 
@@ -53,7 +75,7 @@ Optionally include `browser.js` found in the `Babel-core` package for [JSX](http
 This provides all supported Ignite UI components as React classes available in the global namespace.
 
 ## Initializing controls
-In general React components can be initialized in two ways: 
+In general React components can be initialized in two ways:
 
 1. In `JavaScript` using React's API.
 2. With pseudo-markup by utilizing `JSX` syntax.
@@ -95,7 +117,7 @@ Defining complex type control options (`arrays` & `objects`) in `JSX` is done by
 
 #### Example:
 
-	<IgGrid 
+	<IgGrid
 		id="grid1"
 		columns={[
 			{ headerText: "Product ID", key: "ProductID", dataType: "number" },
@@ -123,7 +145,7 @@ Option updates during runtime can be achieved by using React's [setState](https:
 		render: function () {
 			return (
 				<div>
-					<IgGrid 
+					<IgGrid
 						id="grid1"
 						autoGenerateColumns={true}
 						dataSource={sourceData}
@@ -175,6 +197,15 @@ Or get the DOM element it is initialized on and calling the method through jQuer
 ```JavaScript
 	$.ig.react.core.getElement(gridComponent).igGrid("commit");
 ```
+
+## Running our samples:
+
+Go to the folder of the sample you want to run:
+
+	npm install
+	npm start
+
+Alternatively you can view them from [here](https://igniteui.github.io/igniteui-react-wrappers/).
 
 ## Testing
 

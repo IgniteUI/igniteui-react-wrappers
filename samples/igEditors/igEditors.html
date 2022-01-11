@@ -13,11 +13,13 @@
 	<link rel="stylesheet" href="../sample.css" />
 	<!--Infragistics Css Bootstrap Theme and Bootstrap-->
 	<!--JavaScript refs-->
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/create-react-class/15.7.0/create-react-class.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!--IgniteUI refs-->
@@ -25,9 +27,12 @@
 	<script src="https://secure-cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 
 	<!--React-->
-	<script src="../../src/util/ignite-react.js"></script>
-	<script src="../../src/components/igEditors.js"></script>
-	<script src="../../src/components/igShared.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/util/ignite-react.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igTextEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igDatePicker.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igDateEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igMaskEditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/IgniteUI/igniteui-react-wrappers/src/components/igNumericEditor.js"></script>
 	<!--//React-->
 
 
@@ -75,8 +80,8 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="/igniteui-react/index.html">Home</a></li>
-					<li><a href="https://github.com/IgniteUI/igniteui-react">View on GitHub <i class="fa fa-github"></i></a></li>
+					<li><a href="/igniteui-react-wrappers/index.html">Home</a></li>
+					<li><a href="https://github.com/IgniteUI/igniteui-react-wrappers">View on GitHub <i class="fa fa-github"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -97,7 +102,7 @@
 			</div>
 			<div class="col-md-4">
 				<p class="lead">This sample demonstrates how ReactJS can be used to create igEditors. </p>
-				<p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-editors" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+				<p><a href="https://github.com/IgniteUI/igniteui-react-wrappers/blob/master/samples/ig-editors" class="btn btn-default btn-lg btn-primary" target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
 			</div>
 		</div>
 		<hr />
@@ -105,9 +110,9 @@
 		<div id="app">
 			<!--<script type="text/babel" src="edit-form-example.jsx"></script>-->
 			<!-- to use JSX in our HTML -->
-			<script type="text/babel">
+            <script type="text/babel">
 				// everything below will be up to the users to write
-				var EditForm = React.createClass({
+				var EditForm = createReactClass({
 
 					getInitialState: function(){
 					return {
@@ -122,13 +127,13 @@
 				},
 
 					propTypes: {
-					Email: React.PropTypes.string,
-					userName: React.PropTypes.string,
-					seats: React.PropTypes.number,
-					phone:React.PropTypes.number,
-					licensedue: React.PropTypes.string,
-					birthday: React.PropTypes.string,
-					yourLocation: React.PropTypes.string
+					Email: PropTypes.string,
+					userName: PropTypes.string,
+					seats: PropTypes.number,
+					phone:PropTypes.number,
+					licensedue: PropTypes.string,
+					birthday: PropTypes.string,
+					yourLocation: PropTypes.string
 				},
 
 
@@ -319,7 +324,7 @@
 			})
 
 				// main component
-				var App = React.createClass({
+				var App = createReactClass({
 					render: function () {
 						return (
 							<div>
@@ -341,9 +346,9 @@
 	<hr />
 	<footer>
 		<p>
-			<a href="/igniteui-react/index.html">Home</a> |
-			<a href="https://github.com/IgniteUI/igniteui-react/issues">Feedback &amp; Questions</a> |
-			<a href="https://github.com/IgniteUI/igniteui-react">Clone &amp; Fork</a>
+			<a href="/igniteui-react-wrappers/index.html">Home</a> |
+			<a href="https://github.com/IgniteUI/igniteui-react-wrappers/issues">Feedback &amp; Questions</a> |
+			<a href="https://github.com/IgniteUI/igniteui-react-wrappers">Clone &amp; Fork</a>
 		</p>
 		<p class="small">For more information or to download a trial of Ignite UI, please visit: <a href="https://igniteui.com">https://igniteui.com</a></p>
 	</footer>
