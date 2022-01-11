@@ -14,7 +14,7 @@ Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js
 You can install the package with `npm`.
 
 ```shell
-npm install igniteui-react
+npm install igniteui-react-wrappers
 ```
 
 # Build
@@ -23,7 +23,7 @@ The build will bundle all files available in `src/*` producing `dist/npm/igniteu
 
 To build the project use the following steps:
 
-1. Open a console in the folder where the **igniteui-react** project is located
+1. Open a console in the folder where the **igniteui-react-wrappers** project is located
 2. run `npm install`
 3. run `npm run build`
 
