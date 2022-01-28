@@ -1,6 +1,6 @@
 import React from 'react';
-import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
-import IgButton from 'igniteui-react/ui/igButton.js';
+import IgNumericEditor from 'igniteui-react-wrappers/ui/igNumericEditor.js';
+import IgButton from 'igniteui-react-wrappers/ui/igButton.js';
 
 // Ignite UI Required Combined JavaScript Files
 import "@infragistics/ignite-ui-full/en/js/infragistics.core.js";

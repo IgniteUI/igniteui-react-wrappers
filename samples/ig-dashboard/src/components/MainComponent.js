@@ -1,6 +1,6 @@
 import React from 'react';
-import IgGrid from 'igniteui-react/ui/igGrid.js';
-import IgDataChart from 'igniteui-react/ui/igDataChart.js';
+import IgGrid from 'igniteui-react-wrappers/ui/igGrid.js';
+import IgDataChart from 'igniteui-react-wrappers/ui/igDataChart.js';
 import IgEditBox from './IgEditBox.js';
 
 // Ignite UI Required Combined JavaScript Files

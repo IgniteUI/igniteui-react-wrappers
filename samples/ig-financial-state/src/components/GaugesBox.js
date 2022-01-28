@@ -1,15 +1,15 @@
-import IgLinearGauge from 'igniteui-react/ui/igLinearGauge.js';
+import IgLinearGauge from 'igniteui-react-wrappers/ui/igLinearGauge.js';
 import React from 'react';
 
 class GaugesBox extends React.Component {
-    gaugeInterval = 10;
-    revenueColor = "#a4ba29";
-    expensesColor = "#d3404b";
-    profitColor = "#216EDD";
-    needleColor = "white";
-    needleOutlineColor = "#2582a9";
+	gaugeInterval = 10;
+	revenueColor = "#a4ba29";
+	expensesColor = "#d3404b";
+	profitColor = "#216EDD";
+	needleColor = "white";
+	needleOutlineColor = "#2582a9";
 
-    render() {
+	render() {
 		return (
 			<div className="gauges">
 				<div className="gauge-container">
@@ -32,7 +32,7 @@ class GaugesBox extends React.Component {
 								endValue: 50,
 								brush: this.revenueColor
 							}
-							]}
+						]}
 						valueChanged={this.revenueChanged} />
 				</div>
 				<div className="gauge-container">
@@ -84,15 +84,15 @@ class GaugesBox extends React.Component {
 		)
 	}
 
-    revenueChanged = (e, args) => {
+	revenueChanged = (e, args) => {
 		this.props.changeRevenue(args.newValue);
 	};
 
-    expensesChanged = (e, args) => {
+	expensesChanged = (e, args) => {
 		this.props.changeExpenses(args.newValue);
 	};
 
-    profitChanged = (e, args) => {
+	profitChanged = (e, args) => {
 		this.props.changeProfit(args.newValue);
 	};
 }

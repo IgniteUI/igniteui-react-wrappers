@@ -1,8 +1,8 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
-import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
-import IgButton from 'igniteui-react/ui/igButton.js';
+import IgTextEditor from 'igniteui-react-wrappers/ui/igTextEditor.js';
+import IgNumericEditor from 'igniteui-react-wrappers/ui/igNumericEditor.js';
+import IgButton from 'igniteui-react-wrappers/ui/igButton.js';
 import '../sample.css';
 import $ from 'jquery';
 

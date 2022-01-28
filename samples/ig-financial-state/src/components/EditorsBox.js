@@ -1,5 +1,5 @@
-import IgCombo from 'igniteui-react/ui/igCombo.js';
-import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
+import IgCombo from 'igniteui-react-wrappers/ui/igCombo.js';
+import IgNumericEditor from 'igniteui-react-wrappers/ui/igNumericEditor.js';
 import React from 'react';
 
 class EditorsBox extends React.Component {

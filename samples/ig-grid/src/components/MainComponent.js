@@ -1,7 +1,7 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import IgGrid from 'igniteui-react/ui/igGrid.js';
-import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
+import IgGrid from 'igniteui-react-wrappers/ui/igGrid.js';
+import IgTextEditor from 'igniteui-react-wrappers/ui/igTextEditor.js';
 import IgEditBox from './IgEditBox.js';
 import IgDialogBox from './IgDialogBox.js';
 
