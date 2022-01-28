@@ -6,6 +6,7 @@
     "@infragistics/ignite-ui-full": "latest",
     "babel-runtime": "6.22.0",
     "bootstrap": "^3.3.7",
+    "create-react-class": "^15.7.0",
     "igniteui-react-wrappers": "^1.4.0",
     "jquery": ">=1.9.1",
     "jquery-ui": ">=1.10.5",
