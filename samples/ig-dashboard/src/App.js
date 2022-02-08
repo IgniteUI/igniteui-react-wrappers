@@ -44,7 +44,7 @@ class App extends React.Component {
 						<div className="col-md-4">
 							<p className="lead">This sample demonstrates how to reflect every change in the igGrid data source on the igDataChart by using ReactJS.</p>
 							<p><a href="https://github.com/IgniteUI/igniteui-react/blob/master/samples/ig-dashboard" className="btn btn-default btn-lg btn-primary"
-								target="_blank"><i class="fa fa-code fa-lg"></i> View Source</a></p>
+								target="_blank"><i className="fa fa-code fa-lg"></i> View Source</a></p>
 						</div>
 					</div>
 

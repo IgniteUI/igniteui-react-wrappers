@@ -7,11 +7,11 @@
     "url": "https://github.com/IgniteUI/igniteui-react-wrappers.git"
   },
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "create-react-class": "^15.6.3",
+    "babel-core": "^6.26.3",
+    "create-react-class": "^15.7.0",
     "prop-types": "^15.6.2",
-    "babel-core": "^6.26.3"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "scripts": {
     "build": "npm run prepare-dist",

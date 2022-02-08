@@ -1,7 +1,7 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import IgButton from 'igniteui-react/ui/igButton.js';
-import IgDialog from 'igniteui-react/ui/igDialog.js';
+import IgButton from 'igniteui-react-wrappers/ui/igButton.js';
+import IgDialog from 'igniteui-react-wrappers/ui/igDialog.js';
 import $ from 'jquery'
 import '../sample.css';
 

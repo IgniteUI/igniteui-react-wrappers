@@ -1,4 +1,4 @@
-import IgCurrencyEditor from 'igniteui-react/ui/igCurrencyEditor.js';
+import IgCurrencyEditor from 'igniteui-react-wrappers/ui/igCurrencyEditor.js';
 import React from 'react';
 
 class TotalBox extends React.Component {

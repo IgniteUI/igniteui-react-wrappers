@@ -1,9 +1,9 @@
 import React from 'react';
-import IgTextEditor from 'igniteui-react/ui/igTextEditor.js';
-import IgMaskEditor from 'igniteui-react/ui/igMaskEditor.js';
-import IgNumericEditor from 'igniteui-react/ui/igNumericEditor.js';
-import IgDateEditor from 'igniteui-react/ui/igDateEditor.js';
-import IgDatePicker from 'igniteui-react/ui/igDatePicker.js';
+import IgTextEditor from 'igniteui-react-wrappers/ui/igTextEditor.js';
+import IgMaskEditor from 'igniteui-react-wrappers/ui/igMaskEditor.js';
+import IgNumericEditor from 'igniteui-react-wrappers/ui/igNumericEditor.js';
+import IgDateEditor from 'igniteui-react-wrappers/ui/igDateEditor.js';
+import IgDatePicker from 'igniteui-react-wrappers/ui/igDatePicker.js';
 import PropTypes from 'prop-types';
 
 // Ignite UI Required Combined JavaScript Files

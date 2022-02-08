@@ -1,4 +1,4 @@
-import IgDataChart from 'igniteui-react/ui/igDataChart.js';
+import IgDataChart from 'igniteui-react-wrappers/ui/igDataChart.js';
 import React from 'react';
 
 class ChartsBox extends React.Component {
