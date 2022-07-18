@@ -9,7 +9,7 @@
     "create-react-class": "^15.7.0",
     "igniteui-react-wrappers": "^1.4.0",
     "jquery": ">=1.9.1",
-    "jquery-ui": ">=1.13.0",
+    "jquery-ui": ">=1.13.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0"
