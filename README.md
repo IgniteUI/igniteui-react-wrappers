@@ -4,10 +4,9 @@
 [![Coverage Status](https://coveralls.io/repos/github/IgniteUI/igniteui-react-wrappers/badge.svg?branch=master)](https://coveralls.io/github/IgniteUI/igniteui-react-wrappers?branch=master)
 [![npm version](https://badge.fury.io/js/igniteui-react-wrappers.svg)](https://badge.fury.io/js/igniteui-react-wrappers)
 
-Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react-wrappers/).
+**IMPORTANT** Wrappers have been deprecated. Use [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react) from Infragistics that you may want to consider when starting your next React project. It features a high-performance data grid, high-volume data charts and a complete Microsoft Excel Solution. Please check out the announcement [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/announcing-ignite-ui-for-react-components). 
 
-**IMPORTANT** The package and repository have been renamed from `igniteui-react` to `igniteui-react-wrappers`.
-There is a new product [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react) from Infragistics that you may want to consider when starting your next React project. It features a high-performance data grid, high-volume data charts and a complete Microsoft Excel Solution. Please check out the announcement [here](https://www.infragistics.com/community/blogs/b/infragistics/posts/announcing-ignite-ui-for-react-components).
+Use the declarations available in `igniteui-react.js` (or `igniteui-react.min.js`) to use [Ignite UI](http://igniteui.com) controls as [React](https://facebook.github.io/react/) components. [Work with the running samples here](https://igniteui.github.io/igniteui-react-wrappers/).
 
 # Requirements
 
